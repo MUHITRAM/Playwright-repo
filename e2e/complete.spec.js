@@ -1,11 +1,11 @@
 
 
 import { test } from '@playwright/test';
-import { mainpro } from '../pages/mainpro';
+import { mainpro } from './facadepattern/pages/mainpro';
 
 test('govt website', async ({ page }) => {
 
-    const govt = new GovtPage(page);
+    const govt = new mainpro(page);
 
     await govt.launchURL();
 

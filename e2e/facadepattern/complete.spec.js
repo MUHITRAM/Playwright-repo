@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { mainpro } from './pages/mainpro.spec';
+import { mainpro } from './pages/mainpro';
 
 test('govt website', async ({ page }) => {
 
