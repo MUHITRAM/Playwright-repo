@@ -1,0 +1,24 @@
+{
+  "name": "e2e",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Autocomplete.spec.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MUHITRAM/Playwright-repo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MUHITRAM/Playwright-repo/issues"
+  },
+  "homepage": "https://github.com/MUHITRAM/Playwright-repo#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0"
+  }
+}
