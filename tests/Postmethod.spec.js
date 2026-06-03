@@ -2,13 +2,13 @@ import { test, expect } from '@playwright/test';
 
 test('API Response', async ({ request }) => {
 
-  const response = await request.post('api/v1/create',
+  const response = await request.post('https://dummy.restapiexample.com/api/v1/create',
     {
       data: {
-        title: 'playwright',
-        body: 'api test post method', 
-        userId: 1,
-        id: 101
+        title: 'playwrightt',
+        body: 'api test post methoddd', 
+        userId: 12,
+        id: 102
       }
     }
   );
@@ -18,7 +18,7 @@ test('API Response', async ({ request }) => {
 
   const body = await response.json();
 
-  expect(body.title).toBe('playwright');
-  expect(body.userId).toBe(1);
-  expect(body.id).toBe(101);
+  expect(body.title).toBe('playwrightt');
+  expect(body.userId).toBe(12);
+  expect(body.id).toBe(102);
 });

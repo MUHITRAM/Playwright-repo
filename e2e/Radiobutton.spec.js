@@ -12,3 +12,11 @@ test('Handle Radio Button', async ({ page }) => {
     console.log(status);
      await page.waitForTimeout(3000);
 });
+
+// a=10 b=15
+
+//if(a>b)
+
+//if(10>15)
+
+//console.log(10)
