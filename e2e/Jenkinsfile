@@ -1,7 +1,20 @@
 pipeline {
     agent any
 
+    environment {
+        PATH = "/usr/local/bin:${env.PATH}"
+    }
+
     stages {
+
+        stage('Check Node') {
+            steps {
+                sh 'which node'
+                sh 'which npm'
+                sh 'node -v'
+                sh 'npm -v'
+            }
+        }
 
         stage('Install Dependencies') {
             steps {
@@ -19,6 +32,22 @@ pipeline {
             steps {
                 sh 'npx playwright test'
             }
+        }
+
+        stage('Verify Allure Results') {
+            steps {
+                sh 'ls -la allure-results || true'
+            }
+        }
+    }
+
+    post {
+        always {
+            allure([
+                includeProperties: false,
+                jdk: '',
+                results: [[path: 'allure-results']]
+            ])
         }
     }
 }
