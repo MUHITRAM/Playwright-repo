@@ -1,0 +1,49 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Postmethod.spec.js >> API Response
+- Location: tests/Postmethod.spec.js:3:1
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: "playwrightt"
+Received: undefined
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@playwright/test';
+  2  | 
+  3  | test('API Response', async ({ request }) => {
+  4  | 
+  5  |   const response = await request.post('https://dummy.restapiexample.com/api/v1/create',
+  6  |     {
+  7  |       data: {
+  8  |         title: 'playwrightt',
+  9  |         body: 'api test post methoddd', 
+  10 |         userId: 12,
+  11 |         id: 102
+  12 |       }
+  13 |     }
+  14 |   );
+  15 | 
+  16 |   
+  17 |   expect(response.status()).toBe(200);
+  18 | 
+  19 |   const body = await response.json();
+  20 | 
+> 21 |   expect(body.title).toBe('playwrightt');
+     |                      ^ Error: expect(received).toBe(expected) // Object.is equality
+  22 |   expect(body.userId).toBe(12);
+  23 |   expect(body.id).toBe(102);
+  24 | });
+```

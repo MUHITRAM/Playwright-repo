@@ -11,7 +11,7 @@ await page.mouse.wheel(0,500);
 await page.locator('#tooltipTarget').hover();
 
 
-expect(await page.locator('#tooltipStatus')).toHaveText('Tooltip Hidden')
+expect(await page.locator('#tooltipStatus')).toContain('Tooltip Hidden')
 
 
     await page.waitForTimeout(6000);

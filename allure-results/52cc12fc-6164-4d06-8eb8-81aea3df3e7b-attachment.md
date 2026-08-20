@@ -1,0 +1,128 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Sample.spec.js >> Basic lines
+- Location: tests/Sample.spec.js:3:1
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.screenshot: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('#input')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - link "About" [ref=e4] [cursor=pointer]:
+      - /url: https://about.google/?fg=1&utm_source=google-IN&utm_medium=referral&utm_campaign=hp-header
+    - link "Store" [ref=e5] [cursor=pointer]:
+      - /url: https://store.google.com/IN?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-IN
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - link "Gmail" [ref=e10] [cursor=pointer]:
+          - /url: https://mail.google.com/mail/&ogbl
+        - link "Search for Images" [ref=e12] [cursor=pointer]:
+          - /url: https://www.google.com/imghp?hl=en&ogbl
+          - text: Images
+      - button "Google apps" [ref=e15] [cursor=pointer]:
+        - img [ref=e16]
+      - link "Sign in" [ref=e20] [cursor=pointer]:
+        - /url: https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=futura_exp_og_so_72776762_e
+  - generic [ref=e22]:
+    - link "India Independence Day 2026" [ref=e23] [cursor=pointer]:
+      - /url: /search?sca_esv=c4b1addd543662be&sxsrf=APpeQnulZbKFII2aZqKQs6YJ2yZcuvQ_4w:1786781551502&q=India+Independence+Day&oi=ddle&noiga=1&ct=456448790&hl=en-GB&si=APenkKlisoOXLiCMwraINHtdqOQii4CK9kOlkQc8Apn-pS60ybTU_VoocAB35KVB3Z-ryR8uTvdbSHzZKHMNamV8K91IImXi2e-c-tSeJ0fzc5y4jwHZwvsdfS9ZhjOupOs4iwA5FIHFPwAAhGxTkj-dxtBv9DVbp9ex_rfwlRNEyvYLjoiDFNY%3D&sa=X&ved=0ahUKEwjThqr9l6KWAxVxWXADHRIKLksQPQgH
+      - img "India Independence Day 2026" [ref=e25]
+    - button "Share" [ref=e27]:
+      - generic "Share" [ref=e28] [cursor=pointer]:
+        - img [ref=e32]
+  - search [ref=e35]:
+    - generic [ref=e37]:
+      - generic [ref=e39]:
+        - button "Add files and tools" [ref=e44] [cursor=pointer]:
+          - img [ref=e46]
+        - combobox "Search" [active] [ref=e49]
+        - generic [ref=e50]:
+          - generic [ref=e51]:
+            - button "Search by voice" [ref=e54] [cursor=pointer]:
+              - img [ref=e55]
+            - button "Search by image" [ref=e59] [cursor=pointer]:
+              - img [ref=e60]
+          - link "AI Mode" [ref=e62] [cursor=pointer]:
+            - generic [ref=e64]:
+              - img [ref=e66]
+              - generic [ref=e73]: AI Mode
+      - generic [ref=e75]:
+        - button "Google Search" [ref=e76] [cursor=pointer]
+        - button "I'm Feeling Lucky" [ref=e77] [cursor=pointer]
+  - generic [ref=e80]:
+    - text: "Google offered in:"
+    - link "हिन्दी" [ref=e81] [cursor=pointer]:
+      - /url: https://www.google.com/setprefs?sig=0_pIXHjswOhnpIgMr9HwtvNZpFm-w%3D&hl=hi&source=homepage&sa=X&ved=0ahUKEwjThqr9l6KWAxVxWXADHRIKLksQ2ZgBCDw
+    - link "বাংলা" [ref=e82] [cursor=pointer]:
+      - /url: https://www.google.com/setprefs?sig=0_pIXHjswOhnpIgMr9HwtvNZpFm-w%3D&hl=bn&source=homepage&sa=X&ved=0ahUKEwjThqr9l6KWAxVxWXADHRIKLksQ2ZgBCD0
+    - link "తెలుగు" [ref=e83] [cursor=pointer]:
+      - /url: https://www.google.com/setprefs?sig=0_pIXHjswOhnpIgMr9HwtvNZpFm-w%3D&hl=te&source=homepage&sa=X&ved=0ahUKEwjThqr9l6KWAxVxWXADHRIKLksQ2ZgBCD4
+    - link "मराठी" [ref=e84] [cursor=pointer]:
+      - /url: https://www.google.com/setprefs?sig=0_pIXHjswOhnpIgMr9HwtvNZpFm-w%3D&hl=mr&source=homepage&sa=X&ved=0ahUKEwjThqr9l6KWAxVxWXADHRIKLksQ2ZgBCD8
+    - link "தமிழ்" [ref=e85] [cursor=pointer]:
+      - /url: https://www.google.com/setprefs?sig=0_pIXHjswOhnpIgMr9HwtvNZpFm-w%3D&hl=ta&source=homepage&sa=X&ved=0ahUKEwjThqr9l6KWAxVxWXADHRIKLksQ2ZgBCEA
+    - link "ગુજરાતી" [ref=e86] [cursor=pointer]:
+      - /url: https://www.google.com/setprefs?sig=0_pIXHjswOhnpIgMr9HwtvNZpFm-w%3D&hl=gu&source=homepage&sa=X&ved=0ahUKEwjThqr9l6KWAxVxWXADHRIKLksQ2ZgBCEE
+    - link "ಕನ್ನಡ" [ref=e87] [cursor=pointer]:
+      - /url: https://www.google.com/setprefs?sig=0_pIXHjswOhnpIgMr9HwtvNZpFm-w%3D&hl=kn&source=homepage&sa=X&ved=0ahUKEwjThqr9l6KWAxVxWXADHRIKLksQ2ZgBCEI
+    - link "മലയാളം" [ref=e88] [cursor=pointer]:
+      - /url: https://www.google.com/setprefs?sig=0_pIXHjswOhnpIgMr9HwtvNZpFm-w%3D&hl=ml&source=homepage&sa=X&ved=0ahUKEwjThqr9l6KWAxVxWXADHRIKLksQ2ZgBCEM
+    - link "ਪੰਜਾਬੀ" [ref=e89] [cursor=pointer]:
+      - /url: https://www.google.com/setprefs?sig=0_pIXHjswOhnpIgMr9HwtvNZpFm-w%3D&hl=pa&source=homepage&sa=X&ved=0ahUKEwjThqr9l6KWAxVxWXADHRIKLksQ2ZgBCEQ
+  - contentinfo [ref=e91]:
+    - generic [ref=e92]: India
+    - generic [ref=e93]:
+      - generic [ref=e94]:
+        - link "Advertising" [ref=e95] [cursor=pointer]:
+          - /url: https://www.google.com/intl/en_in/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1
+        - link "Business" [ref=e96] [cursor=pointer]:
+          - /url: https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1
+        - link "How Search works" [ref=e97] [cursor=pointer]:
+          - /url: https://google.com/search/howsearchworks/?fg=1
+      - generic [ref=e98]:
+        - link "Privacy" [ref=e99] [cursor=pointer]:
+          - /url: https://policies.google.com/privacy?hl=en-IN&fg=1
+        - link "Terms" [ref=e100] [cursor=pointer]:
+          - /url: https://policies.google.com/terms?hl=en-IN&fg=1
+        - button "Settings" [ref=e104] [cursor=pointer]:
+          - generic [ref=e105]: Settings
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@playwright/test';
+  2  | 
+  3  | test('Basic lines', async ({ page }) => {
+  4  | 
+  5  |     await page.goto('https://google.com');
+  6  | 
+> 7  |     await page.locator('#input').screenshot({path:'screenshots/google111.png'})
+     |                                  ^ Error: locator.screenshot: Test timeout of 30000ms exceeded.
+  8  | 
+  9  | 
+  10 |     await page.waitForTimeout(2000)
+  11 | })
+  12 | 
+  13 |    
+  14 | 
+```

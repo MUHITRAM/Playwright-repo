@@ -14,7 +14,7 @@ import { defineConfig, devices } from '@playwright/test';
  * @see https://playwright.dev/docs/test-configuration
  */
 export default defineConfig({
-  testDir: './e2e',
+  testDir: './tests',
 
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -44,10 +44,10 @@ export default defineConfig({
     trace: 'on',
 
     /* Take screenshot only when test fails */
-    screenshot: 'only-on-failure',
+    screenshot:'on',
 
     /* Record video only when test fails */
-    video: 'retain-on-failure',
+    video:'on'
   },
 
   /* Configure projects for major browsers */

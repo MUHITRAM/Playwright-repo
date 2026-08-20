@@ -24,4 +24,4 @@ test('govt website', async ({ page }) => {
     await govt.openAboutPIB();
 
     
-});
+})
