@@ -1,0 +1,3 @@
+Fixture Started
+Test is running
+Fixture Complete

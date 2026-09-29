@@ -1,0 +1,5449 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: facade1/amazon.spec.js >> Amazon Product
+- Location: tests/facade1/amazon.spec.js:4:1
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('#add-to-cart-button')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - navigation "Shortcuts menu" [ref=e3]:
+    - heading "Skip to" [level=2] [ref=e4]
+    - list "Skip to" [ref=e5]:
+      - listitem [ref=e6]:
+        - link "main content" [ref=e7] [cursor=pointer]:
+          - /url: "#skippedLink"
+          - text: Main content
+      - listitem [ref=e8]:
+        - link "Results" [ref=e9] [cursor=pointer]:
+          - /url: .s-asin a:has(h2)
+    - separator [ref=e10]
+    - heading "Keyboard shortcuts" [level=2] [ref=e11]
+    - list "Keyboard shortcuts" [ref=e12]:
+      - listitem [ref=e13]:
+        - link "Search, alt, forward slash" [ref=e14] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e15]:
+            - generic [ref=e16]: Search
+            - generic [ref=e17]:
+              - generic [ref=e18]: alt
+              - generic [ref=e19]: +
+              - generic [ref=e20]: /
+      - listitem [ref=e21]:
+        - link "Cart, shift, alt, c" [ref=e22] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e23]:
+            - generic [ref=e24]: Cart
+            - generic [ref=e25]:
+              - generic [ref=e26]: shift
+              - generic [ref=e27]: +
+              - generic [ref=e28]: alt
+              - generic [ref=e29]: +
+              - generic [ref=e30]: C
+      - listitem [ref=e31]:
+        - link "Home, shift, alt, h" [ref=e32] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e33]:
+            - generic [ref=e34]: Home
+            - generic [ref=e35]:
+              - generic [ref=e36]: shift
+              - generic [ref=e37]: +
+              - generic [ref=e38]: alt
+              - generic [ref=e39]: +
+              - generic [ref=e40]: H
+      - listitem [ref=e41]:
+        - link "Your orders, shift, alt, o" [ref=e42] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e43]:
+            - generic [ref=e44]: Orders
+            - generic [ref=e45]:
+              - generic [ref=e46]: shift
+              - generic [ref=e47]: +
+              - generic [ref=e48]: alt
+              - generic [ref=e49]: +
+              - generic [ref=e50]: O
+      - listitem [ref=e51]:
+        - button "Show/hide shortcuts, shift, alt, z" [ref=e52] [cursor=pointer]:
+          - generic [ref=e53]:
+            - generic [ref=e54]: Show/Hide shortcuts
+            - generic [ref=e55]:
+              - generic [ref=e56]: shift
+              - generic [ref=e57]: +
+              - generic [ref=e58]: alt
+              - generic [ref=e59]: +
+              - generic [ref=e60]: Z
+    - generic [ref=e66]: To move between items, use your keyboard's up or down arrows.
+  - banner [ref=e67]:
+    - navigation "Primary" [ref=e68]:
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - link "Amazon.in" [ref=e72] [cursor=pointer]:
+            - /url: /ref=nav_logo
+            - generic: .in
+          - button "Delivering to Chennai 600042 Update location" [ref=e75] [cursor=pointer]:
+            - generic [ref=e77]:
+              - generic [ref=e78]: Delivering to Chennai 600042
+              - generic [ref=e79]: Update location
+        - search [ref=e82]:
+          - generic [ref=e85]:
+            - generic [ref=e87]: All
+            - combobox "Select the department you want to search in" [ref=e89] [cursor=pointer]:
+              - option "All Categories" [selected]
+              - option "Alexa Skills"
+              - option "Amazon Devices"
+              - option "Amazon Fashion"
+              - option "Amazon Fresh"
+              - option "Amazon Fresh Meat"
+              - option "Amazon Pharmacy"
+              - option "Appliances"
+              - option "Apps & Games"
+              - option "Audible Audiobooks"
+              - option "Baby"
+              - option "Beauty"
+              - option "Books"
+              - option "Car & Motorbike"
+              - option "Clothing & Accessories"
+              - option "Collectibles"
+              - option "Computers & Accessories"
+              - option "Deals"
+              - option "Electronics"
+              - option "Furniture"
+              - option "Garden & Outdoors"
+              - option "Gift Cards"
+              - option "Grocery & Gourmet Foods"
+              - option "Health & Personal Care"
+              - option "Home & Kitchen"
+              - option "Industrial & Scientific"
+              - option "Jewellery"
+              - option "Kindle Store"
+              - option "Luggage & Bags"
+              - option "Luxury Beauty"
+              - option "Movies & TV Shows"
+              - option "MP3 Music"
+              - option "Music"
+              - option "Musical Instruments"
+              - option "Office Products"
+              - option "Pet Supplies"
+              - option "Prime Video"
+              - option "Shoes & Handbags"
+              - option "Software"
+              - option "Sports, Fitness & Outdoors"
+              - option "Subscribe & Save"
+              - option "Tools & Home Improvement"
+              - option "Toys & Games"
+              - option "Under ₹500"
+              - option "Video Games"
+              - option "Watches"
+          - searchbox "Search Amazon.in" [ref=e92]: T shirt
+          - generic "Go" [ref=e95] [cursor=pointer]:
+            - button "Go" [ref=e96]
+        - generic [ref=e98]:
+          - generic [ref=e99]:
+            - link "Choose a language for shopping in Amazon India. The current selection is English (EN)." [ref=e100] [cursor=pointer]:
+              - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang
+              - generic [ref=e103]:
+                - img "India" [ref=e104]
+                - generic [ref=e105]: EN
+            - button "Expand to Change Language or Country" [ref=e106] [cursor=pointer]
+          - generic [ref=e107]:
+            - link "Hello, sign in Account & Lists" [ref=e108] [cursor=pointer]:
+              - /url: https://www.amazon.in/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.in%2Fs%3Fk%3DT%2Bshirt%26ref%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=inflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+              - generic [ref=e110]: Hello, sign in
+              - generic [ref=e111]: Account & Lists
+            - button "Expand Account and Lists" [ref=e112] [cursor=pointer]
+          - link "Returns & Orders" [ref=e113] [cursor=pointer]:
+            - /url: /gp/css/order-history?ref_=nav_orders_first
+            - generic [ref=e114]: Returns
+            - generic [ref=e115]: "& Orders"
+          - link "0 items in cart" [ref=e116] [cursor=pointer]:
+            - /url: /gp/cart/view.html?ref_=nav_cart
+            - generic [ref=e118]: "0"
+            - generic [ref=e121]: Cart
+      - generic [ref=e122]:
+        - button "Open All Categories Menu" [ref=e124] [cursor=pointer]:
+          - generic [ref=e126]: All
+        - list [ref=e130]:
+          - listitem [ref=e131]:
+            - generic [ref=e132]:
+              - link "Fresh" [ref=e133] [cursor=pointer]:
+                - /url: /fresh?ref_=nav_cs_grocery
+              - button "Fresh Details" [ref=e134] [cursor=pointer]
+          - listitem [ref=e135]:
+            - link "Prime Video" [ref=e137] [cursor=pointer]:
+              - /url: https://www.primevideo.com/offers/nonprimehomepage/ref_=nav_dvm_crs_in_s_gw_bt_dk_p_hamburgr?ref_=avod_desktop_topnav
+          - listitem [ref=e138]:
+            - link "Sell" [ref=e140] [cursor=pointer]:
+              - /url: /b/32702023031?node=32702023031&ld=AZINSOANavDesktop_T3&ref_=nav_cs_sell_T3
+          - listitem [ref=e141]:
+            - link "Bestsellers" [ref=e143] [cursor=pointer]:
+              - /url: /gp/bestsellers/?ref_=nav_cs_bestsellers
+          - listitem [ref=e144]:
+            - link "Today's Deals" [ref=e146] [cursor=pointer]:
+              - /url: /deals?ref_=nav_cs_gb
+          - listitem [ref=e147]:
+            - link "Mobiles" [ref=e149] [cursor=pointer]:
+              - /url: /mobile-phones/b/?ie=UTF8&node=1389401031&ref_=nav_cs_mobiles
+          - listitem [ref=e150]:
+            - link "Customer Service" [ref=e152] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=200507590&ref_=nav_cs_help
+          - listitem [ref=e153]:
+            - link "New Releases" [ref=e155] [cursor=pointer]:
+              - /url: /gp/new-releases/?ref_=nav_cs_newreleases
+          - listitem [ref=e156]:
+            - generic [ref=e157]:
+              - link "Prime" [ref=e158] [cursor=pointer]:
+                - /url: /prime?ref_=nav_cs_primelink_nonmember
+              - button "Prime Details" [ref=e159] [cursor=pointer]
+          - listitem [ref=e160]:
+            - link "Amazon Pay" [ref=e162] [cursor=pointer]:
+              - /url: /gp/sva/dashboard?ref_=nav_cs_apay
+          - listitem [ref=e163]:
+            - link "Electronics" [ref=e165] [cursor=pointer]:
+              - /url: /electronics/b/?ie=UTF8&node=976419031&ref_=nav_cs_electronics
+          - listitem [ref=e166]:
+            - link "Home & Kitchen" [ref=e168] [cursor=pointer]:
+              - /url: /Home-Kitchen/b/?ie=UTF8&node=976442031&ref_=nav_cs_home
+          - listitem [ref=e169]:
+            - link "Fashion" [ref=e171] [cursor=pointer]:
+              - /url: /gp/browse.html?node=6648217031&ref_=nav_cs_fashion
+          - listitem [ref=e172]:
+            - link "Gift Cards" [ref=e174] [cursor=pointer]:
+              - /url: /gift-card-store/b/?ie=UTF8&node=3704982031&ref_=nav_cs_gc
+          - listitem [ref=e175]:
+            - link "Beauty & Personal Care" [ref=e177] [cursor=pointer]:
+              - /url: /beauty/b/?ie=UTF8&node=1355016031&ref_=nav_cs_beauty
+          - listitem [ref=e178]:
+            - link "Computers" [ref=e180] [cursor=pointer]:
+              - /url: /computers-and-accessories/b/?ie=UTF8&node=976392031&ref_=nav_cs_pc
+          - listitem [ref=e181]:
+            - link "Toys & Games" [ref=e183] [cursor=pointer]:
+              - /url: /Toys-Games/b/?ie=UTF8&node=1350380031&ref_=nav_cs_toys
+          - listitem [ref=e184]:
+            - link "Home Improvement" [ref=e186] [cursor=pointer]:
+              - /url: /Home-Improvement/b/?ie=UTF8&node=4286640031&ref_=nav_cs_hi
+          - listitem [ref=e187]:
+            - link "Car & Motorbike" [ref=e189] [cursor=pointer]:
+              - /url: /Car-Motorbike-Store/b/?ie=UTF8&node=4772060031&ref_=nav_cs_automotive
+          - listitem [ref=e190]:
+            - link "Sports, Fitness & Outdoors" [ref=e192] [cursor=pointer]:
+              - /url: /Sports/b/?ie=UTF8&node=1984443031&ref_=nav_cs_sports
+          - listitem [ref=e193]:
+            - link "Grocery & Gourmet Foods" [ref=e195] [cursor=pointer]:
+              - /url: /Gourmet-Specialty-Foods/b/?ie=UTF8&node=2454178031&ref_=nav_cs_grocery
+          - listitem [ref=e196]:
+            - link "Video Games" [ref=e198] [cursor=pointer]:
+              - /url: /video-games/b/?ie=UTF8&node=976460031&ref_=nav_cs_video_games
+          - listitem [ref=e199]:
+            - link "Custom Products" [ref=e201] [cursor=pointer]:
+              - /url: /Amazon-Custom/b/?ie=UTF8&node=32615889031&ref_=nav_cs_custom
+          - listitem [ref=e202]:
+            - link "Health, Household & Personal Care" [ref=e204] [cursor=pointer]:
+              - /url: /health-and-personal-care/b/?ie=UTF8&node=1350384031&ref_=nav_cs_hpc
+          - listitem [ref=e205]:
+            - link "Pet Supplies" [ref=e207] [cursor=pointer]:
+              - /url: /Pet-Supplies/b/?ie=UTF8&node=2454181031&ref_=nav_cs_pets
+          - listitem [ref=e208]:
+            - link "Baby" [ref=e210] [cursor=pointer]:
+              - /url: /Baby/b/?ie=UTF8&node=1571274031&ref_=nav_cs_baby
+          - listitem [ref=e211]:
+            - link "Audible" [ref=e213] [cursor=pointer]:
+              - /url: /Audible-Books-and-Originals/b/?ie=UTF8&node=17941593031&ref_=nav_cs_audible
+          - listitem [ref=e214]:
+            - link "AmazonBasics" [ref=e216] [cursor=pointer]:
+              - /url: /b/?node=6637738031&ref_=nav_cs_amazonbasics
+          - listitem [ref=e217]:
+            - link "Subscribe & Save" [ref=e219] [cursor=pointer]:
+              - /url: /auto-deliveries/landing?ref_=nav_cs_sns
+          - listitem [ref=e220]:
+            - link "Kindle eBooks" [ref=e222] [cursor=pointer]:
+              - /url: /Kindle-eBooks/b/?ie=UTF8&node=1634753031&ref_=nav_cs_kindle_books
+          - listitem [ref=e223]:
+            - link "Flights" [ref=e225] [cursor=pointer]:
+              - /url: /flights?ref_=nav_cs_apay_desktop_topnav_flights
+          - listitem [ref=e226]:
+            - link "Books" [ref=e228] [cursor=pointer]:
+              - /url: /Books/b/?ie=UTF8&node=976389031&ref_=nav_cs_books
+      - dialog [ref=e231]
+  - generic [ref=e233]:
+    - heading "1-48 of over 40,000 results for \"T shirt\" Featured" [level=1] [ref=e236]:
+      - generic [ref=e237]:
+        - heading "1-48 of over 40,000 results for \"T shirt\"" [level=2] [ref=e242]
+        - generic [ref=e247]:
+          - generic [ref=e248]: "Sort by:"
+          - combobox "Sort by:" [ref=e249]:
+            - option "Featured" [selected]
+            - 'option "Price: Low to High"'
+            - 'option "Price: High to Low"'
+            - option "Avg. Customer Review"
+            - option "Newest Arrivals"
+            - option "Best Sellers"
+          - generic [ref=e252] [cursor=pointer]: Sort by:Featured
+    - generic [ref=e254]:
+      - generic [ref=e256]:
+        - generic [ref=e258]:
+          - generic [ref=e262]:
+            - 'link "Sponsored ad from Boldfit. \"All-Day active: tees that support you.\" Shop Boldfit." [ref=e263] [cursor=pointer]':
+              - /url: https://aax-eu-zaz.amazon.in/x/c/JKRXM94SmIT86xQBS426TnoAAAGgpcQULgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICCWzRT2/clv1c_ek-wBHHyFcbWrUl-pp8tQ2gzhFI6Z2aFi_CUu3p2_dAH-5UTROX9GagOV9hQAUHhjQmFV9uh3a1I8KNvmSgB6t6Vo8-XxIxpDmGtbGkp_Ao66QFoMr_P53AgjLv1q1Kp53kyP9k-1oOAG4zjuaTcVtp4x7s8llHyAkTyArOk3Zj_8Wven8vmM1lHumDfpa556z7MVDfe9yUKU-zykTTaOipbbDtmUc711d-3Mv7tPxqWaZg9XFu2XKrCCxsZI3OyWXBYUkdny9dh5DgHBPMFodAQufwclEe6hXyh1gu73lizLHY2Q4S9Pum3EBo5o3Fd-VTFlgEey5MqjD2ji1esucH4JbomrmIycE_2VRuhmH97qklF-EilH1xNM6pmXnIwgs6pngXo7m836RHBEAGJh5mw_jj2TPaD2tUkkDec2zdFBKfmtElfZGnScO0HzJrKc9kUfRJUkUTByeeoYVkQs0IJLjVYf7o25hseaYVm7LPNzlpJhN1DcXB6oximZQ79Ru9n8lC09oBaQIXW70Yd4n6tmalQWiJZx_uiRm4Q1fN4quuCi2HLrhcfqWQnPGUsAPv7_twvvl-DwxwXUE1VcgLQw2GBJV-YnHtiiNUz6vUUYxdsMqFfOrglYd9qLYC1WU5actmmz0r_ou7CZSETDbBkxUuHA6F6bHRlnHNHdFDMIodJnNy_EVXe1r-gu1OMsLSscANF8igVbdIEn2PkTm0zCBjOapMvgM23vT0ZG7CKpBeylXpRo8DJEgtTqOn0ocDLekRvPlom5T4CjM2VAV_gIkdHAx9Sp-C7Z9hrn0-jXuDX5uWmiFGtxCbOtWFO7yJWTbbjI4GsLyr53XjW2yN64oPZyMqd2nj0OVUg9kFjxPYAb5Cd0ICz4p2mgkWmYR_CGGjqG1iCmNVHrBnHkDNWMNrJzTd9FZcQ7nGuC5X8UZcEUM4sF7NV3p1--c3Bdu26EVbiubRwRQWskt_k1KdYMSDVrMAgc5KzhwpaK3mK7A2WMN3ZwRwfvfsojSYthRwFTyT_55av8um9-HgOU4o5M8c-r8cfqQuhbLgqt84AtXrIK34tTLQg7vFJi28MOb2oRqK-ilvMHX3-Eb8cKUN5C9E0N6TNh_Ns4sKALM6UkNqvpAPKJXKF4bH4r2JsP0iUajD0LUTlkPj5VG0UYci9aGRu1-auQ71gf1VI_f0ArKJzRtB8yGgBrP5LHrYDkVZDbx06SErgUASKLiZ_JbwHAH7jsUsm_b6t1gEFfPGUMfIdGd0yF7WSBooDevVepxhnJkjqHu2jz7dpAofUBoBs_jTSpKZmQzOC1NAniMxVKvHxU4OApSD9sG4ZgA_t26ngMgV9E_AkByJLTifIEY2cPUgFYwH7lQEu2SxODLLf61dJZVYMUX6JBX-c_D2cRpmTCRIXyABC2QM8qCr8177O73qR9nj2KWodCeMrSv2LBv-JhrAxAaK9aAQMwHT6xhUT61hbqrywS7DbXC-apjOrdm2bgGJ9kgIkAr29b8cQesmk4zJ3VEGuRowEk1-k0hNoqEtnqYzivBRhs7nql38n3Qee1bSmt8GuOe0-e0xYsyq0tV0hzrUU-tXwzNBzPdNps0FbRRd9VxaJ2ZlPKGvB2RydWCYiRNRLAdU57NZhVujw1I6qLcv9V-JY-xfcZS2S3uL2LOeCwV47EGxhtoseVxXNvMaRAV2mct-v-Bo6QE5ntAaZHJti7WNSAcETm4Fb66MJ/https://www.amazon.in/stores/page/EA8F97D9-451C-4310-AF86-4F630DC14A0E/?_encoding=UTF8&store_ref=SB_A011211412OA5ZTZOVHPU-A047099314ZIHCVQZ0GQW&pd_rd_plhdr=t&aaxitk=6ccc089b47ab43fec2bf5147cd8e1f85&hsa_cr_id=0&lp_asins=B0D5CXZ2F5%2CB0D93N3DWM%2CB0D5CYV3ZS&lp_query=T%20shirt&lp_slot=auto-sparkle-hsa-tetris&sdp_ad_group=300038643343734&i=aps&aref=rPVPGKoMaG&ref_=sbx_s_sparkle_sbtcd_bkgd&pd_rd_w=9NdgR&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GhyMb&pd_rd_r=85e9f8ab-2e40-449d-ab5f-b43d9448e7b5
+            - generic [ref=e264]:
+              - generic [ref=e266]:
+                - link "Boldfit" [ref=e268] [cursor=pointer]:
+                  - /url: https://aax-eu-zaz.amazon.in/x/c/JKRXM94SmIT86xQBS426TnoAAAGgpcQULgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICCWzRT2/clv1c_ek-wBHHyFcbWrUl-pp8tQ2gzhFI6Z2aFi_CUu3p2_dAH-5UTROX9GagOV9hQAUHhjQmFV9uh3a1I8KNvmSgB6t6Vo8-XxIxpDmGtbGkp_Ao66QFoMr_P53AgjLv1q1Kp53kyP9k-1oOAG4zjuaTcVtp4x7s8llHyAkTyArOk3Zj_8Wven8vmM1lHumDfpa556z7MVDfe9yUKU-zykTTaOipbbDtmUc711d-3Mv7tPxqWaZg9XFu2XKrCCxsZI3OyWXBYUkdny9dh5DgHBPMFodAQufwclEe6hXyh1gu73lizLHY2Q4S9Pum3EBo5o3Fd-VTFlgEey5MqjD2ji1esucH4JbomrmIycE_2VRuhmH97qklF-EilH1xNM6pmXnIwgs6pngXo7m836RHBEAGJh5mw_jj2TPaD2tUkkDec2zdFBKfmtElfZGnScO0HzJrKc9kUfRJUkUTByeeoYVkQs0IJLjVYf7o25hseaYVm7LPNzlpJhN1DcXB6oximZQ79Ru9n8lC09oBaQIXW70Yd4n6tmalQWiJZx_uiRm4Q1fN4quuCi2HLrhcfqWQnPGUsAPv7_twvvl-DwxwXUE1VcgLQw2GBJV-YnHtiiNUz6vUUYxdsMqFfOrglYd9qLYC1WU5actmmz0r_ou7CZSETDbBkxUuHA6F6bHRlnHNHdFDMIodJnNy_EVXe1r-gu1OMsLSscANF8igVbdIEn2PkTm0zCBjOapMvgM23vT0ZG7CKpBeylXpRo8DJEgtTqOn0ocDLekRvPlom5T4CjM2VAV_gIkdHAx9Sp-C7Z9hrn0-jXuDX5uWmiFGtxCbOtWFO7yJWTbbjI4GsLyr53XjW2yN64oPZyMqd2nj0OVUg9kFjxPYAb5Cd0ICz4p2mgkWmYR_CGGjqG1iCmNVHrBnHkDNWMNrJzTd9FZcQ7nGuC5X8UZcEUM4sF7NV3p1--c3Bdu26EVbiubRwRQWskt_k1KdYMSDVrMAgc5KzhwpaK3mK7A2WMN3ZwRwfvfsojSYthRwFTyT_55av8um9-HgOU4o5M8c-r8cfqQuhbLgqt84AtXrIK34tTLQg7vFJi28MOb2oRqK-ilvMHX3-Eb8cKUN5C9E0N6TNh_Ns4sKALM6UkNqvpAPKJXKF4bH4r2JsP0iUajD0LUTlkPj5VG0UYci9aGRu1-auQ71gf1VI_f0ArKJzRtB8yGgBrP5LHrYDkVZDbx06SErgUASKLiZ_JbwHAH7jsUsm_b6t1gEFfPGUMfIdGd0yF7WSBooDevVepxhnJkjqHu2jz7dpAofUBoBs_jTSpKZmQzOC1NAniMxVKvHxU4OApSD9sG4ZgA_t26ngMgV9E_AkByJLTifIEY2cPUgFYwH7lQEu2SxODLLf61dJZVYMUX6JBX-c_D2cRpmTCRIXyABC2QM8qCr8177O73qR9nj2KWodCeMrSv2LBv-JhrAxAaK9aAQMwHT6xhUT61hbqrywS7DbXC-apjOrdm2bgGJ9kgIkAr29b8cQesmk4zJ3VEGuRowEk1-k0hNoqEtnqYzivBRhs7nql38n3Qee1bSmt8GuOe0-e0xYsyq0tV0hzrUU-tXwzNBzPdNps0FbRRd9VxaJ2ZlPKGvB2RydWCYiRNRLAdU57NZhVujw1I6qLcv9V-JY-xfcZS2S3uL2LOeCwV47EGxhtoseVxXNvMaRAV2mct-v-Bo6QE5ntAaZHJti7WNSAcETm4Fb66MJ/https://www.amazon.in/stores/page/EA8F97D9-451C-4310-AF86-4F630DC14A0E/?_encoding=UTF8&store_ref=SB_A011211412OA5ZTZOVHPU-A047099314ZIHCVQZ0GQW&pd_rd_plhdr=t&aaxitk=6ccc089b47ab43fec2bf5147cd8e1f85&hsa_cr_id=0&lp_asins=B0D5CXZ2F5%2CB0D93N3DWM%2CB0D5CYV3ZS&lp_query=T%20shirt&lp_slot=auto-sparkle-hsa-tetris&sdp_ad_group=300038643343734&i=aps&aref=rPVPGKoMaG&ref_=sbx_s_sparkle_sbtcd_logo&pd_rd_w=9NdgR&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GhyMb&pd_rd_r=85e9f8ab-2e40-449d-ab5f-b43d9448e7b5
+                  - img "Boldfit" [ref=e270]
+                - generic [ref=e272]:
+                  - 'link "All-Day active: tees that support you" [ref=e273] [cursor=pointer]':
+                    - /url: https://aax-eu-zaz.amazon.in/x/c/JKRXM94SmIT86xQBS426TnoAAAGgpcQULgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICCWzRT2/clv1c_ek-wBHHyFcbWrUl-pp8tQ2gzhFI6Z2aFi_CUu3p2_dAH-5UTROX9GagOV9hQAUHhjQmFV9uh3a1I8KNvmSgB6t6Vo8-XxIxpDmGtbGkp_Ao66QFoMr_P53AgjLv1q1Kp53kyP9k-1oOAG4zjuaTcVtp4x7s8llHyAkTyArOk3Zj_8Wven8vmM1lHumDfpa556z7MVDfe9yUKU-zykTTaOipbbDtmUc711d-3Mv7tPxqWaZg9XFu2XKrCCxsZI3OyWXBYUkdny9dh5DgHBPMFodAQufwclEe6hXyh1gu73lizLHY2Q4S9Pum3EBo5o3Fd-VTFlgEey5MqjD2ji1esucH4JbomrmIycE_2VRuhmH97qklF-EilH1xNM6pmXnIwgs6pngXo7m836RHBEAGJh5mw_jj2TPaD2tUkkDec2zdFBKfmtElfZGnScO0HzJrKc9kUfRJUkUTByeeoYVkQs0IJLjVYf7o25hseaYVm7LPNzlpJhN1DcXB6oximZQ79Ru9n8lC09oBaQIXW70Yd4n6tmalQWiJZx_uiRm4Q1fN4quuCi2HLrhcfqWQnPGUsAPv7_twvvl-DwxwXUE1VcgLQw2GBJV-YnHtiiNUz6vUUYxdsMqFfOrglYd9qLYC1WU5actmmz0r_ou7CZSETDbBkxUuHA6F6bHRlnHNHdFDMIodJnNy_EVXe1r-gu1OMsLSscANF8igVbdIEn2PkTm0zCBjOapMvgM23vT0ZG7CKpBeylXpRo8DJEgtTqOn0ocDLekRvPlom5T4CjM2VAV_gIkdHAx9Sp-C7Z9hrn0-jXuDX5uWmiFGtxCbOtWFO7yJWTbbjI4GsLyr53XjW2yN64oPZyMqd2nj0OVUg9kFjxPYAb5Cd0ICz4p2mgkWmYR_CGGjqG1iCmNVHrBnHkDNWMNrJzTd9FZcQ7nGuC5X8UZcEUM4sF7NV3p1--c3Bdu26EVbiubRwRQWskt_k1KdYMSDVrMAgc5KzhwpaK3mK7A2WMN3ZwRwfvfsojSYthRwFTyT_55av8um9-HgOU4o5M8c-r8cfqQuhbLgqt84AtXrIK34tTLQg7vFJi28MOb2oRqK-ilvMHX3-Eb8cKUN5C9E0N6TNh_Ns4sKALM6UkNqvpAPKJXKF4bH4r2JsP0iUajD0LUTlkPj5VG0UYci9aGRu1-auQ71gf1VI_f0ArKJzRtB8yGgBrP5LHrYDkVZDbx06SErgUASKLiZ_JbwHAH7jsUsm_b6t1gEFfPGUMfIdGd0yF7WSBooDevVepxhnJkjqHu2jz7dpAofUBoBs_jTSpKZmQzOC1NAniMxVKvHxU4OApSD9sG4ZgA_t26ngMgV9E_AkByJLTifIEY2cPUgFYwH7lQEu2SxODLLf61dJZVYMUX6JBX-c_D2cRpmTCRIXyABC2QM8qCr8177O73qR9nj2KWodCeMrSv2LBv-JhrAxAaK9aAQMwHT6xhUT61hbqrywS7DbXC-apjOrdm2bgGJ9kgIkAr29b8cQesmk4zJ3VEGuRowEk1-k0hNoqEtnqYzivBRhs7nql38n3Qee1bSmt8GuOe0-e0xYsyq0tV0hzrUU-tXwzNBzPdNps0FbRRd9VxaJ2ZlPKGvB2RydWCYiRNRLAdU57NZhVujw1I6qLcv9V-JY-xfcZS2S3uL2LOeCwV47EGxhtoseVxXNvMaRAV2mct-v-Bo6QE5ntAaZHJti7WNSAcETm4Fb66MJ/https://www.amazon.in/stores/page/EA8F97D9-451C-4310-AF86-4F630DC14A0E/?_encoding=UTF8&store_ref=SB_A011211412OA5ZTZOVHPU-A047099314ZIHCVQZ0GQW&pd_rd_plhdr=t&aaxitk=6ccc089b47ab43fec2bf5147cd8e1f85&hsa_cr_id=0&lp_asins=B0D5CXZ2F5%2CB0D93N3DWM%2CB0D5CYV3ZS&lp_query=T%20shirt&lp_slot=auto-sparkle-hsa-tetris&sdp_ad_group=300038643343734&i=aps&aref=rPVPGKoMaG&ref_=sbx_s_sparkle_sbtcd_hl&pd_rd_w=9NdgR&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GhyMb&pd_rd_r=85e9f8ab-2e40-449d-ab5f-b43d9448e7b5
+                    - generic [ref=e274]:
+                      - generic [ref=e275]: "All-Day active: tees that support you"
+                      - generic [ref=e276]: "All-Day active: tees that support you"
+                  - generic [ref=e277]:
+                    - button "Leave feedback on Sponsored ad" [ref=e281] [cursor=pointer]: Sponsored
+                    - generic [ref=e283]: "|"
+                    - link "Shop Boldfit" [ref=e285] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/JKRXM94SmIT86xQBS426TnoAAAGgpcQULgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICCWzRT2/clv1c_ek-wBHHyFcbWrUl-pp8tQ2gzhFI6Z2aFi_CUu3p2_dAH-5UTROX9GagOV9hQAUHhjQmFV9uh3a1I8KNvmSgB6t6Vo8-XxIxpDmGtbGkp_Ao66QFoMr_P53AgjLv1q1Kp53kyP9k-1oOAG4zjuaTcVtp4x7s8llHyAkTyArOk3Zj_8Wven8vmM1lHumDfpa556z7MVDfe9yUKU-zykTTaOipbbDtmUc711d-3Mv7tPxqWaZg9XFu2XKrCCxsZI3OyWXBYUkdny9dh5DgHBPMFodAQufwclEe6hXyh1gu73lizLHY2Q4S9Pum3EBo5o3Fd-VTFlgEey5MqjD2ji1esucH4JbomrmIycE_2VRuhmH97qklF-EilH1xNM6pmXnIwgs6pngXo7m836RHBEAGJh5mw_jj2TPaD2tUkkDec2zdFBKfmtElfZGnScO0HzJrKc9kUfRJUkUTByeeoYVkQs0IJLjVYf7o25hseaYVm7LPNzlpJhN1DcXB6oximZQ79Ru9n8lC09oBaQIXW70Yd4n6tmalQWiJZx_uiRm4Q1fN4quuCi2HLrhcfqWQnPGUsAPv7_twvvl-DwxwXUE1VcgLQw2GBJV-YnHtiiNUz6vUUYxdsMqFfOrglYd9qLYC1WU5actmmz0r_ou7CZSETDbBkxUuHA6F6bHRlnHNHdFDMIodJnNy_EVXe1r-gu1OMsLSscANF8igVbdIEn2PkTm0zCBjOapMvgM23vT0ZG7CKpBeylXpRo8DJEgtTqOn0ocDLekRvPlom5T4CjM2VAV_gIkdHAx9Sp-C7Z9hrn0-jXuDX5uWmiFGtxCbOtWFO7yJWTbbjI4GsLyr53XjW2yN64oPZyMqd2nj0OVUg9kFjxPYAb5Cd0ICz4p2mgkWmYR_CGGjqG1iCmNVHrBnHkDNWMNrJzTd9FZcQ7nGuC5X8UZcEUM4sF7NV3p1--c3Bdu26EVbiubRwRQWskt_k1KdYMSDVrMAgc5KzhwpaK3mK7A2WMN3ZwRwfvfsojSYthRwFTyT_55av8um9-HgOU4o5M8c-r8cfqQuhbLgqt84AtXrIK34tTLQg7vFJi28MOb2oRqK-ilvMHX3-Eb8cKUN5C9E0N6TNh_Ns4sKALM6UkNqvpAPKJXKF4bH4r2JsP0iUajD0LUTlkPj5VG0UYci9aGRu1-auQ71gf1VI_f0ArKJzRtB8yGgBrP5LHrYDkVZDbx06SErgUASKLiZ_JbwHAH7jsUsm_b6t1gEFfPGUMfIdGd0yF7WSBooDevVepxhnJkjqHu2jz7dpAofUBoBs_jTSpKZmQzOC1NAniMxVKvHxU4OApSD9sG4ZgA_t26ngMgV9E_AkByJLTifIEY2cPUgFYwH7lQEu2SxODLLf61dJZVYMUX6JBX-c_D2cRpmTCRIXyABC2QM8qCr8177O73qR9nj2KWodCeMrSv2LBv-JhrAxAaK9aAQMwHT6xhUT61hbqrywS7DbXC-apjOrdm2bgGJ9kgIkAr29b8cQesmk4zJ3VEGuRowEk1-k0hNoqEtnqYzivBRhs7nql38n3Qee1bSmt8GuOe0-e0xYsyq0tV0hzrUU-tXwzNBzPdNps0FbRRd9VxaJ2ZlPKGvB2RydWCYiRNRLAdU57NZhVujw1I6qLcv9V-JY-xfcZS2S3uL2LOeCwV47EGxhtoseVxXNvMaRAV2mct-v-Bo6QE5ntAaZHJti7WNSAcETm4Fb66MJ/https://www.amazon.in/stores/page/EA8F97D9-451C-4310-AF86-4F630DC14A0E/?_encoding=UTF8&store_ref=SB_A011211412OA5ZTZOVHPU-A047099314ZIHCVQZ0GQW&pd_rd_plhdr=t&aaxitk=6ccc089b47ab43fec2bf5147cd8e1f85&hsa_cr_id=0&lp_asins=B0D5CXZ2F5%2CB0D93N3DWM%2CB0D5CYV3ZS&lp_query=T%20shirt&lp_slot=auto-sparkle-hsa-tetris&sdp_ad_group=300038643343734&i=aps&aref=rPVPGKoMaG&ref_=sbx_s_sparkle_sbtcd_cta&pd_rd_w=9NdgR&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GhyMb&pd_rd_r=85e9f8ab-2e40-449d-ab5f-b43d9448e7b5
+                      - generic [ref=e288]:
+                        - text: Shop
+                        - generic [ref=e289]:
+                          - text: Boldfit
+                          - img [ref=e290]
+              - group [ref=e292]:
+                - generic [ref=e294]:
+                  - group [ref=e296]:
+                    - list [ref=e297]:
+                      - listitem [ref=e298]:
+                        - generic [ref=e300]:
+                          - link [ref=e301] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JKRXM94SmIT86xQBS426TnoAAAGgpcQULgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICCWzRT2/clv1c_ek-wBHHyFcbWrUl-pp8tQ2gzhFI6Z2aFi_CUu3p2_dAH-5UTROX9GagOV9hQAUHhjQmFV9uh3a1I8KNvmSgB6t6Vo8-XxIxpDmGtbGkp_Ao66QFoMr_P53AgjLv1q1Kp53kyP9k-1oOAG4zjuaTcVtp4x7s8llHyAkTyArOk3Zj_8Wven8vmM1lHumDfpa556z7MVDfe9yUKU-zykTTaOipbbDtmUc711d-3Mv7tPxqWaZg9XFu2XKrCCxsZI3OyWXBYUkdny9dh5DgHBPMFodAQufwclEe6hXyh1gu73lizLHY2Q4S9Pum3EBo5o3Fd-VTFlgEey5MqjD2ji1esucH4JbomrmIycE_2VRuhmH97qklF-EilH1xNM6pmXnIwgs6pngXo7m836RHBEAGJh5mw_jj2TPaD2tUkkDec2zdFBKfmtElfZGnScO0HzJrKc9kUfRJUkUTByeeoYVkQs0IJLjVYf7o25hseaYVm7LPNzlpJhN1DcXB6oximZQ79Ru9n8lC09oBaQIXW70Yd4n6tmalQWiJZx_uiRm4Q1fN4quuCi2HLrhcfqWQnPGUsAPv7_twvvl-DwxwXUE1VcgLQw2GBJV-YnHtiiNUz6vUUYxdsMqFfOrglYd9qLYC1WU5actmmz0r_ou7CZSETDbBkxUuHA6F6bHRlnHNHdFDMIodJnNy_EVXe1r-gu1OMsLSscANF8igVbdIEn2PkTm0zCBjOapMvgM23vT0ZG7CKpBeylXpRo8DJEgtTqOn0ocDLekRvPlom5T4CjM2VAV_gIkdHAx9Sp-C7Z9hrn0-jXuDX5uWmiFGtxCbOtWFO7yJWTbbjI4GsLyr53XjW2yN64oPZyMqd2nj0OVUg9kFjxPYAb5Cd0ICz4p2mgkWmYR_CGGjqG1iCmNVHrBnHkDNWMNrJzTd9FZcQ7nGuC5X8UZcEUM4sF7NV3p1--c3Bdu26EVbiubRwRQWskt_k1KdYMSDVrMAgc5KzhwpaK3mK7A2WMN3ZwRwfvfsojSYthRwFTyT_55av8um9-HgOU4o5M8c-r8cfqQuhbLgqt84AtXrIK34tTLQg7vFJi28MOb2oRqK-ilvMHX3-Eb8cKUN5C9E0N6TNh_Ns4sKALM6UkNqvpAPKJXKF4bH4r2JsP0iUajD0LUTlkPj5VG0UYci9aGRu1-auQ71gf1VI_f0ArKJzRtB8yGgBrP5LHrYDkVZDbx06SErgUASKLiZ_JbwHAH7jsUsm_b6t1gEFfPGUMfIdGd0yF7WSBooDevVepxhnJkjqHu2jz7dpAofUBoBs_jTSpKZmQzOC1NAniMxVKvHxU4OApSD9sG4ZgA_t26ngMgV9E_AkByJLTifIEY2cPUgFYwH7lQEu2SxODLLf61dJZVYMUX6JBX-c_D2cRpmTCRIXyABC2QM8qCr8177O73qR9nj2KWodCeMrSv2LBv-JhrAxAaK9aAQMwHT6xhUT61hbqrywS7DbXC-apjOrdm2bgGJ9kgIkAr29b8cQesmk4zJ3VEGuRowEk1-k0hNoqEtnqYzivBRhs7nql38n3Qee1bSmt8GuOe0-e0xYsyq0tV0hzrUU-tXwzNBzPdNps0FbRRd9VxaJ2ZlPKGvB2RydWCYiRNRLAdU57NZhVujw1I6qLcv9V-JY-xfcZS2S3uL2LOeCwV47EGxhtoseVxXNvMaRAV2mct-v-Bo6QE5ntAaZHJti7WNSAcETm4Fb66MJ/https://www.amazon.in/gp/aw/d/B0D5CXZ2F5/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=6ccc089b47ab43fec2bf5147cd8e1f85&hsa_cr_id=0&qid=1789487485&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=rPVPGKoMaG&ref_=sbx_s_sparkle_sbtcd_asin_0_bkgd&pd_rd_w=9NdgR&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GhyMb&pd_rd_r=85e9f8ab-2e40-449d-ab5f-b43d9448e7b5
+                          - link "Boldfit Polyester t Shirt Round Neck Quick Dry Gym t Shirts for Men Workout Activewear t Shirts for Men Crew Neck Workout Tshirt for man Regular Fit Tshirt for Mens Ideal for Running, Gym and Sports" [ref=e303] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JKRXM94SmIT86xQBS426TnoAAAGgpcQULgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICCWzRT2/clv1c_ek-wBHHyFcbWrUl-pp8tQ2gzhFI6Z2aFi_CUu3p2_dAH-5UTROX9GagOV9hQAUHhjQmFV9uh3a1I8KNvmSgB6t6Vo8-XxIxpDmGtbGkp_Ao66QFoMr_P53AgjLv1q1Kp53kyP9k-1oOAG4zjuaTcVtp4x7s8llHyAkTyArOk3Zj_8Wven8vmM1lHumDfpa556z7MVDfe9yUKU-zykTTaOipbbDtmUc711d-3Mv7tPxqWaZg9XFu2XKrCCxsZI3OyWXBYUkdny9dh5DgHBPMFodAQufwclEe6hXyh1gu73lizLHY2Q4S9Pum3EBo5o3Fd-VTFlgEey5MqjD2ji1esucH4JbomrmIycE_2VRuhmH97qklF-EilH1xNM6pmXnIwgs6pngXo7m836RHBEAGJh5mw_jj2TPaD2tUkkDec2zdFBKfmtElfZGnScO0HzJrKc9kUfRJUkUTByeeoYVkQs0IJLjVYf7o25hseaYVm7LPNzlpJhN1DcXB6oximZQ79Ru9n8lC09oBaQIXW70Yd4n6tmalQWiJZx_uiRm4Q1fN4quuCi2HLrhcfqWQnPGUsAPv7_twvvl-DwxwXUE1VcgLQw2GBJV-YnHtiiNUz6vUUYxdsMqFfOrglYd9qLYC1WU5actmmz0r_ou7CZSETDbBkxUuHA6F6bHRlnHNHdFDMIodJnNy_EVXe1r-gu1OMsLSscANF8igVbdIEn2PkTm0zCBjOapMvgM23vT0ZG7CKpBeylXpRo8DJEgtTqOn0ocDLekRvPlom5T4CjM2VAV_gIkdHAx9Sp-C7Z9hrn0-jXuDX5uWmiFGtxCbOtWFO7yJWTbbjI4GsLyr53XjW2yN64oPZyMqd2nj0OVUg9kFjxPYAb5Cd0ICz4p2mgkWmYR_CGGjqG1iCmNVHrBnHkDNWMNrJzTd9FZcQ7nGuC5X8UZcEUM4sF7NV3p1--c3Bdu26EVbiubRwRQWskt_k1KdYMSDVrMAgc5KzhwpaK3mK7A2WMN3ZwRwfvfsojSYthRwFTyT_55av8um9-HgOU4o5M8c-r8cfqQuhbLgqt84AtXrIK34tTLQg7vFJi28MOb2oRqK-ilvMHX3-Eb8cKUN5C9E0N6TNh_Ns4sKALM6UkNqvpAPKJXKF4bH4r2JsP0iUajD0LUTlkPj5VG0UYci9aGRu1-auQ71gf1VI_f0ArKJzRtB8yGgBrP5LHrYDkVZDbx06SErgUASKLiZ_JbwHAH7jsUsm_b6t1gEFfPGUMfIdGd0yF7WSBooDevVepxhnJkjqHu2jz7dpAofUBoBs_jTSpKZmQzOC1NAniMxVKvHxU4OApSD9sG4ZgA_t26ngMgV9E_AkByJLTifIEY2cPUgFYwH7lQEu2SxODLLf61dJZVYMUX6JBX-c_D2cRpmTCRIXyABC2QM8qCr8177O73qR9nj2KWodCeMrSv2LBv-JhrAxAaK9aAQMwHT6xhUT61hbqrywS7DbXC-apjOrdm2bgGJ9kgIkAr29b8cQesmk4zJ3VEGuRowEk1-k0hNoqEtnqYzivBRhs7nql38n3Qee1bSmt8GuOe0-e0xYsyq0tV0hzrUU-tXwzNBzPdNps0FbRRd9VxaJ2ZlPKGvB2RydWCYiRNRLAdU57NZhVujw1I6qLcv9V-JY-xfcZS2S3uL2LOeCwV47EGxhtoseVxXNvMaRAV2mct-v-Bo6QE5ntAaZHJti7WNSAcETm4Fb66MJ/https://www.amazon.in/gp/aw/d/B0D5CXZ2F5/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=6ccc089b47ab43fec2bf5147cd8e1f85&hsa_cr_id=0&qid=1789487485&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=rPVPGKoMaG&ref_=sbx_s_sparkle_sbtcd_asin_0_img&pd_rd_w=9NdgR&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GhyMb&pd_rd_r=85e9f8ab-2e40-449d-ab5f-b43d9448e7b5
+                            - img "Boldfit Polyester t Shirt Round Neck Quick Dry Gym t Shirts for Men Workout Activewear t Shirts for Men Crew Neck Workout Tshirt for man Regular Fit Tshirt for Mens Ideal for Running, Gym and Sports" [ref=e306]
+                          - generic [ref=e308]:
+                            - link [ref=e309] [cursor=pointer]:
+                              - /url: https://aax-eu-zaz.amazon.in/x/c/JKRXM94SmIT86xQBS426TnoAAAGgpcQULgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICCWzRT2/clv1c_ek-wBHHyFcbWrUl-pp8tQ2gzhFI6Z2aFi_CUu3p2_dAH-5UTROX9GagOV9hQAUHhjQmFV9uh3a1I8KNvmSgB6t6Vo8-XxIxpDmGtbGkp_Ao66QFoMr_P53AgjLv1q1Kp53kyP9k-1oOAG4zjuaTcVtp4x7s8llHyAkTyArOk3Zj_8Wven8vmM1lHumDfpa556z7MVDfe9yUKU-zykTTaOipbbDtmUc711d-3Mv7tPxqWaZg9XFu2XKrCCxsZI3OyWXBYUkdny9dh5DgHBPMFodAQufwclEe6hXyh1gu73lizLHY2Q4S9Pum3EBo5o3Fd-VTFlgEey5MqjD2ji1esucH4JbomrmIycE_2VRuhmH97qklF-EilH1xNM6pmXnIwgs6pngXo7m836RHBEAGJh5mw_jj2TPaD2tUkkDec2zdFBKfmtElfZGnScO0HzJrKc9kUfRJUkUTByeeoYVkQs0IJLjVYf7o25hseaYVm7LPNzlpJhN1DcXB6oximZQ79Ru9n8lC09oBaQIXW70Yd4n6tmalQWiJZx_uiRm4Q1fN4quuCi2HLrhcfqWQnPGUsAPv7_twvvl-DwxwXUE1VcgLQw2GBJV-YnHtiiNUz6vUUYxdsMqFfOrglYd9qLYC1WU5actmmz0r_ou7CZSETDbBkxUuHA6F6bHRlnHNHdFDMIodJnNy_EVXe1r-gu1OMsLSscANF8igVbdIEn2PkTm0zCBjOapMvgM23vT0ZG7CKpBeylXpRo8DJEgtTqOn0ocDLekRvPlom5T4CjM2VAV_gIkdHAx9Sp-C7Z9hrn0-jXuDX5uWmiFGtxCbOtWFO7yJWTbbjI4GsLyr53XjW2yN64oPZyMqd2nj0OVUg9kFjxPYAb5Cd0ICz4p2mgkWmYR_CGGjqG1iCmNVHrBnHkDNWMNrJzTd9FZcQ7nGuC5X8UZcEUM4sF7NV3p1--c3Bdu26EVbiubRwRQWskt_k1KdYMSDVrMAgc5KzhwpaK3mK7A2WMN3ZwRwfvfsojSYthRwFTyT_55av8um9-HgOU4o5M8c-r8cfqQuhbLgqt84AtXrIK34tTLQg7vFJi28MOb2oRqK-ilvMHX3-Eb8cKUN5C9E0N6TNh_Ns4sKALM6UkNqvpAPKJXKF4bH4r2JsP0iUajD0LUTlkPj5VG0UYci9aGRu1-auQ71gf1VI_f0ArKJzRtB8yGgBrP5LHrYDkVZDbx06SErgUASKLiZ_JbwHAH7jsUsm_b6t1gEFfPGUMfIdGd0yF7WSBooDevVepxhnJkjqHu2jz7dpAofUBoBs_jTSpKZmQzOC1NAniMxVKvHxU4OApSD9sG4ZgA_t26ngMgV9E_AkByJLTifIEY2cPUgFYwH7lQEu2SxODLLf61dJZVYMUX6JBX-c_D2cRpmTCRIXyABC2QM8qCr8177O73qR9nj2KWodCeMrSv2LBv-JhrAxAaK9aAQMwHT6xhUT61hbqrywS7DbXC-apjOrdm2bgGJ9kgIkAr29b8cQesmk4zJ3VEGuRowEk1-k0hNoqEtnqYzivBRhs7nql38n3Qee1bSmt8GuOe0-e0xYsyq0tV0hzrUU-tXwzNBzPdNps0FbRRd9VxaJ2ZlPKGvB2RydWCYiRNRLAdU57NZhVujw1I6qLcv9V-JY-xfcZS2S3uL2LOeCwV47EGxhtoseVxXNvMaRAV2mct-v-Bo6QE5ntAaZHJti7WNSAcETm4Fb66MJ/https://www.amazon.in/gp/aw/d/B0D5CXZ2F5/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=6ccc089b47ab43fec2bf5147cd8e1f85&hsa_cr_id=0&qid=1789487485&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=rPVPGKoMaG&ref_=sbx_s_sparkle_sbtcd_asin_0_bkgd&pd_rd_w=9NdgR&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GhyMb&pd_rd_r=85e9f8ab-2e40-449d-ab5f-b43d9448e7b5
+                            - link "Boldfit Polyester t Shirt Round Neck Quick Dry Gym t Shirts for Men Workout Activewear t Shirts for Men Crew Neck Workout Tshirt for man Regular Fit Tshirt for Mens Ideal for Running, Gym and Sports" [ref=e311] [cursor=pointer]:
+                              - /url: https://aax-eu-zaz.amazon.in/x/c/JKRXM94SmIT86xQBS426TnoAAAGgpcQULgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICCWzRT2/clv1c_ek-wBHHyFcbWrUl-pp8tQ2gzhFI6Z2aFi_CUu3p2_dAH-5UTROX9GagOV9hQAUHhjQmFV9uh3a1I8KNvmSgB6t6Vo8-XxIxpDmGtbGkp_Ao66QFoMr_P53AgjLv1q1Kp53kyP9k-1oOAG4zjuaTcVtp4x7s8llHyAkTyArOk3Zj_8Wven8vmM1lHumDfpa556z7MVDfe9yUKU-zykTTaOipbbDtmUc711d-3Mv7tPxqWaZg9XFu2XKrCCxsZI3OyWXBYUkdny9dh5DgHBPMFodAQufwclEe6hXyh1gu73lizLHY2Q4S9Pum3EBo5o3Fd-VTFlgEey5MqjD2ji1esucH4JbomrmIycE_2VRuhmH97qklF-EilH1xNM6pmXnIwgs6pngXo7m836RHBEAGJh5mw_jj2TPaD2tUkkDec2zdFBKfmtElfZGnScO0HzJrKc9kUfRJUkUTByeeoYVkQs0IJLjVYf7o25hseaYVm7LPNzlpJhN1DcXB6oximZQ79Ru9n8lC09oBaQIXW70Yd4n6tmalQWiJZx_uiRm4Q1fN4quuCi2HLrhcfqWQnPGUsAPv7_twvvl-DwxwXUE1VcgLQw2GBJV-YnHtiiNUz6vUUYxdsMqFfOrglYd9qLYC1WU5actmmz0r_ou7CZSETDbBkxUuHA6F6bHRlnHNHdFDMIodJnNy_EVXe1r-gu1OMsLSscANF8igVbdIEn2PkTm0zCBjOapMvgM23vT0ZG7CKpBeylXpRo8DJEgtTqOn0ocDLekRvPlom5T4CjM2VAV_gIkdHAx9Sp-C7Z9hrn0-jXuDX5uWmiFGtxCbOtWFO7yJWTbbjI4GsLyr53XjW2yN64oPZyMqd2nj0OVUg9kFjxPYAb5Cd0ICz4p2mgkWmYR_CGGjqG1iCmNVHrBnHkDNWMNrJzTd9FZcQ7nGuC5X8UZcEUM4sF7NV3p1--c3Bdu26EVbiubRwRQWskt_k1KdYMSDVrMAgc5KzhwpaK3mK7A2WMN3ZwRwfvfsojSYthRwFTyT_55av8um9-HgOU4o5M8c-r8cfqQuhbLgqt84AtXrIK34tTLQg7vFJi28MOb2oRqK-ilvMHX3-Eb8cKUN5C9E0N6TNh_Ns4sKALM6UkNqvpAPKJXKF4bH4r2JsP0iUajD0LUTlkPj5VG0UYci9aGRu1-auQ71gf1VI_f0ArKJzRtB8yGgBrP5LHrYDkVZDbx06SErgUASKLiZ_JbwHAH7jsUsm_b6t1gEFfPGUMfIdGd0yF7WSBooDevVepxhnJkjqHu2jz7dpAofUBoBs_jTSpKZmQzOC1NAniMxVKvHxU4OApSD9sG4ZgA_t26ngMgV9E_AkByJLTifIEY2cPUgFYwH7lQEu2SxODLLf61dJZVYMUX6JBX-c_D2cRpmTCRIXyABC2QM8qCr8177O73qR9nj2KWodCeMrSv2LBv-JhrAxAaK9aAQMwHT6xhUT61hbqrywS7DbXC-apjOrdm2bgGJ9kgIkAr29b8cQesmk4zJ3VEGuRowEk1-k0hNoqEtnqYzivBRhs7nql38n3Qee1bSmt8GuOe0-e0xYsyq0tV0hzrUU-tXwzNBzPdNps0FbRRd9VxaJ2ZlPKGvB2RydWCYiRNRLAdU57NZhVujw1I6qLcv9V-JY-xfcZS2S3uL2LOeCwV47EGxhtoseVxXNvMaRAV2mct-v-Bo6QE5ntAaZHJti7WNSAcETm4Fb66MJ/https://www.amazon.in/gp/aw/d/B0D5CXZ2F5/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=6ccc089b47ab43fec2bf5147cd8e1f85&hsa_cr_id=0&qid=1789487485&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=rPVPGKoMaG&ref_=sbx_s_sparkle_sbtcd_asin_0_title&pd_rd_w=9NdgR&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GhyMb&pd_rd_r=85e9f8ab-2e40-449d-ab5f-b43d9448e7b5
+                              - generic [ref=e312]:
+                                - generic [ref=e313]: Boldfit Polyester t Shirt Round Neck Quick Dry Gym t Shirts for Men Workout Activewear t Shirts for Men Crew Neck Workout Tshirt for man Regular Fit Tshirt for Mens Ideal for Running, Gym and Sports
+                                - generic [ref=e314]: Boldfit Polyester t Shirt Round Neck Quick Dry Gym t Shirts…
+                            - link "Rated 4.1 out of 5 stars by 1546 reviews. Go to review section." [ref=e315] [cursor=pointer]:
+                              - /url: https://aax-eu-zaz.amazon.in/x/c/JKRXM94SmIT86xQBS426TnoAAAGgpcQULgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICCWzRT2/clv1c_ek-wBHHyFcbWrUl-pp8tQ2gzhFI6Z2aFi_CUu3p2_dAH-5UTROX9GagOV9hQAUHhjQmFV9uh3a1I8KNvmSgB6t6Vo8-XxIxpDmGtbGkp_Ao66QFoMr_P53AgjLv1q1Kp53kyP9k-1oOAG4zjuaTcVtp4x7s8llHyAkTyArOk3Zj_8Wven8vmM1lHumDfpa556z7MVDfe9yUKU-zykTTaOipbbDtmUc711d-3Mv7tPxqWaZg9XFu2XKrCCxsZI3OyWXBYUkdny9dh5DgHBPMFodAQufwclEe6hXyh1gu73lizLHY2Q4S9Pum3EBo5o3Fd-VTFlgEey5MqjD2ji1esucH4JbomrmIycE_2VRuhmH97qklF-EilH1xNM6pmXnIwgs6pngXo7m836RHBEAGJh5mw_jj2TPaD2tUkkDec2zdFBKfmtElfZGnScO0HzJrKc9kUfRJUkUTByeeoYVkQs0IJLjVYf7o25hseaYVm7LPNzlpJhN1DcXB6oximZQ79Ru9n8lC09oBaQIXW70Yd4n6tmalQWiJZx_uiRm4Q1fN4quuCi2HLrhcfqWQnPGUsAPv7_twvvl-DwxwXUE1VcgLQw2GBJV-YnHtiiNUz6vUUYxdsMqFfOrglYd9qLYC1WU5actmmz0r_ou7CZSETDbBkxUuHA6F6bHRlnHNHdFDMIodJnNy_EVXe1r-gu1OMsLSscANF8igVbdIEn2PkTm0zCBjOapMvgM23vT0ZG7CKpBeylXpRo8DJEgtTqOn0ocDLekRvPlom5T4CjM2VAV_gIkdHAx9Sp-C7Z9hrn0-jXuDX5uWmiFGtxCbOtWFO7yJWTbbjI4GsLyr53XjW2yN64oPZyMqd2nj0OVUg9kFjxPYAb5Cd0ICz4p2mgkWmYR_CGGjqG1iCmNVHrBnHkDNWMNrJzTd9FZcQ7nGuC5X8UZcEUM4sF7NV3p1--c3Bdu26EVbiubRwRQWskt_k1KdYMSDVrMAgc5KzhwpaK3mK7A2WMN3ZwRwfvfsojSYthRwFTyT_55av8um9-HgOU4o5M8c-r8cfqQuhbLgqt84AtXrIK34tTLQg7vFJi28MOb2oRqK-ilvMHX3-Eb8cKUN5C9E0N6TNh_Ns4sKALM6UkNqvpAPKJXKF4bH4r2JsP0iUajD0LUTlkPj5VG0UYci9aGRu1-auQ71gf1VI_f0ArKJzRtB8yGgBrP5LHrYDkVZDbx06SErgUASKLiZ_JbwHAH7jsUsm_b6t1gEFfPGUMfIdGd0yF7WSBooDevVepxhnJkjqHu2jz7dpAofUBoBs_jTSpKZmQzOC1NAniMxVKvHxU4OApSD9sG4ZgA_t26ngMgV9E_AkByJLTifIEY2cPUgFYwH7lQEu2SxODLLf61dJZVYMUX6JBX-c_D2cRpmTCRIXyABC2QM8qCr8177O73qR9nj2KWodCeMrSv2LBv-JhrAxAaK9aAQMwHT6xhUT61hbqrywS7DbXC-apjOrdm2bgGJ9kgIkAr29b8cQesmk4zJ3VEGuRowEk1-k0hNoqEtnqYzivBRhs7nql38n3Qee1bSmt8GuOe0-e0xYsyq0tV0hzrUU-tXwzNBzPdNps0FbRRd9VxaJ2ZlPKGvB2RydWCYiRNRLAdU57NZhVujw1I6qLcv9V-JY-xfcZS2S3uL2LOeCwV47EGxhtoseVxXNvMaRAV2mct-v-Bo6QE5ntAaZHJti7WNSAcETm4Fb66MJ/https://www.amazon.in/gp/aw/d/B0D5CXZ2F5/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=6ccc089b47ab43fec2bf5147cd8e1f85&hsa_cr_id=0&qid=1789487485&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=rPVPGKoMaG&ref_=sbx_s_sparkle_sbtcd_asin_0_rating&pd_rd_w=9NdgR&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GhyMb&pd_rd_r=85e9f8ab-2e40-449d-ab5f-b43d9448e7b5#customerReviews
+                              - generic [ref=e316]:
+                                - generic [ref=e317]: "4.1"
+                                - generic [ref=e319]: 4.1 out of 5 stars.
+                                - generic [ref=e320]: (1.5k)
+                            - link "₹399.00" [ref=e322] [cursor=pointer]:
+                              - /url: https://aax-eu-zaz.amazon.in/x/c/JKRXM94SmIT86xQBS426TnoAAAGgpcQULgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICCWzRT2/clv1c_ek-wBHHyFcbWrUl-pp8tQ2gzhFI6Z2aFi_CUu3p2_dAH-5UTROX9GagOV9hQAUHhjQmFV9uh3a1I8KNvmSgB6t6Vo8-XxIxpDmGtbGkp_Ao66QFoMr_P53AgjLv1q1Kp53kyP9k-1oOAG4zjuaTcVtp4x7s8llHyAkTyArOk3Zj_8Wven8vmM1lHumDfpa556z7MVDfe9yUKU-zykTTaOipbbDtmUc711d-3Mv7tPxqWaZg9XFu2XKrCCxsZI3OyWXBYUkdny9dh5DgHBPMFodAQufwclEe6hXyh1gu73lizLHY2Q4S9Pum3EBo5o3Fd-VTFlgEey5MqjD2ji1esucH4JbomrmIycE_2VRuhmH97qklF-EilH1xNM6pmXnIwgs6pngXo7m836RHBEAGJh5mw_jj2TPaD2tUkkDec2zdFBKfmtElfZGnScO0HzJrKc9kUfRJUkUTByeeoYVkQs0IJLjVYf7o25hseaYVm7LPNzlpJhN1DcXB6oximZQ79Ru9n8lC09oBaQIXW70Yd4n6tmalQWiJZx_uiRm4Q1fN4quuCi2HLrhcfqWQnPGUsAPv7_twvvl-DwxwXUE1VcgLQw2GBJV-YnHtiiNUz6vUUYxdsMqFfOrglYd9qLYC1WU5actmmz0r_ou7CZSETDbBkxUuHA6F6bHRlnHNHdFDMIodJnNy_EVXe1r-gu1OMsLSscANF8igVbdIEn2PkTm0zCBjOapMvgM23vT0ZG7CKpBeylXpRo8DJEgtTqOn0ocDLekRvPlom5T4CjM2VAV_gIkdHAx9Sp-C7Z9hrn0-jXuDX5uWmiFGtxCbOtWFO7yJWTbbjI4GsLyr53XjW2yN64oPZyMqd2nj0OVUg9kFjxPYAb5Cd0ICz4p2mgkWmYR_CGGjqG1iCmNVHrBnHkDNWMNrJzTd9FZcQ7nGuC5X8UZcEUM4sF7NV3p1--c3Bdu26EVbiubRwRQWskt_k1KdYMSDVrMAgc5KzhwpaK3mK7A2WMN3ZwRwfvfsojSYthRwFTyT_55av8um9-HgOU4o5M8c-r8cfqQuhbLgqt84AtXrIK34tTLQg7vFJi28MOb2oRqK-ilvMHX3-Eb8cKUN5C9E0N6TNh_Ns4sKALM6UkNqvpAPKJXKF4bH4r2JsP0iUajD0LUTlkPj5VG0UYci9aGRu1-auQ71gf1VI_f0ArKJzRtB8yGgBrP5LHrYDkVZDbx06SErgUASKLiZ_JbwHAH7jsUsm_b6t1gEFfPGUMfIdGd0yF7WSBooDevVepxhnJkjqHu2jz7dpAofUBoBs_jTSpKZmQzOC1NAniMxVKvHxU4OApSD9sG4ZgA_t26ngMgV9E_AkByJLTifIEY2cPUgFYwH7lQEu2SxODLLf61dJZVYMUX6JBX-c_D2cRpmTCRIXyABC2QM8qCr8177O73qR9nj2KWodCeMrSv2LBv-JhrAxAaK9aAQMwHT6xhUT61hbqrywS7DbXC-apjOrdm2bgGJ9kgIkAr29b8cQesmk4zJ3VEGuRowEk1-k0hNoqEtnqYzivBRhs7nql38n3Qee1bSmt8GuOe0-e0xYsyq0tV0hzrUU-tXwzNBzPdNps0FbRRd9VxaJ2ZlPKGvB2RydWCYiRNRLAdU57NZhVujw1I6qLcv9V-JY-xfcZS2S3uL2LOeCwV47EGxhtoseVxXNvMaRAV2mct-v-Bo6QE5ntAaZHJti7WNSAcETm4Fb66MJ/https://www.amazon.in/gp/aw/d/B0D5CXZ2F5/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=6ccc089b47ab43fec2bf5147cd8e1f85&hsa_cr_id=0&qid=1789487485&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=rPVPGKoMaG&ref_=sbx_s_sparkle_sbtcd_asin_0_price&pd_rd_w=9NdgR&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GhyMb&pd_rd_r=85e9f8ab-2e40-449d-ab5f-b43d9448e7b5
+                              - generic [ref=e324]:
+                                - generic [ref=e325]: ₹399.00
+                                - generic [ref=e326]:
+                                  - text: ₹
+                                  - generic [ref=e327]:
+                                    - text: "399"
+                                    - generic [ref=e328]: .
+                                  - text: "00"
+                            - generic [ref=e331]: "M.R.P: ₹666.00"
+                      - listitem [ref=e332]:
+                        - generic [ref=e334]:
+                          - link [ref=e335] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JKRXM94SmIT86xQBS426TnoAAAGgpcQULgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICCWzRT2/clv1c_ek-wBHHyFcbWrUl-pp8tQ2gzhFI6Z2aFi_CUu3p2_dAH-5UTROX9GagOV9hQAUHhjQmFV9uh3a1I8KNvmSgB6t6Vo8-XxIxpDmGtbGkp_Ao66QFoMr_P53AgjLv1q1Kp53kyP9k-1oOAG4zjuaTcVtp4x7s8llHyAkTyArOk3Zj_8Wven8vmM1lHumDfpa556z7MVDfe9yUKU-zykTTaOipbbDtmUc711d-3Mv7tPxqWaZg9XFu2XKrCCxsZI3OyWXBYUkdny9dh5DgHBPMFodAQufwclEe6hXyh1gu73lizLHY2Q4S9Pum3EBo5o3Fd-VTFlgEey5MqjD2ji1esucH4JbomrmIycE_2VRuhmH97qklF-EilH1xNM6pmXnIwgs6pngXo7m836RHBEAGJh5mw_jj2TPaD2tUkkDec2zdFBKfmtElfZGnScO0HzJrKc9kUfRJUkUTByeeoYVkQs0IJLjVYf7o25hseaYVm7LPNzlpJhN1DcXB6oximZQ79Ru9n8lC09oBaQIXW70Yd4n6tmalQWiJZx_uiRm4Q1fN4quuCi2HLrhcfqWQnPGUsAPv7_twvvl-DwxwXUE1VcgLQw2GBJV-YnHtiiNUz6vUUYxdsMqFfOrglYd9qLYC1WU5actmmz0r_ou7CZSETDbBkxUuHA6F6bHRlnHNHdFDMIodJnNy_EVXe1r-gu1OMsLSscANF8igVbdIEn2PkTm0zCBjOapMvgM23vT0ZG7CKpBeylXpRo8DJEgtTqOn0ocDLekRvPlom5T4CjM2VAV_gIkdHAx9Sp-C7Z9hrn0-jXuDX5uWmiFGtxCbOtWFO7yJWTbbjI4GsLyr53XjW2yN64oPZyMqd2nj0OVUg9kFjxPYAb5Cd0ICz4p2mgkWmYR_CGGjqG1iCmNVHrBnHkDNWMNrJzTd9FZcQ7nGuC5X8UZcEUM4sF7NV3p1--c3Bdu26EVbiubRwRQWskt_k1KdYMSDVrMAgc5KzhwpaK3mK7A2WMN3ZwRwfvfsojSYthRwFTyT_55av8um9-HgOU4o5M8c-r8cfqQuhbLgqt84AtXrIK34tTLQg7vFJi28MOb2oRqK-ilvMHX3-Eb8cKUN5C9E0N6TNh_Ns4sKALM6UkNqvpAPKJXKF4bH4r2JsP0iUajD0LUTlkPj5VG0UYci9aGRu1-auQ71gf1VI_f0ArKJzRtB8yGgBrP5LHrYDkVZDbx06SErgUASKLiZ_JbwHAH7jsUsm_b6t1gEFfPGUMfIdGd0yF7WSBooDevVepxhnJkjqHu2jz7dpAofUBoBs_jTSpKZmQzOC1NAniMxVKvHxU4OApSD9sG4ZgA_t26ngMgV9E_AkByJLTifIEY2cPUgFYwH7lQEu2SxODLLf61dJZVYMUX6JBX-c_D2cRpmTCRIXyABC2QM8qCr8177O73qR9nj2KWodCeMrSv2LBv-JhrAxAaK9aAQMwHT6xhUT61hbqrywS7DbXC-apjOrdm2bgGJ9kgIkAr29b8cQesmk4zJ3VEGuRowEk1-k0hNoqEtnqYzivBRhs7nql38n3Qee1bSmt8GuOe0-e0xYsyq0tV0hzrUU-tXwzNBzPdNps0FbRRd9VxaJ2ZlPKGvB2RydWCYiRNRLAdU57NZhVujw1I6qLcv9V-JY-xfcZS2S3uL2LOeCwV47EGxhtoseVxXNvMaRAV2mct-v-Bo6QE5ntAaZHJti7WNSAcETm4Fb66MJ/https://www.amazon.in/gp/aw/d/B0D93N3DWM/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=6ccc089b47ab43fec2bf5147cd8e1f85&hsa_cr_id=0&qid=1789487485&sr=1-2-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=rPVPGKoMaG&ref_=sbx_s_sparkle_sbtcd_asin_1_bkgd&pd_rd_w=9NdgR&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GhyMb&pd_rd_r=85e9f8ab-2e40-449d-ab5f-b43d9448e7b5
+                          - link "Boldfit Tshirt for Man Regular fit Gym t Shirts for Men Workout Active wear t Shirt for Man Running Mens t-Shirts Running Tshirt for Men Workout Gym wear Mens" [ref=e337] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JKRXM94SmIT86xQBS426TnoAAAGgpcQULgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICCWzRT2/clv1c_ek-wBHHyFcbWrUl-pp8tQ2gzhFI6Z2aFi_CUu3p2_dAH-5UTROX9GagOV9hQAUHhjQmFV9uh3a1I8KNvmSgB6t6Vo8-XxIxpDmGtbGkp_Ao66QFoMr_P53AgjLv1q1Kp53kyP9k-1oOAG4zjuaTcVtp4x7s8llHyAkTyArOk3Zj_8Wven8vmM1lHumDfpa556z7MVDfe9yUKU-zykTTaOipbbDtmUc711d-3Mv7tPxqWaZg9XFu2XKrCCxsZI3OyWXBYUkdny9dh5DgHBPMFodAQufwclEe6hXyh1gu73lizLHY2Q4S9Pum3EBo5o3Fd-VTFlgEey5MqjD2ji1esucH4JbomrmIycE_2VRuhmH97qklF-EilH1xNM6pmXnIwgs6pngXo7m836RHBEAGJh5mw_jj2TPaD2tUkkDec2zdFBKfmtElfZGnScO0HzJrKc9kUfRJUkUTByeeoYVkQs0IJLjVYf7o25hseaYVm7LPNzlpJhN1DcXB6oximZQ79Ru9n8lC09oBaQIXW70Yd4n6tmalQWiJZx_uiRm4Q1fN4quuCi2HLrhcfqWQnPGUsAPv7_twvvl-DwxwXUE1VcgLQw2GBJV-YnHtiiNUz6vUUYxdsMqFfOrglYd9qLYC1WU5actmmz0r_ou7CZSETDbBkxUuHA6F6bHRlnHNHdFDMIodJnNy_EVXe1r-gu1OMsLSscANF8igVbdIEn2PkTm0zCBjOapMvgM23vT0ZG7CKpBeylXpRo8DJEgtTqOn0ocDLekRvPlom5T4CjM2VAV_gIkdHAx9Sp-C7Z9hrn0-jXuDX5uWmiFGtxCbOtWFO7yJWTbbjI4GsLyr53XjW2yN64oPZyMqd2nj0OVUg9kFjxPYAb5Cd0ICz4p2mgkWmYR_CGGjqG1iCmNVHrBnHkDNWMNrJzTd9FZcQ7nGuC5X8UZcEUM4sF7NV3p1--c3Bdu26EVbiubRwRQWskt_k1KdYMSDVrMAgc5KzhwpaK3mK7A2WMN3ZwRwfvfsojSYthRwFTyT_55av8um9-HgOU4o5M8c-r8cfqQuhbLgqt84AtXrIK34tTLQg7vFJi28MOb2oRqK-ilvMHX3-Eb8cKUN5C9E0N6TNh_Ns4sKALM6UkNqvpAPKJXKF4bH4r2JsP0iUajD0LUTlkPj5VG0UYci9aGRu1-auQ71gf1VI_f0ArKJzRtB8yGgBrP5LHrYDkVZDbx06SErgUASKLiZ_JbwHAH7jsUsm_b6t1gEFfPGUMfIdGd0yF7WSBooDevVepxhnJkjqHu2jz7dpAofUBoBs_jTSpKZmQzOC1NAniMxVKvHxU4OApSD9sG4ZgA_t26ngMgV9E_AkByJLTifIEY2cPUgFYwH7lQEu2SxODLLf61dJZVYMUX6JBX-c_D2cRpmTCRIXyABC2QM8qCr8177O73qR9nj2KWodCeMrSv2LBv-JhrAxAaK9aAQMwHT6xhUT61hbqrywS7DbXC-apjOrdm2bgGJ9kgIkAr29b8cQesmk4zJ3VEGuRowEk1-k0hNoqEtnqYzivBRhs7nql38n3Qee1bSmt8GuOe0-e0xYsyq0tV0hzrUU-tXwzNBzPdNps0FbRRd9VxaJ2ZlPKGvB2RydWCYiRNRLAdU57NZhVujw1I6qLcv9V-JY-xfcZS2S3uL2LOeCwV47EGxhtoseVxXNvMaRAV2mct-v-Bo6QE5ntAaZHJti7WNSAcETm4Fb66MJ/https://www.amazon.in/gp/aw/d/B0D93N3DWM/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=6ccc089b47ab43fec2bf5147cd8e1f85&hsa_cr_id=0&qid=1789487485&sr=1-2-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=rPVPGKoMaG&ref_=sbx_s_sparkle_sbtcd_asin_1_img&pd_rd_w=9NdgR&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GhyMb&pd_rd_r=85e9f8ab-2e40-449d-ab5f-b43d9448e7b5
+                            - img "Boldfit Tshirt for Man Regular fit Gym t Shirts for Men Workout Active wear t Shirt for Man Running Mens t-Shirts Running Tshirt for Men Workout Gym wear Mens" [ref=e340]
+                          - generic [ref=e342]:
+                            - link [ref=e343] [cursor=pointer]:
+                              - /url: https://aax-eu-zaz.amazon.in/x/c/JKRXM94SmIT86xQBS426TnoAAAGgpcQULgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICCWzRT2/clv1c_ek-wBHHyFcbWrUl-pp8tQ2gzhFI6Z2aFi_CUu3p2_dAH-5UTROX9GagOV9hQAUHhjQmFV9uh3a1I8KNvmSgB6t6Vo8-XxIxpDmGtbGkp_Ao66QFoMr_P53AgjLv1q1Kp53kyP9k-1oOAG4zjuaTcVtp4x7s8llHyAkTyArOk3Zj_8Wven8vmM1lHumDfpa556z7MVDfe9yUKU-zykTTaOipbbDtmUc711d-3Mv7tPxqWaZg9XFu2XKrCCxsZI3OyWXBYUkdny9dh5DgHBPMFodAQufwclEe6hXyh1gu73lizLHY2Q4S9Pum3EBo5o3Fd-VTFlgEey5MqjD2ji1esucH4JbomrmIycE_2VRuhmH97qklF-EilH1xNM6pmXnIwgs6pngXo7m836RHBEAGJh5mw_jj2TPaD2tUkkDec2zdFBKfmtElfZGnScO0HzJrKc9kUfRJUkUTByeeoYVkQs0IJLjVYf7o25hseaYVm7LPNzlpJhN1DcXB6oximZQ79Ru9n8lC09oBaQIXW70Yd4n6tmalQWiJZx_uiRm4Q1fN4quuCi2HLrhcfqWQnPGUsAPv7_twvvl-DwxwXUE1VcgLQw2GBJV-YnHtiiNUz6vUUYxdsMqFfOrglYd9qLYC1WU5actmmz0r_ou7CZSETDbBkxUuHA6F6bHRlnHNHdFDMIodJnNy_EVXe1r-gu1OMsLSscANF8igVbdIEn2PkTm0zCBjOapMvgM23vT0ZG7CKpBeylXpRo8DJEgtTqOn0ocDLekRvPlom5T4CjM2VAV_gIkdHAx9Sp-C7Z9hrn0-jXuDX5uWmiFGtxCbOtWFO7yJWTbbjI4GsLyr53XjW2yN64oPZyMqd2nj0OVUg9kFjxPYAb5Cd0ICz4p2mgkWmYR_CGGjqG1iCmNVHrBnHkDNWMNrJzTd9FZcQ7nGuC5X8UZcEUM4sF7NV3p1--c3Bdu26EVbiubRwRQWskt_k1KdYMSDVrMAgc5KzhwpaK3mK7A2WMN3ZwRwfvfsojSYthRwFTyT_55av8um9-HgOU4o5M8c-r8cfqQuhbLgqt84AtXrIK34tTLQg7vFJi28MOb2oRqK-ilvMHX3-Eb8cKUN5C9E0N6TNh_Ns4sKALM6UkNqvpAPKJXKF4bH4r2JsP0iUajD0LUTlkPj5VG0UYci9aGRu1-auQ71gf1VI_f0ArKJzRtB8yGgBrP5LHrYDkVZDbx06SErgUASKLiZ_JbwHAH7jsUsm_b6t1gEFfPGUMfIdGd0yF7WSBooDevVepxhnJkjqHu2jz7dpAofUBoBs_jTSpKZmQzOC1NAniMxVKvHxU4OApSD9sG4ZgA_t26ngMgV9E_AkByJLTifIEY2cPUgFYwH7lQEu2SxODLLf61dJZVYMUX6JBX-c_D2cRpmTCRIXyABC2QM8qCr8177O73qR9nj2KWodCeMrSv2LBv-JhrAxAaK9aAQMwHT6xhUT61hbqrywS7DbXC-apjOrdm2bgGJ9kgIkAr29b8cQesmk4zJ3VEGuRowEk1-k0hNoqEtnqYzivBRhs7nql38n3Qee1bSmt8GuOe0-e0xYsyq0tV0hzrUU-tXwzNBzPdNps0FbRRd9VxaJ2ZlPKGvB2RydWCYiRNRLAdU57NZhVujw1I6qLcv9V-JY-xfcZS2S3uL2LOeCwV47EGxhtoseVxXNvMaRAV2mct-v-Bo6QE5ntAaZHJti7WNSAcETm4Fb66MJ/https://www.amazon.in/gp/aw/d/B0D93N3DWM/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=6ccc089b47ab43fec2bf5147cd8e1f85&hsa_cr_id=0&qid=1789487485&sr=1-2-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=rPVPGKoMaG&ref_=sbx_s_sparkle_sbtcd_asin_1_bkgd&pd_rd_w=9NdgR&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GhyMb&pd_rd_r=85e9f8ab-2e40-449d-ab5f-b43d9448e7b5
+                            - link "Boldfit Tshirt for Man Regular fit Gym t Shirts for Men Workout Active wear t Shirt for Man Running Mens t-Shirts Running Tshirt for Men Workout Gym wear Mens" [ref=e345] [cursor=pointer]:
+                              - /url: https://aax-eu-zaz.amazon.in/x/c/JKRXM94SmIT86xQBS426TnoAAAGgpcQULgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICCWzRT2/clv1c_ek-wBHHyFcbWrUl-pp8tQ2gzhFI6Z2aFi_CUu3p2_dAH-5UTROX9GagOV9hQAUHhjQmFV9uh3a1I8KNvmSgB6t6Vo8-XxIxpDmGtbGkp_Ao66QFoMr_P53AgjLv1q1Kp53kyP9k-1oOAG4zjuaTcVtp4x7s8llHyAkTyArOk3Zj_8Wven8vmM1lHumDfpa556z7MVDfe9yUKU-zykTTaOipbbDtmUc711d-3Mv7tPxqWaZg9XFu2XKrCCxsZI3OyWXBYUkdny9dh5DgHBPMFodAQufwclEe6hXyh1gu73lizLHY2Q4S9Pum3EBo5o3Fd-VTFlgEey5MqjD2ji1esucH4JbomrmIycE_2VRuhmH97qklF-EilH1xNM6pmXnIwgs6pngXo7m836RHBEAGJh5mw_jj2TPaD2tUkkDec2zdFBKfmtElfZGnScO0HzJrKc9kUfRJUkUTByeeoYVkQs0IJLjVYf7o25hseaYVm7LPNzlpJhN1DcXB6oximZQ79Ru9n8lC09oBaQIXW70Yd4n6tmalQWiJZx_uiRm4Q1fN4quuCi2HLrhcfqWQnPGUsAPv7_twvvl-DwxwXUE1VcgLQw2GBJV-YnHtiiNUz6vUUYxdsMqFfOrglYd9qLYC1WU5actmmz0r_ou7CZSETDbBkxUuHA6F6bHRlnHNHdFDMIodJnNy_EVXe1r-gu1OMsLSscANF8igVbdIEn2PkTm0zCBjOapMvgM23vT0ZG7CKpBeylXpRo8DJEgtTqOn0ocDLekRvPlom5T4CjM2VAV_gIkdHAx9Sp-C7Z9hrn0-jXuDX5uWmiFGtxCbOtWFO7yJWTbbjI4GsLyr53XjW2yN64oPZyMqd2nj0OVUg9kFjxPYAb5Cd0ICz4p2mgkWmYR_CGGjqG1iCmNVHrBnHkDNWMNrJzTd9FZcQ7nGuC5X8UZcEUM4sF7NV3p1--c3Bdu26EVbiubRwRQWskt_k1KdYMSDVrMAgc5KzhwpaK3mK7A2WMN3ZwRwfvfsojSYthRwFTyT_55av8um9-HgOU4o5M8c-r8cfqQuhbLgqt84AtXrIK34tTLQg7vFJi28MOb2oRqK-ilvMHX3-Eb8cKUN5C9E0N6TNh_Ns4sKALM6UkNqvpAPKJXKF4bH4r2JsP0iUajD0LUTlkPj5VG0UYci9aGRu1-auQ71gf1VI_f0ArKJzRtB8yGgBrP5LHrYDkVZDbx06SErgUASKLiZ_JbwHAH7jsUsm_b6t1gEFfPGUMfIdGd0yF7WSBooDevVepxhnJkjqHu2jz7dpAofUBoBs_jTSpKZmQzOC1NAniMxVKvHxU4OApSD9sG4ZgA_t26ngMgV9E_AkByJLTifIEY2cPUgFYwH7lQEu2SxODLLf61dJZVYMUX6JBX-c_D2cRpmTCRIXyABC2QM8qCr8177O73qR9nj2KWodCeMrSv2LBv-JhrAxAaK9aAQMwHT6xhUT61hbqrywS7DbXC-apjOrdm2bgGJ9kgIkAr29b8cQesmk4zJ3VEGuRowEk1-k0hNoqEtnqYzivBRhs7nql38n3Qee1bSmt8GuOe0-e0xYsyq0tV0hzrUU-tXwzNBzPdNps0FbRRd9VxaJ2ZlPKGvB2RydWCYiRNRLAdU57NZhVujw1I6qLcv9V-JY-xfcZS2S3uL2LOeCwV47EGxhtoseVxXNvMaRAV2mct-v-Bo6QE5ntAaZHJti7WNSAcETm4Fb66MJ/https://www.amazon.in/gp/aw/d/B0D93N3DWM/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=6ccc089b47ab43fec2bf5147cd8e1f85&hsa_cr_id=0&qid=1789487485&sr=1-2-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=rPVPGKoMaG&ref_=sbx_s_sparkle_sbtcd_asin_1_title&pd_rd_w=9NdgR&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GhyMb&pd_rd_r=85e9f8ab-2e40-449d-ab5f-b43d9448e7b5
+                              - generic [ref=e346]:
+                                - generic [ref=e347]: Boldfit Tshirt for Man Regular fit Gym t Shirts for Men Workout Active wear t Shirt for Man Running Mens t-Shirts Running Tshirt for Men Workout Gym wear Mens
+                                - generic [ref=e348]: Boldfit Tshirt for Man Regular fit Gym t Shirts for Men Workout…
+                            - link "Rated 4 out of 5 stars by 646 reviews. Go to review section." [ref=e349] [cursor=pointer]:
+                              - /url: https://aax-eu-zaz.amazon.in/x/c/JKRXM94SmIT86xQBS426TnoAAAGgpcQULgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICCWzRT2/clv1c_ek-wBHHyFcbWrUl-pp8tQ2gzhFI6Z2aFi_CUu3p2_dAH-5UTROX9GagOV9hQAUHhjQmFV9uh3a1I8KNvmSgB6t6Vo8-XxIxpDmGtbGkp_Ao66QFoMr_P53AgjLv1q1Kp53kyP9k-1oOAG4zjuaTcVtp4x7s8llHyAkTyArOk3Zj_8Wven8vmM1lHumDfpa556z7MVDfe9yUKU-zykTTaOipbbDtmUc711d-3Mv7tPxqWaZg9XFu2XKrCCxsZI3OyWXBYUkdny9dh5DgHBPMFodAQufwclEe6hXyh1gu73lizLHY2Q4S9Pum3EBo5o3Fd-VTFlgEey5MqjD2ji1esucH4JbomrmIycE_2VRuhmH97qklF-EilH1xNM6pmXnIwgs6pngXo7m836RHBEAGJh5mw_jj2TPaD2tUkkDec2zdFBKfmtElfZGnScO0HzJrKc9kUfRJUkUTByeeoYVkQs0IJLjVYf7o25hseaYVm7LPNzlpJhN1DcXB6oximZQ79Ru9n8lC09oBaQIXW70Yd4n6tmalQWiJZx_uiRm4Q1fN4quuCi2HLrhcfqWQnPGUsAPv7_twvvl-DwxwXUE1VcgLQw2GBJV-YnHtiiNUz6vUUYxdsMqFfOrglYd9qLYC1WU5actmmz0r_ou7CZSETDbBkxUuHA6F6bHRlnHNHdFDMIodJnNy_EVXe1r-gu1OMsLSscANF8igVbdIEn2PkTm0zCBjOapMvgM23vT0ZG7CKpBeylXpRo8DJEgtTqOn0ocDLekRvPlom5T4CjM2VAV_gIkdHAx9Sp-C7Z9hrn0-jXuDX5uWmiFGtxCbOtWFO7yJWTbbjI4GsLyr53XjW2yN64oPZyMqd2nj0OVUg9kFjxPYAb5Cd0ICz4p2mgkWmYR_CGGjqG1iCmNVHrBnHkDNWMNrJzTd9FZcQ7nGuC5X8UZcEUM4sF7NV3p1--c3Bdu26EVbiubRwRQWskt_k1KdYMSDVrMAgc5KzhwpaK3mK7A2WMN3ZwRwfvfsojSYthRwFTyT_55av8um9-HgOU4o5M8c-r8cfqQuhbLgqt84AtXrIK34tTLQg7vFJi28MOb2oRqK-ilvMHX3-Eb8cKUN5C9E0N6TNh_Ns4sKALM6UkNqvpAPKJXKF4bH4r2JsP0iUajD0LUTlkPj5VG0UYci9aGRu1-auQ71gf1VI_f0ArKJzRtB8yGgBrP5LHrYDkVZDbx06SErgUASKLiZ_JbwHAH7jsUsm_b6t1gEFfPGUMfIdGd0yF7WSBooDevVepxhnJkjqHu2jz7dpAofUBoBs_jTSpKZmQzOC1NAniMxVKvHxU4OApSD9sG4ZgA_t26ngMgV9E_AkByJLTifIEY2cPUgFYwH7lQEu2SxODLLf61dJZVYMUX6JBX-c_D2cRpmTCRIXyABC2QM8qCr8177O73qR9nj2KWodCeMrSv2LBv-JhrAxAaK9aAQMwHT6xhUT61hbqrywS7DbXC-apjOrdm2bgGJ9kgIkAr29b8cQesmk4zJ3VEGuRowEk1-k0hNoqEtnqYzivBRhs7nql38n3Qee1bSmt8GuOe0-e0xYsyq0tV0hzrUU-tXwzNBzPdNps0FbRRd9VxaJ2ZlPKGvB2RydWCYiRNRLAdU57NZhVujw1I6qLcv9V-JY-xfcZS2S3uL2LOeCwV47EGxhtoseVxXNvMaRAV2mct-v-Bo6QE5ntAaZHJti7WNSAcETm4Fb66MJ/https://www.amazon.in/gp/aw/d/B0D93N3DWM/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=6ccc089b47ab43fec2bf5147cd8e1f85&hsa_cr_id=0&qid=1789487485&sr=1-2-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=rPVPGKoMaG&ref_=sbx_s_sparkle_sbtcd_asin_1_rating&pd_rd_w=9NdgR&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GhyMb&pd_rd_r=85e9f8ab-2e40-449d-ab5f-b43d9448e7b5#customerReviews
+                              - generic [ref=e350]:
+                                - generic [ref=e351]: "4"
+                                - generic [ref=e353]: 4 out of 5 stars.
+                                - generic [ref=e354]: (646)
+                            - link "₹519.00" [ref=e356] [cursor=pointer]:
+                              - /url: https://aax-eu-zaz.amazon.in/x/c/JKRXM94SmIT86xQBS426TnoAAAGgpcQULgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICCWzRT2/clv1c_ek-wBHHyFcbWrUl-pp8tQ2gzhFI6Z2aFi_CUu3p2_dAH-5UTROX9GagOV9hQAUHhjQmFV9uh3a1I8KNvmSgB6t6Vo8-XxIxpDmGtbGkp_Ao66QFoMr_P53AgjLv1q1Kp53kyP9k-1oOAG4zjuaTcVtp4x7s8llHyAkTyArOk3Zj_8Wven8vmM1lHumDfpa556z7MVDfe9yUKU-zykTTaOipbbDtmUc711d-3Mv7tPxqWaZg9XFu2XKrCCxsZI3OyWXBYUkdny9dh5DgHBPMFodAQufwclEe6hXyh1gu73lizLHY2Q4S9Pum3EBo5o3Fd-VTFlgEey5MqjD2ji1esucH4JbomrmIycE_2VRuhmH97qklF-EilH1xNM6pmXnIwgs6pngXo7m836RHBEAGJh5mw_jj2TPaD2tUkkDec2zdFBKfmtElfZGnScO0HzJrKc9kUfRJUkUTByeeoYVkQs0IJLjVYf7o25hseaYVm7LPNzlpJhN1DcXB6oximZQ79Ru9n8lC09oBaQIXW70Yd4n6tmalQWiJZx_uiRm4Q1fN4quuCi2HLrhcfqWQnPGUsAPv7_twvvl-DwxwXUE1VcgLQw2GBJV-YnHtiiNUz6vUUYxdsMqFfOrglYd9qLYC1WU5actmmz0r_ou7CZSETDbBkxUuHA6F6bHRlnHNHdFDMIodJnNy_EVXe1r-gu1OMsLSscANF8igVbdIEn2PkTm0zCBjOapMvgM23vT0ZG7CKpBeylXpRo8DJEgtTqOn0ocDLekRvPlom5T4CjM2VAV_gIkdHAx9Sp-C7Z9hrn0-jXuDX5uWmiFGtxCbOtWFO7yJWTbbjI4GsLyr53XjW2yN64oPZyMqd2nj0OVUg9kFjxPYAb5Cd0ICz4p2mgkWmYR_CGGjqG1iCmNVHrBnHkDNWMNrJzTd9FZcQ7nGuC5X8UZcEUM4sF7NV3p1--c3Bdu26EVbiubRwRQWskt_k1KdYMSDVrMAgc5KzhwpaK3mK7A2WMN3ZwRwfvfsojSYthRwFTyT_55av8um9-HgOU4o5M8c-r8cfqQuhbLgqt84AtXrIK34tTLQg7vFJi28MOb2oRqK-ilvMHX3-Eb8cKUN5C9E0N6TNh_Ns4sKALM6UkNqvpAPKJXKF4bH4r2JsP0iUajD0LUTlkPj5VG0UYci9aGRu1-auQ71gf1VI_f0ArKJzRtB8yGgBrP5LHrYDkVZDbx06SErgUASKLiZ_JbwHAH7jsUsm_b6t1gEFfPGUMfIdGd0yF7WSBooDevVepxhnJkjqHu2jz7dpAofUBoBs_jTSpKZmQzOC1NAniMxVKvHxU4OApSD9sG4ZgA_t26ngMgV9E_AkByJLTifIEY2cPUgFYwH7lQEu2SxODLLf61dJZVYMUX6JBX-c_D2cRpmTCRIXyABC2QM8qCr8177O73qR9nj2KWodCeMrSv2LBv-JhrAxAaK9aAQMwHT6xhUT61hbqrywS7DbXC-apjOrdm2bgGJ9kgIkAr29b8cQesmk4zJ3VEGuRowEk1-k0hNoqEtnqYzivBRhs7nql38n3Qee1bSmt8GuOe0-e0xYsyq0tV0hzrUU-tXwzNBzPdNps0FbRRd9VxaJ2ZlPKGvB2RydWCYiRNRLAdU57NZhVujw1I6qLcv9V-JY-xfcZS2S3uL2LOeCwV47EGxhtoseVxXNvMaRAV2mct-v-Bo6QE5ntAaZHJti7WNSAcETm4Fb66MJ/https://www.amazon.in/gp/aw/d/B0D93N3DWM/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=6ccc089b47ab43fec2bf5147cd8e1f85&hsa_cr_id=0&qid=1789487485&sr=1-2-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=rPVPGKoMaG&ref_=sbx_s_sparkle_sbtcd_asin_1_price&pd_rd_w=9NdgR&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GhyMb&pd_rd_r=85e9f8ab-2e40-449d-ab5f-b43d9448e7b5
+                              - generic [ref=e358]:
+                                - generic [ref=e359]: ₹519.00
+                                - generic [ref=e360]:
+                                  - text: ₹
+                                  - generic [ref=e361]:
+                                    - text: "519"
+                                    - generic [ref=e362]: .
+                                  - text: "00"
+                            - generic [ref=e365]: "M.R.P: ₹999.00"
+                      - listitem [ref=e366]:
+                        - generic [ref=e368]:
+                          - link [ref=e369] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JKRXM94SmIT86xQBS426TnoAAAGgpcQULgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICCWzRT2/clv1c_ek-wBHHyFcbWrUl-pp8tQ2gzhFI6Z2aFi_CUu3p2_dAH-5UTROX9GagOV9hQAUHhjQmFV9uh3a1I8KNvmSgB6t6Vo8-XxIxpDmGtbGkp_Ao66QFoMr_P53AgjLv1q1Kp53kyP9k-1oOAG4zjuaTcVtp4x7s8llHyAkTyArOk3Zj_8Wven8vmM1lHumDfpa556z7MVDfe9yUKU-zykTTaOipbbDtmUc711d-3Mv7tPxqWaZg9XFu2XKrCCxsZI3OyWXBYUkdny9dh5DgHBPMFodAQufwclEe6hXyh1gu73lizLHY2Q4S9Pum3EBo5o3Fd-VTFlgEey5MqjD2ji1esucH4JbomrmIycE_2VRuhmH97qklF-EilH1xNM6pmXnIwgs6pngXo7m836RHBEAGJh5mw_jj2TPaD2tUkkDec2zdFBKfmtElfZGnScO0HzJrKc9kUfRJUkUTByeeoYVkQs0IJLjVYf7o25hseaYVm7LPNzlpJhN1DcXB6oximZQ79Ru9n8lC09oBaQIXW70Yd4n6tmalQWiJZx_uiRm4Q1fN4quuCi2HLrhcfqWQnPGUsAPv7_twvvl-DwxwXUE1VcgLQw2GBJV-YnHtiiNUz6vUUYxdsMqFfOrglYd9qLYC1WU5actmmz0r_ou7CZSETDbBkxUuHA6F6bHRlnHNHdFDMIodJnNy_EVXe1r-gu1OMsLSscANF8igVbdIEn2PkTm0zCBjOapMvgM23vT0ZG7CKpBeylXpRo8DJEgtTqOn0ocDLekRvPlom5T4CjM2VAV_gIkdHAx9Sp-C7Z9hrn0-jXuDX5uWmiFGtxCbOtWFO7yJWTbbjI4GsLyr53XjW2yN64oPZyMqd2nj0OVUg9kFjxPYAb5Cd0ICz4p2mgkWmYR_CGGjqG1iCmNVHrBnHkDNWMNrJzTd9FZcQ7nGuC5X8UZcEUM4sF7NV3p1--c3Bdu26EVbiubRwRQWskt_k1KdYMSDVrMAgc5KzhwpaK3mK7A2WMN3ZwRwfvfsojSYthRwFTyT_55av8um9-HgOU4o5M8c-r8cfqQuhbLgqt84AtXrIK34tTLQg7vFJi28MOb2oRqK-ilvMHX3-Eb8cKUN5C9E0N6TNh_Ns4sKALM6UkNqvpAPKJXKF4bH4r2JsP0iUajD0LUTlkPj5VG0UYci9aGRu1-auQ71gf1VI_f0ArKJzRtB8yGgBrP5LHrYDkVZDbx06SErgUASKLiZ_JbwHAH7jsUsm_b6t1gEFfPGUMfIdGd0yF7WSBooDevVepxhnJkjqHu2jz7dpAofUBoBs_jTSpKZmQzOC1NAniMxVKvHxU4OApSD9sG4ZgA_t26ngMgV9E_AkByJLTifIEY2cPUgFYwH7lQEu2SxODLLf61dJZVYMUX6JBX-c_D2cRpmTCRIXyABC2QM8qCr8177O73qR9nj2KWodCeMrSv2LBv-JhrAxAaK9aAQMwHT6xhUT61hbqrywS7DbXC-apjOrdm2bgGJ9kgIkAr29b8cQesmk4zJ3VEGuRowEk1-k0hNoqEtnqYzivBRhs7nql38n3Qee1bSmt8GuOe0-e0xYsyq0tV0hzrUU-tXwzNBzPdNps0FbRRd9VxaJ2ZlPKGvB2RydWCYiRNRLAdU57NZhVujw1I6qLcv9V-JY-xfcZS2S3uL2LOeCwV47EGxhtoseVxXNvMaRAV2mct-v-Bo6QE5ntAaZHJti7WNSAcETm4Fb66MJ/https://www.amazon.in/gp/aw/d/B0D5CYV3ZS/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=6ccc089b47ab43fec2bf5147cd8e1f85&hsa_cr_id=0&qid=1789487485&sr=1-3-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=rPVPGKoMaG&ref_=sbx_s_sparkle_sbtcd_asin_2_bkgd&pd_rd_w=9NdgR&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GhyMb&pd_rd_r=85e9f8ab-2e40-449d-ab5f-b43d9448e7b5
+                          - link [ref=e371] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JKRXM94SmIT86xQBS426TnoAAAGgpcQULgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICCWzRT2/clv1c_ek-wBHHyFcbWrUl-pp8tQ2gzhFI6Z2aFi_CUu3p2_dAH-5UTROX9GagOV9hQAUHhjQmFV9uh3a1I8KNvmSgB6t6Vo8-XxIxpDmGtbGkp_Ao66QFoMr_P53AgjLv1q1Kp53kyP9k-1oOAG4zjuaTcVtp4x7s8llHyAkTyArOk3Zj_8Wven8vmM1lHumDfpa556z7MVDfe9yUKU-zykTTaOipbbDtmUc711d-3Mv7tPxqWaZg9XFu2XKrCCxsZI3OyWXBYUkdny9dh5DgHBPMFodAQufwclEe6hXyh1gu73lizLHY2Q4S9Pum3EBo5o3Fd-VTFlgEey5MqjD2ji1esucH4JbomrmIycE_2VRuhmH97qklF-EilH1xNM6pmXnIwgs6pngXo7m836RHBEAGJh5mw_jj2TPaD2tUkkDec2zdFBKfmtElfZGnScO0HzJrKc9kUfRJUkUTByeeoYVkQs0IJLjVYf7o25hseaYVm7LPNzlpJhN1DcXB6oximZQ79Ru9n8lC09oBaQIXW70Yd4n6tmalQWiJZx_uiRm4Q1fN4quuCi2HLrhcfqWQnPGUsAPv7_twvvl-DwxwXUE1VcgLQw2GBJV-YnHtiiNUz6vUUYxdsMqFfOrglYd9qLYC1WU5actmmz0r_ou7CZSETDbBkxUuHA6F6bHRlnHNHdFDMIodJnNy_EVXe1r-gu1OMsLSscANF8igVbdIEn2PkTm0zCBjOapMvgM23vT0ZG7CKpBeylXpRo8DJEgtTqOn0ocDLekRvPlom5T4CjM2VAV_gIkdHAx9Sp-C7Z9hrn0-jXuDX5uWmiFGtxCbOtWFO7yJWTbbjI4GsLyr53XjW2yN64oPZyMqd2nj0OVUg9kFjxPYAb5Cd0ICz4p2mgkWmYR_CGGjqG1iCmNVHrBnHkDNWMNrJzTd9FZcQ7nGuC5X8UZcEUM4sF7NV3p1--c3Bdu26EVbiubRwRQWskt_k1KdYMSDVrMAgc5KzhwpaK3mK7A2WMN3ZwRwfvfsojSYthRwFTyT_55av8um9-HgOU4o5M8c-r8cfqQuhbLgqt84AtXrIK34tTLQg7vFJi28MOb2oRqK-ilvMHX3-Eb8cKUN5C9E0N6TNh_Ns4sKALM6UkNqvpAPKJXKF4bH4r2JsP0iUajD0LUTlkPj5VG0UYci9aGRu1-auQ71gf1VI_f0ArKJzRtB8yGgBrP5LHrYDkVZDbx06SErgUASKLiZ_JbwHAH7jsUsm_b6t1gEFfPGUMfIdGd0yF7WSBooDevVepxhnJkjqHu2jz7dpAofUBoBs_jTSpKZmQzOC1NAniMxVKvHxU4OApSD9sG4ZgA_t26ngMgV9E_AkByJLTifIEY2cPUgFYwH7lQEu2SxODLLf61dJZVYMUX6JBX-c_D2cRpmTCRIXyABC2QM8qCr8177O73qR9nj2KWodCeMrSv2LBv-JhrAxAaK9aAQMwHT6xhUT61hbqrywS7DbXC-apjOrdm2bgGJ9kgIkAr29b8cQesmk4zJ3VEGuRowEk1-k0hNoqEtnqYzivBRhs7nql38n3Qee1bSmt8GuOe0-e0xYsyq0tV0hzrUU-tXwzNBzPdNps0FbRRd9VxaJ2ZlPKGvB2RydWCYiRNRLAdU57NZhVujw1I6qLcv9V-JY-xfcZS2S3uL2LOeCwV47EGxhtoseVxXNvMaRAV2mct-v-Bo6QE5ntAaZHJti7WNSAcETm4Fb66MJ/https://www.amazon.in/gp/aw/d/B0D5CYV3ZS/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=6ccc089b47ab43fec2bf5147cd8e1f85&hsa_cr_id=0&qid=1789487485&sr=1-3-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=rPVPGKoMaG&ref_=sbx_s_sparkle_sbtcd_asin_2_img&pd_rd_w=9NdgR&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GhyMb&pd_rd_r=85e9f8ab-2e40-449d-ab5f-b43d9448e7b5
+                            - img [ref=e374]
+                          - generic [ref=e376]:
+                            - link [ref=e377] [cursor=pointer]:
+                              - /url: https://aax-eu-zaz.amazon.in/x/c/JKRXM94SmIT86xQBS426TnoAAAGgpcQULgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICCWzRT2/clv1c_ek-wBHHyFcbWrUl-pp8tQ2gzhFI6Z2aFi_CUu3p2_dAH-5UTROX9GagOV9hQAUHhjQmFV9uh3a1I8KNvmSgB6t6Vo8-XxIxpDmGtbGkp_Ao66QFoMr_P53AgjLv1q1Kp53kyP9k-1oOAG4zjuaTcVtp4x7s8llHyAkTyArOk3Zj_8Wven8vmM1lHumDfpa556z7MVDfe9yUKU-zykTTaOipbbDtmUc711d-3Mv7tPxqWaZg9XFu2XKrCCxsZI3OyWXBYUkdny9dh5DgHBPMFodAQufwclEe6hXyh1gu73lizLHY2Q4S9Pum3EBo5o3Fd-VTFlgEey5MqjD2ji1esucH4JbomrmIycE_2VRuhmH97qklF-EilH1xNM6pmXnIwgs6pngXo7m836RHBEAGJh5mw_jj2TPaD2tUkkDec2zdFBKfmtElfZGnScO0HzJrKc9kUfRJUkUTByeeoYVkQs0IJLjVYf7o25hseaYVm7LPNzlpJhN1DcXB6oximZQ79Ru9n8lC09oBaQIXW70Yd4n6tmalQWiJZx_uiRm4Q1fN4quuCi2HLrhcfqWQnPGUsAPv7_twvvl-DwxwXUE1VcgLQw2GBJV-YnHtiiNUz6vUUYxdsMqFfOrglYd9qLYC1WU5actmmz0r_ou7CZSETDbBkxUuHA6F6bHRlnHNHdFDMIodJnNy_EVXe1r-gu1OMsLSscANF8igVbdIEn2PkTm0zCBjOapMvgM23vT0ZG7CKpBeylXpRo8DJEgtTqOn0ocDLekRvPlom5T4CjM2VAV_gIkdHAx9Sp-C7Z9hrn0-jXuDX5uWmiFGtxCbOtWFO7yJWTbbjI4GsLyr53XjW2yN64oPZyMqd2nj0OVUg9kFjxPYAb5Cd0ICz4p2mgkWmYR_CGGjqG1iCmNVHrBnHkDNWMNrJzTd9FZcQ7nGuC5X8UZcEUM4sF7NV3p1--c3Bdu26EVbiubRwRQWskt_k1KdYMSDVrMAgc5KzhwpaK3mK7A2WMN3ZwRwfvfsojSYthRwFTyT_55av8um9-HgOU4o5M8c-r8cfqQuhbLgqt84AtXrIK34tTLQg7vFJi28MOb2oRqK-ilvMHX3-Eb8cKUN5C9E0N6TNh_Ns4sKALM6UkNqvpAPKJXKF4bH4r2JsP0iUajD0LUTlkPj5VG0UYci9aGRu1-auQ71gf1VI_f0ArKJzRtB8yGgBrP5LHrYDkVZDbx06SErgUASKLiZ_JbwHAH7jsUsm_b6t1gEFfPGUMfIdGd0yF7WSBooDevVepxhnJkjqHu2jz7dpAofUBoBs_jTSpKZmQzOC1NAniMxVKvHxU4OApSD9sG4ZgA_t26ngMgV9E_AkByJLTifIEY2cPUgFYwH7lQEu2SxODLLf61dJZVYMUX6JBX-c_D2cRpmTCRIXyABC2QM8qCr8177O73qR9nj2KWodCeMrSv2LBv-JhrAxAaK9aAQMwHT6xhUT61hbqrywS7DbXC-apjOrdm2bgGJ9kgIkAr29b8cQesmk4zJ3VEGuRowEk1-k0hNoqEtnqYzivBRhs7nql38n3Qee1bSmt8GuOe0-e0xYsyq0tV0hzrUU-tXwzNBzPdNps0FbRRd9VxaJ2ZlPKGvB2RydWCYiRNRLAdU57NZhVujw1I6qLcv9V-JY-xfcZS2S3uL2LOeCwV47EGxhtoseVxXNvMaRAV2mct-v-Bo6QE5ntAaZHJti7WNSAcETm4Fb66MJ/https://www.amazon.in/gp/aw/d/B0D5CYV3ZS/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=6ccc089b47ab43fec2bf5147cd8e1f85&hsa_cr_id=0&qid=1789487485&sr=1-3-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=rPVPGKoMaG&ref_=sbx_s_sparkle_sbtcd_asin_2_bkgd&pd_rd_w=9NdgR&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GhyMb&pd_rd_r=85e9f8ab-2e40-449d-ab5f-b43d9448e7b5
+                            - link [ref=e379] [cursor=pointer]:
+                              - /url: https://aax-eu-zaz.amazon.in/x/c/JKRXM94SmIT86xQBS426TnoAAAGgpcQULgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICCWzRT2/clv1c_ek-wBHHyFcbWrUl-pp8tQ2gzhFI6Z2aFi_CUu3p2_dAH-5UTROX9GagOV9hQAUHhjQmFV9uh3a1I8KNvmSgB6t6Vo8-XxIxpDmGtbGkp_Ao66QFoMr_P53AgjLv1q1Kp53kyP9k-1oOAG4zjuaTcVtp4x7s8llHyAkTyArOk3Zj_8Wven8vmM1lHumDfpa556z7MVDfe9yUKU-zykTTaOipbbDtmUc711d-3Mv7tPxqWaZg9XFu2XKrCCxsZI3OyWXBYUkdny9dh5DgHBPMFodAQufwclEe6hXyh1gu73lizLHY2Q4S9Pum3EBo5o3Fd-VTFlgEey5MqjD2ji1esucH4JbomrmIycE_2VRuhmH97qklF-EilH1xNM6pmXnIwgs6pngXo7m836RHBEAGJh5mw_jj2TPaD2tUkkDec2zdFBKfmtElfZGnScO0HzJrKc9kUfRJUkUTByeeoYVkQs0IJLjVYf7o25hseaYVm7LPNzlpJhN1DcXB6oximZQ79Ru9n8lC09oBaQIXW70Yd4n6tmalQWiJZx_uiRm4Q1fN4quuCi2HLrhcfqWQnPGUsAPv7_twvvl-DwxwXUE1VcgLQw2GBJV-YnHtiiNUz6vUUYxdsMqFfOrglYd9qLYC1WU5actmmz0r_ou7CZSETDbBkxUuHA6F6bHRlnHNHdFDMIodJnNy_EVXe1r-gu1OMsLSscANF8igVbdIEn2PkTm0zCBjOapMvgM23vT0ZG7CKpBeylXpRo8DJEgtTqOn0ocDLekRvPlom5T4CjM2VAV_gIkdHAx9Sp-C7Z9hrn0-jXuDX5uWmiFGtxCbOtWFO7yJWTbbjI4GsLyr53XjW2yN64oPZyMqd2nj0OVUg9kFjxPYAb5Cd0ICz4p2mgkWmYR_CGGjqG1iCmNVHrBnHkDNWMNrJzTd9FZcQ7nGuC5X8UZcEUM4sF7NV3p1--c3Bdu26EVbiubRwRQWskt_k1KdYMSDVrMAgc5KzhwpaK3mK7A2WMN3ZwRwfvfsojSYthRwFTyT_55av8um9-HgOU4o5M8c-r8cfqQuhbLgqt84AtXrIK34tTLQg7vFJi28MOb2oRqK-ilvMHX3-Eb8cKUN5C9E0N6TNh_Ns4sKALM6UkNqvpAPKJXKF4bH4r2JsP0iUajD0LUTlkPj5VG0UYci9aGRu1-auQ71gf1VI_f0ArKJzRtB8yGgBrP5LHrYDkVZDbx06SErgUASKLiZ_JbwHAH7jsUsm_b6t1gEFfPGUMfIdGd0yF7WSBooDevVepxhnJkjqHu2jz7dpAofUBoBs_jTSpKZmQzOC1NAniMxVKvHxU4OApSD9sG4ZgA_t26ngMgV9E_AkByJLTifIEY2cPUgFYwH7lQEu2SxODLLf61dJZVYMUX6JBX-c_D2cRpmTCRIXyABC2QM8qCr8177O73qR9nj2KWodCeMrSv2LBv-JhrAxAaK9aAQMwHT6xhUT61hbqrywS7DbXC-apjOrdm2bgGJ9kgIkAr29b8cQesmk4zJ3VEGuRowEk1-k0hNoqEtnqYzivBRhs7nql38n3Qee1bSmt8GuOe0-e0xYsyq0tV0hzrUU-tXwzNBzPdNps0FbRRd9VxaJ2ZlPKGvB2RydWCYiRNRLAdU57NZhVujw1I6qLcv9V-JY-xfcZS2S3uL2LOeCwV47EGxhtoseVxXNvMaRAV2mct-v-Bo6QE5ntAaZHJti7WNSAcETm4Fb66MJ/https://www.amazon.in/gp/aw/d/B0D5CYV3ZS/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=6ccc089b47ab43fec2bf5147cd8e1f85&hsa_cr_id=0&qid=1789487485&sr=1-3-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=rPVPGKoMaG&ref_=sbx_s_sparkle_sbtcd_asin_2_title&pd_rd_w=9NdgR&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GhyMb&pd_rd_r=85e9f8ab-2e40-449d-ab5f-b43d9448e7b5
+                              - generic [ref=e380]:
+                                - generic [ref=e381]: Boldfit Polyester t Shirt Round Neck Quick Dry Gym t Shirts for Men Workout Activewear t Shirts for Men Crew Neck Workout Tshirt for man Regular Fit Tshirt for Mens Ideal for Running, Gym and Sports
+                                - generic [ref=e382]: Boldfit Polyester t Shirt Round Neck Quick Dry Gym t Shirts…
+                            - link [ref=e383] [cursor=pointer]:
+                              - /url: https://aax-eu-zaz.amazon.in/x/c/JKRXM94SmIT86xQBS426TnoAAAGgpcQULgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICCWzRT2/clv1c_ek-wBHHyFcbWrUl-pp8tQ2gzhFI6Z2aFi_CUu3p2_dAH-5UTROX9GagOV9hQAUHhjQmFV9uh3a1I8KNvmSgB6t6Vo8-XxIxpDmGtbGkp_Ao66QFoMr_P53AgjLv1q1Kp53kyP9k-1oOAG4zjuaTcVtp4x7s8llHyAkTyArOk3Zj_8Wven8vmM1lHumDfpa556z7MVDfe9yUKU-zykTTaOipbbDtmUc711d-3Mv7tPxqWaZg9XFu2XKrCCxsZI3OyWXBYUkdny9dh5DgHBPMFodAQufwclEe6hXyh1gu73lizLHY2Q4S9Pum3EBo5o3Fd-VTFlgEey5MqjD2ji1esucH4JbomrmIycE_2VRuhmH97qklF-EilH1xNM6pmXnIwgs6pngXo7m836RHBEAGJh5mw_jj2TPaD2tUkkDec2zdFBKfmtElfZGnScO0HzJrKc9kUfRJUkUTByeeoYVkQs0IJLjVYf7o25hseaYVm7LPNzlpJhN1DcXB6oximZQ79Ru9n8lC09oBaQIXW70Yd4n6tmalQWiJZx_uiRm4Q1fN4quuCi2HLrhcfqWQnPGUsAPv7_twvvl-DwxwXUE1VcgLQw2GBJV-YnHtiiNUz6vUUYxdsMqFfOrglYd9qLYC1WU5actmmz0r_ou7CZSETDbBkxUuHA6F6bHRlnHNHdFDMIodJnNy_EVXe1r-gu1OMsLSscANF8igVbdIEn2PkTm0zCBjOapMvgM23vT0ZG7CKpBeylXpRo8DJEgtTqOn0ocDLekRvPlom5T4CjM2VAV_gIkdHAx9Sp-C7Z9hrn0-jXuDX5uWmiFGtxCbOtWFO7yJWTbbjI4GsLyr53XjW2yN64oPZyMqd2nj0OVUg9kFjxPYAb5Cd0ICz4p2mgkWmYR_CGGjqG1iCmNVHrBnHkDNWMNrJzTd9FZcQ7nGuC5X8UZcEUM4sF7NV3p1--c3Bdu26EVbiubRwRQWskt_k1KdYMSDVrMAgc5KzhwpaK3mK7A2WMN3ZwRwfvfsojSYthRwFTyT_55av8um9-HgOU4o5M8c-r8cfqQuhbLgqt84AtXrIK34tTLQg7vFJi28MOb2oRqK-ilvMHX3-Eb8cKUN5C9E0N6TNh_Ns4sKALM6UkNqvpAPKJXKF4bH4r2JsP0iUajD0LUTlkPj5VG0UYci9aGRu1-auQ71gf1VI_f0ArKJzRtB8yGgBrP5LHrYDkVZDbx06SErgUASKLiZ_JbwHAH7jsUsm_b6t1gEFfPGUMfIdGd0yF7WSBooDevVepxhnJkjqHu2jz7dpAofUBoBs_jTSpKZmQzOC1NAniMxVKvHxU4OApSD9sG4ZgA_t26ngMgV9E_AkByJLTifIEY2cPUgFYwH7lQEu2SxODLLf61dJZVYMUX6JBX-c_D2cRpmTCRIXyABC2QM8qCr8177O73qR9nj2KWodCeMrSv2LBv-JhrAxAaK9aAQMwHT6xhUT61hbqrywS7DbXC-apjOrdm2bgGJ9kgIkAr29b8cQesmk4zJ3VEGuRowEk1-k0hNoqEtnqYzivBRhs7nql38n3Qee1bSmt8GuOe0-e0xYsyq0tV0hzrUU-tXwzNBzPdNps0FbRRd9VxaJ2ZlPKGvB2RydWCYiRNRLAdU57NZhVujw1I6qLcv9V-JY-xfcZS2S3uL2LOeCwV47EGxhtoseVxXNvMaRAV2mct-v-Bo6QE5ntAaZHJti7WNSAcETm4Fb66MJ/https://www.amazon.in/gp/aw/d/B0D5CYV3ZS/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=6ccc089b47ab43fec2bf5147cd8e1f85&hsa_cr_id=0&qid=1789487485&sr=1-3-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=rPVPGKoMaG&ref_=sbx_s_sparkle_sbtcd_asin_2_rating&pd_rd_w=9NdgR&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GhyMb&pd_rd_r=85e9f8ab-2e40-449d-ab5f-b43d9448e7b5#customerReviews
+                              - generic [ref=e384]:
+                                - generic [ref=e385]: "4.1"
+                                - generic [ref=e387]: 4.1 out of 5 stars.
+                                - generic [ref=e388]: (1.5k)
+                            - link [ref=e390] [cursor=pointer]:
+                              - /url: https://aax-eu-zaz.amazon.in/x/c/JKRXM94SmIT86xQBS426TnoAAAGgpcQULgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICCWzRT2/clv1c_ek-wBHHyFcbWrUl-pp8tQ2gzhFI6Z2aFi_CUu3p2_dAH-5UTROX9GagOV9hQAUHhjQmFV9uh3a1I8KNvmSgB6t6Vo8-XxIxpDmGtbGkp_Ao66QFoMr_P53AgjLv1q1Kp53kyP9k-1oOAG4zjuaTcVtp4x7s8llHyAkTyArOk3Zj_8Wven8vmM1lHumDfpa556z7MVDfe9yUKU-zykTTaOipbbDtmUc711d-3Mv7tPxqWaZg9XFu2XKrCCxsZI3OyWXBYUkdny9dh5DgHBPMFodAQufwclEe6hXyh1gu73lizLHY2Q4S9Pum3EBo5o3Fd-VTFlgEey5MqjD2ji1esucH4JbomrmIycE_2VRuhmH97qklF-EilH1xNM6pmXnIwgs6pngXo7m836RHBEAGJh5mw_jj2TPaD2tUkkDec2zdFBKfmtElfZGnScO0HzJrKc9kUfRJUkUTByeeoYVkQs0IJLjVYf7o25hseaYVm7LPNzlpJhN1DcXB6oximZQ79Ru9n8lC09oBaQIXW70Yd4n6tmalQWiJZx_uiRm4Q1fN4quuCi2HLrhcfqWQnPGUsAPv7_twvvl-DwxwXUE1VcgLQw2GBJV-YnHtiiNUz6vUUYxdsMqFfOrglYd9qLYC1WU5actmmz0r_ou7CZSETDbBkxUuHA6F6bHRlnHNHdFDMIodJnNy_EVXe1r-gu1OMsLSscANF8igVbdIEn2PkTm0zCBjOapMvgM23vT0ZG7CKpBeylXpRo8DJEgtTqOn0ocDLekRvPlom5T4CjM2VAV_gIkdHAx9Sp-C7Z9hrn0-jXuDX5uWmiFGtxCbOtWFO7yJWTbbjI4GsLyr53XjW2yN64oPZyMqd2nj0OVUg9kFjxPYAb5Cd0ICz4p2mgkWmYR_CGGjqG1iCmNVHrBnHkDNWMNrJzTd9FZcQ7nGuC5X8UZcEUM4sF7NV3p1--c3Bdu26EVbiubRwRQWskt_k1KdYMSDVrMAgc5KzhwpaK3mK7A2WMN3ZwRwfvfsojSYthRwFTyT_55av8um9-HgOU4o5M8c-r8cfqQuhbLgqt84AtXrIK34tTLQg7vFJi28MOb2oRqK-ilvMHX3-Eb8cKUN5C9E0N6TNh_Ns4sKALM6UkNqvpAPKJXKF4bH4r2JsP0iUajD0LUTlkPj5VG0UYci9aGRu1-auQ71gf1VI_f0ArKJzRtB8yGgBrP5LHrYDkVZDbx06SErgUASKLiZ_JbwHAH7jsUsm_b6t1gEFfPGUMfIdGd0yF7WSBooDevVepxhnJkjqHu2jz7dpAofUBoBs_jTSpKZmQzOC1NAniMxVKvHxU4OApSD9sG4ZgA_t26ngMgV9E_AkByJLTifIEY2cPUgFYwH7lQEu2SxODLLf61dJZVYMUX6JBX-c_D2cRpmTCRIXyABC2QM8qCr8177O73qR9nj2KWodCeMrSv2LBv-JhrAxAaK9aAQMwHT6xhUT61hbqrywS7DbXC-apjOrdm2bgGJ9kgIkAr29b8cQesmk4zJ3VEGuRowEk1-k0hNoqEtnqYzivBRhs7nql38n3Qee1bSmt8GuOe0-e0xYsyq0tV0hzrUU-tXwzNBzPdNps0FbRRd9VxaJ2ZlPKGvB2RydWCYiRNRLAdU57NZhVujw1I6qLcv9V-JY-xfcZS2S3uL2LOeCwV47EGxhtoseVxXNvMaRAV2mct-v-Bo6QE5ntAaZHJti7WNSAcETm4Fb66MJ/https://www.amazon.in/gp/aw/d/B0D5CYV3ZS/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=6ccc089b47ab43fec2bf5147cd8e1f85&hsa_cr_id=0&qid=1789487485&sr=1-3-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=rPVPGKoMaG&ref_=sbx_s_sparkle_sbtcd_asin_2_price&pd_rd_w=9NdgR&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GhyMb&pd_rd_r=85e9f8ab-2e40-449d-ab5f-b43d9448e7b5
+                              - generic [ref=e392]:
+                                - generic [ref=e393]: ₹399.00
+                                - generic [ref=e394]:
+                                  - text: ₹
+                                  - generic [ref=e395]:
+                                    - text: "399"
+                                    - generic [ref=e396]: .
+                                  - text: "00"
+                            - generic [ref=e399]: "M.R.P: ₹999.00"
+                  - button "Next page" [ref=e401] [cursor=pointer]:
+                    - generic [ref=e404]: Next page
+          - generic [ref=e406]:
+            - generic [ref=e409]:
+              - heading "Results" [level=2] [ref=e410]
+              - generic [ref=e411]: Check each product page for other buying options. Price and other details may vary based on product size and colour.
+            - generic:
+              - list:
+                - listitem [ref=e412]:
+                  - generic [ref=e417]:
+                    - link [ref=e421] [cursor=pointer]:
+                      - /url: /AUSK-Cable-Knit-Quarter-Zip-Textured-Self-Design/dp/B0GJFCXYMD/ref=sr_1_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-1
+                      - img [ref=e423]
+                    - generic [ref=e424]:
+                      - group "colours available" [ref=e426]:
+                        - list [ref=e427]:
+                          - generic [ref=e428]:
+                            - listitem:
+                              - link "Black & Brown":
+                                - /url: /AUSK-Cable-Knit-Quarter-Zip-Textured-Self-Design/dp/B0GJFCXYMD/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-1
+                          - generic [ref=e431]:
+                            - listitem:
+                              - link "Black & Beige":
+                                - /url: /AUSK-Cable-Knit-Quarter-Zip-Textured-Self-Design/dp/B0GJF8X5BY/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-1
+                          - generic [ref=e434]:
+                            - listitem:
+                              - link "Blue & Black_G115":
+                                - /url: /AUSK-Cable-Knit-Quarter-Zip-Textured-Self-Design/dp/B0H25GRX3Y/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-1
+                          - generic [ref=e437]:
+                            - listitem:
+                              - link "Brown & White":
+                                - /url: /AUSK-Cable-Knit-Quarter-Zip-Textured-Self-Design/dp/B0GJF7S3YQ/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-1
+                          - generic [ref=e440]:
+                            - listitem:
+                              - link "Multicolor2":
+                                - /url: /AUSK-Cable-Knit-Quarter-Zip-Textured-Self-Design/dp/B0GJDW7HD2/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-1
+                          - generic [ref=e443]:
+                            - listitem:
+                              - link "Multicolor_D11":
+                                - /url: /AUSK-Cable-Knit-Quarter-Zip-Textured-Self-Design/dp/B0H6J95RHC/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-1
+                        - link "+13 other colors/patterns" [ref=e447] [cursor=pointer]:
+                          - /url: /AUSK-Cable-Knit-Quarter-Zip-Textured-Self-Design/dp/B0GJFCXYMD/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-1
+                          - text: "+13"
+                      - generic [ref=e448]:
+                        - heading "AUSK" [level=2] [ref=e450]
+                        - link "Men's Retro Cable-Knit Quarter-Zip Polo | Premium Textured Self-Design Half Sleeve T-Shirt for Men" [ref=e451] [cursor=pointer]:
+                          - /url: /AUSK-Cable-Knit-Quarter-Zip-Textured-Self-Design/dp/B0GJFCXYMD/ref=sr_1_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-1
+                          - heading "Men's Retro Cable-Knit Quarter-Zip Polo | Premium Textured Self-Design Half Sleeve T-Shirt for Men" [level=2] [ref=e452]
+                      - generic [ref=e454]:
+                        - text: "3.5"
+                        - button "3.5 out of 5 stars, rating details" [ref=e456] [cursor=pointer]:
+                          - generic [ref=e458]: 3.5 out of 5 stars
+                        - link "449 ratings" [ref=e460] [cursor=pointer]:
+                          - /url: /AUSK-Cable-Knit-Quarter-Zip-Textured-Self-Design/dp/B0GJFCXYMD/ref=sr_1_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-1#customerReviews
+                          - text: (449)
+                      - generic [ref=e461]:
+                        - generic [ref=e463]:
+                          - generic [ref=e464]: Price, product page
+                          - 'link "₹282.21 M.R.P: ₹1,499 M.R.P: ₹1,499" [ref=e465] [cursor=pointer]':
+                            - /url: /AUSK-Cable-Knit-Quarter-Zip-Textured-Self-Design/dp/B0GJFCXYMD/ref=sr_1_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-1
+                            - generic [ref=e466]:
+                              - generic [ref=e467]: ₹282.21
+                              - generic [ref=e468]:
+                                - text: ₹
+                                - generic [ref=e469]:
+                                  - text: "282"
+                                  - generic [ref=e470]: .
+                                - text: "21"
+                            - generic [ref=e471]: "M.R.P: ₹1,499"
+                            - generic [ref=e472]:
+                              - text: "M.R.P:"
+                              - generic [ref=e473]:
+                                - generic [ref=e474]: ₹1,499
+                                - text: ₹1,499
+                          - text: (81% off)
+                        - generic [ref=e478]:
+                          - generic [ref=e479]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e480]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e483]:
+                        - generic [ref=e485]: FREE delivery Thu, 17 Sept on first order
+                        - generic [ref=e487]: Or fastest delivery Tomorrow 6 am - 10 am
+                      - button "Add to cart" [ref=e498] [cursor=pointer]
+                - listitem [ref=e499]:
+                  - generic [ref=e504]:
+                    - link [ref=e508] [cursor=pointer]:
+                      - /url: /AUSK-Baggy-Hip-Hop-T-Shirt-Men/dp/B0GKV18R4N/ref=sr_1_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-2
+                      - img [ref=e510]
+                    - generic [ref=e511]:
+                      - group "colours available" [ref=e513]:
+                        - list [ref=e514]:
+                          - generic [ref=e515]:
+                            - listitem:
+                              - link "Maroon":
+                                - /url: /AUSK-Baggy-Hip-Hop-T-Shirt-Men/dp/B0GKV18R4N/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-2
+                          - generic [ref=e518]:
+                            - listitem:
+                              - link "Black":
+                                - /url: /AUSK-Baggy-Hip-Hop-T-Shirt-Men/dp/B0GKVB3DF4/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-2
+                          - generic [ref=e521]:
+                            - listitem:
+                              - link "Black & Grey":
+                                - /url: /AUSK-Baggy-Hip-Hop-T-Shirt-Men/dp/B0GY9LCQV3/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-2
+                          - generic [ref=e524]:
+                            - listitem:
+                              - link "Black & Maroon":
+                                - /url: /AUSK-Baggy-Hip-Hop-T-Shirt-Men/dp/B0GY97SJ67/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-2
+                          - generic [ref=e527]:
+                            - listitem:
+                              - link "Black & Teal":
+                                - /url: /AUSK-Baggy-Hip-Hop-T-Shirt-Men/dp/B0GY9LD4DN/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-2
+                          - generic [ref=e530]:
+                            - listitem:
+                              - link "Black & Teal1":
+                                - /url: /AUSK-Baggy-Hip-Hop-T-Shirt-Men/dp/B0GY95NRWX/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-2
+                        - link "+24 other colors/patterns" [ref=e534] [cursor=pointer]:
+                          - /url: /AUSK-Baggy-Hip-Hop-T-Shirt-Men/dp/B0GKV18R4N/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-2
+                          - text: "+24"
+                      - generic [ref=e535]:
+                        - heading "AUSK" [level=2] [ref=e537]
+                        - link "Baggy Hip-Hop T-Shirt for Men - Graphic Printed T Shirts || Oversized Men Tshirt || T-Shirts" [ref=e538] [cursor=pointer]:
+                          - /url: /AUSK-Baggy-Hip-Hop-T-Shirt-Men/dp/B0GKV18R4N/ref=sr_1_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-2
+                          - heading "Baggy Hip-Hop T-Shirt for Men - Graphic Printed T Shirts || Oversized Men Tshirt || T-Shirts" [level=2] [ref=e539]
+                      - generic [ref=e540]:
+                        - generic [ref=e541]:
+                          - text: "3.5"
+                          - button "3.5 out of 5 stars, rating details" [ref=e543] [cursor=pointer]:
+                            - generic [ref=e545]: 3.5 out of 5 stars
+                          - link "449 ratings" [ref=e547] [cursor=pointer]:
+                            - /url: /AUSK-Baggy-Hip-Hop-T-Shirt-Men/dp/B0GKV18R4N/ref=sr_1_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-2#customerReviews
+                            - text: (449)
+                        - generic [ref=e548]: 500+ bought in past month
+                      - generic [ref=e549]:
+                        - generic [ref=e551]:
+                          - generic [ref=e552]: Price, product page
+                          - 'link "₹270 M.R.P: ₹1,499 M.R.P: ₹1,499" [ref=e553] [cursor=pointer]':
+                            - /url: /AUSK-Baggy-Hip-Hop-T-Shirt-Men/dp/B0GKV18R4N/ref=sr_1_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-2
+                            - generic [ref=e554]:
+                              - generic [ref=e555]: ₹270
+                              - generic [ref=e556]: ₹270
+                            - generic [ref=e557]: "M.R.P: ₹1,499"
+                            - generic [ref=e558]:
+                              - text: "M.R.P:"
+                              - generic [ref=e559]:
+                                - generic [ref=e560]: ₹1,499
+                                - text: ₹1,499
+                          - text: (82% off)
+                        - generic [ref=e564]:
+                          - generic [ref=e565]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e566]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e569]:
+                        - generic [ref=e571]: FREE delivery Thu, 17 Sept on first order
+                        - generic [ref=e573]: Or fastest delivery Tomorrow 6 am - 10 am
+                      - button "Add to cart" [ref=e584] [cursor=pointer]
+                - listitem [ref=e585]:
+                  - generic [ref=e590]:
+                    - link [ref=e594] [cursor=pointer]:
+                      - /url: /AUSK-Graphic-Printed-T-Shirt-Textured/dp/B0H98Q3HQD/ref=sr_1_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-3
+                      - img [ref=e596]
+                    - generic [ref=e597]:
+                      - group "colours available" [ref=e599]:
+                        - list [ref=e600]:
+                          - generic [ref=e601]:
+                            - listitem:
+                              - link "Black":
+                                - /url: /AUSK-Graphic-Printed-T-Shirt-Textured/dp/B0H98Q3HQD/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-3
+                          - generic [ref=e604]:
+                            - listitem:
+                              - link "Brown":
+                                - /url: /AUSK-Graphic-Printed-T-Shirt-Textured/dp/B0H98HKX1Q/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-3
+                          - generic [ref=e607]:
+                            - listitem:
+                              - link "Olive":
+                                - /url: /AUSK-Graphic-Printed-T-Shirt-Textured/dp/B0H98DCRHQ/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-3
+                          - generic [ref=e610]:
+                            - listitem:
+                              - link "Peach":
+                                - /url: /AUSK-Graphic-Printed-T-Shirt-Textured/dp/B0H988Z8G4/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-3
+                          - generic [ref=e613]:
+                            - listitem:
+                              - link "Teal":
+                                - /url: /AUSK-Graphic-Printed-T-Shirt-Textured/dp/B0H98LFF3N/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-3
+                          - generic [ref=e616]:
+                            - listitem:
+                              - link "White":
+                                - /url: /AUSK-Graphic-Printed-T-Shirt-Textured/dp/B0H98N447T/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-3
+                      - generic [ref=e619]:
+                        - heading "AUSK" [level=2] [ref=e621]
+                        - link "Men's Spider Graphic Printed Polo T-Shirt | Cotton Blend Textured Regular Fit Half Sleeve Zip Polo Neck Casual T-Shirt for Men" [ref=e622] [cursor=pointer]:
+                          - /url: /AUSK-Graphic-Printed-T-Shirt-Textured/dp/B0H98Q3HQD/ref=sr_1_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-3
+                          - heading "Men's Spider Graphic Printed Polo T-Shirt | Cotton Blend Textured Regular Fit Half Sleeve Zip Polo Neck Casual T-Shirt for Men" [level=2] [ref=e623]
+                      - generic [ref=e624]:
+                        - generic [ref=e625]:
+                          - text: "3.9"
+                          - button "3.9 out of 5 stars, rating details" [ref=e627] [cursor=pointer]:
+                            - generic [ref=e629]: 3.9 out of 5 stars
+                          - link "12 ratings" [ref=e631] [cursor=pointer]:
+                            - /url: /AUSK-Graphic-Printed-T-Shirt-Textured/dp/B0H98Q3HQD/ref=sr_1_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-3#customerReviews
+                            - text: (12)
+                        - generic [ref=e632]: 100+ bought in past month
+                      - generic [ref=e633]:
+                        - generic [ref=e635]:
+                          - generic [ref=e636]: Price, product page
+                          - 'link "₹349 M.R.P: ₹999 M.R.P: ₹999" [ref=e637] [cursor=pointer]':
+                            - /url: /AUSK-Graphic-Printed-T-Shirt-Textured/dp/B0H98Q3HQD/ref=sr_1_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-3
+                            - generic [ref=e638]:
+                              - generic [ref=e639]: ₹349
+                              - generic [ref=e640]: ₹349
+                            - generic [ref=e641]: "M.R.P: ₹999"
+                            - generic [ref=e642]:
+                              - text: "M.R.P:"
+                              - generic [ref=e643]:
+                                - generic [ref=e644]: ₹999
+                                - text: ₹999
+                          - text: (65% off)
+                        - generic [ref=e648]:
+                          - generic [ref=e649]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e650]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e655]: FREE delivery Sun, 20 Sept on first order
+                      - button "Add to cart" [ref=e666] [cursor=pointer]
+                - listitem [ref=e667]:
+                  - generic [ref=e672]:
+                    - link [ref=e676] [cursor=pointer]:
+                      - /url: /Lymio-T-Shirt-Shirt-POLO-43-XL-Beige/dp/B0DP7P4KVT/ref=sr_1_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-4
+                      - img [ref=e678]
+                    - generic [ref=e679]:
+                      - group "colours available" [ref=e681]:
+                        - list [ref=e682]:
+                          - generic [ref=e683]:
+                            - listitem:
+                              - link "Beige":
+                                - /url: /Lymio-T-Shirt-Shirt-POLO-43-XL-Beige/dp/B0DP7P4KVT/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-4
+                          - generic [ref=e686]:
+                            - listitem:
+                              - link "Blue":
+                                - /url: /Lymio-T-Shirt-Shirt-POLO-43-XL-Beige/dp/B0DP7QKJ1H/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-4
+                          - generic [ref=e689]:
+                            - listitem:
+                              - link "Green":
+                                - /url: /Lymio-T-Shirt-Shirt-POLO-43-XL-Beige/dp/B0DP7NNGSP/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-4
+                          - generic [ref=e692]:
+                            - listitem:
+                              - link "Pista-Chiku":
+                                - /url: /Lymio-T-Shirt-Shirt-POLO-43-XL-Beige/dp/B0F9SL87T7/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-4
+                          - generic [ref=e695]:
+                            - listitem:
+                              - link "Sky Blue-Chiku":
+                                - /url: /Lymio-T-Shirt-Shirt-POLO-43-XL-Beige/dp/B0F9SSKQK9/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-4
+                          - generic [ref=e698]:
+                            - listitem:
+                              - link "SkyBlue-Pista":
+                                - /url: /Lymio-T-Shirt-Shirt-POLO-43-XL-Beige/dp/B0F9SXWW3G/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-4
+                        - link "+4 other colors/patterns" [ref=e702] [cursor=pointer]:
+                          - /url: /Lymio-T-Shirt-Shirt-POLO-43-XL-Beige/dp/B0DP7P4KVT/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-4
+                          - text: "+4"
+                      - generic [ref=e703]:
+                        - heading "Lymio" [level=2] [ref=e705]
+                        - link "Polo T Shirt for Men || T Shirt for Man || Collar T Shirt Style Men (Packs Also Available) (Polo-40-43)" [ref=e706] [cursor=pointer]:
+                          - /url: /Lymio-T-Shirt-Shirt-POLO-43-XL-Beige/dp/B0DP7P4KVT/ref=sr_1_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-4
+                          - heading "Polo T Shirt for Men || T Shirt for Man || Collar T Shirt Style Men (Packs Also Available) (Polo-40-43)" [level=2] [ref=e707]
+                      - generic [ref=e708]:
+                        - generic [ref=e709]:
+                          - text: "3.7"
+                          - button "3.7 out of 5 stars, rating details" [ref=e711] [cursor=pointer]:
+                            - generic [ref=e713]: 3.7 out of 5 stars
+                          - link "972 ratings" [ref=e715] [cursor=pointer]:
+                            - /url: /Lymio-T-Shirt-Shirt-POLO-43-XL-Beige/dp/B0DP7P4KVT/ref=sr_1_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-4#customerReviews
+                            - text: (972)
+                        - generic [ref=e716]: 500+ bought in past month
+                      - generic [ref=e717]:
+                        - generic [ref=e719]:
+                          - generic [ref=e720]: Price, product page
+                          - 'link "₹399 M.R.P: ₹2,999 M.R.P: ₹2,999" [ref=e721] [cursor=pointer]':
+                            - /url: /Lymio-T-Shirt-Shirt-POLO-43-XL-Beige/dp/B0DP7P4KVT/ref=sr_1_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-4
+                            - generic [ref=e722]:
+                              - generic [ref=e723]: ₹399
+                              - generic [ref=e724]: ₹399
+                            - generic [ref=e725]: "M.R.P: ₹2,999"
+                            - generic [ref=e726]:
+                              - text: "M.R.P:"
+                              - generic [ref=e727]:
+                                - generic [ref=e728]: ₹2,999
+                                - text: ₹2,999
+                          - text: (87% off)
+                        - generic [ref=e732]:
+                          - generic [ref=e733]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e734]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e737]:
+                        - generic [ref=e739]: FREE delivery Thu, 17 Sept on first order
+                        - generic [ref=e741]: Or fastest delivery Tomorrow 6 am - 10 am
+                      - button "Add to cart" [ref=e752] [cursor=pointer]
+                - listitem [ref=e753]:
+                  - generic [ref=e758]:
+                    - generic "Amazon's Choice" [ref=e760]:
+                      - group "Amazon's Choice for \"T shirt\"" [ref=e763]:
+                        - generic [ref=e765]: Amazon's Choice
+                    - link [ref=e769] [cursor=pointer]:
+                      - /url: /Allen-Solly-Regular-AMKP317G04249_Jet-Black_Large/dp/B06Y2FG6R7/ref=sr_1_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-5
+                      - img [ref=e771]
+                    - generic [ref=e772]:
+                      - group "colours available" [ref=e774]:
+                        - list [ref=e775]:
+                          - generic [ref=e776]:
+                            - listitem:
+                              - link "Jet Black":
+                                - /url: /Allen-Solly-Regular-AMKP317G04249_Jet-Black_Large/dp/B06Y2FG6R7/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-5
+                          - generic [ref=e779]:
+                            - listitem:
+                              - link "Beige Melange":
+                                - /url: /Allen-Solly-Regular-AMKP317G04249_Jet-Black_Large/dp/B06Y226XNJ/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-5
+                          - generic [ref=e782]:
+                            - listitem:
+                              - link "Bright Blue":
+                                - /url: /Allen-Solly-Regular-AMKP317G04249_Jet-Black_Large/dp/B06Y2F84K3/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-5
+                          - generic [ref=e785]:
+                            - listitem:
+                              - link "Brown":
+                                - /url: /Allen-Solly-Regular-AMKP317G04249_Jet-Black_Large/dp/B06Y2DXVD6/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-5
+                          - generic [ref=e788]:
+                            - listitem:
+                              - link "Coffee Melange":
+                                - /url: /Allen-Solly-Regular-AMKP317G04249_Jet-Black_Large/dp/B06Y1ZXHVT/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-5
+                          - generic [ref=e791]:
+                            - listitem:
+                              - link "Coral":
+                                - /url: /Allen-Solly-Regular-AMKP317G04249_Jet-Black_Large/dp/B06Y2BT3NG/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-5
+                        - link "+18 other colors/patterns" [ref=e795] [cursor=pointer]:
+                          - /url: /Allen-Solly-Regular-AMKP317G04249_Jet-Black_Large/dp/B06Y2FG6R7/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-5
+                          - text: "+18"
+                      - generic [ref=e796]:
+                        - heading "Allen Solly" [level=2] [ref=e798]
+                        - link "Men’s Polo T‑Shirt | Comfortable Rich Cotton Blend, Band Collar, Regular Fit | Stylish & Premium All Day Wear" [ref=e799] [cursor=pointer]:
+                          - /url: /Allen-Solly-Regular-AMKP317G04249_Jet-Black_Large/dp/B06Y2FG6R7/ref=sr_1_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-5
+                          - heading "Men’s Polo T‑Shirt | Comfortable Rich Cotton Blend, Band Collar, Regular Fit | Stylish & Premium All Day Wear" [level=2] [ref=e800]
+                      - generic [ref=e801]:
+                        - generic [ref=e802]:
+                          - text: "4.1"
+                          - button "4.1 out of 5 stars, rating details" [ref=e804] [cursor=pointer]:
+                            - generic [ref=e806]: 4.1 out of 5 stars
+                          - link "82,643 ratings" [ref=e808] [cursor=pointer]:
+                            - /url: /Allen-Solly-Regular-AMKP317G04249_Jet-Black_Large/dp/B06Y2FG6R7/ref=sr_1_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-5#customerReviews
+                            - text: (82.6K)
+                        - generic [ref=e809]: 1K+ bought in past month
+                      - generic [ref=e810]:
+                        - generic [ref=e812]:
+                          - generic [ref=e813]: Price, product page
+                          - 'link "₹713 M.R.P: ₹1,099 M.R.P: ₹1,099" [ref=e814] [cursor=pointer]':
+                            - /url: /Allen-Solly-Regular-AMKP317G04249_Jet-Black_Large/dp/B06Y2FG6R7/ref=sr_1_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-5
+                            - generic [ref=e815]:
+                              - generic [ref=e816]: ₹713
+                              - generic [ref=e817]: ₹713
+                            - generic [ref=e818]: "M.R.P: ₹1,099"
+                            - generic [ref=e819]:
+                              - text: "M.R.P:"
+                              - generic [ref=e820]:
+                                - generic [ref=e821]: ₹1,099
+                                - text: ₹1,099
+                          - text: (35% off)
+                        - generic [ref=e825]:
+                          - generic [ref=e826]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e827]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e830]:
+                        - generic [ref=e832]: FREE delivery Thu, 17 Sept
+                        - generic [ref=e834]: Or fastest delivery Tomorrow 6 am - 10 am
+                      - button "Add to cart" [ref=e845] [cursor=pointer]
+                - listitem [ref=e846]:
+                  - generic [ref=e851]:
+                    - link [ref=e855] [cursor=pointer]:
+                      - /url: /AUSK-Textured-T-Shirt-Regular-Stylish/dp/B0H9LJZF4R/ref=sr_1_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-6
+                      - img [ref=e857]
+                    - generic [ref=e858]:
+                      - group "colours available" [ref=e860]:
+                        - list [ref=e861]:
+                          - generic [ref=e862]:
+                            - listitem:
+                              - link "White":
+                                - /url: /AUSK-Textured-T-Shirt-Regular-Stylish/dp/B0H9LJZF4R/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-6
+                          - generic [ref=e865]:
+                            - listitem:
+                              - link "Beige":
+                                - /url: /AUSK-Textured-T-Shirt-Regular-Stylish/dp/B0H9L8ZV4C/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-6
+                          - generic [ref=e868]:
+                            - listitem:
+                              - link "Black":
+                                - /url: /AUSK-Textured-T-Shirt-Regular-Stylish/dp/B0H9LL1YJQ/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-6
+                          - generic [ref=e871]:
+                            - listitem:
+                              - link "Blue":
+                                - /url: /AUSK-Textured-T-Shirt-Regular-Stylish/dp/B0H9LNYN9Y/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-6
+                          - generic [ref=e874]:
+                            - listitem:
+                              - link "Brown":
+                                - /url: /AUSK-Textured-T-Shirt-Regular-Stylish/dp/B0H9LKX2RM/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-6
+                          - generic [ref=e877]:
+                            - listitem:
+                              - link "Green":
+                                - /url: /AUSK-Textured-T-Shirt-Regular-Stylish/dp/B0H9LG5B77/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-6
+                        - link "+2 other colors/patterns" [ref=e881] [cursor=pointer]:
+                          - /url: /AUSK-Textured-T-Shirt-Regular-Stylish/dp/B0H9LJZF4R/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-6
+                          - text: "+2"
+                      - generic [ref=e882]:
+                        - heading "AUSK" [level=2] [ref=e884]
+                        - link "Men's Cotton Blend Rib Knit Textured Full Sleeve Polo T-Shirt | Regular Fit Zip Polo Neck Smart Casual T Shirt for Men | Stylish Fashion & Casual Wear Tshirt for Men" [ref=e885] [cursor=pointer]:
+                          - /url: /AUSK-Textured-T-Shirt-Regular-Stylish/dp/B0H9LJZF4R/ref=sr_1_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-6
+                          - heading "Men's Cotton Blend Rib Knit Textured Full Sleeve Polo T-Shirt | Regular Fit Zip Polo Neck Smart Casual T Shirt for Men | Stylish Fashion & Casual Wear Tshirt for Men" [level=2] [ref=e886]
+                      - generic [ref=e887]:
+                        - generic [ref=e888]:
+                          - text: "3.4"
+                          - button "3.4 out of 5 stars, rating details" [ref=e890] [cursor=pointer]:
+                            - generic [ref=e892]: 3.4 out of 5 stars
+                          - link "20 ratings" [ref=e894] [cursor=pointer]:
+                            - /url: /AUSK-Textured-T-Shirt-Regular-Stylish/dp/B0H9LJZF4R/ref=sr_1_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-6#customerReviews
+                            - text: (20)
+                        - generic [ref=e895]: 100+ bought in past month
+                      - generic [ref=e896]:
+                        - generic [ref=e898]:
+                          - generic [ref=e899]: Price, product page
+                          - 'link "₹399 M.R.P: ₹999 M.R.P: ₹999" [ref=e900] [cursor=pointer]':
+                            - /url: /AUSK-Textured-T-Shirt-Regular-Stylish/dp/B0H9LJZF4R/ref=sr_1_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-6
+                            - generic [ref=e901]:
+                              - generic [ref=e902]: ₹399
+                              - generic [ref=e903]: ₹399
+                            - generic [ref=e904]: "M.R.P: ₹999"
+                            - generic [ref=e905]:
+                              - text: "M.R.P:"
+                              - generic [ref=e906]:
+                                - generic [ref=e907]: ₹999
+                                - text: ₹999
+                          - text: (60% off)
+                        - generic [ref=e911]:
+                          - generic [ref=e912]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e913]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e918]: FREE delivery Sun, 20 Sept on first order
+                      - button "Add to cart" [ref=e929] [cursor=pointer]
+                - listitem [ref=e930]:
+                  - generic [ref=e935]:
+                    - link [ref=e939] [cursor=pointer]:
+                      - /url: /Lux-Cozi-Sleeve-T-Shirt-Pocket_COZI_2122_MTGRN_L_1PC/dp/B0CVXQ9SKB/ref=sr_1_7?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-7
+                      - img [ref=e941]
+                    - generic [ref=e942]:
+                      - group "colours available" [ref=e944]:
+                        - list [ref=e945]:
+                          - generic [ref=e946]:
+                            - listitem:
+                              - link "Mint Green":
+                                - /url: /Lux-Cozi-Sleeve-T-Shirt-Pocket_COZI_2122_MTGRN_L_1PC/dp/B0CVXQ9SKB/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-7
+                          - generic [ref=e949]:
+                            - listitem:
+                              - link "Grey Melange1":
+                                - /url: /Lux-Cozi-Sleeve-T-Shirt-Pocket_COZI_2122_MTGRN_L_1PC/dp/B0GS2F5QC3/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-7
+                          - generic [ref=e952]:
+                            - listitem:
+                              - link "Navy1":
+                                - /url: /Lux-Cozi-Sleeve-T-Shirt-Pocket_COZI_2122_MTGRN_L_1PC/dp/B0GS22P5GK/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-7
+                          - generic [ref=e955]:
+                            - listitem:
+                              - link "Apricat":
+                                - /url: /Lux-Cozi-Sleeve-T-Shirt-Pocket_COZI_2122_MTGRN_L_1PC/dp/B0CVXD6GZV/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-7
+                          - generic [ref=e958]:
+                            - listitem:
+                              - link "Black":
+                                - /url: /Lux-Cozi-Sleeve-T-Shirt-Pocket_COZI_2122_MTGRN_L_1PC/dp/B0CVXRZ91T/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-7
+                          - generic [ref=e961]:
+                            - listitem:
+                              - link "Black Melange":
+                                - /url: /Lux-Cozi-Sleeve-T-Shirt-Pocket_COZI_2122_MTGRN_L_1PC/dp/B0CVXSSMWB/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-7
+                        - link "+14 other colors/patterns" [ref=e965] [cursor=pointer]:
+                          - /url: /Lux-Cozi-Sleeve-T-Shirt-Pocket_COZI_2122_MTGRN_L_1PC/dp/B0CVXQ9SKB/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-7
+                          - text: "+14"
+                      - generic [ref=e966]:
+                        - heading "Lux Cozi" [level=2] [ref=e968]
+                        - link "Men's Half Sleeve Soild Casual Regular Fit T-Shirt with Chest Pocket | Polo Tshirt for Men" [ref=e969] [cursor=pointer]:
+                          - /url: /Lux-Cozi-Sleeve-T-Shirt-Pocket_COZI_2122_MTGRN_L_1PC/dp/B0CVXQ9SKB/ref=sr_1_7?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-7
+                          - heading "Men's Half Sleeve Soild Casual Regular Fit T-Shirt with Chest Pocket | Polo Tshirt for Men" [level=2] [ref=e970]
+                      - generic [ref=e971]:
+                        - generic [ref=e972]:
+                          - text: "3.9"
+                          - button "3.9 out of 5 stars, rating details" [ref=e974] [cursor=pointer]:
+                            - generic [ref=e976]: 3.9 out of 5 stars
+                          - link "3,959 ratings" [ref=e978] [cursor=pointer]:
+                            - /url: /Lux-Cozi-Sleeve-T-Shirt-Pocket_COZI_2122_MTGRN_L_1PC/dp/B0CVXQ9SKB/ref=sr_1_7?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-7#customerReviews
+                            - text: (3.9K)
+                        - generic [ref=e979]: 300+ bought in past month
+                      - generic [ref=e980]:
+                        - generic [ref=e982]:
+                          - generic [ref=e983]: Price, product page
+                          - 'link "₹364 M.R.P: ₹479 M.R.P: ₹479" [ref=e984] [cursor=pointer]':
+                            - /url: /Lux-Cozi-Sleeve-T-Shirt-Pocket_COZI_2122_MTGRN_L_1PC/dp/B0CVXQ9SKB/ref=sr_1_7?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-7
+                            - generic [ref=e985]:
+                              - generic [ref=e986]: ₹364
+                              - generic [ref=e987]: ₹364
+                            - generic [ref=e988]: "M.R.P: ₹479"
+                            - generic [ref=e989]:
+                              - text: "M.R.P:"
+                              - generic [ref=e990]:
+                                - generic [ref=e991]: ₹479
+                                - text: ₹479
+                          - text: (24% off)
+                        - generic [ref=e995]:
+                          - generic [ref=e996]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e997]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e1000]:
+                        - generic [ref=e1002]: FREE delivery Thu, 17 Sept on first order
+                        - generic [ref=e1004]: Or fastest delivery Tomorrow 6 am - 10 am
+                      - button "Add to cart" [ref=e1015] [cursor=pointer]
+                - listitem [ref=e1016]:
+                  - generic [ref=e1021]:
+                    - link [ref=e1025] [cursor=pointer]:
+                      - /url: /boffi-Oversized-T-Shirt-Shoulder-Regular/dp/B0GSGXFK4G/ref=sr_1_8?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-8
+                      - img [ref=e1027]
+                    - generic [ref=e1028]:
+                      - group "colours available" [ref=e1030]:
+                        - list [ref=e1031]:
+                          - generic [ref=e1032]:
+                            - listitem:
+                              - link "OPTICAL FAAHH":
+                                - /url: /boffi-Oversized-T-Shirt-Shoulder-Regular/dp/B0GSGXFK4G/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-8
+                          - generic [ref=e1035]:
+                            - listitem:
+                              - link "666 OPTICAL":
+                                - /url: /boffi-Oversized-T-Shirt-Shoulder-Regular/dp/B0GQ4MBGDP/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-8
+                          - generic [ref=e1038]:
+                            - listitem:
+                              - link "ACID BLACK":
+                                - /url: /boffi-Oversized-T-Shirt-Shoulder-Regular/dp/B0F42NNWSG/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-8
+                          - generic [ref=e1041]:
+                            - listitem:
+                              - link "ACID BLOODLINE":
+                                - /url: /boffi-Oversized-T-Shirt-Shoulder-Regular/dp/B0GPXBQSFF/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-8
+                          - generic [ref=e1044]:
+                            - listitem:
+                              - link "ACID DRAGON":
+                                - /url: /boffi-Oversized-T-Shirt-Shoulder-Regular/dp/B0H1M1NFNY/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-8
+                          - generic [ref=e1047]:
+                            - listitem:
+                              - link "BLACK":
+                                - /url: /boffi-Oversized-T-Shirt-Shoulder-Regular/dp/B0DNBFKWRW/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-8
+                        - link "+14 other colors/patterns" [ref=e1051] [cursor=pointer]:
+                          - /url: /boffi-Oversized-T-Shirt-Shoulder-Regular/dp/B0GSGXFK4G/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-8
+                          - text: "+14"
+                      - generic [ref=e1052]:
+                        - heading "boffi ..." [level=2] [ref=e1054]
+                        - link "100% Cotton Oversized T-Shirt Unisex Drop Shoulder Dye Washed Street Look Black Pack of 1" [active] [ref=e1055] [cursor=pointer]:
+                          - /url: /boffi-Oversized-T-Shirt-Shoulder-Regular/dp/B0GSGXFK4G/ref=sr_1_8?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-8
+                          - heading "100% Cotton Oversized T-Shirt Unisex Drop Shoulder Dye Washed Street Look Black Pack of 1" [level=2] [ref=e1056]
+                      - generic [ref=e1057]:
+                        - generic [ref=e1058]:
+                          - text: "3.5"
+                          - button "3.5 out of 5 stars, rating details" [ref=e1060] [cursor=pointer]:
+                            - generic [ref=e1062]: 3.5 out of 5 stars
+                          - link "1,947 ratings" [ref=e1064] [cursor=pointer]:
+                            - /url: /boffi-Oversized-T-Shirt-Shoulder-Regular/dp/B0GSGXFK4G/ref=sr_1_8?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-8#customerReviews
+                            - text: (1.9K)
+                        - generic [ref=e1065]: 200+ bought in past month
+                      - generic [ref=e1066]:
+                        - generic [ref=e1068]:
+                          - generic [ref=e1069]: Price, product page
+                          - 'link "₹332 M.R.P: ₹799 M.R.P: ₹799" [ref=e1070] [cursor=pointer]':
+                            - /url: /boffi-Oversized-T-Shirt-Shoulder-Regular/dp/B0GSGXFK4G/ref=sr_1_8?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-8
+                            - generic [ref=e1071]:
+                              - generic [ref=e1072]: ₹332
+                              - generic [ref=e1073]: ₹332
+                            - generic [ref=e1074]: "M.R.P: ₹799"
+                            - generic [ref=e1075]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1076]:
+                                - generic [ref=e1077]: ₹799
+                                - text: ₹799
+                          - text: (58% off)
+                        - generic [ref=e1081]:
+                          - generic [ref=e1082]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1083]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e1086]:
+                        - generic [ref=e1088]: FREE delivery Thu, 17 Sept on first order
+                        - generic [ref=e1090]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e1101] [cursor=pointer]
+                - listitem [ref=e1102]:
+                  - generic [ref=e1107]:
+                    - link [ref=e1111] [cursor=pointer]:
+                      - /url: /FTX-Polyester-Regular-T-Shirt-Multicolor/dp/B0BPCYCDKR/ref=sr_1_9?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-9
+                      - img [ref=e1113]
+                    - generic [ref=e1114]:
+                      - group "colours available" [ref=e1116]:
+                        - list [ref=e1117]:
+                          - generic [ref=e1118]:
+                            - listitem:
+                              - link "BLACK:AIRFORCE BLUE:LT.GREY:STEEL GREY":
+                                - /url: /FTX-Polyester-Regular-T-Shirt-Multicolor/dp/B0BPCYCDKR/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-9
+                          - generic [ref=e1121]:
+                            - listitem:
+                              - link "BLACK:AQUA:AIRFORCE BLUE:LT.GREY":
+                                - /url: /FTX-Polyester-Regular-T-Shirt-Multicolor/dp/B0BPSXVTY7/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-9
+                          - generic [ref=e1124]:
+                            - listitem:
+                              - link "AIRFORCE BLUE:NAVY:LT.GREY:STEEL GREY":
+                                - /url: /FTX-Polyester-Regular-T-Shirt-Multicolor/dp/B0BPSV7SSV/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-9
+                          - generic [ref=e1127]:
+                            - listitem:
+                              - link "AQUA:AIRFORCE BLUE:LT.GREY:STEEL GREY":
+                                - /url: /FTX-Polyester-Regular-T-Shirt-Multicolor/dp/B0BPSVN2LW/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-9
+                          - generic [ref=e1130]:
+                            - listitem:
+                              - link "AQUA:AIRFORCE BLUE:NAVY:LT.GREY":
+                                - /url: /FTX-Polyester-Regular-T-Shirt-Multicolor/dp/B0BPSWQH4X/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-9
+                          - generic [ref=e1133]:
+                            - listitem:
+                              - link "AQUA:AIRFORCE BLUE:NAVY:STEEL GREY":
+                                - /url: /FTX-Polyester-Regular-T-Shirt-Multicolor/dp/B0BPD69H8C/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-9
+                        - link "+63 other colors/patterns" [ref=e1137] [cursor=pointer]:
+                          - /url: /FTX-Polyester-Regular-T-Shirt-Multicolor/dp/B0BPCYCDKR/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-9
+                          - text: "+63"
+                      - generic [ref=e1138]:
+                        - heading "FTX" [level=2] [ref=e1140]
+                        - link "Men Polyester Regular Fit T-Shirt" [ref=e1141] [cursor=pointer]:
+                          - /url: /FTX-Polyester-Regular-T-Shirt-Multicolor/dp/B0BPCYCDKR/ref=sr_1_9?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-9
+                          - heading "Men Polyester Regular Fit T-Shirt" [level=2] [ref=e1142]
+                      - generic [ref=e1143]:
+                        - generic [ref=e1144]:
+                          - text: "3.8"
+                          - button "3.8 out of 5 stars, rating details" [ref=e1146] [cursor=pointer]:
+                            - generic [ref=e1148]: 3.8 out of 5 stars
+                          - link "3,123 ratings" [ref=e1150] [cursor=pointer]:
+                            - /url: /FTX-Polyester-Regular-T-Shirt-Multicolor/dp/B0BPCYCDKR/ref=sr_1_9?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-9#customerReviews
+                            - text: (3.1K)
+                        - generic [ref=e1151]: 400+ bought in past month
+                      - generic [ref=e1152]:
+                        - generic [ref=e1154]:
+                          - generic [ref=e1155]: Price, product page
+                          - 'link "₹380 ( ₹95 /count) M.R.P: ₹1,249 M.R.P: ₹1,249" [ref=e1156] [cursor=pointer]':
+                            - /url: /FTX-Polyester-Regular-T-Shirt-Multicolor/dp/B0BPCYCDKR/ref=sr_1_9?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-9
+                            - generic [ref=e1157]:
+                              - generic [ref=e1158]: ₹380
+                              - generic [ref=e1159]: ₹380
+                            - generic [ref=e1160]:
+                              - text: (
+                              - generic [ref=e1161]:
+                                - generic [ref=e1162]: ₹95
+                                - text: ₹95
+                              - text: /count)
+                            - generic [ref=e1163]: "M.R.P: ₹1,249"
+                            - generic [ref=e1164]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1165]:
+                                - generic [ref=e1166]: ₹1,249
+                                - text: ₹1,249
+                          - text: (70% off)
+                        - generic [ref=e1170]:
+                          - generic [ref=e1171]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1172]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e1175]:
+                        - generic [ref=e1177]: FREE delivery Thu, 17 Sept on first order
+                        - generic [ref=e1179]: Or fastest delivery Tomorrow 6 am - 10 am
+                      - button "Add to cart" [ref=e1190] [cursor=pointer]
+                - listitem [ref=e1191]:
+                  - generic [ref=e1196]:
+                    - link [ref=e1200] [cursor=pointer]:
+                      - /url: /BULLMER-Trendy-Printed-Cotton-Regular/dp/B0DJYJNTM3/ref=sr_1_10?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-10
+                      - img [ref=e1202]
+                    - generic [ref=e1203]:
+                      - group "colours available" [ref=e1205]:
+                        - list [ref=e1206]:
+                          - generic [ref=e1207]:
+                            - listitem:
+                              - link "Brick/Bluish Grey/Navy Blue":
+                                - /url: /BULLMER-Trendy-Printed-Cotton-Regular/dp/B0DJYJNTM3/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-10
+                          - generic [ref=e1210]:
+                            - listitem:
+                              - link "Beige/Bluish Grey/Black":
+                                - /url: /BULLMER-Trendy-Printed-Cotton-Regular/dp/B0DJYM7JZ8/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-10
+                          - generic [ref=e1213]:
+                            - listitem:
+                              - link "Bluish Grey/Navy Blue/Beige":
+                                - /url: /BULLMER-Trendy-Printed-Cotton-Regular/dp/B0DJYMD12C/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-10
+                          - generic [ref=e1216]:
+                            - listitem:
+                              - link "Navy Blue/Purple/Beige":
+                                - /url: /BULLMER-Trendy-Printed-Cotton-Regular/dp/B0DJYN37WQ/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-10
+                          - generic [ref=e1219]:
+                            - listitem:
+                              - link "Purple/Black/Brick":
+                                - /url: /BULLMER-Trendy-Printed-Cotton-Regular/dp/B0DJYJX8T8/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-10
+                          - generic [ref=e1222]:
+                            - listitem:
+                              - link "Black/Beige/Brick":
+                                - /url: /BULLMER-Trendy-Printed-Cotton-Regular/dp/B0DJYK5RY2/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-10
+                      - generic [ref=e1225]:
+                        - heading "BULLMER" [level=2] [ref=e1227]
+                        - link "Trendy Printed Cotton Blend Crew Neck/Round Neck Half Sleeve Tshirt for Men - Pack of 3" [ref=e1228] [cursor=pointer]:
+                          - /url: /BULLMER-Trendy-Printed-Cotton-Regular/dp/B0DJYJNTM3/ref=sr_1_10?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-10
+                          - heading "Trendy Printed Cotton Blend Crew Neck/Round Neck Half Sleeve Tshirt for Men - Pack of 3" [level=2] [ref=e1229]
+                      - generic [ref=e1230]:
+                        - generic [ref=e1231]:
+                          - text: "3.5"
+                          - button "3.5 out of 5 stars, rating details" [ref=e1233] [cursor=pointer]:
+                            - generic [ref=e1235]: 3.5 out of 5 stars
+                          - link "2,796 ratings" [ref=e1237] [cursor=pointer]:
+                            - /url: /BULLMER-Trendy-Printed-Cotton-Regular/dp/B0DJYJNTM3/ref=sr_1_10?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-10#customerReviews
+                            - text: (2.7K)
+                        - generic [ref=e1238]: 700+ bought in past month
+                      - generic [ref=e1239]:
+                        - generic [ref=e1241]:
+                          - generic [ref=e1242]: Price, product page
+                          - 'link "₹473 ( ₹157.67 /count) M.R.P: ₹2,997 M.R.P: ₹2,997" [ref=e1243] [cursor=pointer]':
+                            - /url: /BULLMER-Trendy-Printed-Cotton-Regular/dp/B0DJYJNTM3/ref=sr_1_10?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-10
+                            - generic [ref=e1244]:
+                              - generic [ref=e1245]: ₹473
+                              - generic [ref=e1246]: ₹473
+                            - generic [ref=e1247]:
+                              - text: (
+                              - generic [ref=e1248]:
+                                - generic [ref=e1249]: ₹157.67
+                                - text: ₹157.67
+                              - text: /count)
+                            - generic [ref=e1250]: "M.R.P: ₹2,997"
+                            - generic [ref=e1251]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1252]:
+                                - generic [ref=e1253]: ₹2,997
+                                - text: ₹2,997
+                          - text: (84% off)
+                        - generic [ref=e1257]:
+                          - generic [ref=e1258]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1259]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e1262]:
+                        - generic [ref=e1264]: FREE delivery Thu, 17 Sept on first order
+                        - generic [ref=e1266]: Or fastest delivery Tomorrow 6 am - 10 am
+                      - button "Add to cart" [ref=e1277] [cursor=pointer]
+                - listitem [ref=e1278]:
+                  - generic [ref=e1283]:
+                    - link [ref=e1287] [cursor=pointer]:
+                      - /url: /Peter-England-Regular-Shirt-PCKPSRGP483904_Green/dp/B09XMV6125/ref=sr_1_11?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-11
+                      - img [ref=e1289]
+                    - generic [ref=e1290]:
+                      - group "colours available" [ref=e1292]:
+                        - list [ref=e1293]:
+                          - generic [ref=e1294]:
+                            - listitem:
+                              - link "Forest green":
+                                - /url: /Peter-England-Regular-Shirt-PCKPSRGP483904_Green/dp/B09XMV6125/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-11
+                          - generic [ref=e1297]:
+                            - listitem:
+                              - link "Adrenaline Red":
+                                - /url: /Peter-England-Regular-Shirt-PCKPSRGP483904_Green/dp/B09XMWFF8Y/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-11
+                          - generic [ref=e1300]:
+                            - listitem:
+                              - link "Black":
+                                - /url: /Peter-England-Regular-Shirt-PCKPSRGP483904_Green/dp/B09XMWFKZB/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-11
+                          - generic [ref=e1303]:
+                            - listitem:
+                              - link "Cyber yellow":
+                                - /url: /Peter-England-Regular-Shirt-PCKPSRGP483904_Green/dp/B09XMWGT5R/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-11
+                          - generic [ref=e1306]:
+                            - listitem:
+                              - link "Gibraltar Sea":
+                                - /url: /Peter-England-Regular-Shirt-PCKPSRGP483904_Green/dp/B09XMTQLB1/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-11
+                          - generic [ref=e1309]:
+                            - listitem:
+                              - link "Grey":
+                                - /url: /Peter-England-Regular-Shirt-PCKPSRGP483904_Green/dp/B09XMWHN94/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-11
+                        - link "+10 other colors/patterns" [ref=e1313] [cursor=pointer]:
+                          - /url: /Peter-England-Regular-Shirt-PCKPSRGP483904_Green/dp/B09XMV6125/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-11
+                          - text: "+10"
+                      - generic [ref=e1314]:
+                        - heading "Peter England" [level=2] [ref=e1316]
+                        - link "Men's Regular Fit Insignia Half Sleeve Polo T-Shirt | Cotton Rich | Premium Pique Weave" [ref=e1317] [cursor=pointer]:
+                          - /url: /Peter-England-Regular-Shirt-PCKPSRGP483904_Green/dp/B09XMV6125/ref=sr_1_11?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-11
+                          - heading "Men's Regular Fit Insignia Half Sleeve Polo T-Shirt | Cotton Rich | Premium Pique Weave" [level=2] [ref=e1318]
+                      - generic [ref=e1319]:
+                        - generic [ref=e1320]:
+                          - text: "4.0"
+                          - button "4.0 out of 5 stars, rating details" [ref=e1322] [cursor=pointer]:
+                            - generic [ref=e1324]: 4.0 out of 5 stars
+                          - link "4,355 ratings" [ref=e1326] [cursor=pointer]:
+                            - /url: /Peter-England-Regular-Shirt-PCKPSRGP483904_Green/dp/B09XMV6125/ref=sr_1_11?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-11#customerReviews
+                            - text: (4.3K)
+                        - generic [ref=e1327]: 1K+ bought in past month
+                      - generic [ref=e1328]:
+                        - generic [ref=e1330]:
+                          - generic [ref=e1331]: Price, product page
+                          - 'link "₹709 M.R.P: ₹1,099 M.R.P: ₹1,099" [ref=e1332] [cursor=pointer]':
+                            - /url: /Peter-England-Regular-Shirt-PCKPSRGP483904_Green/dp/B09XMV6125/ref=sr_1_11?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-11
+                            - generic [ref=e1333]:
+                              - generic [ref=e1334]: ₹709
+                              - generic [ref=e1335]: ₹709
+                            - generic [ref=e1336]: "M.R.P: ₹1,099"
+                            - generic [ref=e1337]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1338]:
+                                - generic [ref=e1339]: ₹1,099
+                                - text: ₹1,099
+                          - text: (35% off)
+                        - generic [ref=e1343]:
+                          - generic [ref=e1344]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1345]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e1348]:
+                        - generic [ref=e1350]: FREE delivery Thu, 17 Sept
+                        - generic [ref=e1352]: Or fastest delivery Tomorrow 6 am - 10 am
+                      - button "Add to cart" [ref=e1363] [cursor=pointer]
+                - listitem [ref=e1364]:
+                  - generic [ref=e1369]:
+                    - link [ref=e1373] [cursor=pointer]:
+                      - /url: /LEOTUDE-Cottonblend-Graphic-Oversized-FS49_Navy_Boston_P_Navy/dp/B0FHDL7JY8/ref=sr_1_12?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-12
+                      - img [ref=e1375]
+                    - generic [ref=e1376]:
+                      - group "colours available" [ref=e1378]:
+                        - list [ref=e1379]:
+                          - generic [ref=e1380]:
+                            - listitem:
+                              - link "Navy Blue":
+                                - /url: /LEOTUDE-Cottonblend-Graphic-Oversized-FS49_Navy_Boston_P_Navy/dp/B0FHDL7JY8/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-12
+                          - generic [ref=e1383]:
+                            - listitem:
+                              - link "1Beige":
+                                - /url: /LEOTUDE-Cottonblend-Graphic-Oversized-FS49_Navy_Boston_P_Navy/dp/B0GXG9PYNL/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-12
+                          - generic [ref=e1386]:
+                            - listitem:
+                              - link "1Brown":
+                                - /url: /LEOTUDE-Cottonblend-Graphic-Oversized-FS49_Navy_Boston_P_Navy/dp/B0GXG28G46/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-12
+                          - generic [ref=e1389]:
+                            - listitem:
+                              - link "Black":
+                                - /url: /LEOTUDE-Cottonblend-Graphic-Oversized-FS49_Navy_Boston_P_Navy/dp/B0FKGMDRM8/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-12
+                          - generic [ref=e1392]:
+                            - listitem:
+                              - link "Multicolour1":
+                                - /url: /LEOTUDE-Cottonblend-Graphic-Oversized-FS49_Navy_Boston_P_Navy/dp/B0FN86NS8F/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-12
+                          - generic [ref=e1395]:
+                            - listitem:
+                              - link "Multicolour2":
+                                - /url: /LEOTUDE-Cottonblend-Graphic-Oversized-FS49_Navy_Boston_P_Navy/dp/B0FN8BF3NY/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-12
+                        - link "+6 other colors/patterns" [ref=e1399] [cursor=pointer]:
+                          - /url: /LEOTUDE-Cottonblend-Graphic-Oversized-FS49_Navy_Boston_P_Navy/dp/B0FHDL7JY8/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-12
+                          - text: "+6"
+                      - generic [ref=e1400]:
+                        - heading "LEOTUDE" [level=2] [ref=e1402]
+                        - link "Men's Half Sleeve Round Neck Cottonblend Graphic Print Oversized" [ref=e1403] [cursor=pointer]:
+                          - /url: /LEOTUDE-Cottonblend-Graphic-Oversized-FS49_Navy_Boston_P_Navy/dp/B0FHDL7JY8/ref=sr_1_12?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-12
+                          - heading "Men's Half Sleeve Round Neck Cottonblend Graphic Print Oversized" [level=2] [ref=e1404]
+                      - generic [ref=e1405]:
+                        - generic [ref=e1406]:
+                          - text: "3.9"
+                          - button "3.9 out of 5 stars, rating details" [ref=e1408] [cursor=pointer]:
+                            - generic [ref=e1410]: 3.9 out of 5 stars
+                          - link "1,247 ratings" [ref=e1412] [cursor=pointer]:
+                            - /url: /LEOTUDE-Cottonblend-Graphic-Oversized-FS49_Navy_Boston_P_Navy/dp/B0FHDL7JY8/ref=sr_1_12?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-12#customerReviews
+                            - text: (1.2K)
+                        - generic [ref=e1413]: 400+ bought in past month
+                      - generic [ref=e1416]:
+                        - generic [ref=e1417]: Price, product page
+                        - 'link "₹298 M.R.P: ₹1,099 M.R.P: ₹1,099" [ref=e1418] [cursor=pointer]':
+                          - /url: /LEOTUDE-Cottonblend-Graphic-Oversized-FS49_Navy_Boston_P_Navy/dp/B0FHDL7JY8/ref=sr_1_12?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-12
+                          - generic [ref=e1419]:
+                            - generic [ref=e1420]: ₹298
+                            - generic [ref=e1421]: ₹298
+                          - generic [ref=e1422]: "M.R.P: ₹1,099"
+                          - generic [ref=e1423]:
+                            - text: "M.R.P:"
+                            - generic [ref=e1424]:
+                              - generic [ref=e1425]: ₹1,099
+                              - text: ₹1,099
+                        - text: (73% off)
+                      - generic [ref=e1428]:
+                        - generic [ref=e1430]: FREE delivery Thu, 17 Sept on first order
+                        - generic [ref=e1432]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e1443] [cursor=pointer]
+                - listitem [ref=e1444]:
+                  - generic [ref=e1449]:
+                    - link [ref=e1453] [cursor=pointer]:
+                      - /url: /QUTUN-Premium-Waffle-Henley-Tshirt/dp/B0H74X4CCD/ref=sr_1_13?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-13
+                      - img [ref=e1455]
+                    - generic [ref=e1456]:
+                      - group "colours available" [ref=e1458]:
+                        - list [ref=e1459]:
+                          - generic [ref=e1460]:
+                            - listitem:
+                              - link "Brown":
+                                - /url: /QUTUN-Premium-Waffle-Henley-Tshirt/dp/B0H74X4CCD/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-13
+                          - generic [ref=e1463]:
+                            - listitem:
+                              - link "Black":
+                                - /url: /QUTUN-Premium-Waffle-Henley-Tshirt/dp/B0H752HH7J/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-13
+                          - generic [ref=e1466]:
+                            - listitem:
+                              - link "DarkGrey":
+                                - /url: /QUTUN-Premium-Waffle-Henley-Tshirt/dp/B0H74XH6WS/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-13
+                          - generic [ref=e1469]:
+                            - listitem:
+                              - link "Navy":
+                                - /url: /QUTUN-Premium-Waffle-Henley-Tshirt/dp/B0H75489WK/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-13
+                          - generic [ref=e1472]:
+                            - listitem:
+                              - link "White":
+                                - /url: /QUTUN-Premium-Waffle-Henley-Tshirt/dp/B0H751KD2G/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-13
+                      - link "Men's Premium Waffle Knit Henley Tshirt for Men" [ref=e1476] [cursor=pointer]:
+                        - /url: /QUTUN-Premium-Waffle-Henley-Tshirt/dp/B0H74X4CCD/ref=sr_1_13?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-13
+                        - heading "Men's Premium Waffle Knit Henley Tshirt for Men" [level=2] [ref=e1477]
+                      - generic [ref=e1478]:
+                        - generic [ref=e1479]:
+                          - text: "4.2"
+                          - button "4.2 out of 5 stars, rating details" [ref=e1481] [cursor=pointer]:
+                            - generic [ref=e1483]: 4.2 out of 5 stars
+                          - link "64 ratings" [ref=e1485] [cursor=pointer]:
+                            - /url: /QUTUN-Premium-Waffle-Henley-Tshirt/dp/B0H74X4CCD/ref=sr_1_13?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-13#customerReviews
+                            - text: (64)
+                        - generic [ref=e1486]: 200+ bought in past month
+                      - generic [ref=e1487]:
+                        - generic [ref=e1489]:
+                          - generic [ref=e1490]: Price, product page
+                          - 'link "₹349 M.R.P: ₹1,499 M.R.P: ₹1,499" [ref=e1491] [cursor=pointer]':
+                            - /url: /QUTUN-Premium-Waffle-Henley-Tshirt/dp/B0H74X4CCD/ref=sr_1_13?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-13
+                            - generic [ref=e1492]:
+                              - generic [ref=e1493]: ₹349
+                              - generic [ref=e1494]: ₹349
+                            - generic [ref=e1495]: "M.R.P: ₹1,499"
+                            - generic [ref=e1496]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1497]:
+                                - generic [ref=e1498]: ₹1,499
+                                - text: ₹1,499
+                          - text: (77% off)
+                        - generic [ref=e1502]:
+                          - generic [ref=e1503]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1504]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e1511]: FREE delivery Sun, 20 Sept
+                      - button "Add to cart" [ref=e1522] [cursor=pointer]
+                - listitem [ref=e1523]:
+                  - generic [ref=e1528]:
+                    - group "Best sellerin Men's Polos" [ref=e1533]:
+                      - generic "Best seller" [ref=e1535]
+                    - link [ref=e1539] [cursor=pointer]:
+                      - /url: /Amazon-Brand-Symbol-Polo_SS19PLS2_Fog-Teal_X-Large/dp/B07MZM26XG/ref=sr_1_14?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-14
+                      - img [ref=e1541]
+                    - generic [ref=e1542]:
+                      - group "colours available" [ref=e1544]:
+                        - list [ref=e1545]:
+                          - generic [ref=e1546]:
+                            - listitem:
+                              - link "Fog Teal":
+                                - /url: /Amazon-Brand-Symbol-Polo_SS19PLS2_Fog-Teal_X-Large/dp/B07MZM26XG/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-14
+                          - generic [ref=e1549]:
+                            - listitem:
+                              - link "Black & Grey Melange":
+                                - /url: /Amazon-Brand-Symbol-Polo_SS19PLS2_Fog-Teal_X-Large/dp/B0FV33FT6H/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-14
+                          - generic [ref=e1552]:
+                            - listitem:
+                              - link "Bossa Nova":
+                                - /url: /Amazon-Brand-Symbol-Polo_SS19PLS2_Fog-Teal_X-Large/dp/B07MZLS87Z/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-14
+                          - generic [ref=e1555]:
+                            - listitem:
+                              - link "Bright Blue":
+                                - /url: /Amazon-Brand-Symbol-Polo_SS19PLS2_Fog-Teal_X-Large/dp/B0FV342VY3/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-14
+                          - generic [ref=e1558]:
+                            - listitem:
+                              - link "Candle Pink":
+                                - /url: /Amazon-Brand-Symbol-Polo_SS19PLS2_Fog-Teal_X-Large/dp/B07MZJTG62/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-14
+                          - generic [ref=e1561]:
+                            - listitem:
+                              - link "Dark Brown":
+                                - /url: /Amazon-Brand-Symbol-Polo_SS19PLS2_Fog-Teal_X-Large/dp/B0FV32PGCZ/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-14
+                        - link "+36 other colors/patterns" [ref=e1565] [cursor=pointer]:
+                          - /url: /Amazon-Brand-Symbol-Polo_SS19PLS2_Fog-Teal_X-Large/dp/B07MZM26XG/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-14
+                          - text: "+36"
+                      - generic [ref=e1566]:
+                        - heading "Amazon Brand - Symbol" [level=2] [ref=e1568]
+                        - link "Men's Cotton Rich Solid Polo Tshirt | Collar Tshirts | Half Sleeves | Plain-Regular Fit (Available in Plus Sizes and Combo Pack of 2)" [ref=e1569] [cursor=pointer]:
+                          - /url: /Amazon-Brand-Symbol-Polo_SS19PLS2_Fog-Teal_X-Large/dp/B07MZM26XG/ref=sr_1_14?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-14
+                          - heading "Men's Cotton Rich Solid Polo Tshirt | Collar Tshirts | Half Sleeves | Plain-Regular Fit (Available in Plus Sizes and Combo Pack of 2)" [level=2] [ref=e1570]
+                      - generic [ref=e1571]:
+                        - generic [ref=e1572]:
+                          - text: "3.9"
+                          - button "3.9 out of 5 stars, rating details" [ref=e1574] [cursor=pointer]:
+                            - generic [ref=e1576]: 3.9 out of 5 stars
+                          - link "40,012 ratings" [ref=e1578] [cursor=pointer]:
+                            - /url: /Amazon-Brand-Symbol-Polo_SS19PLS2_Fog-Teal_X-Large/dp/B07MZM26XG/ref=sr_1_14?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-14#customerReviews
+                            - text: (40K)
+                        - generic [ref=e1579]: 900+ bought in past month
+                      - generic [ref=e1580]:
+                        - generic [ref=e1582]:
+                          - generic [ref=e1583]: Price, product page
+                          - 'link "₹399 M.R.P: ₹1,049 M.R.P: ₹1,049" [ref=e1584] [cursor=pointer]':
+                            - /url: /Amazon-Brand-Symbol-Polo_SS19PLS2_Fog-Teal_X-Large/dp/B07MZM26XG/ref=sr_1_14?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-14
+                            - generic [ref=e1585]:
+                              - generic [ref=e1586]: ₹399
+                              - generic [ref=e1587]: ₹399
+                            - generic [ref=e1588]: "M.R.P: ₹1,049"
+                            - generic [ref=e1589]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1590]:
+                                - generic [ref=e1591]: ₹1,049
+                                - text: ₹1,049
+                          - text: (62% off)
+                        - generic [ref=e1595]:
+                          - generic [ref=e1596]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1597]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e1600]:
+                        - generic [ref=e1602]: FREE delivery Fri, 18 Sept on first order
+                        - generic [ref=e1604]: Or fastest delivery Tomorrow 6 am - 10 am
+                      - button "Add to cart" [ref=e1615] [cursor=pointer]
+                - listitem [ref=e1616]:
+                  - generic [ref=e1621]:
+                    - group "Best sellerin Men's T-Shirts" [ref=e1626]:
+                      - generic "Best seller" [ref=e1628]
+                    - link [ref=e1632] [cursor=pointer]:
+                      - /url: /Levis-Plain-Regular-T-Shirt-PR679313_Black/dp/B07XK9H5KF/ref=sr_1_15?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-15
+                      - img [ref=e1634]
+                    - generic [ref=e1635]:
+                      - group "colours available" [ref=e1637]:
+                        - list [ref=e1638]:
+                          - generic [ref=e1639]:
+                            - listitem:
+                              - link "Black(Red)":
+                                - /url: /Levis-Plain-Regular-T-Shirt-PR679313_Black/dp/B07XK9H5KF/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-15
+                          - generic [ref=e1642]:
+                            - listitem:
+                              - link "Dark Grey Mel (Black)":
+                                - /url: /Levis-Plain-Regular-T-Shirt-PR679313_Black/dp/B07XJ4R2RS/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-15
+                          - generic [ref=e1645]:
+                            - listitem:
+                              - link "Light Grey Mel (Dk. Grey Mel)":
+                                - /url: /Levis-Plain-Regular-T-Shirt-PR679313_Black/dp/B07XGJYRTX/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-15
+                          - generic [ref=e1648]:
+                            - listitem:
+                              - link "Navy(Lt. Grey Mel),Navy(Lt. Grey Mel)":
+                                - /url: /Levis-Plain-Regular-T-Shirt-PR679313_Black/dp/B07XK8SWGC/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-15
+                          - generic [ref=e1651]:
+                            - listitem:
+                              - link "Red(Black)":
+                                - /url: /Levis-Plain-Regular-T-Shirt-PR679313_Black/dp/B07XMCR7WG/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-15
+                          - generic [ref=e1654]:
+                            - listitem:
+                              - link "White(Light Grey Mel)":
+                                - /url: /Levis-Plain-Regular-T-Shirt-PR679313_Black/dp/B07XFMDXY4/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-15
+                      - generic [ref=e1657]:
+                        - heading "Levi's" [level=2] [ref=e1659]
+                        - link "025 Men's Premium Soft Cotton Solid T-Shirt - Round Neck, Short Sleeves with Side Branding (Pack of 1) Regular Fit" [ref=e1660] [cursor=pointer]:
+                          - /url: /Levis-Plain-Regular-T-Shirt-PR679313_Black/dp/B07XK9H5KF/ref=sr_1_15?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-15
+                          - heading "025 Men's Premium Soft Cotton Solid T-Shirt - Round Neck, Short Sleeves with Side Branding (Pack of 1) Regular Fit" [level=2] [ref=e1661]
+                      - generic [ref=e1662]:
+                        - generic [ref=e1663]:
+                          - text: "4.0"
+                          - button "4.0 out of 5 stars, rating details" [ref=e1665] [cursor=pointer]:
+                            - generic [ref=e1667]: 4.0 out of 5 stars
+                          - link "5,869 ratings" [ref=e1669] [cursor=pointer]:
+                            - /url: /Levis-Plain-Regular-T-Shirt-PR679313_Black/dp/B07XK9H5KF/ref=sr_1_15?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-15#customerReviews
+                            - text: (5.8K)
+                        - generic [ref=e1670]: 1K+ bought in past month
+                      - generic [ref=e1671]:
+                        - generic [ref=e1673]:
+                          - generic [ref=e1674]: Price, product page
+                          - 'link "₹396 M.R.P: ₹649 M.R.P: ₹649" [ref=e1675] [cursor=pointer]':
+                            - /url: /Levis-Plain-Regular-T-Shirt-PR679313_Black/dp/B07XK9H5KF/ref=sr_1_15?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-15
+                            - generic [ref=e1676]:
+                              - generic [ref=e1677]: ₹396
+                              - generic [ref=e1678]: ₹396
+                            - generic [ref=e1679]: "M.R.P: ₹649"
+                            - generic [ref=e1680]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1681]:
+                                - generic [ref=e1682]: ₹649
+                                - text: ₹649
+                          - text: (39% off)
+                        - generic [ref=e1686]:
+                          - generic [ref=e1687]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1688]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e1691]:
+                        - generic [ref=e1693]: FREE delivery Thu, 17 Sept on first order
+                        - generic [ref=e1695]: Or fastest delivery Tomorrow 6 am - 10 am
+                      - button "Add to cart" [ref=e1706] [cursor=pointer]
+                - listitem [ref=e1707]:
+                  - generic [ref=e1712]:
+                    - link [ref=e1716] [cursor=pointer]:
+                      - /url: /AUSK-Printed-T-Shirt-Regular-Tshirts/dp/B0GKV3BNWF/ref=sr_1_16?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-16
+                      - img [ref=e1718]
+                    - generic [ref=e1719]:
+                      - group "colours available" [ref=e1721]:
+                        - list [ref=e1722]:
+                          - generic [ref=e1723]:
+                            - listitem:
+                              - link "Black":
+                                - /url: /AUSK-Printed-T-Shirt-Regular-Tshirts/dp/B0GKV3BNWF/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-16
+                          - generic [ref=e1726]:
+                            - listitem:
+                              - link "Dark Green":
+                                - /url: /AUSK-Printed-T-Shirt-Regular-Tshirts/dp/B0GKVLNCSX/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-16
+                          - generic [ref=e1729]:
+                            - listitem:
+                              - link "Green":
+                                - /url: /AUSK-Printed-T-Shirt-Regular-Tshirts/dp/B0GKTWV4SM/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-16
+                          - generic [ref=e1732]:
+                            - listitem:
+                              - link "Maroon":
+                                - /url: /AUSK-Printed-T-Shirt-Regular-Tshirts/dp/B0GKV26BD9/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-16
+                          - generic [ref=e1735]:
+                            - listitem:
+                              - link "Multicolour":
+                                - /url: /AUSK-Printed-T-Shirt-Regular-Tshirts/dp/B0H25LPVFZ/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-16
+                          - generic [ref=e1738]:
+                            - listitem:
+                              - link "Navy Blue":
+                                - /url: /AUSK-Printed-T-Shirt-Regular-Tshirts/dp/B0GKVKCL1J/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-16
+                        - link "+5 other colors/patterns" [ref=e1742] [cursor=pointer]:
+                          - /url: /AUSK-Printed-T-Shirt-Regular-Tshirts/dp/B0GKV3BNWF/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-16
+                          - text: "+5"
+                      - generic [ref=e1743]:
+                        - heading "AUSK" [level=2] [ref=e1745]
+                        - link "Men Printed Polo Neck Cotton Blend T-Shirt (Regular Fit, Half Sleeve) || Tshirts for Mens" [ref=e1746] [cursor=pointer]:
+                          - /url: /AUSK-Printed-T-Shirt-Regular-Tshirts/dp/B0GKV3BNWF/ref=sr_1_16?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-16
+                          - heading "Men Printed Polo Neck Cotton Blend T-Shirt (Regular Fit, Half Sleeve) || Tshirts for Mens" [level=2] [ref=e1747]
+                      - generic [ref=e1748]:
+                        - generic [ref=e1749]:
+                          - text: "3.0"
+                          - button "3.0 out of 5 stars, rating details" [ref=e1751] [cursor=pointer]:
+                            - generic [ref=e1753]: 3.0 out of 5 stars
+                          - link "153 ratings" [ref=e1755] [cursor=pointer]:
+                            - /url: /AUSK-Printed-T-Shirt-Regular-Tshirts/dp/B0GKV3BNWF/ref=sr_1_16?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-16#customerReviews
+                            - text: (153)
+                        - generic [ref=e1756]: 200+ bought in past month
+                      - generic [ref=e1757]:
+                        - generic [ref=e1759]:
+                          - generic [ref=e1760]: Price, product page
+                          - 'link "₹270 M.R.P: ₹1,499 M.R.P: ₹1,499" [ref=e1761] [cursor=pointer]':
+                            - /url: /AUSK-Printed-T-Shirt-Regular-Tshirts/dp/B0GKV3BNWF/ref=sr_1_16?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-16
+                            - generic [ref=e1762]:
+                              - generic [ref=e1763]: ₹270
+                              - generic [ref=e1764]: ₹270
+                            - generic [ref=e1765]: "M.R.P: ₹1,499"
+                            - generic [ref=e1766]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1767]:
+                                - generic [ref=e1768]: ₹1,499
+                                - text: ₹1,499
+                          - text: (82% off)
+                        - generic [ref=e1772]:
+                          - generic [ref=e1773]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1774]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e1777]:
+                        - generic [ref=e1779]: FREE delivery Thu, 17 Sept on first order
+                        - generic [ref=e1781]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e1792] [cursor=pointer]
+                - listitem [ref=e1793]:
+                  - generic [ref=e1798]:
+                    - link [ref=e1802] [cursor=pointer]:
+                      - /url: /Allen-Solly-Mens-Polo-8907587727059_AMKP317G04237_Green_X-Large/dp/B06Y2DM9JL/ref=sr_1_17?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-17
+                      - img [ref=e1804]
+                    - generic [ref=e1805]:
+                      - group "colours available" [ref=e1807]:
+                        - list [ref=e1808]:
+                          - generic [ref=e1809]:
+                            - listitem:
+                              - link "Forest Green":
+                                - /url: /Allen-Solly-Mens-Polo-8907587727059_AMKP317G04237_Green_X-Large/dp/B06Y2DM9JL/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-17
+                          - generic [ref=e1812]:
+                            - listitem:
+                              - link "Beige Melange":
+                                - /url: /Allen-Solly-Mens-Polo-8907587727059_AMKP317G04237_Green_X-Large/dp/B06Y1ZTSJ7/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-17
+                          - generic [ref=e1815]:
+                            - listitem:
+                              - link "Bright Blue":
+                                - /url: /Allen-Solly-Mens-Polo-8907587727059_AMKP317G04237_Green_X-Large/dp/B06Y2C1211/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-17
+                          - generic [ref=e1818]:
+                            - listitem:
+                              - link "Brown":
+                                - /url: /Allen-Solly-Mens-Polo-8907587727059_AMKP317G04237_Green_X-Large/dp/B06Y2CTVCV/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-17
+                          - generic [ref=e1821]:
+                            - listitem:
+                              - link "Coffee Melange":
+                                - /url: /Allen-Solly-Mens-Polo-8907587727059_AMKP317G04237_Green_X-Large/dp/B06Y277HHR/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-17
+                          - generic [ref=e1824]:
+                            - listitem:
+                              - link "Coral":
+                                - /url: /Allen-Solly-Mens-Polo-8907587727059_AMKP317G04237_Green_X-Large/dp/B06Y2DV85R/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-17
+                        - link "+18 other colors/patterns" [ref=e1828] [cursor=pointer]:
+                          - /url: /Allen-Solly-Mens-Polo-8907587727059_AMKP317G04237_Green_X-Large/dp/B06Y2DM9JL/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-17
+                          - text: "+18"
+                      - generic [ref=e1829]:
+                        - heading "Allen Solly" [level=2] [ref=e1831]
+                        - link "Men’s Polo T‑Shirt | Comfortable Rich Cotton Blend, Band Collar, Regular Fit | Stylish & Premium All Day Wear" [ref=e1832] [cursor=pointer]:
+                          - /url: /Allen-Solly-Mens-Polo-8907587727059_AMKP317G04237_Green_X-Large/dp/B06Y2DM9JL/ref=sr_1_17?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-17
+                          - heading "Men’s Polo T‑Shirt | Comfortable Rich Cotton Blend, Band Collar, Regular Fit | Stylish & Premium All Day Wear" [level=2] [ref=e1833]
+                      - generic [ref=e1834]:
+                        - generic [ref=e1835]:
+                          - text: "4.1"
+                          - button "4.1 out of 5 stars, rating details" [ref=e1837] [cursor=pointer]:
+                            - generic [ref=e1839]: 4.1 out of 5 stars
+                          - link "82,643 ratings" [ref=e1841] [cursor=pointer]:
+                            - /url: /Allen-Solly-Mens-Polo-8907587727059_AMKP317G04237_Green_X-Large/dp/B06Y2DM9JL/ref=sr_1_17?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-17#customerReviews
+                            - text: (82.6K)
+                        - generic [ref=e1842]: 800+ bought in past month
+                      - generic [ref=e1843]:
+                        - generic [ref=e1845]:
+                          - generic [ref=e1846]: Price, product page
+                          - 'link "₹649 M.R.P: ₹1,099 M.R.P: ₹1,099" [ref=e1847] [cursor=pointer]':
+                            - /url: /Allen-Solly-Mens-Polo-8907587727059_AMKP317G04237_Green_X-Large/dp/B06Y2DM9JL/ref=sr_1_17?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-17
+                            - generic [ref=e1848]:
+                              - generic [ref=e1849]: ₹649
+                              - generic [ref=e1850]: ₹649
+                            - generic [ref=e1851]: "M.R.P: ₹1,099"
+                            - generic [ref=e1852]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1853]:
+                                - generic [ref=e1854]: ₹1,099
+                                - text: ₹1,099
+                          - text: (41% off)
+                        - generic [ref=e1858]:
+                          - generic [ref=e1859]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1860]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e1863]:
+                        - generic [ref=e1865]: FREE delivery Thu, 17 Sept
+                        - generic [ref=e1867]: Or fastest delivery Tomorrow 6 am - 10 am
+                      - button "Add to cart" [ref=e1878] [cursor=pointer]
+                - listitem [ref=e1879]:
+                  - generic [ref=e1884]:
+                    - link [ref=e1888] [cursor=pointer]:
+                      - /url: /Souled-Store-Originals-Oversized-T-Shirts/dp/B0F8ZYY44H/ref=sr_1_18?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-18
+                      - img [ref=e1890]
+                    - generic [ref=e1891]:
+                      - group "colours available" [ref=e1893]:
+                        - list [ref=e1894]:
+                          - generic [ref=e1895]:
+                            - listitem:
+                              - link "Cocoa":
+                                - /url: /Souled-Store-Originals-Oversized-T-Shirts/dp/B0F8ZYY44H/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-18
+                          - generic [ref=e1898]:
+                            - listitem:
+                              - link "Fern":
+                                - /url: /Souled-Store-Originals-Oversized-T-Shirts/dp/B0F91H2NG9/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-18
+                      - generic [ref=e1901]:
+                        - heading "The Souled Store" [level=2] [ref=e1903]
+                        - 'link "Originals: Men and Boys Short Sleeves Polo Collar Cream Colour Block Cotton Casual Lightweight Drop Shoulder Streetwear Trendy Oversized T-Shirts" [ref=e1904] [cursor=pointer]':
+                          - /url: /Souled-Store-Originals-Oversized-T-Shirts/dp/B0F8ZYY44H/ref=sr_1_18?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-18
+                          - 'heading "Originals: Men and Boys Short Sleeves Polo Collar Cream Colour Block Cotton Casual Lightweight Drop Shoulder Streetwear Trendy Oversized T-Shirts" [level=2] [ref=e1905]'
+                      - generic [ref=e1907]:
+                        - text: "4.3"
+                        - button "4.3 out of 5 stars, rating details" [ref=e1909] [cursor=pointer]:
+                          - generic [ref=e1911]: 4.3 out of 5 stars
+                        - link "73 ratings" [ref=e1913] [cursor=pointer]:
+                          - /url: /Souled-Store-Originals-Oversized-T-Shirts/dp/B0F8ZYY44H/ref=sr_1_18?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-18#customerReviews
+                          - text: (73)
+                      - generic [ref=e1914]:
+                        - generic [ref=e1916]:
+                          - generic [ref=e1917]: Price, product page
+                          - 'link "₹1,498 M.R.P: ₹1,499 M.R.P: ₹1,499" [ref=e1918] [cursor=pointer]':
+                            - /url: /Souled-Store-Originals-Oversized-T-Shirts/dp/B0F8ZYY44H/ref=sr_1_18?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-18
+                            - generic [ref=e1919]:
+                              - generic [ref=e1920]: ₹1,498
+                              - generic [ref=e1921]: ₹1,498
+                            - generic [ref=e1922]: "M.R.P: ₹1,499"
+                            - generic [ref=e1923]:
+                              - text: "M.R.P:"
+                              - generic [ref=e1924]:
+                                - generic [ref=e1925]: ₹1,499
+                                - text: ₹1,499
+                        - generic [ref=e1929]:
+                          - generic [ref=e1930]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e1931]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e1936]: FREE delivery Sun, 20 Sept
+                      - button "Add to cart" [ref=e1947] [cursor=pointer]
+                - listitem [ref=e1948]:
+                  - generic [ref=e1953]:
+                    - link [ref=e1957] [cursor=pointer]:
+                      - /url: /Peter-England-Regular-Shirt-PCKPSRGFF79745_White/dp/B0C1S1QC3C/ref=sr_1_19?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-19
+                      - img [ref=e1959]
+                    - generic [ref=e1960]:
+                      - group "colours available" [ref=e1962]:
+                        - list [ref=e1963]:
+                          - generic [ref=e1964]:
+                            - listitem:
+                              - link "White":
+                                - /url: /Peter-England-Regular-Shirt-PCKPSRGFF79745_White/dp/B0C1S1QC3C/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-19
+                          - generic [ref=e1967]:
+                            - listitem:
+                              - link "Black":
+                                - /url: /Peter-England-Regular-Shirt-PCKPSRGFF79745_White/dp/B0C1RXZLDY/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-19
+                          - generic [ref=e1970]:
+                            - listitem:
+                              - link "Maroon":
+                                - /url: /Peter-England-Regular-Shirt-PCKPSRGFF79745_White/dp/B0C1RWTPTK/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-19
+                          - generic [ref=e1973]:
+                            - listitem:
+                              - link "Navy":
+                                - /url: /Peter-England-Regular-Shirt-PCKPSRGFF79745_White/dp/B0C1RYGDVD/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-19
+                          - generic [ref=e1976]:
+                            - listitem:
+                              - link "Olive":
+                                - /url: /Peter-England-Regular-Shirt-PCKPSRGFF79745_White/dp/B0C1RYRFZM/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-19
+                      - generic [ref=e1979]:
+                        - heading "Peter England" [level=2] [ref=e1981]
+                        - link "Men's Everyday Solid Regular Fit Polo | Cotton Rich | Premium Pique Weave" [ref=e1982] [cursor=pointer]:
+                          - /url: /Peter-England-Regular-Shirt-PCKPSRGFF79745_White/dp/B0C1S1QC3C/ref=sr_1_19?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-19
+                          - heading "Men's Everyday Solid Regular Fit Polo | Cotton Rich | Premium Pique Weave" [level=2] [ref=e1983]
+                      - generic [ref=e1984]:
+                        - generic [ref=e1985]:
+                          - text: "4.1"
+                          - button "4.1 out of 5 stars, rating details" [ref=e1987] [cursor=pointer]:
+                            - generic [ref=e1989]: 4.1 out of 5 stars
+                          - link "1,505 ratings" [ref=e1991] [cursor=pointer]:
+                            - /url: /Peter-England-Regular-Shirt-PCKPSRGFF79745_White/dp/B0C1S1QC3C/ref=sr_1_19?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-19#customerReviews
+                            - text: (1.5K)
+                        - generic [ref=e1992]: 400+ bought in past month
+                      - generic [ref=e1993]:
+                        - generic [ref=e1995]:
+                          - generic [ref=e1996]: Price, product page
+                          - 'link "₹839 M.R.P: ₹1,299 M.R.P: ₹1,299" [ref=e1997] [cursor=pointer]':
+                            - /url: /Peter-England-Regular-Shirt-PCKPSRGFF79745_White/dp/B0C1S1QC3C/ref=sr_1_19?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-19
+                            - generic [ref=e1998]:
+                              - generic [ref=e1999]: ₹839
+                              - generic [ref=e2000]: ₹839
+                            - generic [ref=e2001]: "M.R.P: ₹1,299"
+                            - generic [ref=e2002]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2003]:
+                                - generic [ref=e2004]: ₹1,299
+                                - text: ₹1,299
+                          - text: (35% off)
+                        - generic [ref=e2008]:
+                          - generic [ref=e2009]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2010]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e2013]:
+                        - generic [ref=e2015]: FREE delivery Thu, 17 Sept
+                        - generic [ref=e2017]: Or fastest delivery Tomorrow 6 am - 10 am
+                      - button "Add to cart" [ref=e2028] [cursor=pointer]
+                - listitem [ref=e2029]:
+                  - generic [ref=e2034]:
+                    - link [ref=e2038] [cursor=pointer]:
+                      - /url: /Max-Mens-Solid-Slim-AMPSP2001HSCNAVY_Navy/dp/B08353R4CD/ref=sr_1_20?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-20
+                      - img [ref=e2040]
+                    - generic [ref=e2041]:
+                      - group "colours available" [ref=e2043]:
+                        - list [ref=e2044]:
+                          - generic [ref=e2045]:
+                            - listitem:
+                              - link "Blue_01":
+                                - /url: /Max-Mens-Solid-Slim-AMPSP2001HSCNAVY_Navy/dp/B08353R4CD/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-20
+                          - generic [ref=e2048]:
+                            - listitem:
+                              - link "Aqua Blue":
+                                - /url: /Max-Mens-Solid-Slim-AMPSP2001HSCNAVY_Navy/dp/B083541H75/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-20
+                          - generic [ref=e2051]:
+                            - listitem:
+                              - link "Beige":
+                                - /url: /Max-Mens-Solid-Slim-AMPSP2001HSCNAVY_Navy/dp/B0GDRKYV5T/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-20
+                          - generic [ref=e2054]:
+                            - listitem:
+                              - link "Black":
+                                - /url: /Max-Mens-Solid-Slim-AMPSP2001HSCNAVY_Navy/dp/B08353KN5S/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-20
+                          - generic [ref=e2057]:
+                            - listitem:
+                              - link "Black_1":
+                                - /url: /Max-Mens-Solid-Slim-AMPSP2001HSCNAVY_Navy/dp/B0GDR8BPHX/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-20
+                          - generic [ref=e2060]:
+                            - listitem:
+                              - link "Blue_02":
+                                - /url: /Max-Mens-Solid-Slim-AMPSP2001HSCNAVY_Navy/dp/B09KCJ8RPB/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-20
+                        - link "+20 other colors/patterns" [ref=e2064] [cursor=pointer]:
+                          - /url: /Max-Mens-Solid-Slim-AMPSP2001HSCNAVY_Navy/dp/B08353R4CD/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-20
+                          - text: "+20"
+                      - generic [ref=e2065]:
+                        - heading "Max" [level=2] [ref=e2067]
+                        - link "Men's Polycotton Half Sleeves Regular Fit Solid Polo T-Shirt" [ref=e2068] [cursor=pointer]:
+                          - /url: /Max-Mens-Solid-Slim-AMPSP2001HSCNAVY_Navy/dp/B08353R4CD/ref=sr_1_20?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-20
+                          - heading "Men's Polycotton Half Sleeves Regular Fit Solid Polo T-Shirt" [level=2] [ref=e2069]
+                      - generic [ref=e2070]:
+                        - generic [ref=e2071]:
+                          - text: "4.0"
+                          - button "4.0 out of 5 stars, rating details" [ref=e2073] [cursor=pointer]:
+                            - generic [ref=e2075]: 4.0 out of 5 stars
+                          - link "15,358 ratings" [ref=e2077] [cursor=pointer]:
+                            - /url: /Max-Mens-Solid-Slim-AMPSP2001HSCNAVY_Navy/dp/B08353R4CD/ref=sr_1_20?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-20#customerReviews
+                            - text: (15.3K)
+                        - generic [ref=e2078]: 100+ bought in past month
+                      - generic [ref=e2079]:
+                        - generic [ref=e2081]:
+                          - generic [ref=e2082]: Price, product page
+                          - 'link "₹329 M.R.P: ₹449 M.R.P: ₹449" [ref=e2083] [cursor=pointer]':
+                            - /url: /Max-Mens-Solid-Slim-AMPSP2001HSCNAVY_Navy/dp/B08353R4CD/ref=sr_1_20?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-20
+                            - generic [ref=e2084]:
+                              - generic [ref=e2085]: ₹329
+                              - generic [ref=e2086]: ₹329
+                            - generic [ref=e2087]: "M.R.P: ₹449"
+                            - generic [ref=e2088]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2089]:
+                                - generic [ref=e2090]: ₹449
+                                - text: ₹449
+                          - text: (27% off)
+                        - generic [ref=e2094]:
+                          - generic [ref=e2095]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2096]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e2099]:
+                        - generic [ref=e2101]: FREE delivery Fri, 18 Sept on first order
+                        - generic [ref=e2103]: Or fastest delivery Thu, 17 Sept
+                      - button "Add to cart" [ref=e2114] [cursor=pointer]
+                - listitem [ref=e2115]:
+                  - generic [ref=e2120]:
+                    - link [ref=e2124] [cursor=pointer]:
+                      - /url: /Allen-Solly-Regular-T-Shirt-ASKPCURGFI04455_Green/dp/B0C7ZN2N6R/ref=sr_1_21?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-21
+                      - img [ref=e2126]
+                    - generic [ref=e2127]:
+                      - group "colours available" [ref=e2129]:
+                        - list [ref=e2130]:
+                          - generic [ref=e2131]:
+                            - listitem:
+                              - link "Light Green":
+                                - /url: /Allen-Solly-Regular-T-Shirt-ASKPCURGFI04455_Green/dp/B0C7ZN2N6R/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-21
+                          - generic [ref=e2134]:
+                            - listitem:
+                              - link "Black":
+                                - /url: /Allen-Solly-Regular-T-Shirt-ASKPCURGFI04455_Green/dp/B08KTXPYBF/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-21
+                          - generic [ref=e2137]:
+                            - listitem:
+                              - link "Green":
+                                - /url: /Allen-Solly-Regular-T-Shirt-ASKPCURGFI04455_Green/dp/B08KTZDXMG/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-21
+                          - generic [ref=e2140]:
+                            - listitem:
+                              - link "Light Blue":
+                                - /url: /Allen-Solly-Regular-T-Shirt-ASKPCURGFI04455_Green/dp/B0C7ZLYTQ7/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-21
+                          - generic [ref=e2143]:
+                            - listitem:
+                              - link "Mint Green":
+                                - /url: /Allen-Solly-Regular-T-Shirt-ASKPCURGFI04455_Green/dp/B0C7ZP9S3W/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-21
+                          - generic [ref=e2146]:
+                            - listitem:
+                              - link "Navy":
+                                - /url: /Allen-Solly-Regular-T-Shirt-ASKPCURGFI04455_Green/dp/B08KTWG4VH/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-21
+                        - link "+6 other colors/patterns" [ref=e2150] [cursor=pointer]:
+                          - /url: /Allen-Solly-Regular-T-Shirt-ASKPCURGFI04455_Green/dp/B0C7ZN2N6R/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-21
+                          - text: "+6"
+                      - generic [ref=e2151]:
+                        - heading "Allen Solly" [level=2] [ref=e2153]
+                        - link "Men’s Solid Polo T‑Shirt | Regular Fit | Premium Cotton | Contrast Tipping Collar | Smart Casual Wear" [ref=e2154] [cursor=pointer]:
+                          - /url: /Allen-Solly-Regular-T-Shirt-ASKPCURGFI04455_Green/dp/B0C7ZN2N6R/ref=sr_1_21?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-21
+                          - heading "Men’s Solid Polo T‑Shirt | Regular Fit | Premium Cotton | Contrast Tipping Collar | Smart Casual Wear" [level=2] [ref=e2155]
+                      - generic [ref=e2156]:
+                        - generic [ref=e2157]:
+                          - text: "4.1"
+                          - button "4.1 out of 5 stars, rating details" [ref=e2159] [cursor=pointer]:
+                            - generic [ref=e2161]: 4.1 out of 5 stars
+                          - link "8,289 ratings" [ref=e2163] [cursor=pointer]:
+                            - /url: /Allen-Solly-Regular-T-Shirt-ASKPCURGFI04455_Green/dp/B0C7ZN2N6R/ref=sr_1_21?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-21#customerReviews
+                            - text: (8.2K)
+                        - generic [ref=e2164]: 100+ bought in past month
+                      - generic [ref=e2165]:
+                        - generic [ref=e2167]:
+                          - generic [ref=e2168]: Price, product page
+                          - 'link "₹839 M.R.P: ₹1,399 M.R.P: ₹1,399" [ref=e2169] [cursor=pointer]':
+                            - /url: /Allen-Solly-Regular-T-Shirt-ASKPCURGFI04455_Green/dp/B0C7ZN2N6R/ref=sr_1_21?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-21
+                            - generic [ref=e2170]:
+                              - generic [ref=e2171]: ₹839
+                              - generic [ref=e2172]: ₹839
+                            - generic [ref=e2173]: "M.R.P: ₹1,399"
+                            - generic [ref=e2174]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2175]:
+                                - generic [ref=e2176]: ₹1,399
+                                - text: ₹1,399
+                          - text: (40% off)
+                        - generic [ref=e2180]:
+                          - generic [ref=e2181]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2182]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e2185]:
+                        - generic [ref=e2187]: FREE delivery Fri, 18 Sept
+                        - generic [ref=e2189]: Or fastest delivery Tomorrow, 16 Sept
+                      - button "Add to cart" [ref=e2200] [cursor=pointer]
+                - listitem [ref=e2201]:
+                  - generic [ref=e2206]:
+                    - link [ref=e2210] [cursor=pointer]:
+                      - /url: /Colorblock-Round-Neck-Black-T-Shirt/dp/B0H5QYXSMM/ref=sr_1_22?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-22
+                      - img [ref=e2212]
+                    - generic [ref=e2213]:
+                      - group "colours available" [ref=e2215]:
+                        - list [ref=e2216]:
+                          - generic [ref=e2217]:
+                            - listitem:
+                              - link "Maroon":
+                                - /url: /Colorblock-Round-Neck-Black-T-Shirt/dp/B0H5QYXSMM/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-22
+                          - generic [ref=e2220]:
+                            - listitem:
+                              - link "Black":
+                                - /url: /Colorblock-Round-Neck-Black-T-Shirt/dp/B0H5R1FP12/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-22
+                          - generic [ref=e2223]:
+                            - listitem:
+                              - link "Grey":
+                                - /url: /Colorblock-Round-Neck-Black-T-Shirt/dp/B0H5R2QSGT/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-22
+                      - generic [ref=e2226]:
+                        - heading "Generic" [level=2] [ref=e2228]
+                        - link "Colorblock Men Round Neck Multicolor T-Shirt" [ref=e2229] [cursor=pointer]:
+                          - /url: /Colorblock-Round-Neck-Black-T-Shirt/dp/B0H5QYXSMM/ref=sr_1_22?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-22
+                          - heading "Colorblock Men Round Neck Multicolor T-Shirt" [level=2] [ref=e2230]
+                      - generic [ref=e2231]:
+                        - generic [ref=e2232]:
+                          - text: "3.0"
+                          - button "3.0 out of 5 stars, rating details" [ref=e2234] [cursor=pointer]:
+                            - generic [ref=e2236]: 3.0 out of 5 stars
+                          - link "40 ratings" [ref=e2238] [cursor=pointer]:
+                            - /url: /Colorblock-Round-Neck-Black-T-Shirt/dp/B0H5QYXSMM/ref=sr_1_22?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-22#customerReviews
+                            - text: (40)
+                        - generic [ref=e2239]: 100+ bought in past month
+                      - generic [ref=e2240]:
+                        - generic [ref=e2242]:
+                          - generic [ref=e2243]: Price, product page
+                          - 'link "₹249 M.R.P: ₹999 M.R.P: ₹999" [ref=e2244] [cursor=pointer]':
+                            - /url: /Colorblock-Round-Neck-Black-T-Shirt/dp/B0H5QYXSMM/ref=sr_1_22?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-22
+                            - generic [ref=e2245]:
+                              - generic [ref=e2246]: ₹249
+                              - generic [ref=e2247]: ₹249
+                            - generic [ref=e2248]: "M.R.P: ₹999"
+                            - generic [ref=e2249]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2250]:
+                                - generic [ref=e2251]: ₹999
+                                - text: ₹999
+                          - text: (75% off)
+                        - generic [ref=e2255]:
+                          - generic [ref=e2256]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2257]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e2260]:
+                        - img "Bazaar" [ref=e2263]
+                        - generic [ref=e2265]: FREE delivery Sun, 20 Sept
+                      - button "Add to cart" [ref=e2276] [cursor=pointer]
+                - listitem [ref=e2277]:
+                  - generic [ref=e2282]:
+                    - link [ref=e2286] [cursor=pointer]:
+                      - /url: /max-Mens-Regular-T-Shirt-SU23LTSSCN01WHITE_White/dp/B0BYJWG9DZ/ref=sr_1_23?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-23
+                      - img [ref=e2288]
+                    - generic [ref=e2289]:
+                      - group "colours available" [ref=e2291]:
+                        - list [ref=e2292]:
+                          - generic [ref=e2293]:
+                            - listitem:
+                              - link "WHITE":
+                                - /url: /max-Mens-Regular-T-Shirt-SU23LTSSCN01WHITE_White/dp/B0BYJWG9DZ/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-23
+                          - generic [ref=e2296]:
+                            - listitem:
+                              - link "BEIGE":
+                                - /url: /max-Mens-Regular-T-Shirt-SU23LTSSCN01WHITE_White/dp/B0BYJVPG5Y/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-23
+                          - generic [ref=e2299]:
+                            - listitem:
+                              - link "BLACK":
+                                - /url: /max-Mens-Regular-T-Shirt-SU23LTSSCN01WHITE_White/dp/B0BV6VCZ8D/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-23
+                          - generic [ref=e2302]:
+                            - listitem:
+                              - link "BURGUNDY":
+                                - /url: /max-Mens-Regular-T-Shirt-SU23LTSSCN01WHITE_White/dp/B0BYJXMWN3/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-23
+                          - generic [ref=e2305]:
+                            - listitem:
+                              - link "CHARCOAL MELANGE":
+                                - /url: /max-Mens-Regular-T-Shirt-SU23LTSSCN01WHITE_White/dp/B0BYJVZV1X/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-23
+                          - generic [ref=e2308]:
+                            - listitem:
+                              - link "LIGHT BLUE":
+                                - /url: /max-Mens-Regular-T-Shirt-SU23LTSSCN01WHITE_White/dp/B0BYK1B2ZC/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-23
+                        - link "+6 other colors/patterns" [ref=e2312] [cursor=pointer]:
+                          - /url: /max-Mens-Regular-T-Shirt-SU23LTSSCN01WHITE_White/dp/B0BYJWG9DZ/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-23
+                          - text: "+6"
+                      - generic [ref=e2313]:
+                        - heading "Max" [level=2] [ref=e2315]
+                        - link "Men's Cotton Regular Fit Half Sleeves Crew Neck Solid Lounge T-Shirt" [ref=e2316] [cursor=pointer]:
+                          - /url: /max-Mens-Regular-T-Shirt-SU23LTSSCN01WHITE_White/dp/B0BYJWG9DZ/ref=sr_1_23?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-23
+                          - heading "Men's Cotton Regular Fit Half Sleeves Crew Neck Solid Lounge T-Shirt" [level=2] [ref=e2317]
+                      - generic [ref=e2318]:
+                        - generic [ref=e2319]:
+                          - text: "4.0"
+                          - button "4.0 out of 5 stars, rating details" [ref=e2321] [cursor=pointer]:
+                            - generic [ref=e2323]: 4.0 out of 5 stars
+                          - link "2,595 ratings" [ref=e2325] [cursor=pointer]:
+                            - /url: /max-Mens-Regular-T-Shirt-SU23LTSSCN01WHITE_White/dp/B0BYJWG9DZ/ref=sr_1_23?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-23#customerReviews
+                            - text: (2.5K)
+                        - generic [ref=e2326]: 100+ bought in past month
+                      - generic [ref=e2327]:
+                        - generic [ref=e2329]:
+                          - generic [ref=e2330]: Price, product page
+                          - 'link "₹198 M.R.P: ₹199 M.R.P: ₹199" [ref=e2331] [cursor=pointer]':
+                            - /url: /max-Mens-Regular-T-Shirt-SU23LTSSCN01WHITE_White/dp/B0BYJWG9DZ/ref=sr_1_23?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-23
+                            - generic [ref=e2332]:
+                              - generic [ref=e2333]: ₹198
+                              - generic [ref=e2334]: ₹198
+                            - generic [ref=e2335]: "M.R.P: ₹199"
+                            - generic [ref=e2336]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2337]:
+                                - generic [ref=e2338]: ₹199
+                                - text: ₹199
+                          - text: (1% off)
+                        - generic [ref=e2342]:
+                          - generic [ref=e2343]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2344]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e2349]: FREE delivery Sun, 20 Sept on first order
+                      - button "Add to cart" [ref=e2360] [cursor=pointer]
+                - listitem [ref=e2361]:
+                  - generic [ref=e2366]:
+                    - link [ref=e2370] [cursor=pointer]:
+                      - /url: /Allen-Solly-Regular-AMKP317G04243_Coffee-Melange_X-Large/dp/B06Y277HHR/ref=sr_1_24?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-24
+                      - img [ref=e2372]
+                    - generic [ref=e2373]:
+                      - group "colours available" [ref=e2375]:
+                        - list [ref=e2376]:
+                          - generic [ref=e2377]:
+                            - listitem:
+                              - link "Coffee Melange":
+                                - /url: /Allen-Solly-Regular-AMKP317G04243_Coffee-Melange_X-Large/dp/B06Y277HHR/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-24
+                          - generic [ref=e2380]:
+                            - listitem:
+                              - link "Beige Melange":
+                                - /url: /Allen-Solly-Regular-AMKP317G04243_Coffee-Melange_X-Large/dp/B06Y1ZTSJ7/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-24
+                          - generic [ref=e2383]:
+                            - listitem:
+                              - link "Bright Blue":
+                                - /url: /Allen-Solly-Regular-AMKP317G04243_Coffee-Melange_X-Large/dp/B06Y2C1211/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-24
+                          - generic [ref=e2386]:
+                            - listitem:
+                              - link "Brown":
+                                - /url: /Allen-Solly-Regular-AMKP317G04243_Coffee-Melange_X-Large/dp/B06Y2CTVCV/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-24
+                          - generic [ref=e2389]:
+                            - listitem:
+                              - link "Coral":
+                                - /url: /Allen-Solly-Regular-AMKP317G04243_Coffee-Melange_X-Large/dp/B06Y2DV85R/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-24
+                          - generic [ref=e2392]:
+                            - listitem:
+                              - link "Dessert Rose":
+                                - /url: /Allen-Solly-Regular-AMKP317G04243_Coffee-Melange_X-Large/dp/B06Y26ZG94/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-24
+                        - link "+18 other colors/patterns" [ref=e2396] [cursor=pointer]:
+                          - /url: /Allen-Solly-Regular-AMKP317G04243_Coffee-Melange_X-Large/dp/B06Y277HHR/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-24
+                          - text: "+18"
+                      - generic [ref=e2397]:
+                        - heading "Allen Solly" [level=2] [ref=e2399]
+                        - link "Men’s Polo T‑Shirt | Comfortable Rich Cotton Blend, Band Collar, Regular Fit | Stylish & Premium All Day Wear" [ref=e2400] [cursor=pointer]:
+                          - /url: /Allen-Solly-Regular-AMKP317G04243_Coffee-Melange_X-Large/dp/B06Y277HHR/ref=sr_1_24?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-24
+                          - heading "Men’s Polo T‑Shirt | Comfortable Rich Cotton Blend, Band Collar, Regular Fit | Stylish & Premium All Day Wear" [level=2] [ref=e2401]
+                      - generic [ref=e2402]:
+                        - generic [ref=e2403]:
+                          - text: "4.1"
+                          - button "4.1 out of 5 stars, rating details" [ref=e2405] [cursor=pointer]:
+                            - generic [ref=e2407]: 4.1 out of 5 stars
+                          - link "82,643 ratings" [ref=e2409] [cursor=pointer]:
+                            - /url: /Allen-Solly-Regular-AMKP317G04243_Coffee-Melange_X-Large/dp/B06Y277HHR/ref=sr_1_24?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-24#customerReviews
+                            - text: (82.6K)
+                        - generic [ref=e2410]: 500+ bought in past month
+                      - generic [ref=e2411]:
+                        - generic [ref=e2413]:
+                          - generic [ref=e2414]: Price, product page
+                          - 'link "₹739 M.R.P: ₹1,099 M.R.P: ₹1,099" [ref=e2415] [cursor=pointer]':
+                            - /url: /Allen-Solly-Regular-AMKP317G04243_Coffee-Melange_X-Large/dp/B06Y277HHR/ref=sr_1_24?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-24
+                            - generic [ref=e2416]:
+                              - generic [ref=e2417]: ₹739
+                              - generic [ref=e2418]: ₹739
+                            - generic [ref=e2419]: "M.R.P: ₹1,099"
+                            - generic [ref=e2420]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2421]:
+                                - generic [ref=e2422]: ₹1,099
+                                - text: ₹1,099
+                          - text: (33% off)
+                        - generic [ref=e2426]:
+                          - generic [ref=e2427]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2428]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e2431]:
+                        - generic [ref=e2433]: FREE delivery Thu, 17 Sept
+                        - generic [ref=e2435]: Or fastest delivery Tomorrow 6 am - 10 am
+                      - button "Add to cart" [ref=e2446] [cursor=pointer]
+                - listitem [ref=e2447]:
+                  - generic [ref=e2452]:
+                    - link [ref=e2456] [cursor=pointer]:
+                      - /url: /Lux-Cozi-Maroon-Cotton-Tshirt/dp/B0D3975PCB/ref=sr_1_25?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-25
+                      - img [ref=e2458]
+                    - generic [ref=e2459]:
+                      - group "colours available" [ref=e2461]:
+                        - list [ref=e2462]:
+                          - generic [ref=e2463]:
+                            - listitem:
+                              - link "Maroon":
+                                - /url: /Lux-Cozi-Maroon-Cotton-Tshirt/dp/B0D3975PCB/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-25
+                          - generic [ref=e2466]:
+                            - listitem:
+                              - link "Black":
+                                - /url: /Lux-Cozi-Maroon-Cotton-Tshirt/dp/B0D399KYN4/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-25
+                          - generic [ref=e2469]:
+                            - listitem:
+                              - link "Ink Blue":
+                                - /url: /Lux-Cozi-Maroon-Cotton-Tshirt/dp/B0D397QF2B/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-25
+                          - generic [ref=e2472]:
+                            - listitem:
+                              - link "Mustard":
+                                - /url: /Lux-Cozi-Maroon-Cotton-Tshirt/dp/B0D398V7ND/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-25
+                          - generic [ref=e2475]:
+                            - listitem:
+                              - link "Navy":
+                                - /url: /Lux-Cozi-Maroon-Cotton-Tshirt/dp/B0D396DJXL/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-25
+                          - generic [ref=e2478]:
+                            - listitem:
+                              - link "Pool Blue":
+                                - /url: /Lux-Cozi-Maroon-Cotton-Tshirt/dp/B0D3953VLP/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-25
+                        - link "+2 other colors/patterns" [ref=e2482] [cursor=pointer]:
+                          - /url: /Lux-Cozi-Maroon-Cotton-Tshirt/dp/B0D3975PCB/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-25
+                          - text: "+2"
+                      - generic [ref=e2483]:
+                        - heading "Lux Cozi" [level=2] [ref=e2485]
+                        - link "Men Cotton Half Sleeves Round Neck Regular Fit Casual T-Shirt" [ref=e2486] [cursor=pointer]:
+                          - /url: /Lux-Cozi-Maroon-Cotton-Tshirt/dp/B0D3975PCB/ref=sr_1_25?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-25
+                          - heading "Men Cotton Half Sleeves Round Neck Regular Fit Casual T-Shirt" [level=2] [ref=e2487]
+                      - generic [ref=e2488]:
+                        - generic [ref=e2489]:
+                          - text: "4.0"
+                          - button "4.0 out of 5 stars, rating details" [ref=e2491] [cursor=pointer]:
+                            - generic [ref=e2493]: 4.0 out of 5 stars
+                          - link "396 ratings" [ref=e2495] [cursor=pointer]:
+                            - /url: /Lux-Cozi-Maroon-Cotton-Tshirt/dp/B0D3975PCB/ref=sr_1_25?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-25#customerReviews
+                            - text: (396)
+                        - generic [ref=e2496]: 100+ bought in past month
+                      - generic [ref=e2497]:
+                        - generic [ref=e2499]:
+                          - generic [ref=e2500]: Price, product page
+                          - 'link "₹279 M.R.P: ₹315 M.R.P: ₹315" [ref=e2501] [cursor=pointer]':
+                            - /url: /Lux-Cozi-Maroon-Cotton-Tshirt/dp/B0D3975PCB/ref=sr_1_25?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-25
+                            - generic [ref=e2502]:
+                              - generic [ref=e2503]: ₹279
+                              - generic [ref=e2504]: ₹279
+                            - generic [ref=e2505]: "M.R.P: ₹315"
+                            - generic [ref=e2506]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2507]:
+                                - generic [ref=e2508]: ₹315
+                                - text: ₹315
+                          - text: (11% off)
+                        - generic [ref=e2512]:
+                          - generic [ref=e2513]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2514]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e2517]:
+                        - generic [ref=e2519]: FREE delivery Thu, 17 Sept on first order
+                        - generic [ref=e2521]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e2532] [cursor=pointer]
+                - listitem [ref=e2533]:
+                  - generic [ref=e2538]:
+                    - link [ref=e2542] [cursor=pointer]:
+                      - /url: /Louis-Philippe-Solid-T-Shirt-LRKPNSLF475219_White/dp/B0D4VPH1YB/ref=sr_1_26?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-26
+                      - img [ref=e2544]
+                    - generic [ref=e2545]:
+                      - group "colours available" [ref=e2547]:
+                        - list [ref=e2548]:
+                          - generic [ref=e2549]:
+                            - listitem:
+                              - link "White":
+                                - /url: /Louis-Philippe-Solid-T-Shirt-LRKPNSLF475219_White/dp/B0D4VPH1YB/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-26
+                          - generic [ref=e2552]:
+                            - listitem:
+                              - link "Green":
+                                - /url: /Louis-Philippe-Solid-T-Shirt-LRKPNSLF475219_White/dp/B0D4VQTBDK/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-26
+                          - generic [ref=e2555]:
+                            - listitem:
+                              - link "Grey":
+                                - /url: /Louis-Philippe-Solid-T-Shirt-LRKPNSLF475219_White/dp/B0D4VR29SZ/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-26
+                          - generic [ref=e2558]:
+                            - listitem:
+                              - link "Pink":
+                                - /url: /Louis-Philippe-Solid-T-Shirt-LRKPNSLF475219_White/dp/B0D4VQRS7P/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-26
+                          - generic [ref=e2561]:
+                            - listitem:
+                              - link "Yellow":
+                                - /url: /Louis-Philippe-Solid-T-Shirt-LRKPNSLF475219_White/dp/B0D4VQBKQ4/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-26
+                          - generic [ref=e2564]:
+                            - listitem:
+                              - link "Blue":
+                                - /url: /Louis-Philippe-Solid-T-Shirt-LRKPNSLF475219_White/dp/B0D4Z97PDM/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-26
+                        - link "+1 other color/pattern" [ref=e2568] [cursor=pointer]:
+                          - /url: /Louis-Philippe-Solid-T-Shirt-LRKPNSLF475219_White/dp/B0D4VPH1YB/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-26
+                          - text: "+1"
+                      - generic [ref=e2569]:
+                        - heading "Louis Philippe" [level=2] [ref=e2571]
+                        - link "Men's Slim Fit Premium High-End Pique in Superior Cotton Cut & Sew Design Color Block Shoulder Half Sleeve Polo Tshirt" [ref=e2572] [cursor=pointer]:
+                          - /url: /Louis-Philippe-Solid-T-Shirt-LRKPNSLF475219_White/dp/B0D4VPH1YB/ref=sr_1_26?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-26
+                          - heading "Men's Slim Fit Premium High-End Pique in Superior Cotton Cut & Sew Design Color Block Shoulder Half Sleeve Polo Tshirt" [level=2] [ref=e2573]
+                      - generic [ref=e2574]:
+                        - generic [ref=e2575]:
+                          - text: "4.1"
+                          - button "4.1 out of 5 stars, rating details" [ref=e2577] [cursor=pointer]:
+                            - generic [ref=e2579]: 4.1 out of 5 stars
+                          - link "1,102 ratings" [ref=e2581] [cursor=pointer]:
+                            - /url: /Louis-Philippe-Solid-T-Shirt-LRKPNSLF475219_White/dp/B0D4VPH1YB/ref=sr_1_26?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-26#customerReviews
+                            - text: (1.1K)
+                        - generic [ref=e2582]: 600+ bought in past month
+                      - generic [ref=e2583]:
+                        - generic [ref=e2585]:
+                          - generic [ref=e2586]: Price, product page
+                          - 'link "₹1,119 M.R.P: ₹1,999 M.R.P: ₹1,999" [ref=e2587] [cursor=pointer]':
+                            - /url: /Louis-Philippe-Solid-T-Shirt-LRKPNSLF475219_White/dp/B0D4VPH1YB/ref=sr_1_26?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-26
+                            - generic [ref=e2588]:
+                              - generic [ref=e2589]: ₹1,119
+                              - generic [ref=e2590]: ₹1,119
+                            - generic [ref=e2591]: "M.R.P: ₹1,999"
+                            - generic [ref=e2592]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2593]:
+                                - generic [ref=e2594]: ₹1,999
+                                - text: ₹1,999
+                          - text: (44% off)
+                        - generic [ref=e2598]:
+                          - generic [ref=e2599]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2600]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e2605]: FREE delivery 12 - 26 Oct
+                      - button "Add to cart" [ref=e2616] [cursor=pointer]
+                - listitem [ref=e2617]:
+                  - generic [ref=e2622]:
+                    - link [ref=e2626] [cursor=pointer]:
+                      - /url: /Allen-Solly-Regular-AMKP317G04241_Spinus-Yellow_Large/dp/B06Y222T9D/ref=sr_1_27?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-27
+                      - img [ref=e2628]
+                    - generic [ref=e2629]:
+                      - group "colours available" [ref=e2631]:
+                        - list [ref=e2632]:
+                          - generic [ref=e2633]:
+                            - listitem:
+                              - link "Spinus Yellow":
+                                - /url: /Allen-Solly-Regular-AMKP317G04241_Spinus-Yellow_Large/dp/B06Y222T9D/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-27
+                          - generic [ref=e2636]:
+                            - listitem:
+                              - link "Beige Melange":
+                                - /url: /Allen-Solly-Regular-AMKP317G04241_Spinus-Yellow_Large/dp/B06Y226XNJ/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-27
+                          - generic [ref=e2639]:
+                            - listitem:
+                              - link "Bright Blue":
+                                - /url: /Allen-Solly-Regular-AMKP317G04241_Spinus-Yellow_Large/dp/B06Y2F84K3/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-27
+                          - generic [ref=e2642]:
+                            - listitem:
+                              - link "Brown":
+                                - /url: /Allen-Solly-Regular-AMKP317G04241_Spinus-Yellow_Large/dp/B06Y2DXVD6/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-27
+                          - generic [ref=e2645]:
+                            - listitem:
+                              - link "Coffee Melange":
+                                - /url: /Allen-Solly-Regular-AMKP317G04241_Spinus-Yellow_Large/dp/B06Y1ZXHVT/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-27
+                          - generic [ref=e2648]:
+                            - listitem:
+                              - link "Coral":
+                                - /url: /Allen-Solly-Regular-AMKP317G04241_Spinus-Yellow_Large/dp/B06Y2BT3NG/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-27
+                        - link "+18 other colors/patterns" [ref=e2652] [cursor=pointer]:
+                          - /url: /Allen-Solly-Regular-AMKP317G04241_Spinus-Yellow_Large/dp/B06Y222T9D/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-27
+                          - text: "+18"
+                      - generic [ref=e2653]:
+                        - heading "Allen Solly" [level=2] [ref=e2655]
+                        - link "Men’s Polo T‑Shirt | Comfortable Rich Cotton Blend, Band Collar, Regular Fit | Stylish & Premium All Day Wear" [ref=e2656] [cursor=pointer]:
+                          - /url: /Allen-Solly-Regular-AMKP317G04241_Spinus-Yellow_Large/dp/B06Y222T9D/ref=sr_1_27?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-27
+                          - heading "Men’s Polo T‑Shirt | Comfortable Rich Cotton Blend, Band Collar, Regular Fit | Stylish & Premium All Day Wear" [level=2] [ref=e2657]
+                      - generic [ref=e2658]:
+                        - generic [ref=e2659]:
+                          - text: "4.1"
+                          - button "4.1 out of 5 stars, rating details" [ref=e2661] [cursor=pointer]:
+                            - generic [ref=e2663]: 4.1 out of 5 stars
+                          - link "82,643 ratings" [ref=e2665] [cursor=pointer]:
+                            - /url: /Allen-Solly-Regular-AMKP317G04241_Spinus-Yellow_Large/dp/B06Y222T9D/ref=sr_1_27?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-27#customerReviews
+                            - text: (82.6K)
+                        - generic [ref=e2666]: 300+ bought in past month
+                      - generic [ref=e2667]:
+                        - generic [ref=e2669]:
+                          - generic [ref=e2670]: Price, product page
+                          - 'link "₹599 M.R.P: ₹1,099 M.R.P: ₹1,099" [ref=e2671] [cursor=pointer]':
+                            - /url: /Allen-Solly-Regular-AMKP317G04241_Spinus-Yellow_Large/dp/B06Y222T9D/ref=sr_1_27?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-27
+                            - generic [ref=e2672]:
+                              - generic [ref=e2673]: ₹599
+                              - generic [ref=e2674]: ₹599
+                            - generic [ref=e2675]: "M.R.P: ₹1,099"
+                            - generic [ref=e2676]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2677]:
+                                - generic [ref=e2678]: ₹1,099
+                                - text: ₹1,099
+                          - text: (45% off)
+                        - generic [ref=e2682]:
+                          - generic [ref=e2683]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2684]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e2687]:
+                        - generic [ref=e2689]: FREE delivery Thu, 17 Sept
+                        - generic [ref=e2691]: Or fastest delivery Tomorrow 6 am - 10 am
+                      - button "Add to cart" [ref=e2702] [cursor=pointer]
+                - listitem [ref=e2703]:
+                  - generic [ref=e2708]:
+                    - link [ref=e2712] [cursor=pointer]:
+                      - /url: /Van-Heusen-Solid-Regular-VSKP517S011419_Nautical_Large/dp/B076CMJXML/ref=sr_1_28?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-28
+                      - img [ref=e2714]
+                    - generic [ref=e2715]:
+                      - group "colours available" [ref=e2717]:
+                        - list [ref=e2718]:
+                          - generic [ref=e2719]:
+                            - listitem:
+                              - link "Nautical":
+                                - /url: /Van-Heusen-Solid-Regular-VSKP517S011419_Nautical_Large/dp/B076CMJXML/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-28
+                          - generic [ref=e2722]:
+                            - listitem:
+                              - link "Black":
+                                - /url: /Van-Heusen-Solid-Regular-VSKP517S011419_Nautical_Large/dp/B076CHQJZP/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-28
+                          - generic [ref=e2725]:
+                            - listitem:
+                              - link "Blue":
+                                - /url: /Van-Heusen-Solid-Regular-VSKP517S011419_Nautical_Large/dp/B076CJMH93/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-28
+                          - generic [ref=e2728]:
+                            - listitem:
+                              - link "Brown":
+                                - /url: /Van-Heusen-Solid-Regular-VSKP517S011419_Nautical_Large/dp/B0DF7CZPZP/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-28
+                          - generic [ref=e2731]:
+                            - listitem:
+                              - link "Cardinal Red":
+                                - /url: /Van-Heusen-Solid-Regular-VSKP517S011419_Nautical_Large/dp/B07HJBND9G/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-28
+                          - generic [ref=e2734]:
+                            - listitem:
+                              - link "Cream":
+                                - /url: /Van-Heusen-Solid-Regular-VSKP517S011419_Nautical_Large/dp/B076CKDCJP/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-28
+                        - link "+15 other colors/patterns" [ref=e2738] [cursor=pointer]:
+                          - /url: /Van-Heusen-Solid-Regular-VSKP517S011419_Nautical_Large/dp/B076CMJXML/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-28
+                          - text: "+15"
+                      - generic [ref=e2739]:
+                        - heading "Van Heusen" [level=2] [ref=e2741]
+                        - link "Men's Cotton Solid Regular Fit Collar Polo T-Shirt" [ref=e2742] [cursor=pointer]:
+                          - /url: /Van-Heusen-Solid-Regular-VSKP517S011419_Nautical_Large/dp/B076CMJXML/ref=sr_1_28?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-28
+                          - heading "Men's Cotton Solid Regular Fit Collar Polo T-Shirt" [level=2] [ref=e2743]
+                      - generic [ref=e2744]:
+                        - generic [ref=e2745]:
+                          - text: "4.0"
+                          - button "4.0 out of 5 stars, rating details" [ref=e2747] [cursor=pointer]:
+                            - generic [ref=e2749]: 4.0 out of 5 stars
+                          - link "45,309 ratings" [ref=e2751] [cursor=pointer]:
+                            - /url: /Van-Heusen-Solid-Regular-VSKP517S011419_Nautical_Large/dp/B076CMJXML/ref=sr_1_28?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-28#customerReviews
+                            - text: (45.3K)
+                        - generic [ref=e2752]: 800+ bought in past month
+                      - generic [ref=e2753]:
+                        - generic [ref=e2755]:
+                          - generic [ref=e2756]: Price, product page
+                          - 'link "₹739 M.R.P: ₹1,099 M.R.P: ₹1,099" [ref=e2757] [cursor=pointer]':
+                            - /url: /Van-Heusen-Solid-Regular-VSKP517S011419_Nautical_Large/dp/B076CMJXML/ref=sr_1_28?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-28
+                            - generic [ref=e2758]:
+                              - generic [ref=e2759]: ₹739
+                              - generic [ref=e2760]: ₹739
+                            - generic [ref=e2761]: "M.R.P: ₹1,099"
+                            - generic [ref=e2762]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2763]:
+                                - generic [ref=e2764]: ₹1,099
+                                - text: ₹1,099
+                          - text: (33% off)
+                        - generic [ref=e2768]:
+                          - generic [ref=e2769]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2770]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e2773]:
+                        - generic [ref=e2775]: FREE delivery Thu, 17 Sept
+                        - generic [ref=e2777]: Or fastest delivery Tomorrow 6 am - 10 am
+                      - button "Add to cart" [ref=e2788] [cursor=pointer]
+                - listitem [ref=e2789]:
+                  - generic [ref=e2794]:
+                    - link [ref=e2798] [cursor=pointer]:
+                      - /url: /Lymio-T-Shirt-Polo-Shirt-POLO-52-Olivegreen-L/dp/B0DRFN3213/ref=sr_1_29?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-29
+                      - img [ref=e2800]
+                    - generic [ref=e2801]:
+                      - group "colours available" [ref=e2803]:
+                        - list [ref=e2804]:
+                          - generic [ref=e2805]:
+                            - listitem:
+                              - link "Olivegreen":
+                                - /url: /Lymio-T-Shirt-Polo-Shirt-POLO-52-Olivegreen-L/dp/B0DRFN3213/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-29
+                          - generic [ref=e2808]:
+                            - listitem:
+                              - link "Black":
+                                - /url: /Lymio-T-Shirt-Polo-Shirt-POLO-52-Olivegreen-L/dp/B0DRFP9YJJ/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-29
+                          - generic [ref=e2811]:
+                            - listitem:
+                              - link "Black-Blue":
+                                - /url: /Lymio-T-Shirt-Polo-Shirt-POLO-52-Olivegreen-L/dp/B0F9T3PVRM/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-29
+                          - generic [ref=e2814]:
+                            - listitem:
+                              - link "Black-OliveGreen":
+                                - /url: /Lymio-T-Shirt-Polo-Shirt-POLO-52-Olivegreen-L/dp/B0F9SW1HMT/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-29
+                          - generic [ref=e2817]:
+                            - listitem:
+                              - link "Black-Orange":
+                                - /url: /Lymio-T-Shirt-Polo-Shirt-POLO-52-Olivegreen-L/dp/B0F9T71L1N/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-29
+                          - generic [ref=e2820]:
+                            - listitem:
+                              - link "Blue":
+                                - /url: /Lymio-T-Shirt-Polo-Shirt-POLO-52-Olivegreen-L/dp/B0DRFMKN55/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-29
+                        - link "+4 other colors/patterns" [ref=e2824] [cursor=pointer]:
+                          - /url: /Lymio-T-Shirt-Polo-Shirt-POLO-52-Olivegreen-L/dp/B0DRFN3213/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-29
+                          - text: "+4"
+                      - generic [ref=e2825]:
+                        - heading "Lymio" [level=2] [ref=e2827]
+                        - link "Polo T Shirt for Men || T Shirt for Man || Collar T Shirt Style Men (Packs Also Available) (Polo-51-54)" [ref=e2828] [cursor=pointer]:
+                          - /url: /Lymio-T-Shirt-Polo-Shirt-POLO-52-Olivegreen-L/dp/B0DRFN3213/ref=sr_1_29?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-29
+                          - heading "Polo T Shirt for Men || T Shirt for Man || Collar T Shirt Style Men (Packs Also Available) (Polo-51-54)" [level=2] [ref=e2829]
+                      - generic [ref=e2830]:
+                        - generic [ref=e2831]:
+                          - text: "3.6"
+                          - button "3.6 out of 5 stars, rating details" [ref=e2833] [cursor=pointer]:
+                            - generic [ref=e2835]: 3.6 out of 5 stars
+                          - link "1,062 ratings" [ref=e2837] [cursor=pointer]:
+                            - /url: /Lymio-T-Shirt-Polo-Shirt-POLO-52-Olivegreen-L/dp/B0DRFN3213/ref=sr_1_29?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-29#customerReviews
+                            - text: (1K)
+                        - generic [ref=e2838]: 300+ bought in past month
+                      - generic [ref=e2839]:
+                        - link "Limited time deal" [ref=e2841] [cursor=pointer]:
+                          - /url: /deals
+                          - generic [ref=e2844]: Limited time deal
+                        - generic [ref=e2846]:
+                          - generic [ref=e2847]: Price, product page
+                          - 'link "₹399 M.R.P: ₹2,999 M.R.P: ₹2,999" [ref=e2848] [cursor=pointer]':
+                            - /url: /Lymio-T-Shirt-Polo-Shirt-POLO-52-Olivegreen-L/dp/B0DRFN3213/ref=sr_1_29?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-29
+                            - generic [ref=e2849]:
+                              - generic [ref=e2850]: ₹399
+                              - generic [ref=e2851]: ₹399
+                            - generic [ref=e2852]: "M.R.P: ₹2,999"
+                            - generic [ref=e2853]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2854]:
+                                - generic [ref=e2855]: ₹2,999
+                                - text: ₹2,999
+                          - text: (87% off)
+                        - generic [ref=e2859]:
+                          - generic [ref=e2860]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2861]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e2864]:
+                        - generic [ref=e2866]: FREE delivery Thu, 17 Sept on first order
+                        - generic [ref=e2868]: Or fastest delivery Tomorrow 6 am - 10 am
+                      - button "Add to cart" [ref=e2879] [cursor=pointer]
+                - listitem [ref=e2880]:
+                  - generic [ref=e2885]:
+                    - link [ref=e2889] [cursor=pointer]:
+                      - /url: /Allen-Solly-Regular-AMKP317G04250_Indigo-Melange_Large/dp/B06Y2796HJ/ref=sr_1_30?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-30
+                      - img [ref=e2891]
+                    - generic [ref=e2892]:
+                      - group "colours available" [ref=e2894]:
+                        - list [ref=e2895]:
+                          - generic [ref=e2896]:
+                            - listitem:
+                              - link "Indigo Melange":
+                                - /url: /Allen-Solly-Regular-AMKP317G04250_Indigo-Melange_Large/dp/B06Y2796HJ/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-30
+                          - generic [ref=e2899]:
+                            - listitem:
+                              - link "Beige Melange":
+                                - /url: /Allen-Solly-Regular-AMKP317G04250_Indigo-Melange_Large/dp/B06Y226XNJ/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-30
+                          - generic [ref=e2902]:
+                            - listitem:
+                              - link "Bright Blue":
+                                - /url: /Allen-Solly-Regular-AMKP317G04250_Indigo-Melange_Large/dp/B06Y2F84K3/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-30
+                          - generic [ref=e2905]:
+                            - listitem:
+                              - link "Brown":
+                                - /url: /Allen-Solly-Regular-AMKP317G04250_Indigo-Melange_Large/dp/B06Y2DXVD6/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-30
+                          - generic [ref=e2908]:
+                            - listitem:
+                              - link "Coffee Melange":
+                                - /url: /Allen-Solly-Regular-AMKP317G04250_Indigo-Melange_Large/dp/B06Y1ZXHVT/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-30
+                          - generic [ref=e2911]:
+                            - listitem:
+                              - link "Coral":
+                                - /url: /Allen-Solly-Regular-AMKP317G04250_Indigo-Melange_Large/dp/B06Y2BT3NG/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-30
+                        - link "+18 other colors/patterns" [ref=e2915] [cursor=pointer]:
+                          - /url: /Allen-Solly-Regular-AMKP317G04250_Indigo-Melange_Large/dp/B06Y2796HJ/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-30
+                          - text: "+18"
+                      - generic [ref=e2916]:
+                        - heading "Allen Solly" [level=2] [ref=e2918]
+                        - link "Men’s Polo T‑Shirt | Comfortable Rich Cotton Blend, Band Collar, Regular Fit | Stylish & Premium All Day Wear" [ref=e2919] [cursor=pointer]:
+                          - /url: /Allen-Solly-Regular-AMKP317G04250_Indigo-Melange_Large/dp/B06Y2796HJ/ref=sr_1_30?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-30
+                          - heading "Men’s Polo T‑Shirt | Comfortable Rich Cotton Blend, Band Collar, Regular Fit | Stylish & Premium All Day Wear" [level=2] [ref=e2920]
+                      - generic [ref=e2921]:
+                        - generic [ref=e2922]:
+                          - text: "4.1"
+                          - button "4.1 out of 5 stars, rating details" [ref=e2924] [cursor=pointer]:
+                            - generic [ref=e2926]: 4.1 out of 5 stars
+                          - link "82,643 ratings" [ref=e2928] [cursor=pointer]:
+                            - /url: /Allen-Solly-Regular-AMKP317G04250_Indigo-Melange_Large/dp/B06Y2796HJ/ref=sr_1_30?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-30#customerReviews
+                            - text: (82.6K)
+                        - generic [ref=e2929]: 400+ bought in past month
+                      - generic [ref=e2930]:
+                        - generic [ref=e2932]:
+                          - generic [ref=e2933]: Price, product page
+                          - 'link "₹649 M.R.P: ₹1,099 M.R.P: ₹1,099" [ref=e2934] [cursor=pointer]':
+                            - /url: /Allen-Solly-Regular-AMKP317G04250_Indigo-Melange_Large/dp/B06Y2796HJ/ref=sr_1_30?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-30
+                            - generic [ref=e2935]:
+                              - generic [ref=e2936]: ₹649
+                              - generic [ref=e2937]: ₹649
+                            - generic [ref=e2938]: "M.R.P: ₹1,099"
+                            - generic [ref=e2939]:
+                              - text: "M.R.P:"
+                              - generic [ref=e2940]:
+                                - generic [ref=e2941]: ₹1,099
+                                - text: ₹1,099
+                          - text: (41% off)
+                        - generic [ref=e2945]:
+                          - generic [ref=e2946]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e2947]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e2950]:
+                        - generic [ref=e2952]: FREE delivery Thu, 17 Sept
+                        - generic [ref=e2954]: Or fastest delivery Tomorrow 6 am - 10 am
+                      - button "Add to cart" [ref=e2965] [cursor=pointer]
+                - listitem [ref=e2966]:
+                  - generic [ref=e2971]:
+                    - link [ref=e2975] [cursor=pointer]:
+                      - /url: /AUSK-Collar-Material-Sleeves-Regular/dp/B0GZPTV35B/ref=sr_1_31?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-31
+                      - img [ref=e2977]
+                    - generic [ref=e2978]:
+                      - group "colours available" [ref=e2980]:
+                        - list [ref=e2981]:
+                          - generic [ref=e2982]:
+                            - listitem:
+                              - link "Black_A92":
+                                - /url: /AUSK-Collar-Material-Sleeves-Regular/dp/B0GZPTV35B/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-31
+                          - generic [ref=e2985]:
+                            - listitem:
+                              - link "Black_A86":
+                                - /url: /AUSK-Collar-Material-Sleeves-Regular/dp/B0GZPF8WFQ/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-31
+                          - generic [ref=e2988]:
+                            - listitem:
+                              - link "Black_A91":
+                                - /url: /AUSK-Collar-Material-Sleeves-Regular/dp/B0GZPZ46DB/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-31
+                          - generic [ref=e2991]:
+                            - listitem:
+                              - link "White_A88":
+                                - /url: /AUSK-Collar-Material-Sleeves-Regular/dp/B0GZPKP3P5/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-31
+                          - generic [ref=e2994]:
+                            - listitem:
+                              - link "White_A94":
+                                - /url: /AUSK-Collar-Material-Sleeves-Regular/dp/B0GZV8L8WL/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-31
+                          - generic [ref=e2997]:
+                            - listitem:
+                              - link "White_A87":
+                                - /url: /AUSK-Collar-Material-Sleeves-Regular/dp/B0GZQC1M21/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-31
+                        - link "+3 other colors/patterns" [ref=e3001] [cursor=pointer]:
+                          - /url: /AUSK-Collar-Material-Sleeves-Regular/dp/B0GZPTV35B/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-31
+                          - text: "+3"
+                      - generic [ref=e3002]:
+                        - heading "AUSK" [level=2] [ref=e3004]
+                        - link "Men's Zip Collar Polo Tshirt | Cotton Rich Material | Half Sleeves | Modern Knit Panel Work | Regular Fit" [ref=e3005] [cursor=pointer]:
+                          - /url: /AUSK-Collar-Material-Sleeves-Regular/dp/B0GZPTV35B/ref=sr_1_31?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-31
+                          - heading "Men's Zip Collar Polo Tshirt | Cotton Rich Material | Half Sleeves | Modern Knit Panel Work | Regular Fit" [level=2] [ref=e3006]
+                      - generic [ref=e3008]:
+                        - text: "3.3"
+                        - button "3.3 out of 5 stars, rating details" [ref=e3010] [cursor=pointer]:
+                          - generic [ref=e3012]: 3.3 out of 5 stars
+                        - link "42 ratings" [ref=e3014] [cursor=pointer]:
+                          - /url: /AUSK-Collar-Material-Sleeves-Regular/dp/B0GZPTV35B/ref=sr_1_31?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-31#customerReviews
+                          - text: (42)
+                      - generic [ref=e3015]:
+                        - generic [ref=e3017]:
+                          - generic [ref=e3018]: Price, product page
+                          - 'link "₹298 M.R.P: ₹1,499 M.R.P: ₹1,499" [ref=e3019] [cursor=pointer]':
+                            - /url: /AUSK-Collar-Material-Sleeves-Regular/dp/B0GZPTV35B/ref=sr_1_31?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-31
+                            - generic [ref=e3020]:
+                              - generic [ref=e3021]: ₹298
+                              - generic [ref=e3022]: ₹298
+                            - generic [ref=e3023]: "M.R.P: ₹1,499"
+                            - generic [ref=e3024]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3025]:
+                                - generic [ref=e3026]: ₹1,499
+                                - text: ₹1,499
+                          - text: (80% off)
+                        - generic [ref=e3030]:
+                          - generic [ref=e3031]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3032]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e3035]:
+                        - generic [ref=e3037]: FREE delivery Fri, 18 Sept on first order
+                        - generic [ref=e3039]: Or fastest delivery Tomorrow, 16 Sept
+                      - button "Add to cart" [ref=e3050] [cursor=pointer]
+                - listitem [ref=e3051]:
+                  - generic [ref=e3056]:
+                    - link [ref=e3060] [cursor=pointer]:
+                      - /url: /Allen-Solly-Regular-T-Shirt-ASKPQRGF701338_Medium/dp/B08KTYSGH9/ref=sr_1_32?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-32
+                      - img [ref=e3062]
+                    - generic [ref=e3063]:
+                      - group "colours available" [ref=e3065]:
+                        - list [ref=e3066]:
+                          - generic [ref=e3067]:
+                            - listitem:
+                              - link "Medium Blue":
+                                - /url: /Allen-Solly-Regular-T-Shirt-ASKPQRGF701338_Medium/dp/B08KTYSGH9/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-32
+                          - generic [ref=e3070]:
+                            - listitem:
+                              - link "Charcoal":
+                                - /url: /Allen-Solly-Regular-T-Shirt-ASKPQRGF701338_Medium/dp/B08KTZ6Y9J/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-32
+                          - generic [ref=e3073]:
+                            - listitem:
+                              - link "Green":
+                                - /url: /Allen-Solly-Regular-T-Shirt-ASKPQRGF701338_Medium/dp/B08KTVV1W7/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-32
+                          - generic [ref=e3076]:
+                            - listitem:
+                              - link "Light Blue":
+                                - /url: /Allen-Solly-Regular-T-Shirt-ASKPQRGF701338_Medium/dp/B08KTWKGG8/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-32
+                          - generic [ref=e3079]:
+                            - listitem:
+                              - link "Light Green":
+                                - /url: /Allen-Solly-Regular-T-Shirt-ASKPQRGF701338_Medium/dp/B0C7ZLD5C2/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-32
+                          - generic [ref=e3082]:
+                            - listitem:
+                              - link "Light Red":
+                                - /url: /Allen-Solly-Regular-T-Shirt-ASKPQRGF701338_Medium/dp/B08KTZ4VHD/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-32
+                        - link "+6 other colors/patterns" [ref=e3086] [cursor=pointer]:
+                          - /url: /Allen-Solly-Regular-T-Shirt-ASKPQRGF701338_Medium/dp/B08KTYSGH9/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-32
+                          - text: "+6"
+                      - generic [ref=e3087]:
+                        - heading "Allen Solly" [level=2] [ref=e3089]
+                        - link "Men’s Pastel Shade Polo T‑Shirt | Bird’s Eye Knit Texture | Soft Cotton‑Blend | Regular Fit | Half Sleeves | Casual Everyday Wear" [ref=e3090] [cursor=pointer]:
+                          - /url: /Allen-Solly-Regular-T-Shirt-ASKPQRGF701338_Medium/dp/B08KTYSGH9/ref=sr_1_32?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-32
+                          - heading "Men’s Pastel Shade Polo T‑Shirt | Bird’s Eye Knit Texture | Soft Cotton‑Blend | Regular Fit | Half Sleeves | Casual Everyday Wear" [level=2] [ref=e3091]
+                      - generic [ref=e3092]:
+                        - generic [ref=e3093]:
+                          - text: "4.1"
+                          - button "4.1 out of 5 stars, rating details" [ref=e3095] [cursor=pointer]:
+                            - generic [ref=e3097]: 4.1 out of 5 stars
+                          - link "7,726 ratings" [ref=e3099] [cursor=pointer]:
+                            - /url: /Allen-Solly-Regular-T-Shirt-ASKPQRGF701338_Medium/dp/B08KTYSGH9/ref=sr_1_32?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-32#customerReviews
+                            - text: (7.7K)
+                        - generic [ref=e3100]: 200+ bought in past month
+                      - generic [ref=e3101]:
+                        - generic [ref=e3103]:
+                          - generic [ref=e3104]: Price, product page
+                          - 'link "₹919 M.R.P: ₹1,149 M.R.P: ₹1,149" [ref=e3105] [cursor=pointer]':
+                            - /url: /Allen-Solly-Regular-T-Shirt-ASKPQRGF701338_Medium/dp/B08KTYSGH9/ref=sr_1_32?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-32
+                            - generic [ref=e3106]:
+                              - generic [ref=e3107]: ₹919
+                              - generic [ref=e3108]: ₹919
+                            - generic [ref=e3109]: "M.R.P: ₹1,149"
+                            - generic [ref=e3110]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3111]:
+                                - generic [ref=e3112]: ₹1,149
+                                - text: ₹1,149
+                          - text: (20% off)
+                        - generic [ref=e3116]:
+                          - generic [ref=e3117]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3118]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e3121]:
+                        - generic [ref=e3123]: FREE delivery Thu, 17 Sept
+                        - generic [ref=e3125]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e3136] [cursor=pointer]
+                - listitem [ref=e3137]:
+                  - generic [ref=e3142]:
+                    - link [ref=e3146] [cursor=pointer]:
+                      - /url: /KAJARU-Polyester-Closure-Sleeves-Standard/dp/B0FFMJKFK4/ref=sr_1_33?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-33
+                      - img [ref=e3148]
+                    - generic [ref=e3149]:
+                      - group "colours available" [ref=e3151]:
+                        - list [ref=e3152]:
+                          - generic [ref=e3153]:
+                            - listitem:
+                              - link "COFFEE":
+                                - /url: /KAJARU-Polyester-Closure-Sleeves-Standard/dp/B0FFMJKFK4/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-33
+                          - generic [ref=e3156]:
+                            - listitem:
+                              - link "BLACK":
+                                - /url: /KAJARU-Polyester-Closure-Sleeves-Standard/dp/B0FFMH5N34/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-33
+                          - generic [ref=e3159]:
+                            - listitem:
+                              - link "ONIONPINK":
+                                - /url: /KAJARU-Polyester-Closure-Sleeves-Standard/dp/B0FFMJ1N8N/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-33
+                          - generic [ref=e3162]:
+                            - listitem:
+                              - link "OFFWHITE":
+                                - /url: /KAJARU-Polyester-Closure-Sleeves-Standard/dp/B0FFMJ6TBW/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-33
+                          - generic [ref=e3165]:
+                            - listitem:
+                              - link "SKYBLUE":
+                                - /url: /KAJARU-Polyester-Closure-Sleeves-Standard/dp/B0FFMP3CQ3/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-33
+                      - generic [ref=e3168]:
+                        - heading "KAJARU" [level=2] [ref=e3170]
+                        - link "Men's Polyester Blend T Shirt with Spread Collar Neck Line Zipper Closure Full Sleeves Solid Pattern Regular Fit and Standard Length" [ref=e3171] [cursor=pointer]:
+                          - /url: /KAJARU-Polyester-Closure-Sleeves-Standard/dp/B0FFMJKFK4/ref=sr_1_33?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-33
+                          - heading "Men's Polyester Blend T Shirt with Spread Collar Neck Line Zipper Closure Full Sleeves Solid Pattern Regular Fit and Standard Length" [level=2] [ref=e3172]
+                      - generic [ref=e3173]:
+                        - generic [ref=e3174]:
+                          - text: "3.8"
+                          - button "3.8 out of 5 stars, rating details" [ref=e3176] [cursor=pointer]:
+                            - generic [ref=e3178]: 3.8 out of 5 stars
+                          - link "1,070 ratings" [ref=e3180] [cursor=pointer]:
+                            - /url: /KAJARU-Polyester-Closure-Sleeves-Standard/dp/B0FFMJKFK4/ref=sr_1_33?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-33#customerReviews
+                            - text: (1K)
+                        - generic [ref=e3181]: 300+ bought in past month
+                      - generic [ref=e3182]:
+                        - generic [ref=e3184]:
+                          - generic [ref=e3185]: Price, product page
+                          - 'link "₹319 M.R.P: ₹999 M.R.P: ₹999" [ref=e3186] [cursor=pointer]':
+                            - /url: /KAJARU-Polyester-Closure-Sleeves-Standard/dp/B0FFMJKFK4/ref=sr_1_33?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-33
+                            - generic [ref=e3187]:
+                              - generic [ref=e3188]: ₹319
+                              - generic [ref=e3189]: ₹319
+                            - generic [ref=e3190]: "M.R.P: ₹999"
+                            - generic [ref=e3191]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3192]:
+                                - generic [ref=e3193]: ₹999
+                                - text: ₹999
+                          - text: (68% off)
+                        - generic [ref=e3197]:
+                          - generic [ref=e3198]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3199]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e3202]:
+                        - generic [ref=e3204]: FREE delivery Fri, 18 Sept on first order
+                        - generic [ref=e3206]: Or fastest delivery Tomorrow 6 am - 10 am
+                      - button "Add to cart" [ref=e3217] [cursor=pointer]
+                - listitem [ref=e3218]:
+                  - generic [ref=e3223]:
+                    - link [ref=e3227] [cursor=pointer]:
+                      - /url: /Jockey-Regular-Sleeved-2714_Wine-Tasting_L/dp/B0B56XMVFN/ref=sr_1_34?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-34
+                      - img [ref=e3229]
+                    - generic [ref=e3230]:
+                      - group "colours available" [ref=e3232]:
+                        - list [ref=e3233]:
+                          - generic [ref=e3234]:
+                            - listitem:
+                              - link "Wine Tasting":
+                                - /url: /Jockey-Regular-Sleeved-2714_Wine-Tasting_L/dp/B0B56XMVFN/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-34
+                          - generic [ref=e3237]:
+                            - listitem:
+                              - link "Balsam Green":
+                                - /url: /Jockey-Regular-Sleeved-2714_Wine-Tasting_L/dp/B0BSTZC8JV/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-34
+                          - generic [ref=e3240]:
+                            - listitem:
+                              - link "Black":
+                                - /url: /Jockey-Regular-Sleeved-2714_Wine-Tasting_L/dp/B012SSWU2C/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-34
+                          - generic [ref=e3243]:
+                            - listitem:
+                              - link "Brownie Melange":
+                                - /url: /Jockey-Regular-Sleeved-2714_Wine-Tasting_L/dp/B0H7XCKX24/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-34
+                          - generic [ref=e3246]:
+                            - listitem:
+                              - link "Burgundy Print":
+                                - /url: /Jockey-Regular-Sleeved-2714_Wine-Tasting_L/dp/B0822L6M93/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-34
+                          - generic [ref=e3249]:
+                            - listitem:
+                              - link "Charcoal Melange":
+                                - /url: /Jockey-Regular-Sleeved-2714_Wine-Tasting_L/dp/B012SSYXFY/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-34
+                        - link "+20 other colors/patterns" [ref=e3253] [cursor=pointer]:
+                          - /url: /Jockey-Regular-Sleeved-2714_Wine-Tasting_L/dp/B0B56XMVFN/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-34
+                          - text: "+20"
+                      - generic [ref=e3254]:
+                        - heading "Jockey" [level=2] [ref=e3256]
+                        - link "2714 Men Super Combed Cotton Rich Round Neck Half Sleeve Regular Fit T-Shirt" [ref=e3257] [cursor=pointer]:
+                          - /url: /Jockey-Regular-Sleeved-2714_Wine-Tasting_L/dp/B0B56XMVFN/ref=sr_1_34?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-34
+                          - heading "2714 Men Super Combed Cotton Rich Round Neck Half Sleeve Regular Fit T-Shirt" [level=2] [ref=e3258]
+                      - generic [ref=e3259]:
+                        - generic [ref=e3260]:
+                          - text: "4.2"
+                          - button "4.2 out of 5 stars, rating details" [ref=e3262] [cursor=pointer]:
+                            - generic [ref=e3264]: 4.2 out of 5 stars
+                          - link "21,460 ratings" [ref=e3266] [cursor=pointer]:
+                            - /url: /Jockey-Regular-Sleeved-2714_Wine-Tasting_L/dp/B0B56XMVFN/ref=sr_1_34?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-34#customerReviews
+                            - text: (21.4K)
+                        - generic [ref=e3267]: 300+ bought in past month
+                      - generic [ref=e3268]:
+                        - generic [ref=e3270]:
+                          - generic [ref=e3271]: Price, product page
+                          - link "₹579" [ref=e3272] [cursor=pointer]:
+                            - /url: /Jockey-Regular-Sleeved-2714_Wine-Tasting_L/dp/B0B56XMVFN/ref=sr_1_34?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-34
+                            - generic [ref=e3273]:
+                              - generic [ref=e3274]: ₹579
+                              - generic [ref=e3275]: ₹579
+                        - generic [ref=e3279]:
+                          - generic [ref=e3280]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3281]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e3284]:
+                        - generic [ref=e3286]: FREE delivery Thu, 17 Sept
+                        - generic [ref=e3288]: Or fastest delivery Tomorrow 6 am - 10 am
+                      - button "Add to cart" [ref=e3299] [cursor=pointer]
+                - listitem [ref=e3300]:
+                  - generic [ref=e3305]:
+                    - link [ref=e3309] [cursor=pointer]:
+                      - /url: /Jockey-Recycled-Microfiber-Breathable-Mesh_Navy_XL/dp/B0DK1H8GVV/ref=sr_1_35?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-35
+                      - img [ref=e3311]
+                    - generic [ref=e3312]:
+                      - group "colours available" [ref=e3314]:
+                        - list [ref=e3315]:
+                          - generic [ref=e3316]:
+                            - listitem:
+                              - link "Navy":
+                                - /url: /Jockey-Recycled-Microfiber-Breathable-Mesh_Navy_XL/dp/B0DK1H8GVV/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-35
+                          - generic [ref=e3319]:
+                            - listitem:
+                              - link "Abyss":
+                                - /url: /Jockey-Recycled-Microfiber-Breathable-Mesh_Navy_XL/dp/B0HDYGY62J/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-35
+                          - generic [ref=e3322]:
+                            - listitem:
+                              - link "Black":
+                                - /url: /Jockey-Recycled-Microfiber-Breathable-Mesh_Navy_XL/dp/B0DK1FB7CZ/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-35
+                          - generic [ref=e3325]:
+                            - listitem:
+                              - link "Grey":
+                                - /url: /Jockey-Recycled-Microfiber-Breathable-Mesh_Navy_XL/dp/B0FVX6YK4P/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-35
+                          - generic [ref=e3328]:
+                            - listitem:
+                              - link "Provincial Blue":
+                                - /url: /Jockey-Recycled-Microfiber-Breathable-Mesh_Navy_XL/dp/B0FVX2JBNG/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-35
+                          - generic [ref=e3331]:
+                            - listitem:
+                              - link "Tawny Port":
+                                - /url: /Jockey-Recycled-Microfiber-Breathable-Mesh_Navy_XL/dp/B0DK1GMZ38/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-35
+                        - link "+1 other color/pattern" [ref=e3335] [cursor=pointer]:
+                          - /url: /Jockey-Recycled-Microfiber-Breathable-Mesh_Navy_XL/dp/B0DK1H8GVV/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-35
+                          - text: "+1"
+                      - generic [ref=e3336]:
+                        - heading "Jockey" [level=2] [ref=e3338]
+                        - link "MV41 Men Recycled Microfiber Elastane Stretch Half Sleeve Active Wear Polo T-Shirt with Breathable Mesh" [ref=e3339] [cursor=pointer]:
+                          - /url: /Jockey-Recycled-Microfiber-Breathable-Mesh_Navy_XL/dp/B0DK1H8GVV/ref=sr_1_35?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-35
+                          - heading "MV41 Men Recycled Microfiber Elastane Stretch Half Sleeve Active Wear Polo T-Shirt with Breathable Mesh" [level=2] [ref=e3340]
+                      - generic [ref=e3342]:
+                        - text: "4.2"
+                        - button "4.2 out of 5 stars, rating details" [ref=e3344] [cursor=pointer]:
+                          - generic [ref=e3346]: 4.2 out of 5 stars
+                        - link "63 ratings" [ref=e3348] [cursor=pointer]:
+                          - /url: /Jockey-Recycled-Microfiber-Breathable-Mesh_Navy_XL/dp/B0DK1H8GVV/ref=sr_1_35?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-35#customerReviews
+                          - text: (63)
+                      - generic [ref=e3349]:
+                        - generic [ref=e3351]:
+                          - generic [ref=e3352]: Price, product page
+                          - 'link "₹1,399 M.R.P: ₹1,429 M.R.P: ₹1,429" [ref=e3353] [cursor=pointer]':
+                            - /url: /Jockey-Recycled-Microfiber-Breathable-Mesh_Navy_XL/dp/B0DK1H8GVV/ref=sr_1_35?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-35
+                            - generic [ref=e3354]:
+                              - generic [ref=e3355]: ₹1,399
+                              - generic [ref=e3356]: ₹1,399
+                            - generic [ref=e3357]: "M.R.P: ₹1,429"
+                            - generic [ref=e3358]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3359]:
+                                - generic [ref=e3360]: ₹1,429
+                                - text: ₹1,429
+                          - text: (2% off)
+                        - generic [ref=e3364]:
+                          - generic [ref=e3365]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3366]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e3369]:
+                        - generic [ref=e3371]: FREE delivery Fri, 18 Sept
+                        - generic [ref=e3373]: Or fastest delivery Tomorrow, 16 Sept
+                      - button "Add to cart" [ref=e3384] [cursor=pointer]
+                - listitem [ref=e3385]:
+                  - generic [ref=e3390]:
+                    - link [ref=e3394] [cursor=pointer]:
+                      - /url: /U-S-Polo-Assn-Phulkari-UDOEN1POLO123_Olive/dp/B0C4NXDR4L/ref=sr_1_36?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-36
+                      - img [ref=e3396]
+                    - generic [ref=e3397]:
+                      - group "colours available" [ref=e3399]:
+                        - list [ref=e3400]:
+                          - generic [ref=e3401]:
+                            - listitem:
+                              - link "Olive":
+                                - /url: /U-S-Polo-Assn-Phulkari-UDOEN1POLO123_Olive/dp/B0C4NXDR4L/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-36
+                          - generic [ref=e3404]:
+                            - listitem:
+                              - link "Beige":
+                                - /url: /U-S-Polo-Assn-Phulkari-UDOEN1POLO123_Olive/dp/B0C9J5GQ24/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-36
+                          - generic [ref=e3407]:
+                            - listitem:
+                              - link "Navy":
+                                - /url: /U-S-Polo-Assn-Phulkari-UDOEN1POLO123_Olive/dp/B0C4NYTGJ5/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-36
+                          - generic [ref=e3410]:
+                            - listitem:
+                              - link "Red":
+                                - /url: /U-S-Polo-Assn-Phulkari-UDOEN1POLO123_Olive/dp/B0C4NY74F5/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-36
+                          - generic [ref=e3413]:
+                            - listitem:
+                              - link "Turquoise":
+                                - /url: /U-S-Polo-Assn-Phulkari-UDOEN1POLO123_Olive/dp/B0C4NYR2JY/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-36
+                      - generic [ref=e3416]:
+                        - heading "U.S. POLO ASSN." [level=2] [ref=e3418]
+                        - link "Men’s Slim Fit Cotton Polo T-Shirt, Ribbed Collar, Half Sleeves Casual Mens Tshirt for Men" [ref=e3419] [cursor=pointer]:
+                          - /url: /U-S-Polo-Assn-Phulkari-UDOEN1POLO123_Olive/dp/B0C4NXDR4L/ref=sr_1_36?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-36
+                          - heading "Men’s Slim Fit Cotton Polo T-Shirt, Ribbed Collar, Half Sleeves Casual Mens Tshirt for Men" [level=2] [ref=e3420]
+                      - generic [ref=e3421]:
+                        - generic [ref=e3422]:
+                          - text: "4.0"
+                          - button "4.0 out of 5 stars, rating details" [ref=e3424] [cursor=pointer]:
+                            - generic [ref=e3426]: 4.0 out of 5 stars
+                          - link "232 ratings" [ref=e3428] [cursor=pointer]:
+                            - /url: /U-S-Polo-Assn-Phulkari-UDOEN1POLO123_Olive/dp/B0C4NXDR4L/ref=sr_1_36?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-36#customerReviews
+                            - text: (232)
+                        - generic [ref=e3429]: 50+ bought in past month
+                      - generic [ref=e3430]:
+                        - generic [ref=e3432]:
+                          - generic [ref=e3433]: Price, product page
+                          - 'link "₹1,539 M.R.P: ₹2,299 M.R.P: ₹2,299" [ref=e3434] [cursor=pointer]':
+                            - /url: /U-S-Polo-Assn-Phulkari-UDOEN1POLO123_Olive/dp/B0C4NXDR4L/ref=sr_1_36?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-36
+                            - generic [ref=e3435]:
+                              - generic [ref=e3436]: ₹1,539
+                              - generic [ref=e3437]: ₹1,539
+                            - generic [ref=e3438]: "M.R.P: ₹2,299"
+                            - generic [ref=e3439]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3440]:
+                                - generic [ref=e3441]: ₹2,299
+                                - text: ₹2,299
+                          - text: (33% off)
+                        - generic [ref=e3445]:
+                          - generic [ref=e3446]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3447]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e3450]:
+                        - generic [ref=e3452]: FREE delivery Sat, 19 Sept
+                        - generic [ref=e3454]: Or fastest delivery Fri, 18 Sept
+                      - button "Add to cart" [ref=e3465] [cursor=pointer]
+                - listitem [ref=e3466]:
+                  - generic [ref=e3471]:
+                    - link [ref=e3475] [cursor=pointer]:
+                      - /url: /U-S-POLO-ASSN-Oversized-OEE04-PL_Rust/dp/B0DN13JGY1/ref=sr_1_37?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-37
+                      - img [ref=e3477]
+                    - generic [ref=e3478]:
+                      - group "colours available" [ref=e3480]:
+                        - list [ref=e3481]:
+                          - generic [ref=e3482]:
+                            - listitem:
+                              - link "Rust Brown":
+                                - /url: /U-S-POLO-ASSN-Oversized-OEE04-PL_Rust/dp/B0DN13JGY1/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-37
+                          - generic [ref=e3485]:
+                            - listitem:
+                              - link "Black":
+                                - /url: /U-S-POLO-ASSN-Oversized-OEE04-PL_Rust/dp/B0DN14GKZ3/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-37
+                          - generic [ref=e3488]:
+                            - listitem:
+                              - link "Navy":
+                                - /url: /U-S-POLO-ASSN-Oversized-OEE04-PL_Rust/dp/B0DN11BG2X/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-37
+                          - generic [ref=e3491]:
+                            - listitem:
+                              - link "Olive":
+                                - /url: /U-S-POLO-ASSN-Oversized-OEE04-PL_Rust/dp/B0DN147CSB/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-37
+                          - generic [ref=e3494]:
+                            - listitem:
+                              - link "Smoke Grey":
+                                - /url: /U-S-POLO-ASSN-Oversized-OEE04-PL_Rust/dp/B0DN1333ZX/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-37
+                          - generic [ref=e3497]:
+                            - listitem:
+                              - link "White":
+                                - /url: /U-S-POLO-ASSN-Oversized-OEE04-PL_Rust/dp/B0DN129X2Y/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-37
+                      - generic [ref=e3500]:
+                        - heading "U.S. POLO ASSN." [level=2] [ref=e3502]
+                        - link "Mens OEE04 Pure Cotton Oversized Lounge T-Shirt" [ref=e3503] [cursor=pointer]:
+                          - /url: /U-S-POLO-ASSN-Oversized-OEE04-PL_Rust/dp/B0DN13JGY1/ref=sr_1_37?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-37
+                          - heading "Mens OEE04 Pure Cotton Oversized Lounge T-Shirt" [level=2] [ref=e3504]
+                      - generic [ref=e3505]:
+                        - generic [ref=e3506]:
+                          - text: "4.0"
+                          - button "4.0 out of 5 stars, rating details" [ref=e3508] [cursor=pointer]:
+                            - generic [ref=e3510]: 4.0 out of 5 stars
+                          - link "232 ratings" [ref=e3512] [cursor=pointer]:
+                            - /url: /U-S-POLO-ASSN-Oversized-OEE04-PL_Rust/dp/B0DN13JGY1/ref=sr_1_37?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-37#customerReviews
+                            - text: (232)
+                        - generic [ref=e3513]: 50+ bought in past month
+                      - generic [ref=e3514]:
+                        - generic [ref=e3516]:
+                          - generic [ref=e3517]: Price, product page
+                          - 'link "₹863 M.R.P: ₹899 M.R.P: ₹899" [ref=e3518] [cursor=pointer]':
+                            - /url: /U-S-POLO-ASSN-Oversized-OEE04-PL_Rust/dp/B0DN13JGY1/ref=sr_1_37?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-37
+                            - generic [ref=e3519]:
+                              - generic [ref=e3520]: ₹863
+                              - generic [ref=e3521]: ₹863
+                            - generic [ref=e3522]: "M.R.P: ₹899"
+                            - generic [ref=e3523]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3524]:
+                                - generic [ref=e3525]: ₹899
+                                - text: ₹899
+                          - text: (4% off)
+                        - generic [ref=e3529]:
+                          - generic [ref=e3530]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3531]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e3534]:
+                        - generic [ref=e3536]: FREE delivery Thu, 17 Sept
+                        - generic [ref=e3538]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e3549] [cursor=pointer]
+                - listitem [ref=e3550]:
+                  - generic [ref=e3555]:
+                    - link [ref=e3559] [cursor=pointer]:
+                      - /url: /LM-STUDIO-Oversized-Shoulder-Charcoal/dp/B0H3D2688J/ref=sr_1_38?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-38
+                      - img [ref=e3561]
+                    - generic [ref=e3562]:
+                      - group "colours available" [ref=e3564]:
+                        - list
+                        - link "+5 other colors/patterns" [ref=e3566] [cursor=pointer]:
+                          - /url: /LM-STUDIO-Oversized-Shoulder-Charcoal/dp/B0H3D2688J/ref=cs_sr_dp?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-38
+                      - link "Oversized T-Shirt for Men, Premium Combed Cotton, Drop Shoulder, Baggy Fit, Black/White/Charcoal Grey" [ref=e3568] [cursor=pointer]:
+                        - /url: /LM-STUDIO-Oversized-Shoulder-Charcoal/dp/B0H3D2688J/ref=sr_1_38?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-38
+                        - heading "Oversized T-Shirt for Men, Premium Combed Cotton, Drop Shoulder, Baggy Fit, Black/White/Charcoal Grey" [level=2] [ref=e3569]
+                      - generic [ref=e3570]:
+                        - generic [ref=e3571]:
+                          - text: "3.2"
+                          - button "3.2 out of 5 stars, rating details" [ref=e3573] [cursor=pointer]:
+                            - generic [ref=e3575]: 3.2 out of 5 stars
+                          - link "13 ratings" [ref=e3577] [cursor=pointer]:
+                            - /url: /LM-STUDIO-Oversized-Shoulder-Charcoal/dp/B0H3D2688J/ref=sr_1_38?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-38#customerReviews
+                            - text: (13)
+                        - generic [ref=e3578]: 100+ bought in past month
+                      - generic [ref=e3579]:
+                        - generic [ref=e3581]:
+                          - generic [ref=e3582]: Price, product page
+                          - 'link "₹299 M.R.P: ₹1,999 M.R.P: ₹1,999" [ref=e3583] [cursor=pointer]':
+                            - /url: /LM-STUDIO-Oversized-Shoulder-Charcoal/dp/B0H3D2688J/ref=sr_1_38?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-38
+                            - generic [ref=e3584]:
+                              - generic [ref=e3585]: ₹299
+                              - generic [ref=e3586]: ₹299
+                            - generic [ref=e3587]: "M.R.P: ₹1,999"
+                            - generic [ref=e3588]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3589]:
+                                - generic [ref=e3590]: ₹1,999
+                                - text: ₹1,999
+                          - text: (85% off)
+                        - generic [ref=e3593]:
+                          - generic [ref=e3594]: You pay ₹293
+                          - text: with coupon (limited sizes/colours)
+                      - generic [ref=e3599]: FREE delivery Sun, 20 Sept on first order
+                      - button "Add to cart" [ref=e3610] [cursor=pointer]
+                - listitem [ref=e3611]:
+                  - generic [ref=e3616]:
+                    - link [ref=e3620] [cursor=pointer]:
+                      - /url: /Van-Heusen-Solid-Regular-VSKP517S011411_Blue_Large/dp/B076CHQJZR/ref=sr_1_39?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-39
+                      - img [ref=e3622]
+                    - generic [ref=e3623]:
+                      - group "colours available" [ref=e3625]:
+                        - list [ref=e3626]:
+                          - generic [ref=e3627]:
+                            - listitem:
+                              - link "Navy":
+                                - /url: /Van-Heusen-Solid-Regular-VSKP517S011411_Blue_Large/dp/B076CHQJZR/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-39
+                          - generic [ref=e3630]:
+                            - listitem:
+                              - link "Black":
+                                - /url: /Van-Heusen-Solid-Regular-VSKP517S011411_Blue_Large/dp/B076CHQJZP/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-39
+                          - generic [ref=e3633]:
+                            - listitem:
+                              - link "Blue":
+                                - /url: /Van-Heusen-Solid-Regular-VSKP517S011411_Blue_Large/dp/B076CJMH93/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-39
+                          - generic [ref=e3636]:
+                            - listitem:
+                              - link "Brown":
+                                - /url: /Van-Heusen-Solid-Regular-VSKP517S011411_Blue_Large/dp/B0DF7CZPZP/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-39
+                          - generic [ref=e3639]:
+                            - listitem:
+                              - link "Cardinal Red":
+                                - /url: /Van-Heusen-Solid-Regular-VSKP517S011411_Blue_Large/dp/B07HJBND9G/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-39
+                          - generic [ref=e3642]:
+                            - listitem:
+                              - link "Cream":
+                                - /url: /Van-Heusen-Solid-Regular-VSKP517S011411_Blue_Large/dp/B076CKDCJP/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-39
+                        - link "+15 other colors/patterns" [ref=e3646] [cursor=pointer]:
+                          - /url: /Van-Heusen-Solid-Regular-VSKP517S011411_Blue_Large/dp/B076CHQJZR/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-39
+                          - text: "+15"
+                      - generic [ref=e3647]:
+                        - heading "Van Heusen" [level=2] [ref=e3649]
+                        - link "Men's Cotton Solid Regular Fit Collar Polo T-Shirt" [ref=e3650] [cursor=pointer]:
+                          - /url: /Van-Heusen-Solid-Regular-VSKP517S011411_Blue_Large/dp/B076CHQJZR/ref=sr_1_39?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-39
+                          - heading "Men's Cotton Solid Regular Fit Collar Polo T-Shirt" [level=2] [ref=e3651]
+                      - generic [ref=e3652]:
+                        - generic [ref=e3653]:
+                          - text: "4.0"
+                          - button "4.0 out of 5 stars, rating details" [ref=e3655] [cursor=pointer]:
+                            - generic [ref=e3657]: 4.0 out of 5 stars
+                          - link "45,309 ratings" [ref=e3659] [cursor=pointer]:
+                            - /url: /Van-Heusen-Solid-Regular-VSKP517S011411_Blue_Large/dp/B076CHQJZR/ref=sr_1_39?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-39#customerReviews
+                            - text: (45.3K)
+                        - generic [ref=e3660]: 400+ bought in past month
+                      - generic [ref=e3661]:
+                        - generic [ref=e3663]:
+                          - generic [ref=e3664]: Price, product page
+                          - 'link "₹648 M.R.P: ₹1,099 M.R.P: ₹1,099" [ref=e3665] [cursor=pointer]':
+                            - /url: /Van-Heusen-Solid-Regular-VSKP517S011411_Blue_Large/dp/B076CHQJZR/ref=sr_1_39?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-39
+                            - generic [ref=e3666]:
+                              - generic [ref=e3667]: ₹648
+                              - generic [ref=e3668]: ₹648
+                            - generic [ref=e3669]: "M.R.P: ₹1,099"
+                            - generic [ref=e3670]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3671]:
+                                - generic [ref=e3672]: ₹1,099
+                                - text: ₹1,099
+                          - text: (41% off)
+                        - generic [ref=e3676]:
+                          - generic [ref=e3677]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3678]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e3681]:
+                        - generic [ref=e3683]: FREE delivery Thu, 17 Sept
+                        - generic [ref=e3685]: Or fastest delivery Tomorrow 6 am - 10 am
+                      - button "Add to cart" [ref=e3696] [cursor=pointer]
+                - listitem [ref=e3697]:
+                  - generic [ref=e3702]:
+                    - link [ref=e3706] [cursor=pointer]:
+                      - /url: /AUSK-Regular-Tshirt-T-Shirts-Color-Teal/dp/B0D5MLQMNR/ref=sr_1_40?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-40
+                      - img [ref=e3708]
+                    - generic [ref=e3709]:
+                      - group "colours available" [ref=e3711]:
+                        - list [ref=e3712]:
+                          - generic [ref=e3713]:
+                            - listitem:
+                              - link "Teal":
+                                - /url: /AUSK-Regular-Tshirt-T-Shirts-Color-Teal/dp/B0D5MLQMNR/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-40
+                          - generic [ref=e3716]:
+                            - listitem:
+                              - link "Blue":
+                                - /url: /AUSK-Regular-Tshirt-T-Shirts-Color-Teal/dp/B0D5MMSPMQ/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-40
+                          - generic [ref=e3719]:
+                            - listitem:
+                              - link "Maroon":
+                                - /url: /AUSK-Regular-Tshirt-T-Shirts-Color-Teal/dp/B0D5MKMXWH/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-40
+                          - generic [ref=e3722]:
+                            - listitem:
+                              - link "Multi&Maroon":
+                                - /url: /AUSK-Regular-Tshirt-T-Shirts-Color-Teal/dp/B0DHSC5QJD/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-40
+                          - generic [ref=e3725]:
+                            - listitem:
+                              - link "Multi&Teal":
+                                - /url: /AUSK-Regular-Tshirt-T-Shirts-Color-Teal/dp/B0DHS8XG8F/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-40
+                          - generic [ref=e3728]:
+                            - listitem:
+                              - link "Teal&Maroon":
+                                - /url: /AUSK-Regular-Tshirt-T-Shirts-Color-Teal/dp/B0DHS7BDQN/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-40
+                      - generic [ref=e3731]:
+                        - heading "AUSK" [level=2] [ref=e3733]
+                        - link "Men Tshirt || Mens Sports T-Shirts (Color-)" [ref=e3734] [cursor=pointer]:
+                          - /url: /AUSK-Regular-Tshirt-T-Shirts-Color-Teal/dp/B0D5MLQMNR/ref=sr_1_40?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-40
+                          - heading "Men Tshirt || Mens Sports T-Shirts (Color-)" [level=2] [ref=e3735]
+                      - generic [ref=e3736]:
+                        - generic [ref=e3737]:
+                          - text: "3.4"
+                          - button "3.4 out of 5 stars, rating details" [ref=e3739] [cursor=pointer]:
+                            - generic [ref=e3741]: 3.4 out of 5 stars
+                          - link "1,733 ratings" [ref=e3743] [cursor=pointer]:
+                            - /url: /AUSK-Regular-Tshirt-T-Shirts-Color-Teal/dp/B0D5MLQMNR/ref=sr_1_40?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-40#customerReviews
+                            - text: (1.7K)
+                        - generic [ref=e3744]: 400+ bought in past month
+                      - generic [ref=e3745]:
+                        - generic [ref=e3747]:
+                          - generic [ref=e3748]: Price, product page
+                          - 'link "₹270 M.R.P: ₹1,499 M.R.P: ₹1,499" [ref=e3749] [cursor=pointer]':
+                            - /url: /AUSK-Regular-Tshirt-T-Shirts-Color-Teal/dp/B0D5MLQMNR/ref=sr_1_40?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-40
+                            - generic [ref=e3750]:
+                              - generic [ref=e3751]: ₹270
+                              - generic [ref=e3752]: ₹270
+                            - generic [ref=e3753]: "M.R.P: ₹1,499"
+                            - generic [ref=e3754]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3755]:
+                                - generic [ref=e3756]: ₹1,499
+                                - text: ₹1,499
+                          - text: (82% off)
+                        - generic [ref=e3760]:
+                          - generic [ref=e3761]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3762]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e3765]:
+                        - generic [ref=e3767]: FREE delivery Fri, 18 Sept on first order
+                        - generic [ref=e3769]: Or fastest delivery Tomorrow 6 am - 10 am
+                      - button "Add to cart" [ref=e3780] [cursor=pointer]
+                - listitem [ref=e3781]:
+                  - generic [ref=e3786]:
+                    - link [ref=e3790] [cursor=pointer]:
+                      - /url: /Van-Heusen-Regular-VSKP517S011407_Grey-Melange_Large/dp/B076CHSL6P/ref=sr_1_41?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-41
+                      - img [ref=e3792]
+                    - generic [ref=e3793]:
+                      - group "colours available" [ref=e3795]:
+                        - list [ref=e3796]:
+                          - generic [ref=e3797]:
+                            - listitem:
+                              - link "Grey Mélange":
+                                - /url: /Van-Heusen-Regular-VSKP517S011407_Grey-Melange_Large/dp/B076CHSL6P/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-41
+                          - generic [ref=e3800]:
+                            - listitem:
+                              - link "Black":
+                                - /url: /Van-Heusen-Regular-VSKP517S011407_Grey-Melange_Large/dp/B076CHQJZP/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-41
+                          - generic [ref=e3803]:
+                            - listitem:
+                              - link "Blue":
+                                - /url: /Van-Heusen-Regular-VSKP517S011407_Grey-Melange_Large/dp/B076CJMH93/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-41
+                          - generic [ref=e3806]:
+                            - listitem:
+                              - link "Brown":
+                                - /url: /Van-Heusen-Regular-VSKP517S011407_Grey-Melange_Large/dp/B0DF7CZPZP/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-41
+                          - generic [ref=e3809]:
+                            - listitem:
+                              - link "Cardinal Red":
+                                - /url: /Van-Heusen-Regular-VSKP517S011407_Grey-Melange_Large/dp/B07HJBND9G/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-41
+                          - generic [ref=e3812]:
+                            - listitem:
+                              - link "Cream":
+                                - /url: /Van-Heusen-Regular-VSKP517S011407_Grey-Melange_Large/dp/B076CKDCJP/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-41
+                        - link "+15 other colors/patterns" [ref=e3816] [cursor=pointer]:
+                          - /url: /Van-Heusen-Regular-VSKP517S011407_Grey-Melange_Large/dp/B076CHSL6P/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-41
+                          - text: "+15"
+                      - generic [ref=e3817]:
+                        - heading "Van Heusen" [level=2] [ref=e3819]
+                        - link "Men's Cotton Solid Regular Fit Collar Polo T-Shirt" [ref=e3820] [cursor=pointer]:
+                          - /url: /Van-Heusen-Regular-VSKP517S011407_Grey-Melange_Large/dp/B076CHSL6P/ref=sr_1_41?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-41
+                          - heading "Men's Cotton Solid Regular Fit Collar Polo T-Shirt" [level=2] [ref=e3821]
+                      - generic [ref=e3822]:
+                        - generic [ref=e3823]:
+                          - text: "4.0"
+                          - button "4.0 out of 5 stars, rating details" [ref=e3825] [cursor=pointer]:
+                            - generic [ref=e3827]: 4.0 out of 5 stars
+                          - link "45,309 ratings" [ref=e3829] [cursor=pointer]:
+                            - /url: /Van-Heusen-Regular-VSKP517S011407_Grey-Melange_Large/dp/B076CHSL6P/ref=sr_1_41?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-41#customerReviews
+                            - text: (45.3K)
+                        - generic [ref=e3830]: 300+ bought in past month
+                      - generic [ref=e3831]:
+                        - generic [ref=e3833]:
+                          - generic [ref=e3834]: Price, product page
+                          - 'link "₹648 M.R.P: ₹1,099 M.R.P: ₹1,099" [ref=e3835] [cursor=pointer]':
+                            - /url: /Van-Heusen-Regular-VSKP517S011407_Grey-Melange_Large/dp/B076CHSL6P/ref=sr_1_41?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-41
+                            - generic [ref=e3836]:
+                              - generic [ref=e3837]: ₹648
+                              - generic [ref=e3838]: ₹648
+                            - generic [ref=e3839]: "M.R.P: ₹1,099"
+                            - generic [ref=e3840]:
+                              - text: "M.R.P:"
+                              - generic [ref=e3841]:
+                                - generic [ref=e3842]: ₹1,099
+                                - text: ₹1,099
+                          - text: (41% off)
+                        - generic [ref=e3846]:
+                          - generic [ref=e3847]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3848]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e3851]:
+                        - generic [ref=e3853]: FREE delivery Thu, 17 Sept
+                        - generic [ref=e3855]: Or fastest delivery Tomorrow 6 am - 10 am
+                      - button "Add to cart" [ref=e3866] [cursor=pointer]
+                - listitem [ref=e3867]:
+                  - generic [ref=e3872]:
+                    - link [ref=e3876] [cursor=pointer]:
+                      - /url: /Jockey-Microfiber-Fabric-Sleeve-T-Shirt_Wine_L/dp/B0D6N3DLYW/ref=sr_1_42?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-42
+                      - img [ref=e3878]
+                    - generic [ref=e3879]:
+                      - group "colours available" [ref=e3881]:
+                        - list [ref=e3882]:
+                          - generic [ref=e3883]:
+                            - listitem:
+                              - link "Wine":
+                                - /url: /Jockey-Microfiber-Fabric-Sleeve-T-Shirt_Wine_L/dp/B0D6N3DLYW/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-42
+                          - generic [ref=e3886]:
+                            - listitem:
+                              - link "Black":
+                                - /url: /Jockey-Microfiber-Fabric-Sleeve-T-Shirt_Wine_L/dp/B0D6MT6YTZ/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-42
+                          - generic [ref=e3889]:
+                            - listitem:
+                              - link "Copper":
+                                - /url: /Jockey-Microfiber-Fabric-Sleeve-T-Shirt_Wine_L/dp/B0F5H4G547/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-42
+                          - generic [ref=e3892]:
+                            - listitem:
+                              - link "Dark Maroon":
+                                - /url: /Jockey-Microfiber-Fabric-Sleeve-T-Shirt_Wine_L/dp/B0FNCTR3KF/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-42
+                          - generic [ref=e3895]:
+                            - listitem:
+                              - link "Green":
+                                - /url: /Jockey-Microfiber-Fabric-Sleeve-T-Shirt_Wine_L/dp/B0D6MXWQ72/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-42
+                          - generic [ref=e3898]:
+                            - listitem:
+                              - link "Grey":
+                                - /url: /Jockey-Microfiber-Fabric-Sleeve-T-Shirt_Wine_L/dp/B0F5GKCT28/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-42
+                        - link "+12 other colors/patterns" [ref=e3902] [cursor=pointer]:
+                          - /url: /Jockey-Microfiber-Fabric-Sleeve-T-Shirt_Wine_L/dp/B0D6N3DLYW/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-42
+                          - text: "+12"
+                      - generic [ref=e3903]:
+                        - heading "Jockey" [level=2] [ref=e3905]
+                        - link "AM38 Men Nylon Regular Fit Solid Half Sleeve Polo T-Shirt with StayDry & StayFresh Technology" [ref=e3906] [cursor=pointer]:
+                          - /url: /Jockey-Microfiber-Fabric-Sleeve-T-Shirt_Wine_L/dp/B0D6N3DLYW/ref=sr_1_42?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-42
+                          - heading "AM38 Men Nylon Regular Fit Solid Half Sleeve Polo T-Shirt with StayDry & StayFresh Technology" [level=2] [ref=e3907]
+                      - generic [ref=e3908]:
+                        - generic [ref=e3909]:
+                          - text: "4.1"
+                          - button "4.1 out of 5 stars, rating details" [ref=e3911] [cursor=pointer]:
+                            - generic [ref=e3913]: 4.1 out of 5 stars
+                          - link "612 ratings" [ref=e3915] [cursor=pointer]:
+                            - /url: /Jockey-Microfiber-Fabric-Sleeve-T-Shirt_Wine_L/dp/B0D6N3DLYW/ref=sr_1_42?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-42#customerReviews
+                            - text: (612)
+                        - generic [ref=e3916]: 100+ bought in past month
+                      - generic [ref=e3917]:
+                        - generic [ref=e3919]:
+                          - generic [ref=e3920]: Price, product page
+                          - link "₹999" [ref=e3921] [cursor=pointer]:
+                            - /url: /Jockey-Microfiber-Fabric-Sleeve-T-Shirt_Wine_L/dp/B0D6N3DLYW/ref=sr_1_42?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-42
+                            - generic [ref=e3922]:
+                              - generic [ref=e3923]: ₹999
+                              - generic [ref=e3924]: ₹999
+                        - generic [ref=e3928]:
+                          - generic [ref=e3929]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3930]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e3933]:
+                        - generic [ref=e3935]: FREE delivery Thu, 17 Sept
+                        - generic [ref=e3937]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e3948] [cursor=pointer]
+                - listitem [ref=e3949]:
+                  - generic [ref=e3954]:
+                    - link [ref=e3958] [cursor=pointer]:
+                      - /url: /Souled-Store-Demon-Slayer-Lightweight/dp/B0FJFVJDC4/ref=sr_1_43?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-43
+                      - img [ref=e3960]
+                    - generic [ref=e3961]:
+                      - generic [ref=e3962]:
+                        - heading "The Souled Store" [level=2] [ref=e3964]
+                        - 'link "Demon Slayer: Tanjiro Men and Boys Short Sleeves Round Neck Green Graphic Printed Cotton Lightweight All-Season Oversized T-Shirt" [ref=e3965] [cursor=pointer]':
+                          - /url: /Souled-Store-Demon-Slayer-Lightweight/dp/B0FJFVJDC4/ref=sr_1_43?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-43
+                          - 'heading "Demon Slayer: Tanjiro Men and Boys Short Sleeves Round Neck Green Graphic Printed Cotton Lightweight All-Season Oversized T-Shirt" [level=2] [ref=e3966]'
+                      - generic [ref=e3968]:
+                        - text: "4.4"
+                        - button "4.4 out of 5 stars, rating details" [ref=e3970] [cursor=pointer]:
+                          - generic [ref=e3972]: 4.4 out of 5 stars
+                        - link "22 ratings" [ref=e3974] [cursor=pointer]:
+                          - /url: /Souled-Store-Demon-Slayer-Lightweight/dp/B0FJFVJDC4/ref=sr_1_43?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-43#customerReviews
+                          - text: (22)
+                      - generic [ref=e3975]:
+                        - generic [ref=e3977]:
+                          - generic [ref=e3978]: Price, product page
+                          - link "₹1,199" [ref=e3979] [cursor=pointer]:
+                            - /url: /Souled-Store-Demon-Slayer-Lightweight/dp/B0FJFVJDC4/ref=sr_1_43?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-43
+                            - generic [ref=e3980]:
+                              - generic [ref=e3981]: ₹1,199
+                              - generic [ref=e3982]: ₹1,199
+                        - generic [ref=e3986]:
+                          - generic [ref=e3987]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e3988]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e3991]:
+                        - generic [ref=e3993]: FREE delivery Thu, 17 Sept
+                        - generic [ref=e3995]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e4006] [cursor=pointer]
+                - listitem [ref=e4007]:
+                  - generic [ref=e4012]:
+                    - link [ref=e4016] [cursor=pointer]:
+                      - /url: /Van-Heusen-Regular-Shirt-IHTS1LPNG60033_Green/dp/B091KS9SJK/ref=sr_1_44?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-44
+                      - img [ref=e4018]
+                    - generic [ref=e4019]:
+                      - group "colours available" [ref=e4021]:
+                        - list [ref=e4022]:
+                          - generic [ref=e4023]:
+                            - listitem:
+                              - link "Pine Green":
+                                - /url: /Van-Heusen-Regular-Shirt-IHTS1LPNG60033_Green/dp/B091KS9SJK/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-44
+                          - generic [ref=e4026]:
+                            - listitem:
+                              - link "Deep Sea":
+                                - /url: /Van-Heusen-Regular-Shirt-IHTS1LPNG60033_Green/dp/B07RB1F2FC/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-44
+                          - generic [ref=e4029]:
+                            - listitem:
+                              - link "Grey Melange":
+                                - /url: /Van-Heusen-Regular-Shirt-IHTS1LPNG60033_Green/dp/B07R4NHRQD/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-44
+                          - generic [ref=e4032]:
+                            - listitem:
+                              - link "Racing Red":
+                                - /url: /Van-Heusen-Regular-Shirt-IHTS1LPNG60033_Green/dp/B07R4NHYR5/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-44
+                          - generic [ref=e4035]:
+                            - listitem:
+                              - link "Black":
+                                - /url: /Van-Heusen-Regular-Shirt-IHTS1LPNG60033_Green/dp/B07R4NHT99/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-44
+                          - generic [ref=e4038]:
+                            - listitem:
+                              - link "Dusty Orange":
+                                - /url: /Van-Heusen-Regular-Shirt-IHTS1LPNG60033_Green/dp/B091KTT2VT/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-44
+                        - link "+3 other colors/patterns" [ref=e4042] [cursor=pointer]:
+                          - /url: /Van-Heusen-Regular-Shirt-IHTS1LPNG60033_Green/dp/B091KS9SJK/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-44
+                          - text: "+3"
+                      - generic [ref=e4043]:
+                        - heading "Van Heusen" [level=2] [ref=e4045]
+                        - link "Mens Cotton Blend Polo T-Shirt|Athleisure |Ultra Soft Handfeel|Lightweight|Regular Fit| Short Sleeve| Breathable Fabric|Activewear| Solid Colors |Style 60033|Available in Pack of 1 & 2" [ref=e4046] [cursor=pointer]:
+                          - /url: /Van-Heusen-Regular-Shirt-IHTS1LPNG60033_Green/dp/B091KS9SJK/ref=sr_1_44?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-44
+                          - heading "Mens Cotton Blend Polo T-Shirt|Athleisure |Ultra Soft Handfeel|Lightweight|Regular Fit| Short Sleeve| Breathable Fabric|Activewear| Solid Colors |Style 60033|Available in Pack of 1 & 2" [level=2] [ref=e4047]
+                      - generic [ref=e4048]:
+                        - generic [ref=e4049]:
+                          - text: "4.1"
+                          - button "4.1 out of 5 stars, rating details" [ref=e4051] [cursor=pointer]:
+                            - generic [ref=e4053]: 4.1 out of 5 stars
+                          - link "3,638 ratings" [ref=e4055] [cursor=pointer]:
+                            - /url: /Van-Heusen-Regular-Shirt-IHTS1LPNG60033_Green/dp/B091KS9SJK/ref=sr_1_44?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-44#customerReviews
+                            - text: (3.6K)
+                        - generic [ref=e4056]: 50+ bought in past month
+                      - generic [ref=e4057]:
+                        - generic [ref=e4059]:
+                          - generic [ref=e4060]: Price, product page
+                          - link "₹1,049" [ref=e4061] [cursor=pointer]:
+                            - /url: /Van-Heusen-Regular-Shirt-IHTS1LPNG60033_Green/dp/B091KS9SJK/ref=sr_1_44?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-44
+                            - generic [ref=e4062]:
+                              - generic [ref=e4063]: ₹1,049
+                              - generic [ref=e4064]: ₹1,049
+                        - generic [ref=e4068]:
+                          - generic [ref=e4069]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4070]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e4073]:
+                        - generic [ref=e4075]: FREE delivery Fri, 18 Sept
+                        - generic [ref=e4077]: Or fastest delivery Thu, 17 Sept
+                      - button "Add to cart" [ref=e4088] [cursor=pointer]
+                - listitem [ref=e4089]:
+                  - generic [ref=e4094]:
+                    - link [ref=e4098] [cursor=pointer]:
+                      - /url: /Van-Heusen-Solid-Regular-VSKP517S011409_White_Large/dp/B076CJHDGZ/ref=sr_1_45?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-45
+                      - img [ref=e4100]
+                    - generic [ref=e4101]:
+                      - group "colours available" [ref=e4103]:
+                        - list [ref=e4104]:
+                          - generic [ref=e4105]:
+                            - listitem:
+                              - link "White":
+                                - /url: /Van-Heusen-Solid-Regular-VSKP517S011409_White_Large/dp/B076CJHDGZ/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-45
+                          - generic [ref=e4108]:
+                            - listitem:
+                              - link "Black":
+                                - /url: /Van-Heusen-Solid-Regular-VSKP517S011409_White_Large/dp/B076CHQJZP/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-45
+                          - generic [ref=e4111]:
+                            - listitem:
+                              - link "Blue":
+                                - /url: /Van-Heusen-Solid-Regular-VSKP517S011409_White_Large/dp/B076CJMH93/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-45
+                          - generic [ref=e4114]:
+                            - listitem:
+                              - link "Brown":
+                                - /url: /Van-Heusen-Solid-Regular-VSKP517S011409_White_Large/dp/B0DF7CZPZP/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-45
+                          - generic [ref=e4117]:
+                            - listitem:
+                              - link "Cardinal Red":
+                                - /url: /Van-Heusen-Solid-Regular-VSKP517S011409_White_Large/dp/B07HJBND9G/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-45
+                          - generic [ref=e4120]:
+                            - listitem:
+                              - link "Cream":
+                                - /url: /Van-Heusen-Solid-Regular-VSKP517S011409_White_Large/dp/B076CKDCJP/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-45
+                        - link "+15 other colors/patterns" [ref=e4124] [cursor=pointer]:
+                          - /url: /Van-Heusen-Solid-Regular-VSKP517S011409_White_Large/dp/B076CJHDGZ/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-45
+                          - text: "+15"
+                      - generic [ref=e4125]:
+                        - heading "Van Heusen" [level=2] [ref=e4127]
+                        - link "Men's Cotton Solid Regular Fit Collar Polo T-Shirt" [ref=e4128] [cursor=pointer]:
+                          - /url: /Van-Heusen-Solid-Regular-VSKP517S011409_White_Large/dp/B076CJHDGZ/ref=sr_1_45?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-45
+                          - heading "Men's Cotton Solid Regular Fit Collar Polo T-Shirt" [level=2] [ref=e4129]
+                      - generic [ref=e4130]:
+                        - generic [ref=e4131]:
+                          - text: "4.0"
+                          - button "4.0 out of 5 stars, rating details" [ref=e4133] [cursor=pointer]:
+                            - generic [ref=e4135]: 4.0 out of 5 stars
+                          - link "45,309 ratings" [ref=e4137] [cursor=pointer]:
+                            - /url: /Van-Heusen-Solid-Regular-VSKP517S011409_White_Large/dp/B076CJHDGZ/ref=sr_1_45?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-45#customerReviews
+                            - text: (45.3K)
+                        - generic [ref=e4138]: 400+ bought in past month
+                      - generic [ref=e4139]:
+                        - generic [ref=e4141]:
+                          - generic [ref=e4142]: Price, product page
+                          - 'link "₹648 M.R.P: ₹1,099 M.R.P: ₹1,099" [ref=e4143] [cursor=pointer]':
+                            - /url: /Van-Heusen-Solid-Regular-VSKP517S011409_White_Large/dp/B076CJHDGZ/ref=sr_1_45?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-45
+                            - generic [ref=e4144]:
+                              - generic [ref=e4145]: ₹648
+                              - generic [ref=e4146]: ₹648
+                            - generic [ref=e4147]: "M.R.P: ₹1,099"
+                            - generic [ref=e4148]:
+                              - text: "M.R.P:"
+                              - generic [ref=e4149]:
+                                - generic [ref=e4150]: ₹1,099
+                                - text: ₹1,099
+                          - text: (41% off)
+                        - generic [ref=e4154]:
+                          - generic [ref=e4155]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4156]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e4159]:
+                        - generic [ref=e4161]: FREE delivery Thu, 17 Sept
+                        - generic [ref=e4163]: Or fastest delivery Tomorrow 6 am - 10 am
+                      - button "Add to cart" [ref=e4174] [cursor=pointer]
+                - listitem [ref=e4175]:
+                  - generic [ref=e4180]:
+                    - link [ref=e4184] [cursor=pointer]:
+                      - /url: /Jack-Jones-T-Shirt-12261194-Jet-Black_Jet/dp/B0CL6GBZLR/ref=sr_1_46?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-46
+                      - img [ref=e4186]
+                    - generic [ref=e4187]:
+                      - group "colours available" [ref=e4189]:
+                        - list [ref=e4190]:
+                          - generic [ref=e4191]:
+                            - listitem:
+                              - link "Jet Black":
+                                - /url: /Jack-Jones-T-Shirt-12261194-Jet-Black_Jet/dp/B0CL6GBZLR/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-46
+                          - generic [ref=e4194]:
+                            - listitem:
+                              - link "Dark Grey Melange":
+                                - /url: /Jack-Jones-T-Shirt-12261194-Jet-Black_Jet/dp/B0CLS5TXN1/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-46
+                      - generic [ref=e4197]:
+                        - heading "JACK & JONES" [level=2] [ref=e4199]
+                        - link "Jack&Jones Men's Cotton Logo Print Slim Fit T-Shirt" [ref=e4200] [cursor=pointer]:
+                          - /url: /Jack-Jones-T-Shirt-12261194-Jet-Black_Jet/dp/B0CL6GBZLR/ref=sr_1_46?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-46
+                          - heading "Jack&Jones Men's Cotton Logo Print Slim Fit T-Shirt" [level=2] [ref=e4201]
+                      - generic [ref=e4202]:
+                        - generic [ref=e4203]:
+                          - text: "3.8"
+                          - button "3.8 out of 5 stars, rating details" [ref=e4205] [cursor=pointer]:
+                            - generic [ref=e4207]: 3.8 out of 5 stars
+                          - link "176 ratings" [ref=e4209] [cursor=pointer]:
+                            - /url: /Jack-Jones-T-Shirt-12261194-Jet-Black_Jet/dp/B0CL6GBZLR/ref=sr_1_46?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-46#customerReviews
+                            - text: (176)
+                        - generic [ref=e4210]: 100+ bought in past month
+                      - generic [ref=e4211]:
+                        - generic [ref=e4213]:
+                          - generic [ref=e4214]: Price, product page
+                          - 'link "₹396 M.R.P: ₹899 M.R.P: ₹899" [ref=e4215] [cursor=pointer]':
+                            - /url: /Jack-Jones-T-Shirt-12261194-Jet-Black_Jet/dp/B0CL6GBZLR/ref=sr_1_46?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-46
+                            - generic [ref=e4216]:
+                              - generic [ref=e4217]: ₹396
+                              - generic [ref=e4218]: ₹396
+                            - generic [ref=e4219]: "M.R.P: ₹899"
+                            - generic [ref=e4220]:
+                              - text: "M.R.P:"
+                              - generic [ref=e4221]:
+                                - generic [ref=e4222]: ₹899
+                                - text: ₹899
+                          - text: (56% off)
+                        - generic [ref=e4226]:
+                          - generic [ref=e4227]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4228]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e4231]:
+                        - generic [ref=e4233]: FREE delivery Thu, 17 Sept on first order
+                        - generic [ref=e4235]: Or fastest delivery Tomorrow 8 am - 12 pm
+                      - button "Add to cart" [ref=e4246] [cursor=pointer]
+                - listitem [ref=e4247]:
+                  - generic [ref=e4252]:
+                    - link [ref=e4256] [cursor=pointer]:
+                      - /url: /Moyzikh-Printed-Polycotton-T-Shirt-Comfortable/dp/B0GY1K5YKR/ref=sr_1_47?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-47
+                      - img [ref=e4258]
+                    - generic [ref=e4259]:
+                      - group "colours available" [ref=e4261]:
+                        - list [ref=e4262]:
+                          - generic [ref=e4263]:
+                            - listitem:
+                              - link "Black":
+                                - /url: /Moyzikh-Printed-Polycotton-T-Shirt-Comfortable/dp/B0GY1K5YKR/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-47
+                          - generic [ref=e4266]:
+                            - listitem:
+                              - link "White":
+                                - /url: /Moyzikh-Printed-Polycotton-T-Shirt-Comfortable/dp/B0GYSC2KHN/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-47
+                      - link "Printed Men’s Polycotton Relax Fit Round Neck T-Shirt | Half Sleeve Solid Casual & Gym Wear Comfortable Regular T-Shirt" [ref=e4270] [cursor=pointer]:
+                        - /url: /Moyzikh-Printed-Polycotton-T-Shirt-Comfortable/dp/B0GY1K5YKR/ref=sr_1_47?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-47
+                        - heading "Printed Men’s Polycotton Relax Fit Round Neck T-Shirt | Half Sleeve Solid Casual & Gym Wear Comfortable Regular T-Shirt" [level=2] [ref=e4271]
+                      - generic [ref=e4272]:
+                        - generic [ref=e4273]:
+                          - text: "3.6"
+                          - button "3.6 out of 5 stars, rating details" [ref=e4275] [cursor=pointer]:
+                            - generic [ref=e4277]: 3.6 out of 5 stars
+                          - link "27 ratings" [ref=e4279] [cursor=pointer]:
+                            - /url: /Moyzikh-Printed-Polycotton-T-Shirt-Comfortable/dp/B0GY1K5YKR/ref=sr_1_47?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-47#customerReviews
+                            - text: (27)
+                        - generic [ref=e4280]: 200+ bought in past month
+                      - generic [ref=e4281]:
+                        - generic [ref=e4283]:
+                          - generic [ref=e4284]: Price, product page
+                          - 'link "₹299 M.R.P: ₹999 M.R.P: ₹999" [ref=e4285] [cursor=pointer]':
+                            - /url: /Moyzikh-Printed-Polycotton-T-Shirt-Comfortable/dp/B0GY1K5YKR/ref=sr_1_47?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-47
+                            - generic [ref=e4286]:
+                              - generic [ref=e4287]: ₹299
+                              - generic [ref=e4288]: ₹299
+                            - generic [ref=e4289]: "M.R.P: ₹999"
+                            - generic [ref=e4290]:
+                              - text: "M.R.P:"
+                              - generic [ref=e4291]:
+                                - generic [ref=e4292]: ₹999
+                                - text: ₹999
+                          - text: (70% off)
+                        - generic [ref=e4296]:
+                          - generic [ref=e4297]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4298]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e4301]:
+                        - img "Bazaar" [ref=e4304]
+                        - generic [ref=e4306]: FREE delivery Sun, 20 Sept
+                      - button "Add to cart" [ref=e4317] [cursor=pointer]
+                - listitem [ref=e4318]:
+                  - generic [ref=e4323]:
+                    - link [ref=e4327] [cursor=pointer]:
+                      - /url: /U-S-POLO-ASSN-Solid-USTSHF0421_Beige/dp/B0F7LKQFTW/ref=sr_1_48?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-48
+                      - img [ref=e4329]
+                    - generic [ref=e4330]:
+                      - group "colours available" [ref=e4332]:
+                        - list [ref=e4333]:
+                          - generic [ref=e4334]:
+                            - listitem:
+                              - link "Beige":
+                                - /url: /U-S-POLO-ASSN-Solid-USTSHF0421_Beige/dp/B0F7LKQFTW/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-48
+                          - generic [ref=e4337]:
+                            - listitem:
+                              - link "Light Blue":
+                                - /url: /U-S-POLO-ASSN-Solid-USTSHF0421_Beige/dp/B0F7LKY943/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-48
+                      - generic [ref=e4340]:
+                        - heading "U.S. POLO ASSN." [level=2] [ref=e4342]
+                        - link "Solid Slim Fit Polo T Shirts for Men - 100% Cotton, Half Sleeves Mens Tshirt" [ref=e4343] [cursor=pointer]:
+                          - /url: /U-S-POLO-ASSN-Solid-USTSHF0421_Beige/dp/B0F7LKQFTW/ref=sr_1_48?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-48
+                          - heading "Solid Slim Fit Polo T Shirts for Men - 100% Cotton, Half Sleeves Mens Tshirt" [level=2] [ref=e4344]
+                      - generic [ref=e4346]:
+                        - text: "4.2"
+                        - button "4.2 out of 5 stars, rating details" [ref=e4348] [cursor=pointer]:
+                          - generic [ref=e4350]: 4.2 out of 5 stars
+                        - link "16 ratings" [ref=e4352] [cursor=pointer]:
+                          - /url: /U-S-POLO-ASSN-Solid-USTSHF0421_Beige/dp/B0F7LKQFTW/ref=sr_1_48?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-48#customerReviews
+                          - text: (16)
+                      - generic [ref=e4353]:
+                        - generic [ref=e4355]:
+                          - generic [ref=e4356]: Price, product page
+                          - 'link "₹1,309 M.R.P: ₹1,899 M.R.P: ₹1,899" [ref=e4357] [cursor=pointer]':
+                            - /url: /U-S-POLO-ASSN-Solid-USTSHF0421_Beige/dp/B0F7LKQFTW/ref=sr_1_48?dib=eyJ2IjoiMSJ9.1G04o2xSffoCDgbTfQOnt5k4quxBMnv8rexMgmD9d_c3dpzq3PTZBkBR32Yl4vpUFmyGbgjrTyTHhDh6HBEpshYFR2U03PNCPPpq4kWhsza27uXryPYsQkMqPSfFoZrBH_Y2IaYWIWz41WETFQLRz9IIgycV95-UdMcrQ-CU1VfbWk4mIJD90gtsTFn6-ZFT6kjdhvaIWElPxIYHY5xMPcIC56VwB-mRy7QBJI-Bd-pyM8AhPlJacXdaszpOg3UGZsRrQA6ddNILNZytXdmuviBZkLFPwT4Yhu9rtAIeWKU.ovWeT6-dL1QVHNvyfnAmpxEJR4K9zt5M95phLeIg7l8&dib_tag=se&keywords=T+shirt&qid=1789487485&sr=8-48
+                            - generic [ref=e4358]:
+                              - generic [ref=e4359]: ₹1,309
+                              - generic [ref=e4360]: ₹1,309
+                            - generic [ref=e4361]: "M.R.P: ₹1,899"
+                            - generic [ref=e4362]:
+                              - text: "M.R.P:"
+                              - generic [ref=e4363]:
+                                - generic [ref=e4364]: ₹1,899
+                                - text: ₹1,899
+                          - text: (31% off)
+                        - generic [ref=e4368]:
+                          - generic [ref=e4369]: Up to 5% back with Amazon Pay ICICI card
+                          - generic [ref=e4370]: Up to 5% back with Amazon Pay IC...
+                      - generic [ref=e4373]:
+                        - generic [ref=e4375]: FREE delivery Sat, 19 Sept
+                        - generic [ref=e4377]: Or fastest delivery Fri, 18 Sept
+                      - button "Add to cart" [ref=e4388] [cursor=pointer]
+          - generic [ref=e4394]:
+            - generic "Related searches in T shirt" [ref=e4395]:
+              - heading "Related searches" [level=2] [ref=e4398]
+            - list [ref=e4400]:
+              - generic [ref=e4401]:
+                - listitem [ref=e4402]:
+                  - link "shirt" [ref=e4404] [cursor=pointer]:
+                    - /url: /s?k=shirt&ref=rsl_sug_0_0&pd_rd_w=pSRKU&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=nsGPF&pd_rd_r=2f92bf28-e243-494b-b129-edfbd3aa2468&qid=1789487485
+                    - generic [ref=e4409]: shirt
+                - listitem [ref=e4410]:
+                  - link "shirt for mens" [ref=e4412] [cursor=pointer]:
+                    - /url: /s?k=shirt+for+mens&ref=rsl_sug_0_3&pd_rd_w=pSRKU&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=nsGPF&pd_rd_r=2f92bf28-e243-494b-b129-edfbd3aa2468&qid=1789487485
+                    - generic [ref=e4417]: shirt for mens
+              - generic [ref=e4418]:
+                - listitem [ref=e4419]:
+                  - link "t shirt for mens" [ref=e4421] [cursor=pointer]:
+                    - /url: /s?k=t+shirt+for+mens&ref=rsl_sug_0_1&pd_rd_w=pSRKU&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=nsGPF&pd_rd_r=2f92bf28-e243-494b-b129-edfbd3aa2468&qid=1789487485
+                    - generic [ref=e4426]: t shirt for mens
+                - listitem [ref=e4427]:
+                  - link "t shirt full sleeves" [ref=e4429] [cursor=pointer]:
+                    - /url: /s?k=t+shirt+full+sleeves&ref=rsl_sug_0_4&pd_rd_w=pSRKU&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=nsGPF&pd_rd_r=2f92bf28-e243-494b-b129-edfbd3aa2468&qid=1789487485
+                    - generic [ref=e4434]: t shirt full sleeves
+              - generic [ref=e4435]:
+                - listitem [ref=e4436]:
+                  - link "tshirt for womens" [ref=e4438] [cursor=pointer]:
+                    - /url: /s?k=tshirt+for+womens&ref=rsl_sug_0_2&pd_rd_w=pSRKU&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=nsGPF&pd_rd_r=2f92bf28-e243-494b-b129-edfbd3aa2468&qid=1789487485
+                    - generic [ref=e4443]: tshirt for womens
+                - listitem [ref=e4444]:
+                  - link "t shirt women" [ref=e4446] [cursor=pointer]:
+                    - /url: /s?k=t+shirt+women&ref=rsl_sug_0_5&pd_rd_w=pSRKU&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=nsGPF&pd_rd_r=2f92bf28-e243-494b-b129-edfbd3aa2468&qid=1789487485
+                    - generic [ref=e4451]: t shirt women
+          - navigation "pagination" [ref=e4454]:
+            - list [ref=e4456]:
+              - listitem [ref=e4457]:
+                - button "Previous" [disabled] [ref=e4459]:
+                  - img [ref=e4460]
+                  - text: Previous
+              - listitem [ref=e4462]:
+                - button "Page 1" [ref=e4464]: "1"
+              - listitem [ref=e4465]:
+                - button "Go to page 2" [ref=e4467] [cursor=pointer]: "2"
+              - listitem [ref=e4468]:
+                - button "Go to page 3" [ref=e4470] [cursor=pointer]: "3"
+              - button [disabled] [ref=e4471]:
+                - img [ref=e4472]: ...
+              - button "7" [disabled] [ref=e4474]
+              - listitem [ref=e4475]:
+                - button "Go to next page, page 2" [ref=e4477] [cursor=pointer]:
+                  - text: Next
+                  - img [ref=e4478]
+          - generic [ref=e4482]:
+            - separator [ref=e4483]
+            - generic [ref=e4484]:
+              - heading "Brands related to your search" [ref=e4485]
+              - button "Leave feedback on Sponsored ad" [ref=e4490] [cursor=pointer]: Sponsored
+              - generic [ref=e4494]:
+                - generic [ref=e4496]:
+                  - generic:
+                    - generic:
+                      - link:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JADdRjSx-vKvBuIjo7aP7r0AAAGgpcQVDwoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICDvAlQP/clv1c_ek-wBPHXLcTWXmxht8lmmiiJo0EyvordQEnyJS9gG9tD1jMkNmRpGgPV3fL3e3Pn_PuiV-8l-MGMBnrCHwHvZF5rocvMDLBzaqL3Ivyg1K2ymkf_sgCK77b9-8NURjC00dGYsEhAHG2iAcYjnd6mPH4jxe2ck0fyskSTjLaqx65LmQvdmgZRozPhsmxWNpsq-G_vzFFckExplmT4on7Thsr6xdV9UA_01a9UnK4UOZAyDrmVpV08xxxOPJYQow1jhqdvp8W5INIVkK2pBozoJCYufbbUEf1hBbxIPthMmj5ESgNPSnBUojTRuSZhubME2SwKNcMYk4Jy5lAYGPJmFR9qEID2m1gSXNIyV6QX1PzkDpYFrdRgykG3RyHOdxOfG9RqVijxTgNuN-W1HAKRxkXUWBDQ1WBoauZeBj3ssNmri71IGbN-7T2G4ejdqnT0eBFPZi8Mr4JDvkOEbv3sU_64xjWiYMWC0i4XU_g3UA2c1pQEV-DfSNj2E6l_LPCZ0kZYMiPJjf897f3p9SKGXtjp6xjLts5Y_NQ7ForvxFr33X2lwBU6Ex1-3niX4Ais14Z7LL0_lNtZZQ4MGC7dDfGJ3kyiRhkjHRyzNj1SOAyMGTijGdjsuZEJlGH56xRMTcWDVXdYLRSpYKTw5qakDuFveHvXP3Ejc8gDru3j7jVnLUZzb8pgrzocIf7pF2kFMpHlFQbrJoelSIxGpvVeMk1KEycyXbV9BEdfGYqio5yQWnyiWumFQQ7OZhkFG9BkBuyQ8okmjTbbGuxwbMzdJvpFA0vlFxVUuUfCrIGr28JSJ3J0zmzBV7iwSdDTXR2Zmi4HT62kg2W0_rMsQAd5jenk3OWMDPTIuOf3hDN63OH1nxCBKJF7osAx6w_VzqyDkSzHy2BdmdUduIRZ7r6lnvGtDq9_rxP1H1z6Gn1gKKP0f1diVZL-zX_m36hbmtwm4-wR319-jTws1sEvOmQy1qGCFg5REYTnE4L7uepcepXa98g_RTnAaFWftWaSbBioh4q_EuceeolY_v8DuuLTStcsPZvcIQJ3TNZywF9h4ak5bkiyD0oOdlONCklpw-t8mjprGDm_P-M1LwzLDYtAKBUAXmTxXip2AloU8ZrO6jLhq3SOk0XubkPEFgaAshnFc5jWzfWMTJBjopGFogUJidSUI9x14pzY_cEy--0MIRT2JmhcWEO2w8MsRnETdjxJx0GxbrBvkBQAPTh9DyZK2WLNE3-4r2XgmqZPDWXFX4n_uqLG87qRVXbijj-EoXAnBHQISvzcz-MaO34prImtvoJBF_fOhjN7UKdy5UtU1RpnBUIFrrl64kcelBK9Vk6kJjDcOh3c7Xgd8qH-DyhWcd3FciVbfGf9Svz_ldLykQgAk-MahOgpypgPVPONuEdnbXEz6k96P-eCEc1tyH9vNA0rlN770T6rPXPA5_nozUjZ_7uhs5A6Xzb_o_VqYOgNuocI_053PCh1Jv5qUMQKMF7OhzIgy_9D5VQYXs2fWiASXsB-WnHyXfs6fEeBqybq6dqbMGzUWTHeBRYaYsymtGlntTXqBZT8dbbKDHvTII-oeAS3jbW_9FFKfDK4ehPwUG_JIgOAx-h6qG3ZYqA1r3ZAJ6C3BOWhhxksNVycQyiu0F-GwIhUH3IzfNi2Ib0j3DZMon5amS-E7DWMenqtoJNYegD-5saktbVOgJouz5YxadKKn_KHymDGoYAyBYvvZMJ-WA/https://www.amazon.in/stores/page/ECDAE4A8-47D3-412A-9FD3-D82F5965D44F/?_encoding=UTF8&store_ref=SB_A02056012J4CO3MG7N1C5-A0780073394SX21SMU7A3&pd_rd_plhdr=t&aaxitk=31c38282e23f6e9de8cfd76c0fe333c0&hsa_cr_id=0&lp_asins=B0DQCZ682S%2CB0DDKLDKZH&lp_query=T%20shirt&lp_slot=desktop-hsa-3psl&aref=xeHJl5d4ET&ref_=sbx_be_s_3psl_mbd_mb0_bkgd&pd_rd_w=CkgDz&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GKbFl&pd_rd_r=a48c5be3-39e0-49d8-909e-8e9e50d97efe
+                      - link "Nobero" [ref=e4497] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JADdRjSx-vKvBuIjo7aP7r0AAAGgpcQVDwoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICDvAlQP/clv1c_ek-wBPHXLcTWXmxht8lmmiiJo0EyvordQEnyJS9gG9tD1jMkNmRpGgPV3fL3e3Pn_PuiV-8l-MGMBnrCHwHvZF5rocvMDLBzaqL3Ivyg1K2ymkf_sgCK77b9-8NURjC00dGYsEhAHG2iAcYjnd6mPH4jxe2ck0fyskSTjLaqx65LmQvdmgZRozPhsmxWNpsq-G_vzFFckExplmT4on7Thsr6xdV9UA_01a9UnK4UOZAyDrmVpV08xxxOPJYQow1jhqdvp8W5INIVkK2pBozoJCYufbbUEf1hBbxIPthMmj5ESgNPSnBUojTRuSZhubME2SwKNcMYk4Jy5lAYGPJmFR9qEID2m1gSXNIyV6QX1PzkDpYFrdRgykG3RyHOdxOfG9RqVijxTgNuN-W1HAKRxkXUWBDQ1WBoauZeBj3ssNmri71IGbN-7T2G4ejdqnT0eBFPZi8Mr4JDvkOEbv3sU_64xjWiYMWC0i4XU_g3UA2c1pQEV-DfSNj2E6l_LPCZ0kZYMiPJjf897f3p9SKGXtjp6xjLts5Y_NQ7ForvxFr33X2lwBU6Ex1-3niX4Ais14Z7LL0_lNtZZQ4MGC7dDfGJ3kyiRhkjHRyzNj1SOAyMGTijGdjsuZEJlGH56xRMTcWDVXdYLRSpYKTw5qakDuFveHvXP3Ejc8gDru3j7jVnLUZzb8pgrzocIf7pF2kFMpHlFQbrJoelSIxGpvVeMk1KEycyXbV9BEdfGYqio5yQWnyiWumFQQ7OZhkFG9BkBuyQ8okmjTbbGuxwbMzdJvpFA0vlFxVUuUfCrIGr28JSJ3J0zmzBV7iwSdDTXR2Zmi4HT62kg2W0_rMsQAd5jenk3OWMDPTIuOf3hDN63OH1nxCBKJF7osAx6w_VzqyDkSzHy2BdmdUduIRZ7r6lnvGtDq9_rxP1H1z6Gn1gKKP0f1diVZL-zX_m36hbmtwm4-wR319-jTws1sEvOmQy1qGCFg5REYTnE4L7uepcepXa98g_RTnAaFWftWaSbBioh4q_EuceeolY_v8DuuLTStcsPZvcIQJ3TNZywF9h4ak5bkiyD0oOdlONCklpw-t8mjprGDm_P-M1LwzLDYtAKBUAXmTxXip2AloU8ZrO6jLhq3SOk0XubkPEFgaAshnFc5jWzfWMTJBjopGFogUJidSUI9x14pzY_cEy--0MIRT2JmhcWEO2w8MsRnETdjxJx0GxbrBvkBQAPTh9DyZK2WLNE3-4r2XgmqZPDWXFX4n_uqLG87qRVXbijj-EoXAnBHQISvzcz-MaO34prImtvoJBF_fOhjN7UKdy5UtU1RpnBUIFrrl64kcelBK9Vk6kJjDcOh3c7Xgd8qH-DyhWcd3FciVbfGf9Svz_ldLykQgAk-MahOgpypgPVPONuEdnbXEz6k96P-eCEc1tyH9vNA0rlN770T6rPXPA5_nozUjZ_7uhs5A6Xzb_o_VqYOgNuocI_053PCh1Jv5qUMQKMF7OhzIgy_9D5VQYXs2fWiASXsB-WnHyXfs6fEeBqybq6dqbMGzUWTHeBRYaYsymtGlntTXqBZT8dbbKDHvTII-oeAS3jbW_9FFKfDK4ehPwUG_JIgOAx-h6qG3ZYqA1r3ZAJ6C3BOWhhxksNVycQyiu0F-GwIhUH3IzfNi2Ib0j3DZMon5amS-E7DWMenqtoJNYegD-5saktbVOgJouz5YxadKKn_KHymDGoYAyBYvvZMJ-WA/https://www.amazon.in/stores/page/ECDAE4A8-47D3-412A-9FD3-D82F5965D44F/?_encoding=UTF8&store_ref=SB_A02056012J4CO3MG7N1C5-A0780073394SX21SMU7A3&pd_rd_plhdr=t&aaxitk=31c38282e23f6e9de8cfd76c0fe333c0&hsa_cr_id=0&lp_asins=B0DQCZ682S%2CB0DDKLDKZH&lp_query=T%20shirt&lp_slot=desktop-hsa-3psl&aref=xeHJl5d4ET&ref_=sbx_be_s_3psl_mbd_mb0_ls&pd_rd_w=CkgDz&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GKbFl&pd_rd_r=a48c5be3-39e0-49d8-909e-8e9e50d97efe
+                        - img "Nobero" [ref=e4498]
+                      - generic [ref=e4500]:
+                        - generic [ref=e4501]:
+                          - link [ref=e4502] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JADdRjSx-vKvBuIjo7aP7r0AAAGgpcQVDwoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICDvAlQP/clv1c_ek-wBPHXLcTWXmxht8lmmiiJo0EyvordQEnyJS9gG9tD1jMkNmRpGgPV3fL3e3Pn_PuiV-8l-MGMBnrCHwHvZF5rocvMDLBzaqL3Ivyg1K2ymkf_sgCK77b9-8NURjC00dGYsEhAHG2iAcYjnd6mPH4jxe2ck0fyskSTjLaqx65LmQvdmgZRozPhsmxWNpsq-G_vzFFckExplmT4on7Thsr6xdV9UA_01a9UnK4UOZAyDrmVpV08xxxOPJYQow1jhqdvp8W5INIVkK2pBozoJCYufbbUEf1hBbxIPthMmj5ESgNPSnBUojTRuSZhubME2SwKNcMYk4Jy5lAYGPJmFR9qEID2m1gSXNIyV6QX1PzkDpYFrdRgykG3RyHOdxOfG9RqVijxTgNuN-W1HAKRxkXUWBDQ1WBoauZeBj3ssNmri71IGbN-7T2G4ejdqnT0eBFPZi8Mr4JDvkOEbv3sU_64xjWiYMWC0i4XU_g3UA2c1pQEV-DfSNj2E6l_LPCZ0kZYMiPJjf897f3p9SKGXtjp6xjLts5Y_NQ7ForvxFr33X2lwBU6Ex1-3niX4Ais14Z7LL0_lNtZZQ4MGC7dDfGJ3kyiRhkjHRyzNj1SOAyMGTijGdjsuZEJlGH56xRMTcWDVXdYLRSpYKTw5qakDuFveHvXP3Ejc8gDru3j7jVnLUZzb8pgrzocIf7pF2kFMpHlFQbrJoelSIxGpvVeMk1KEycyXbV9BEdfGYqio5yQWnyiWumFQQ7OZhkFG9BkBuyQ8okmjTbbGuxwbMzdJvpFA0vlFxVUuUfCrIGr28JSJ3J0zmzBV7iwSdDTXR2Zmi4HT62kg2W0_rMsQAd5jenk3OWMDPTIuOf3hDN63OH1nxCBKJF7osAx6w_VzqyDkSzHy2BdmdUduIRZ7r6lnvGtDq9_rxP1H1z6Gn1gKKP0f1diVZL-zX_m36hbmtwm4-wR319-jTws1sEvOmQy1qGCFg5REYTnE4L7uepcepXa98g_RTnAaFWftWaSbBioh4q_EuceeolY_v8DuuLTStcsPZvcIQJ3TNZywF9h4ak5bkiyD0oOdlONCklpw-t8mjprGDm_P-M1LwzLDYtAKBUAXmTxXip2AloU8ZrO6jLhq3SOk0XubkPEFgaAshnFc5jWzfWMTJBjopGFogUJidSUI9x14pzY_cEy--0MIRT2JmhcWEO2w8MsRnETdjxJx0GxbrBvkBQAPTh9DyZK2WLNE3-4r2XgmqZPDWXFX4n_uqLG87qRVXbijj-EoXAnBHQISvzcz-MaO34prImtvoJBF_fOhjN7UKdy5UtU1RpnBUIFrrl64kcelBK9Vk6kJjDcOh3c7Xgd8qH-DyhWcd3FciVbfGf9Svz_ldLykQgAk-MahOgpypgPVPONuEdnbXEz6k96P-eCEc1tyH9vNA0rlN770T6rPXPA5_nozUjZ_7uhs5A6Xzb_o_VqYOgNuocI_053PCh1Jv5qUMQKMF7OhzIgy_9D5VQYXs2fWiASXsB-WnHyXfs6fEeBqybq6dqbMGzUWTHeBRYaYsymtGlntTXqBZT8dbbKDHvTII-oeAS3jbW_9FFKfDK4ehPwUG_JIgOAx-h6qG3ZYqA1r3ZAJ6C3BOWhhxksNVycQyiu0F-GwIhUH3IzfNi2Ib0j3DZMon5amS-E7DWMenqtoJNYegD-5saktbVOgJouz5YxadKKn_KHymDGoYAyBYvvZMJ-WA/https://www.amazon.in/stores/page/ECDAE4A8-47D3-412A-9FD3-D82F5965D44F/?_encoding=UTF8&store_ref=SB_A02056012J4CO3MG7N1C5-A0780073394SX21SMU7A3&pd_rd_plhdr=t&aaxitk=31c38282e23f6e9de8cfd76c0fe333c0&hsa_cr_id=0&lp_asins=B0DQCZ682S%2CB0DDKLDKZH&lp_query=T%20shirt&lp_slot=desktop-hsa-3psl&aref=xeHJl5d4ET&ref_=sbx_be_s_3psl_mbd_mb0_bkgd&pd_rd_w=CkgDz&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GKbFl&pd_rd_r=a48c5be3-39e0-49d8-909e-8e9e50d97efe
+                          - link "Nobero" [ref=e4503] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JADdRjSx-vKvBuIjo7aP7r0AAAGgpcQVDwoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICDvAlQP/clv1c_ek-wBPHXLcTWXmxht8lmmiiJo0EyvordQEnyJS9gG9tD1jMkNmRpGgPV3fL3e3Pn_PuiV-8l-MGMBnrCHwHvZF5rocvMDLBzaqL3Ivyg1K2ymkf_sgCK77b9-8NURjC00dGYsEhAHG2iAcYjnd6mPH4jxe2ck0fyskSTjLaqx65LmQvdmgZRozPhsmxWNpsq-G_vzFFckExplmT4on7Thsr6xdV9UA_01a9UnK4UOZAyDrmVpV08xxxOPJYQow1jhqdvp8W5INIVkK2pBozoJCYufbbUEf1hBbxIPthMmj5ESgNPSnBUojTRuSZhubME2SwKNcMYk4Jy5lAYGPJmFR9qEID2m1gSXNIyV6QX1PzkDpYFrdRgykG3RyHOdxOfG9RqVijxTgNuN-W1HAKRxkXUWBDQ1WBoauZeBj3ssNmri71IGbN-7T2G4ejdqnT0eBFPZi8Mr4JDvkOEbv3sU_64xjWiYMWC0i4XU_g3UA2c1pQEV-DfSNj2E6l_LPCZ0kZYMiPJjf897f3p9SKGXtjp6xjLts5Y_NQ7ForvxFr33X2lwBU6Ex1-3niX4Ais14Z7LL0_lNtZZQ4MGC7dDfGJ3kyiRhkjHRyzNj1SOAyMGTijGdjsuZEJlGH56xRMTcWDVXdYLRSpYKTw5qakDuFveHvXP3Ejc8gDru3j7jVnLUZzb8pgrzocIf7pF2kFMpHlFQbrJoelSIxGpvVeMk1KEycyXbV9BEdfGYqio5yQWnyiWumFQQ7OZhkFG9BkBuyQ8okmjTbbGuxwbMzdJvpFA0vlFxVUuUfCrIGr28JSJ3J0zmzBV7iwSdDTXR2Zmi4HT62kg2W0_rMsQAd5jenk3OWMDPTIuOf3hDN63OH1nxCBKJF7osAx6w_VzqyDkSzHy2BdmdUduIRZ7r6lnvGtDq9_rxP1H1z6Gn1gKKP0f1diVZL-zX_m36hbmtwm4-wR319-jTws1sEvOmQy1qGCFg5REYTnE4L7uepcepXa98g_RTnAaFWftWaSbBioh4q_EuceeolY_v8DuuLTStcsPZvcIQJ3TNZywF9h4ak5bkiyD0oOdlONCklpw-t8mjprGDm_P-M1LwzLDYtAKBUAXmTxXip2AloU8ZrO6jLhq3SOk0XubkPEFgaAshnFc5jWzfWMTJBjopGFogUJidSUI9x14pzY_cEy--0MIRT2JmhcWEO2w8MsRnETdjxJx0GxbrBvkBQAPTh9DyZK2WLNE3-4r2XgmqZPDWXFX4n_uqLG87qRVXbijj-EoXAnBHQISvzcz-MaO34prImtvoJBF_fOhjN7UKdy5UtU1RpnBUIFrrl64kcelBK9Vk6kJjDcOh3c7Xgd8qH-DyhWcd3FciVbfGf9Svz_ldLykQgAk-MahOgpypgPVPONuEdnbXEz6k96P-eCEc1tyH9vNA0rlN770T6rPXPA5_nozUjZ_7uhs5A6Xzb_o_VqYOgNuocI_053PCh1Jv5qUMQKMF7OhzIgy_9D5VQYXs2fWiASXsB-WnHyXfs6fEeBqybq6dqbMGzUWTHeBRYaYsymtGlntTXqBZT8dbbKDHvTII-oeAS3jbW_9FFKfDK4ehPwUG_JIgOAx-h6qG3ZYqA1r3ZAJ6C3BOWhhxksNVycQyiu0F-GwIhUH3IzfNi2Ib0j3DZMon5amS-E7DWMenqtoJNYegD-5saktbVOgJouz5YxadKKn_KHymDGoYAyBYvvZMJ-WA/https://www.amazon.in/stores/page/ECDAE4A8-47D3-412A-9FD3-D82F5965D44F/?_encoding=UTF8&store_ref=SB_A02056012J4CO3MG7N1C5-A0780073394SX21SMU7A3&pd_rd_plhdr=t&aaxitk=31c38282e23f6e9de8cfd76c0fe333c0&hsa_cr_id=0&lp_asins=B0DQCZ682S%2CB0DDKLDKZH&lp_query=T%20shirt&lp_slot=desktop-hsa-3psl&aref=xeHJl5d4ET&ref_=sbx_be_s_3psl_mbd_mb0_logo&pd_rd_w=CkgDz&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GKbFl&pd_rd_r=a48c5be3-39e0-49d8-909e-8e9e50d97efe
+                            - img "Nobero" [ref=e4505]
+                        - generic [ref=e4506]:
+                          - link [ref=e4507] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JADdRjSx-vKvBuIjo7aP7r0AAAGgpcQVDwoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICDvAlQP/clv1c_ek-wBPHXLcTWXmxht8lmmiiJo0EyvordQEnyJS9gG9tD1jMkNmRpGgPV3fL3e3Pn_PuiV-8l-MGMBnrCHwHvZF5rocvMDLBzaqL3Ivyg1K2ymkf_sgCK77b9-8NURjC00dGYsEhAHG2iAcYjnd6mPH4jxe2ck0fyskSTjLaqx65LmQvdmgZRozPhsmxWNpsq-G_vzFFckExplmT4on7Thsr6xdV9UA_01a9UnK4UOZAyDrmVpV08xxxOPJYQow1jhqdvp8W5INIVkK2pBozoJCYufbbUEf1hBbxIPthMmj5ESgNPSnBUojTRuSZhubME2SwKNcMYk4Jy5lAYGPJmFR9qEID2m1gSXNIyV6QX1PzkDpYFrdRgykG3RyHOdxOfG9RqVijxTgNuN-W1HAKRxkXUWBDQ1WBoauZeBj3ssNmri71IGbN-7T2G4ejdqnT0eBFPZi8Mr4JDvkOEbv3sU_64xjWiYMWC0i4XU_g3UA2c1pQEV-DfSNj2E6l_LPCZ0kZYMiPJjf897f3p9SKGXtjp6xjLts5Y_NQ7ForvxFr33X2lwBU6Ex1-3niX4Ais14Z7LL0_lNtZZQ4MGC7dDfGJ3kyiRhkjHRyzNj1SOAyMGTijGdjsuZEJlGH56xRMTcWDVXdYLRSpYKTw5qakDuFveHvXP3Ejc8gDru3j7jVnLUZzb8pgrzocIf7pF2kFMpHlFQbrJoelSIxGpvVeMk1KEycyXbV9BEdfGYqio5yQWnyiWumFQQ7OZhkFG9BkBuyQ8okmjTbbGuxwbMzdJvpFA0vlFxVUuUfCrIGr28JSJ3J0zmzBV7iwSdDTXR2Zmi4HT62kg2W0_rMsQAd5jenk3OWMDPTIuOf3hDN63OH1nxCBKJF7osAx6w_VzqyDkSzHy2BdmdUduIRZ7r6lnvGtDq9_rxP1H1z6Gn1gKKP0f1diVZL-zX_m36hbmtwm4-wR319-jTws1sEvOmQy1qGCFg5REYTnE4L7uepcepXa98g_RTnAaFWftWaSbBioh4q_EuceeolY_v8DuuLTStcsPZvcIQJ3TNZywF9h4ak5bkiyD0oOdlONCklpw-t8mjprGDm_P-M1LwzLDYtAKBUAXmTxXip2AloU8ZrO6jLhq3SOk0XubkPEFgaAshnFc5jWzfWMTJBjopGFogUJidSUI9x14pzY_cEy--0MIRT2JmhcWEO2w8MsRnETdjxJx0GxbrBvkBQAPTh9DyZK2WLNE3-4r2XgmqZPDWXFX4n_uqLG87qRVXbijj-EoXAnBHQISvzcz-MaO34prImtvoJBF_fOhjN7UKdy5UtU1RpnBUIFrrl64kcelBK9Vk6kJjDcOh3c7Xgd8qH-DyhWcd3FciVbfGf9Svz_ldLykQgAk-MahOgpypgPVPONuEdnbXEz6k96P-eCEc1tyH9vNA0rlN770T6rPXPA5_nozUjZ_7uhs5A6Xzb_o_VqYOgNuocI_053PCh1Jv5qUMQKMF7OhzIgy_9D5VQYXs2fWiASXsB-WnHyXfs6fEeBqybq6dqbMGzUWTHeBRYaYsymtGlntTXqBZT8dbbKDHvTII-oeAS3jbW_9FFKfDK4ehPwUG_JIgOAx-h6qG3ZYqA1r3ZAJ6C3BOWhhxksNVycQyiu0F-GwIhUH3IzfNi2Ib0j3DZMon5amS-E7DWMenqtoJNYegD-5saktbVOgJouz5YxadKKn_KHymDGoYAyBYvvZMJ-WA/https://www.amazon.in/stores/page/ECDAE4A8-47D3-412A-9FD3-D82F5965D44F/?_encoding=UTF8&store_ref=SB_A02056012J4CO3MG7N1C5-A0780073394SX21SMU7A3&pd_rd_plhdr=t&aaxitk=31c38282e23f6e9de8cfd76c0fe333c0&hsa_cr_id=0&lp_asins=B0DQCZ682S%2CB0DDKLDKZH&lp_query=T%20shirt&lp_slot=desktop-hsa-3psl&aref=xeHJl5d4ET&ref_=sbx_be_s_3psl_mbd_mb0_bkgd&pd_rd_w=CkgDz&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GKbFl&pd_rd_r=a48c5be3-39e0-49d8-909e-8e9e50d97efe
+                          - link "Trendy Stylish Pack of 3 Tshirts for Men" [ref=e4508] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JADdRjSx-vKvBuIjo7aP7r0AAAGgpcQVDwoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICDvAlQP/clv1c_ek-wBPHXLcTWXmxht8lmmiiJo0EyvordQEnyJS9gG9tD1jMkNmRpGgPV3fL3e3Pn_PuiV-8l-MGMBnrCHwHvZF5rocvMDLBzaqL3Ivyg1K2ymkf_sgCK77b9-8NURjC00dGYsEhAHG2iAcYjnd6mPH4jxe2ck0fyskSTjLaqx65LmQvdmgZRozPhsmxWNpsq-G_vzFFckExplmT4on7Thsr6xdV9UA_01a9UnK4UOZAyDrmVpV08xxxOPJYQow1jhqdvp8W5INIVkK2pBozoJCYufbbUEf1hBbxIPthMmj5ESgNPSnBUojTRuSZhubME2SwKNcMYk4Jy5lAYGPJmFR9qEID2m1gSXNIyV6QX1PzkDpYFrdRgykG3RyHOdxOfG9RqVijxTgNuN-W1HAKRxkXUWBDQ1WBoauZeBj3ssNmri71IGbN-7T2G4ejdqnT0eBFPZi8Mr4JDvkOEbv3sU_64xjWiYMWC0i4XU_g3UA2c1pQEV-DfSNj2E6l_LPCZ0kZYMiPJjf897f3p9SKGXtjp6xjLts5Y_NQ7ForvxFr33X2lwBU6Ex1-3niX4Ais14Z7LL0_lNtZZQ4MGC7dDfGJ3kyiRhkjHRyzNj1SOAyMGTijGdjsuZEJlGH56xRMTcWDVXdYLRSpYKTw5qakDuFveHvXP3Ejc8gDru3j7jVnLUZzb8pgrzocIf7pF2kFMpHlFQbrJoelSIxGpvVeMk1KEycyXbV9BEdfGYqio5yQWnyiWumFQQ7OZhkFG9BkBuyQ8okmjTbbGuxwbMzdJvpFA0vlFxVUuUfCrIGr28JSJ3J0zmzBV7iwSdDTXR2Zmi4HT62kg2W0_rMsQAd5jenk3OWMDPTIuOf3hDN63OH1nxCBKJF7osAx6w_VzqyDkSzHy2BdmdUduIRZ7r6lnvGtDq9_rxP1H1z6Gn1gKKP0f1diVZL-zX_m36hbmtwm4-wR319-jTws1sEvOmQy1qGCFg5REYTnE4L7uepcepXa98g_RTnAaFWftWaSbBioh4q_EuceeolY_v8DuuLTStcsPZvcIQJ3TNZywF9h4ak5bkiyD0oOdlONCklpw-t8mjprGDm_P-M1LwzLDYtAKBUAXmTxXip2AloU8ZrO6jLhq3SOk0XubkPEFgaAshnFc5jWzfWMTJBjopGFogUJidSUI9x14pzY_cEy--0MIRT2JmhcWEO2w8MsRnETdjxJx0GxbrBvkBQAPTh9DyZK2WLNE3-4r2XgmqZPDWXFX4n_uqLG87qRVXbijj-EoXAnBHQISvzcz-MaO34prImtvoJBF_fOhjN7UKdy5UtU1RpnBUIFrrl64kcelBK9Vk6kJjDcOh3c7Xgd8qH-DyhWcd3FciVbfGf9Svz_ldLykQgAk-MahOgpypgPVPONuEdnbXEz6k96P-eCEc1tyH9vNA0rlN770T6rPXPA5_nozUjZ_7uhs5A6Xzb_o_VqYOgNuocI_053PCh1Jv5qUMQKMF7OhzIgy_9D5VQYXs2fWiASXsB-WnHyXfs6fEeBqybq6dqbMGzUWTHeBRYaYsymtGlntTXqBZT8dbbKDHvTII-oeAS3jbW_9FFKfDK4ehPwUG_JIgOAx-h6qG3ZYqA1r3ZAJ6C3BOWhhxksNVycQyiu0F-GwIhUH3IzfNi2Ib0j3DZMon5amS-E7DWMenqtoJNYegD-5saktbVOgJouz5YxadKKn_KHymDGoYAyBYvvZMJ-WA/https://www.amazon.in/stores/page/ECDAE4A8-47D3-412A-9FD3-D82F5965D44F/?_encoding=UTF8&store_ref=SB_A02056012J4CO3MG7N1C5-A0780073394SX21SMU7A3&pd_rd_plhdr=t&aaxitk=31c38282e23f6e9de8cfd76c0fe333c0&hsa_cr_id=0&lp_asins=B0DQCZ682S%2CB0DDKLDKZH&lp_query=T%20shirt&lp_slot=desktop-hsa-3psl&aref=xeHJl5d4ET&ref_=sbx_be_s_3psl_mbd_mb0_hl&pd_rd_w=CkgDz&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GKbFl&pd_rd_r=a48c5be3-39e0-49d8-909e-8e9e50d97efe
+                            - generic [ref=e4510]:
+                              - generic [ref=e4511]: Trendy Stylish Pack of 3 Tshirts for Men
+                              - generic [ref=e4512]: Trendy Stylish Pack of 3 Tshirts for Men
+                - generic [ref=e4514]:
+                  - generic:
+                    - generic:
+                      - link:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JGyWRAxy7xXdXU3a82MI4EwAAAGgpcQVEAoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICAtgHqZ/clv1c_ek-ABPfXJTbXTd2GNco1KkzhTGlEf8IpDT1cDzgvEogZJZj0Sc12QRsC1js_vP0aFeE20dhuzJjwq9rOwUetC7FOqTBwwOJF2cLnuKofYiTNcB7kSbj5bjAIcy608HllJxgX18iLoj2SsBdCA8nnuSO6gR8fcBocY0T2xz-Kz4Evc_NdXcG819LgRosdgKAmVyXpGeftKKZRFk_5OETeIjq7XHq8CVzSyZ5iuTX7B5GSHoO7GWGCqYwbm_KjVaJLiN7HQfP3IvZoJkuVIxIigGklboqwCEiZ2DJz0CYbwrz2jgyX_DRP3FmFWrm-iYbUB52c2BmTcAxfU_UZXo-HQ5W4GPzxsiW_QRh7fGIL7rG94_qEU52DFfpLiFTB_3k2nTj5LJkpsmp2z4lUlHx-wWoZahqVqNoHXILBBpWR5Fz0PAjLqmg_OXzBdhOBV6WELprIre_6_TFTRPXL1b3Gb4Pi5ePPstb1hRRvQGDuot8PEv_E93txnUQBjkMEV_u8xib2e8Fa2IYA_8CIb0rhYO9_GafycEMHSmXMI5qRWnu3VdryEbkTL4DvjQf3TZHtjmsyszrbzrVjSIItwJIyrVd7LOLDyDk-pvRB486WqeqxyOUHYd53oLahsZugJaZTIjJG4qPLmetGfkxVcrIUX3tsQH4gJ3B4Nd8hpc5BgcIrPuNzMHzI8QbEAsrozVeqSRe21302O8fOkQlkzOAn-IJjq5gVPgqeegUo8qag-qcg_UrgJHv11ftyXdkqt7oyycYRJZsj2MzWhZp3m-ETeyySYuLY_ftprQswwgOsvLm-EZ8SQtezs_tc5RGZFbAzSreFKHndlckHmaShVaXPKG-8J8Z64yxBqhdVb4ZVw1I1cucrRaNaT_jSkrMZLfJnw3L4Du3kXGAgC8IdnUR5JSP9YwO5RqI_kdCkxUkPD3oeKbkEtAEOsaHGXPobtkZgAKB_-asiITO5S0AjWtffcmKRqBxXl_kusPnjhIdcBVdxwHElbTraKptShuvt2Yd2Gzbwnn_4iQZcDcjnlqIfQ2BHWsWgZVMjbKxptitfZdzu0ryKS_z4QziejTwE-3W9hDhFygh1rom41QNHadHB466ggGIOSwd6e0bZq57__qjMg3Xwi5mdRrgfp--RNEevWnrYZdYiwmwvWnPj7Lzzb_mrAOIwQLdjl45XKNzqc6uT6OqyIReKZnsQLLJyXLD67SkH5pbKQkFE1VxN-MIByRW62F28ikWotqy8QZyCEPXSlBxsQbqhhe9HS6Z_9lGaRL3T0ghwfTNbej-5OWuf1AiVLTZ3JTBufu_uUJ6rkwUyTQsxfrRM0sGAf_myeJ_z6wyWRRVOvj0v57mUbC6-qdkcEdqeBS5zrnViyErG8Ov46Ezvdj8uPmMlmmyVt8qawTjO_IuN-9tg_Nn1f5QWeOEkLwOv0DIcSoJ0H2Sf0j2bW8EA4jQOAJc7DcpvaSA8NDGXc71OW20h5_tMpq6QXq92GUym4jEWNYkXhO4Tp9v57aAnfUEtlAbPH09lTZ1gtSi_xLumgNS9pBFbeQ0E-Nt4lRR8UoATvTLVa3azaYDqB1n4PQvZtMeSX8IDimPxxpuK5OZhPkK5KVHmC1ipGioC-pYwRNS7Ulo81ygzBFoeITFuKzLh66DDqqqY08TqZvjQinvB1C4NpZtvUy4r2h0Rpb56zehRKXpgMgIAwpzGF96fBM6_CXVj25kAJtKJkmmikQ/https://www.amazon.in/stores/page/F13757AB-A156-4736-8F11-B92AEC6F7A73/?_encoding=UTF8&store_ref=SB_A09397371COVPYC7335IV-A0232436G6IYJV9XLK01&pd_rd_plhdr=t&aaxitk=5db1d5c0c939af829c9998d204e2083a&hsa_cr_id=0&lp_query=T%20shirt&lp_slot=desktop-hsa-3psl&aref=7clDkt03Rc&ref_=sbx_be_s_3psl_mbd_mb1_bkgd&pd_rd_w=CkgDz&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GKbFl&pd_rd_r=a48c5be3-39e0-49d8-909e-8e9e50d97efe
+                      - link "SYMBOL" [ref=e4515] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JGyWRAxy7xXdXU3a82MI4EwAAAGgpcQVEAoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICAtgHqZ/clv1c_ek-ABPfXJTbXTd2GNco1KkzhTGlEf8IpDT1cDzgvEogZJZj0Sc12QRsC1js_vP0aFeE20dhuzJjwq9rOwUetC7FOqTBwwOJF2cLnuKofYiTNcB7kSbj5bjAIcy608HllJxgX18iLoj2SsBdCA8nnuSO6gR8fcBocY0T2xz-Kz4Evc_NdXcG819LgRosdgKAmVyXpGeftKKZRFk_5OETeIjq7XHq8CVzSyZ5iuTX7B5GSHoO7GWGCqYwbm_KjVaJLiN7HQfP3IvZoJkuVIxIigGklboqwCEiZ2DJz0CYbwrz2jgyX_DRP3FmFWrm-iYbUB52c2BmTcAxfU_UZXo-HQ5W4GPzxsiW_QRh7fGIL7rG94_qEU52DFfpLiFTB_3k2nTj5LJkpsmp2z4lUlHx-wWoZahqVqNoHXILBBpWR5Fz0PAjLqmg_OXzBdhOBV6WELprIre_6_TFTRPXL1b3Gb4Pi5ePPstb1hRRvQGDuot8PEv_E93txnUQBjkMEV_u8xib2e8Fa2IYA_8CIb0rhYO9_GafycEMHSmXMI5qRWnu3VdryEbkTL4DvjQf3TZHtjmsyszrbzrVjSIItwJIyrVd7LOLDyDk-pvRB486WqeqxyOUHYd53oLahsZugJaZTIjJG4qPLmetGfkxVcrIUX3tsQH4gJ3B4Nd8hpc5BgcIrPuNzMHzI8QbEAsrozVeqSRe21302O8fOkQlkzOAn-IJjq5gVPgqeegUo8qag-qcg_UrgJHv11ftyXdkqt7oyycYRJZsj2MzWhZp3m-ETeyySYuLY_ftprQswwgOsvLm-EZ8SQtezs_tc5RGZFbAzSreFKHndlckHmaShVaXPKG-8J8Z64yxBqhdVb4ZVw1I1cucrRaNaT_jSkrMZLfJnw3L4Du3kXGAgC8IdnUR5JSP9YwO5RqI_kdCkxUkPD3oeKbkEtAEOsaHGXPobtkZgAKB_-asiITO5S0AjWtffcmKRqBxXl_kusPnjhIdcBVdxwHElbTraKptShuvt2Yd2Gzbwnn_4iQZcDcjnlqIfQ2BHWsWgZVMjbKxptitfZdzu0ryKS_z4QziejTwE-3W9hDhFygh1rom41QNHadHB466ggGIOSwd6e0bZq57__qjMg3Xwi5mdRrgfp--RNEevWnrYZdYiwmwvWnPj7Lzzb_mrAOIwQLdjl45XKNzqc6uT6OqyIReKZnsQLLJyXLD67SkH5pbKQkFE1VxN-MIByRW62F28ikWotqy8QZyCEPXSlBxsQbqhhe9HS6Z_9lGaRL3T0ghwfTNbej-5OWuf1AiVLTZ3JTBufu_uUJ6rkwUyTQsxfrRM0sGAf_myeJ_z6wyWRRVOvj0v57mUbC6-qdkcEdqeBS5zrnViyErG8Ov46Ezvdj8uPmMlmmyVt8qawTjO_IuN-9tg_Nn1f5QWeOEkLwOv0DIcSoJ0H2Sf0j2bW8EA4jQOAJc7DcpvaSA8NDGXc71OW20h5_tMpq6QXq92GUym4jEWNYkXhO4Tp9v57aAnfUEtlAbPH09lTZ1gtSi_xLumgNS9pBFbeQ0E-Nt4lRR8UoATvTLVa3azaYDqB1n4PQvZtMeSX8IDimPxxpuK5OZhPkK5KVHmC1ipGioC-pYwRNS7Ulo81ygzBFoeITFuKzLh66DDqqqY08TqZvjQinvB1C4NpZtvUy4r2h0Rpb56zehRKXpgMgIAwpzGF96fBM6_CXVj25kAJtKJkmmikQ/https://www.amazon.in/stores/page/F13757AB-A156-4736-8F11-B92AEC6F7A73/?_encoding=UTF8&store_ref=SB_A09397371COVPYC7335IV-A0232436G6IYJV9XLK01&pd_rd_plhdr=t&aaxitk=5db1d5c0c939af829c9998d204e2083a&hsa_cr_id=0&lp_query=T%20shirt&lp_slot=desktop-hsa-3psl&aref=7clDkt03Rc&ref_=sbx_be_s_3psl_mbd_mb1_ls&pd_rd_w=CkgDz&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GKbFl&pd_rd_r=a48c5be3-39e0-49d8-909e-8e9e50d97efe
+                        - img "SYMBOL" [ref=e4516]
+                      - generic [ref=e4518]:
+                        - generic [ref=e4519]:
+                          - link [ref=e4520] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JGyWRAxy7xXdXU3a82MI4EwAAAGgpcQVEAoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICAtgHqZ/clv1c_ek-ABPfXJTbXTd2GNco1KkzhTGlEf8IpDT1cDzgvEogZJZj0Sc12QRsC1js_vP0aFeE20dhuzJjwq9rOwUetC7FOqTBwwOJF2cLnuKofYiTNcB7kSbj5bjAIcy608HllJxgX18iLoj2SsBdCA8nnuSO6gR8fcBocY0T2xz-Kz4Evc_NdXcG819LgRosdgKAmVyXpGeftKKZRFk_5OETeIjq7XHq8CVzSyZ5iuTX7B5GSHoO7GWGCqYwbm_KjVaJLiN7HQfP3IvZoJkuVIxIigGklboqwCEiZ2DJz0CYbwrz2jgyX_DRP3FmFWrm-iYbUB52c2BmTcAxfU_UZXo-HQ5W4GPzxsiW_QRh7fGIL7rG94_qEU52DFfpLiFTB_3k2nTj5LJkpsmp2z4lUlHx-wWoZahqVqNoHXILBBpWR5Fz0PAjLqmg_OXzBdhOBV6WELprIre_6_TFTRPXL1b3Gb4Pi5ePPstb1hRRvQGDuot8PEv_E93txnUQBjkMEV_u8xib2e8Fa2IYA_8CIb0rhYO9_GafycEMHSmXMI5qRWnu3VdryEbkTL4DvjQf3TZHtjmsyszrbzrVjSIItwJIyrVd7LOLDyDk-pvRB486WqeqxyOUHYd53oLahsZugJaZTIjJG4qPLmetGfkxVcrIUX3tsQH4gJ3B4Nd8hpc5BgcIrPuNzMHzI8QbEAsrozVeqSRe21302O8fOkQlkzOAn-IJjq5gVPgqeegUo8qag-qcg_UrgJHv11ftyXdkqt7oyycYRJZsj2MzWhZp3m-ETeyySYuLY_ftprQswwgOsvLm-EZ8SQtezs_tc5RGZFbAzSreFKHndlckHmaShVaXPKG-8J8Z64yxBqhdVb4ZVw1I1cucrRaNaT_jSkrMZLfJnw3L4Du3kXGAgC8IdnUR5JSP9YwO5RqI_kdCkxUkPD3oeKbkEtAEOsaHGXPobtkZgAKB_-asiITO5S0AjWtffcmKRqBxXl_kusPnjhIdcBVdxwHElbTraKptShuvt2Yd2Gzbwnn_4iQZcDcjnlqIfQ2BHWsWgZVMjbKxptitfZdzu0ryKS_z4QziejTwE-3W9hDhFygh1rom41QNHadHB466ggGIOSwd6e0bZq57__qjMg3Xwi5mdRrgfp--RNEevWnrYZdYiwmwvWnPj7Lzzb_mrAOIwQLdjl45XKNzqc6uT6OqyIReKZnsQLLJyXLD67SkH5pbKQkFE1VxN-MIByRW62F28ikWotqy8QZyCEPXSlBxsQbqhhe9HS6Z_9lGaRL3T0ghwfTNbej-5OWuf1AiVLTZ3JTBufu_uUJ6rkwUyTQsxfrRM0sGAf_myeJ_z6wyWRRVOvj0v57mUbC6-qdkcEdqeBS5zrnViyErG8Ov46Ezvdj8uPmMlmmyVt8qawTjO_IuN-9tg_Nn1f5QWeOEkLwOv0DIcSoJ0H2Sf0j2bW8EA4jQOAJc7DcpvaSA8NDGXc71OW20h5_tMpq6QXq92GUym4jEWNYkXhO4Tp9v57aAnfUEtlAbPH09lTZ1gtSi_xLumgNS9pBFbeQ0E-Nt4lRR8UoATvTLVa3azaYDqB1n4PQvZtMeSX8IDimPxxpuK5OZhPkK5KVHmC1ipGioC-pYwRNS7Ulo81ygzBFoeITFuKzLh66DDqqqY08TqZvjQinvB1C4NpZtvUy4r2h0Rpb56zehRKXpgMgIAwpzGF96fBM6_CXVj25kAJtKJkmmikQ/https://www.amazon.in/stores/page/F13757AB-A156-4736-8F11-B92AEC6F7A73/?_encoding=UTF8&store_ref=SB_A09397371COVPYC7335IV-A0232436G6IYJV9XLK01&pd_rd_plhdr=t&aaxitk=5db1d5c0c939af829c9998d204e2083a&hsa_cr_id=0&lp_query=T%20shirt&lp_slot=desktop-hsa-3psl&aref=7clDkt03Rc&ref_=sbx_be_s_3psl_mbd_mb1_bkgd&pd_rd_w=CkgDz&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GKbFl&pd_rd_r=a48c5be3-39e0-49d8-909e-8e9e50d97efe
+                          - link "SYMBOL" [ref=e4521] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JGyWRAxy7xXdXU3a82MI4EwAAAGgpcQVEAoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICAtgHqZ/clv1c_ek-ABPfXJTbXTd2GNco1KkzhTGlEf8IpDT1cDzgvEogZJZj0Sc12QRsC1js_vP0aFeE20dhuzJjwq9rOwUetC7FOqTBwwOJF2cLnuKofYiTNcB7kSbj5bjAIcy608HllJxgX18iLoj2SsBdCA8nnuSO6gR8fcBocY0T2xz-Kz4Evc_NdXcG819LgRosdgKAmVyXpGeftKKZRFk_5OETeIjq7XHq8CVzSyZ5iuTX7B5GSHoO7GWGCqYwbm_KjVaJLiN7HQfP3IvZoJkuVIxIigGklboqwCEiZ2DJz0CYbwrz2jgyX_DRP3FmFWrm-iYbUB52c2BmTcAxfU_UZXo-HQ5W4GPzxsiW_QRh7fGIL7rG94_qEU52DFfpLiFTB_3k2nTj5LJkpsmp2z4lUlHx-wWoZahqVqNoHXILBBpWR5Fz0PAjLqmg_OXzBdhOBV6WELprIre_6_TFTRPXL1b3Gb4Pi5ePPstb1hRRvQGDuot8PEv_E93txnUQBjkMEV_u8xib2e8Fa2IYA_8CIb0rhYO9_GafycEMHSmXMI5qRWnu3VdryEbkTL4DvjQf3TZHtjmsyszrbzrVjSIItwJIyrVd7LOLDyDk-pvRB486WqeqxyOUHYd53oLahsZugJaZTIjJG4qPLmetGfkxVcrIUX3tsQH4gJ3B4Nd8hpc5BgcIrPuNzMHzI8QbEAsrozVeqSRe21302O8fOkQlkzOAn-IJjq5gVPgqeegUo8qag-qcg_UrgJHv11ftyXdkqt7oyycYRJZsj2MzWhZp3m-ETeyySYuLY_ftprQswwgOsvLm-EZ8SQtezs_tc5RGZFbAzSreFKHndlckHmaShVaXPKG-8J8Z64yxBqhdVb4ZVw1I1cucrRaNaT_jSkrMZLfJnw3L4Du3kXGAgC8IdnUR5JSP9YwO5RqI_kdCkxUkPD3oeKbkEtAEOsaHGXPobtkZgAKB_-asiITO5S0AjWtffcmKRqBxXl_kusPnjhIdcBVdxwHElbTraKptShuvt2Yd2Gzbwnn_4iQZcDcjnlqIfQ2BHWsWgZVMjbKxptitfZdzu0ryKS_z4QziejTwE-3W9hDhFygh1rom41QNHadHB466ggGIOSwd6e0bZq57__qjMg3Xwi5mdRrgfp--RNEevWnrYZdYiwmwvWnPj7Lzzb_mrAOIwQLdjl45XKNzqc6uT6OqyIReKZnsQLLJyXLD67SkH5pbKQkFE1VxN-MIByRW62F28ikWotqy8QZyCEPXSlBxsQbqhhe9HS6Z_9lGaRL3T0ghwfTNbej-5OWuf1AiVLTZ3JTBufu_uUJ6rkwUyTQsxfrRM0sGAf_myeJ_z6wyWRRVOvj0v57mUbC6-qdkcEdqeBS5zrnViyErG8Ov46Ezvdj8uPmMlmmyVt8qawTjO_IuN-9tg_Nn1f5QWeOEkLwOv0DIcSoJ0H2Sf0j2bW8EA4jQOAJc7DcpvaSA8NDGXc71OW20h5_tMpq6QXq92GUym4jEWNYkXhO4Tp9v57aAnfUEtlAbPH09lTZ1gtSi_xLumgNS9pBFbeQ0E-Nt4lRR8UoATvTLVa3azaYDqB1n4PQvZtMeSX8IDimPxxpuK5OZhPkK5KVHmC1ipGioC-pYwRNS7Ulo81ygzBFoeITFuKzLh66DDqqqY08TqZvjQinvB1C4NpZtvUy4r2h0Rpb56zehRKXpgMgIAwpzGF96fBM6_CXVj25kAJtKJkmmikQ/https://www.amazon.in/stores/page/F13757AB-A156-4736-8F11-B92AEC6F7A73/?_encoding=UTF8&store_ref=SB_A09397371COVPYC7335IV-A0232436G6IYJV9XLK01&pd_rd_plhdr=t&aaxitk=5db1d5c0c939af829c9998d204e2083a&hsa_cr_id=0&lp_query=T%20shirt&lp_slot=desktop-hsa-3psl&aref=7clDkt03Rc&ref_=sbx_be_s_3psl_mbd_mb1_logo&pd_rd_w=CkgDz&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GKbFl&pd_rd_r=a48c5be3-39e0-49d8-909e-8e9e50d97efe
+                            - img "SYMBOL" [ref=e4523]
+                        - generic [ref=e4524]:
+                          - link [ref=e4525] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JGyWRAxy7xXdXU3a82MI4EwAAAGgpcQVEAoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICAtgHqZ/clv1c_ek-ABPfXJTbXTd2GNco1KkzhTGlEf8IpDT1cDzgvEogZJZj0Sc12QRsC1js_vP0aFeE20dhuzJjwq9rOwUetC7FOqTBwwOJF2cLnuKofYiTNcB7kSbj5bjAIcy608HllJxgX18iLoj2SsBdCA8nnuSO6gR8fcBocY0T2xz-Kz4Evc_NdXcG819LgRosdgKAmVyXpGeftKKZRFk_5OETeIjq7XHq8CVzSyZ5iuTX7B5GSHoO7GWGCqYwbm_KjVaJLiN7HQfP3IvZoJkuVIxIigGklboqwCEiZ2DJz0CYbwrz2jgyX_DRP3FmFWrm-iYbUB52c2BmTcAxfU_UZXo-HQ5W4GPzxsiW_QRh7fGIL7rG94_qEU52DFfpLiFTB_3k2nTj5LJkpsmp2z4lUlHx-wWoZahqVqNoHXILBBpWR5Fz0PAjLqmg_OXzBdhOBV6WELprIre_6_TFTRPXL1b3Gb4Pi5ePPstb1hRRvQGDuot8PEv_E93txnUQBjkMEV_u8xib2e8Fa2IYA_8CIb0rhYO9_GafycEMHSmXMI5qRWnu3VdryEbkTL4DvjQf3TZHtjmsyszrbzrVjSIItwJIyrVd7LOLDyDk-pvRB486WqeqxyOUHYd53oLahsZugJaZTIjJG4qPLmetGfkxVcrIUX3tsQH4gJ3B4Nd8hpc5BgcIrPuNzMHzI8QbEAsrozVeqSRe21302O8fOkQlkzOAn-IJjq5gVPgqeegUo8qag-qcg_UrgJHv11ftyXdkqt7oyycYRJZsj2MzWhZp3m-ETeyySYuLY_ftprQswwgOsvLm-EZ8SQtezs_tc5RGZFbAzSreFKHndlckHmaShVaXPKG-8J8Z64yxBqhdVb4ZVw1I1cucrRaNaT_jSkrMZLfJnw3L4Du3kXGAgC8IdnUR5JSP9YwO5RqI_kdCkxUkPD3oeKbkEtAEOsaHGXPobtkZgAKB_-asiITO5S0AjWtffcmKRqBxXl_kusPnjhIdcBVdxwHElbTraKptShuvt2Yd2Gzbwnn_4iQZcDcjnlqIfQ2BHWsWgZVMjbKxptitfZdzu0ryKS_z4QziejTwE-3W9hDhFygh1rom41QNHadHB466ggGIOSwd6e0bZq57__qjMg3Xwi5mdRrgfp--RNEevWnrYZdYiwmwvWnPj7Lzzb_mrAOIwQLdjl45XKNzqc6uT6OqyIReKZnsQLLJyXLD67SkH5pbKQkFE1VxN-MIByRW62F28ikWotqy8QZyCEPXSlBxsQbqhhe9HS6Z_9lGaRL3T0ghwfTNbej-5OWuf1AiVLTZ3JTBufu_uUJ6rkwUyTQsxfrRM0sGAf_myeJ_z6wyWRRVOvj0v57mUbC6-qdkcEdqeBS5zrnViyErG8Ov46Ezvdj8uPmMlmmyVt8qawTjO_IuN-9tg_Nn1f5QWeOEkLwOv0DIcSoJ0H2Sf0j2bW8EA4jQOAJc7DcpvaSA8NDGXc71OW20h5_tMpq6QXq92GUym4jEWNYkXhO4Tp9v57aAnfUEtlAbPH09lTZ1gtSi_xLumgNS9pBFbeQ0E-Nt4lRR8UoATvTLVa3azaYDqB1n4PQvZtMeSX8IDimPxxpuK5OZhPkK5KVHmC1ipGioC-pYwRNS7Ulo81ygzBFoeITFuKzLh66DDqqqY08TqZvjQinvB1C4NpZtvUy4r2h0Rpb56zehRKXpgMgIAwpzGF96fBM6_CXVj25kAJtKJkmmikQ/https://www.amazon.in/stores/page/F13757AB-A156-4736-8F11-B92AEC6F7A73/?_encoding=UTF8&store_ref=SB_A09397371COVPYC7335IV-A0232436G6IYJV9XLK01&pd_rd_plhdr=t&aaxitk=5db1d5c0c939af829c9998d204e2083a&hsa_cr_id=0&lp_query=T%20shirt&lp_slot=desktop-hsa-3psl&aref=7clDkt03Rc&ref_=sbx_be_s_3psl_mbd_mb1_bkgd&pd_rd_w=CkgDz&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GKbFl&pd_rd_r=a48c5be3-39e0-49d8-909e-8e9e50d97efe
+                          - link "Active wear T-Shirts" [ref=e4526] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JGyWRAxy7xXdXU3a82MI4EwAAAGgpcQVEAoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICAtgHqZ/clv1c_ek-ABPfXJTbXTd2GNco1KkzhTGlEf8IpDT1cDzgvEogZJZj0Sc12QRsC1js_vP0aFeE20dhuzJjwq9rOwUetC7FOqTBwwOJF2cLnuKofYiTNcB7kSbj5bjAIcy608HllJxgX18iLoj2SsBdCA8nnuSO6gR8fcBocY0T2xz-Kz4Evc_NdXcG819LgRosdgKAmVyXpGeftKKZRFk_5OETeIjq7XHq8CVzSyZ5iuTX7B5GSHoO7GWGCqYwbm_KjVaJLiN7HQfP3IvZoJkuVIxIigGklboqwCEiZ2DJz0CYbwrz2jgyX_DRP3FmFWrm-iYbUB52c2BmTcAxfU_UZXo-HQ5W4GPzxsiW_QRh7fGIL7rG94_qEU52DFfpLiFTB_3k2nTj5LJkpsmp2z4lUlHx-wWoZahqVqNoHXILBBpWR5Fz0PAjLqmg_OXzBdhOBV6WELprIre_6_TFTRPXL1b3Gb4Pi5ePPstb1hRRvQGDuot8PEv_E93txnUQBjkMEV_u8xib2e8Fa2IYA_8CIb0rhYO9_GafycEMHSmXMI5qRWnu3VdryEbkTL4DvjQf3TZHtjmsyszrbzrVjSIItwJIyrVd7LOLDyDk-pvRB486WqeqxyOUHYd53oLahsZugJaZTIjJG4qPLmetGfkxVcrIUX3tsQH4gJ3B4Nd8hpc5BgcIrPuNzMHzI8QbEAsrozVeqSRe21302O8fOkQlkzOAn-IJjq5gVPgqeegUo8qag-qcg_UrgJHv11ftyXdkqt7oyycYRJZsj2MzWhZp3m-ETeyySYuLY_ftprQswwgOsvLm-EZ8SQtezs_tc5RGZFbAzSreFKHndlckHmaShVaXPKG-8J8Z64yxBqhdVb4ZVw1I1cucrRaNaT_jSkrMZLfJnw3L4Du3kXGAgC8IdnUR5JSP9YwO5RqI_kdCkxUkPD3oeKbkEtAEOsaHGXPobtkZgAKB_-asiITO5S0AjWtffcmKRqBxXl_kusPnjhIdcBVdxwHElbTraKptShuvt2Yd2Gzbwnn_4iQZcDcjnlqIfQ2BHWsWgZVMjbKxptitfZdzu0ryKS_z4QziejTwE-3W9hDhFygh1rom41QNHadHB466ggGIOSwd6e0bZq57__qjMg3Xwi5mdRrgfp--RNEevWnrYZdYiwmwvWnPj7Lzzb_mrAOIwQLdjl45XKNzqc6uT6OqyIReKZnsQLLJyXLD67SkH5pbKQkFE1VxN-MIByRW62F28ikWotqy8QZyCEPXSlBxsQbqhhe9HS6Z_9lGaRL3T0ghwfTNbej-5OWuf1AiVLTZ3JTBufu_uUJ6rkwUyTQsxfrRM0sGAf_myeJ_z6wyWRRVOvj0v57mUbC6-qdkcEdqeBS5zrnViyErG8Ov46Ezvdj8uPmMlmmyVt8qawTjO_IuN-9tg_Nn1f5QWeOEkLwOv0DIcSoJ0H2Sf0j2bW8EA4jQOAJc7DcpvaSA8NDGXc71OW20h5_tMpq6QXq92GUym4jEWNYkXhO4Tp9v57aAnfUEtlAbPH09lTZ1gtSi_xLumgNS9pBFbeQ0E-Nt4lRR8UoATvTLVa3azaYDqB1n4PQvZtMeSX8IDimPxxpuK5OZhPkK5KVHmC1ipGioC-pYwRNS7Ulo81ygzBFoeITFuKzLh66DDqqqY08TqZvjQinvB1C4NpZtvUy4r2h0Rpb56zehRKXpgMgIAwpzGF96fBM6_CXVj25kAJtKJkmmikQ/https://www.amazon.in/stores/page/F13757AB-A156-4736-8F11-B92AEC6F7A73/?_encoding=UTF8&store_ref=SB_A09397371COVPYC7335IV-A0232436G6IYJV9XLK01&pd_rd_plhdr=t&aaxitk=5db1d5c0c939af829c9998d204e2083a&hsa_cr_id=0&lp_query=T%20shirt&lp_slot=desktop-hsa-3psl&aref=7clDkt03Rc&ref_=sbx_be_s_3psl_mbd_mb1_hl&pd_rd_w=CkgDz&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GKbFl&pd_rd_r=a48c5be3-39e0-49d8-909e-8e9e50d97efe
+                            - generic [ref=e4528]:
+                              - generic [ref=e4529]: Active wear T-Shirts
+                              - generic [ref=e4530]: Active wear T-Shirts
+                - generic [ref=e4532]:
+                  - generic:
+                    - generic:
+                      - link:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JL0V6gdjzmgiW2zlXEk-h48AAAGgpcQVEAoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICBZxtxs/clv1c_ek-wBPHXKjbXTixTdO9dI6s9P6sZtvJWxxW5Pv7F-qsVSvrstbpmHrTtQnhovmSmf1LpEdYIzTZo_ZRZlNDmrb-ZI8kGXEnbLszpnywYIQ8-qp3b6HMhS3DlsfdkZ3YBRzmZob2qFeeR5MQmkkEe84RL4lpjtLXrmMYwTjSO37bfGWkFPIBtzNFcajOucjmoc7YZ3zqVFwTwV8V_vkTkevryvV40kmv_HoJ0lIW95qKA05YuVnaiuqR9iITZZ245FA_gi8Jr5K-JbVwN1glWeGM19Sx1H-ZzFuTxDXveCxAbQ1dhAYq4wIJsdtCC3nn9PG8ccXx7jo2FfQkrLLCkB5AlgxYDSyZcgbF3AJIiEIxSJW8zOip2k-lNwqJAeevXTH2yb_q-HoRwxxmocFvAT4Y0mU80p8XGwQvJghafeo6-vo9B5B4EEn2wpZzdCB58GilTRjaXC_W4FcXzkNmKKKxaWLvgZiiyyYuq5FehDLyDmlaEAiUr9pRaN__sRDwVrh28dfFBaJDhRQyFRyJq72PvsBr1aHLncodqUzvrj49OiaZOa99Kb2WEUhVfC6EsZCzgogukAuNHtrU_AaY_XBzGi1BNi9ylYuH4lDsjM_xNKCFolCzycMv1wEqjjgmV23kv5s1Q2UkFglPBtP8gItYBrPbyCH77Pv_R24hyXtu3yybRYU23blwoBzRL7sFxKJIa70TbKgdeaJwFpnmQzwFrvR_m2UPtoWmIueZ3PN-ADN-04QgdYO3pa7vMaZD414e9dU7kNBXZ7ABmjiilzgKKjuMDn8l9rcC2EYYn-AxLoaggRmdGrWa1EPFrgw0gLH9R1nuoGnmycqCS0G6aDtdwNtnspc6ixgZRy9b8K7mDGxpuPYLGy0pnIRSdiOs0uyApuc70MW_fOchbRurE9RtZBEaorgM-LGX3b0jXxnOa336rH2KfR6GU0yuUIPS5M9MYemqVFulFVRyU5nAGKyWwcgbHTOEXQVaB9uIJqM1qQmW2m2qAXfAWUkyoNjLVgOon9Lo7NeZEsRQ-Tx-Q64fMxrmFZBWUKhhhojFh4yEkKDqF_qIoTFOj-7bmbhUntR_9RNTnOGt74Dc9d1Iw6ab69hrem7GV6TxwzRoD3E3lgNLGd6p6OgD8wbH4rGJiP1g8VyNzl2V7uhyfqUz1LS28kSwpEYnCkuq8rTBVGcuzhXaxTQOKWF5zI9hFJvJikb7nkGfPv0ZlLMSr1lSfeqj9zUUtgEMICzSbddViVfzY9Xrziyrr0kPl_kWoC2hrvSrAj1PCG161VVK_lHWHHhzKQtIqh7HAxLOPpPJBKFZlmQnjBAQ7sgq0ILXHKbkrjN6EeF6sNHRSjz_X9GaLcWNls-u5nsAkbQALAOUxum10Pv0zJcsuKS15IbMNtN9sa__tbYHbCjEOk7IqAxq4cLMmzql5hrdxn0Ojwe5YKth0vaF7fb3anme_3D8m4EbcNthhTlymeVHAozHMgL_KeC6PM2jLnIz13T3ntowsHRKnDrVKsOFOYnN2WjvsOsxZnmt9KTCb7OGa5bHYAHXI7F4i2bzB6Hiyb7_VmTGNFUij-hBbIEYZVXPg6xvXZ9JJX_wKhU5VDZI0GSlON33Rxiw6DPvEN0v-_6toU5H9MiE8FB7UAPp_6ptZC6JxdcFkbQGW9SxTtWP_CDCYfwM7wSddxu2cgHvlrmnGiPT4jbWTBUHtgnVXYWL_VE4-JXgKM4en3rTXA-Ow85sB2PKT1QWSNBZsKw/https://www.amazon.in/stores/page/EA8F97D9-451C-4310-AF86-4F630DC14A0E/?_encoding=UTF8&store_ref=SB_A011211412OA5ZTZOVHPU-A047099314ZIHCVQZ0GQW&pd_rd_plhdr=t&aaxitk=6ccc089b47ab43fec2bf5147cd8e1f85&hsa_cr_id=0&lp_asins=B0D5CXZ2F5%2CB0D93N3DWM%2CB0D5CYV3ZS&lp_query=T%20shirt&lp_slot=desktop-hsa-3psl&aref=rPVPGKoMaG&ref_=sbx_be_s_3psl_mbd_mb2_bkgd&pd_rd_w=CkgDz&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GKbFl&pd_rd_r=a48c5be3-39e0-49d8-909e-8e9e50d97efe
+                      - link "Boldfit" [ref=e4533] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JL0V6gdjzmgiW2zlXEk-h48AAAGgpcQVEAoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICBZxtxs/clv1c_ek-wBPHXKjbXTixTdO9dI6s9P6sZtvJWxxW5Pv7F-qsVSvrstbpmHrTtQnhovmSmf1LpEdYIzTZo_ZRZlNDmrb-ZI8kGXEnbLszpnywYIQ8-qp3b6HMhS3DlsfdkZ3YBRzmZob2qFeeR5MQmkkEe84RL4lpjtLXrmMYwTjSO37bfGWkFPIBtzNFcajOucjmoc7YZ3zqVFwTwV8V_vkTkevryvV40kmv_HoJ0lIW95qKA05YuVnaiuqR9iITZZ245FA_gi8Jr5K-JbVwN1glWeGM19Sx1H-ZzFuTxDXveCxAbQ1dhAYq4wIJsdtCC3nn9PG8ccXx7jo2FfQkrLLCkB5AlgxYDSyZcgbF3AJIiEIxSJW8zOip2k-lNwqJAeevXTH2yb_q-HoRwxxmocFvAT4Y0mU80p8XGwQvJghafeo6-vo9B5B4EEn2wpZzdCB58GilTRjaXC_W4FcXzkNmKKKxaWLvgZiiyyYuq5FehDLyDmlaEAiUr9pRaN__sRDwVrh28dfFBaJDhRQyFRyJq72PvsBr1aHLncodqUzvrj49OiaZOa99Kb2WEUhVfC6EsZCzgogukAuNHtrU_AaY_XBzGi1BNi9ylYuH4lDsjM_xNKCFolCzycMv1wEqjjgmV23kv5s1Q2UkFglPBtP8gItYBrPbyCH77Pv_R24hyXtu3yybRYU23blwoBzRL7sFxKJIa70TbKgdeaJwFpnmQzwFrvR_m2UPtoWmIueZ3PN-ADN-04QgdYO3pa7vMaZD414e9dU7kNBXZ7ABmjiilzgKKjuMDn8l9rcC2EYYn-AxLoaggRmdGrWa1EPFrgw0gLH9R1nuoGnmycqCS0G6aDtdwNtnspc6ixgZRy9b8K7mDGxpuPYLGy0pnIRSdiOs0uyApuc70MW_fOchbRurE9RtZBEaorgM-LGX3b0jXxnOa336rH2KfR6GU0yuUIPS5M9MYemqVFulFVRyU5nAGKyWwcgbHTOEXQVaB9uIJqM1qQmW2m2qAXfAWUkyoNjLVgOon9Lo7NeZEsRQ-Tx-Q64fMxrmFZBWUKhhhojFh4yEkKDqF_qIoTFOj-7bmbhUntR_9RNTnOGt74Dc9d1Iw6ab69hrem7GV6TxwzRoD3E3lgNLGd6p6OgD8wbH4rGJiP1g8VyNzl2V7uhyfqUz1LS28kSwpEYnCkuq8rTBVGcuzhXaxTQOKWF5zI9hFJvJikb7nkGfPv0ZlLMSr1lSfeqj9zUUtgEMICzSbddViVfzY9Xrziyrr0kPl_kWoC2hrvSrAj1PCG161VVK_lHWHHhzKQtIqh7HAxLOPpPJBKFZlmQnjBAQ7sgq0ILXHKbkrjN6EeF6sNHRSjz_X9GaLcWNls-u5nsAkbQALAOUxum10Pv0zJcsuKS15IbMNtN9sa__tbYHbCjEOk7IqAxq4cLMmzql5hrdxn0Ojwe5YKth0vaF7fb3anme_3D8m4EbcNthhTlymeVHAozHMgL_KeC6PM2jLnIz13T3ntowsHRKnDrVKsOFOYnN2WjvsOsxZnmt9KTCb7OGa5bHYAHXI7F4i2bzB6Hiyb7_VmTGNFUij-hBbIEYZVXPg6xvXZ9JJX_wKhU5VDZI0GSlON33Rxiw6DPvEN0v-_6toU5H9MiE8FB7UAPp_6ptZC6JxdcFkbQGW9SxTtWP_CDCYfwM7wSddxu2cgHvlrmnGiPT4jbWTBUHtgnVXYWL_VE4-JXgKM4en3rTXA-Ow85sB2PKT1QWSNBZsKw/https://www.amazon.in/stores/page/EA8F97D9-451C-4310-AF86-4F630DC14A0E/?_encoding=UTF8&store_ref=SB_A011211412OA5ZTZOVHPU-A047099314ZIHCVQZ0GQW&pd_rd_plhdr=t&aaxitk=6ccc089b47ab43fec2bf5147cd8e1f85&hsa_cr_id=0&lp_asins=B0D5CXZ2F5%2CB0D93N3DWM%2CB0D5CYV3ZS&lp_query=T%20shirt&lp_slot=desktop-hsa-3psl&aref=rPVPGKoMaG&ref_=sbx_be_s_3psl_mbd_mb2_ls&pd_rd_w=CkgDz&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GKbFl&pd_rd_r=a48c5be3-39e0-49d8-909e-8e9e50d97efe
+                        - img "Boldfit" [ref=e4534]
+                      - generic [ref=e4536]:
+                        - generic [ref=e4537]:
+                          - link [ref=e4538] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JL0V6gdjzmgiW2zlXEk-h48AAAGgpcQVEAoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICBZxtxs/clv1c_ek-wBPHXKjbXTixTdO9dI6s9P6sZtvJWxxW5Pv7F-qsVSvrstbpmHrTtQnhovmSmf1LpEdYIzTZo_ZRZlNDmrb-ZI8kGXEnbLszpnywYIQ8-qp3b6HMhS3DlsfdkZ3YBRzmZob2qFeeR5MQmkkEe84RL4lpjtLXrmMYwTjSO37bfGWkFPIBtzNFcajOucjmoc7YZ3zqVFwTwV8V_vkTkevryvV40kmv_HoJ0lIW95qKA05YuVnaiuqR9iITZZ245FA_gi8Jr5K-JbVwN1glWeGM19Sx1H-ZzFuTxDXveCxAbQ1dhAYq4wIJsdtCC3nn9PG8ccXx7jo2FfQkrLLCkB5AlgxYDSyZcgbF3AJIiEIxSJW8zOip2k-lNwqJAeevXTH2yb_q-HoRwxxmocFvAT4Y0mU80p8XGwQvJghafeo6-vo9B5B4EEn2wpZzdCB58GilTRjaXC_W4FcXzkNmKKKxaWLvgZiiyyYuq5FehDLyDmlaEAiUr9pRaN__sRDwVrh28dfFBaJDhRQyFRyJq72PvsBr1aHLncodqUzvrj49OiaZOa99Kb2WEUhVfC6EsZCzgogukAuNHtrU_AaY_XBzGi1BNi9ylYuH4lDsjM_xNKCFolCzycMv1wEqjjgmV23kv5s1Q2UkFglPBtP8gItYBrPbyCH77Pv_R24hyXtu3yybRYU23blwoBzRL7sFxKJIa70TbKgdeaJwFpnmQzwFrvR_m2UPtoWmIueZ3PN-ADN-04QgdYO3pa7vMaZD414e9dU7kNBXZ7ABmjiilzgKKjuMDn8l9rcC2EYYn-AxLoaggRmdGrWa1EPFrgw0gLH9R1nuoGnmycqCS0G6aDtdwNtnspc6ixgZRy9b8K7mDGxpuPYLGy0pnIRSdiOs0uyApuc70MW_fOchbRurE9RtZBEaorgM-LGX3b0jXxnOa336rH2KfR6GU0yuUIPS5M9MYemqVFulFVRyU5nAGKyWwcgbHTOEXQVaB9uIJqM1qQmW2m2qAXfAWUkyoNjLVgOon9Lo7NeZEsRQ-Tx-Q64fMxrmFZBWUKhhhojFh4yEkKDqF_qIoTFOj-7bmbhUntR_9RNTnOGt74Dc9d1Iw6ab69hrem7GV6TxwzRoD3E3lgNLGd6p6OgD8wbH4rGJiP1g8VyNzl2V7uhyfqUz1LS28kSwpEYnCkuq8rTBVGcuzhXaxTQOKWF5zI9hFJvJikb7nkGfPv0ZlLMSr1lSfeqj9zUUtgEMICzSbddViVfzY9Xrziyrr0kPl_kWoC2hrvSrAj1PCG161VVK_lHWHHhzKQtIqh7HAxLOPpPJBKFZlmQnjBAQ7sgq0ILXHKbkrjN6EeF6sNHRSjz_X9GaLcWNls-u5nsAkbQALAOUxum10Pv0zJcsuKS15IbMNtN9sa__tbYHbCjEOk7IqAxq4cLMmzql5hrdxn0Ojwe5YKth0vaF7fb3anme_3D8m4EbcNthhTlymeVHAozHMgL_KeC6PM2jLnIz13T3ntowsHRKnDrVKsOFOYnN2WjvsOsxZnmt9KTCb7OGa5bHYAHXI7F4i2bzB6Hiyb7_VmTGNFUij-hBbIEYZVXPg6xvXZ9JJX_wKhU5VDZI0GSlON33Rxiw6DPvEN0v-_6toU5H9MiE8FB7UAPp_6ptZC6JxdcFkbQGW9SxTtWP_CDCYfwM7wSddxu2cgHvlrmnGiPT4jbWTBUHtgnVXYWL_VE4-JXgKM4en3rTXA-Ow85sB2PKT1QWSNBZsKw/https://www.amazon.in/stores/page/EA8F97D9-451C-4310-AF86-4F630DC14A0E/?_encoding=UTF8&store_ref=SB_A011211412OA5ZTZOVHPU-A047099314ZIHCVQZ0GQW&pd_rd_plhdr=t&aaxitk=6ccc089b47ab43fec2bf5147cd8e1f85&hsa_cr_id=0&lp_asins=B0D5CXZ2F5%2CB0D93N3DWM%2CB0D5CYV3ZS&lp_query=T%20shirt&lp_slot=desktop-hsa-3psl&aref=rPVPGKoMaG&ref_=sbx_be_s_3psl_mbd_mb2_bkgd&pd_rd_w=CkgDz&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GKbFl&pd_rd_r=a48c5be3-39e0-49d8-909e-8e9e50d97efe
+                          - link "Boldfit" [ref=e4539] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JL0V6gdjzmgiW2zlXEk-h48AAAGgpcQVEAoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICBZxtxs/clv1c_ek-wBPHXKjbXTixTdO9dI6s9P6sZtvJWxxW5Pv7F-qsVSvrstbpmHrTtQnhovmSmf1LpEdYIzTZo_ZRZlNDmrb-ZI8kGXEnbLszpnywYIQ8-qp3b6HMhS3DlsfdkZ3YBRzmZob2qFeeR5MQmkkEe84RL4lpjtLXrmMYwTjSO37bfGWkFPIBtzNFcajOucjmoc7YZ3zqVFwTwV8V_vkTkevryvV40kmv_HoJ0lIW95qKA05YuVnaiuqR9iITZZ245FA_gi8Jr5K-JbVwN1glWeGM19Sx1H-ZzFuTxDXveCxAbQ1dhAYq4wIJsdtCC3nn9PG8ccXx7jo2FfQkrLLCkB5AlgxYDSyZcgbF3AJIiEIxSJW8zOip2k-lNwqJAeevXTH2yb_q-HoRwxxmocFvAT4Y0mU80p8XGwQvJghafeo6-vo9B5B4EEn2wpZzdCB58GilTRjaXC_W4FcXzkNmKKKxaWLvgZiiyyYuq5FehDLyDmlaEAiUr9pRaN__sRDwVrh28dfFBaJDhRQyFRyJq72PvsBr1aHLncodqUzvrj49OiaZOa99Kb2WEUhVfC6EsZCzgogukAuNHtrU_AaY_XBzGi1BNi9ylYuH4lDsjM_xNKCFolCzycMv1wEqjjgmV23kv5s1Q2UkFglPBtP8gItYBrPbyCH77Pv_R24hyXtu3yybRYU23blwoBzRL7sFxKJIa70TbKgdeaJwFpnmQzwFrvR_m2UPtoWmIueZ3PN-ADN-04QgdYO3pa7vMaZD414e9dU7kNBXZ7ABmjiilzgKKjuMDn8l9rcC2EYYn-AxLoaggRmdGrWa1EPFrgw0gLH9R1nuoGnmycqCS0G6aDtdwNtnspc6ixgZRy9b8K7mDGxpuPYLGy0pnIRSdiOs0uyApuc70MW_fOchbRurE9RtZBEaorgM-LGX3b0jXxnOa336rH2KfR6GU0yuUIPS5M9MYemqVFulFVRyU5nAGKyWwcgbHTOEXQVaB9uIJqM1qQmW2m2qAXfAWUkyoNjLVgOon9Lo7NeZEsRQ-Tx-Q64fMxrmFZBWUKhhhojFh4yEkKDqF_qIoTFOj-7bmbhUntR_9RNTnOGt74Dc9d1Iw6ab69hrem7GV6TxwzRoD3E3lgNLGd6p6OgD8wbH4rGJiP1g8VyNzl2V7uhyfqUz1LS28kSwpEYnCkuq8rTBVGcuzhXaxTQOKWF5zI9hFJvJikb7nkGfPv0ZlLMSr1lSfeqj9zUUtgEMICzSbddViVfzY9Xrziyrr0kPl_kWoC2hrvSrAj1PCG161VVK_lHWHHhzKQtIqh7HAxLOPpPJBKFZlmQnjBAQ7sgq0ILXHKbkrjN6EeF6sNHRSjz_X9GaLcWNls-u5nsAkbQALAOUxum10Pv0zJcsuKS15IbMNtN9sa__tbYHbCjEOk7IqAxq4cLMmzql5hrdxn0Ojwe5YKth0vaF7fb3anme_3D8m4EbcNthhTlymeVHAozHMgL_KeC6PM2jLnIz13T3ntowsHRKnDrVKsOFOYnN2WjvsOsxZnmt9KTCb7OGa5bHYAHXI7F4i2bzB6Hiyb7_VmTGNFUij-hBbIEYZVXPg6xvXZ9JJX_wKhU5VDZI0GSlON33Rxiw6DPvEN0v-_6toU5H9MiE8FB7UAPp_6ptZC6JxdcFkbQGW9SxTtWP_CDCYfwM7wSddxu2cgHvlrmnGiPT4jbWTBUHtgnVXYWL_VE4-JXgKM4en3rTXA-Ow85sB2PKT1QWSNBZsKw/https://www.amazon.in/stores/page/EA8F97D9-451C-4310-AF86-4F630DC14A0E/?_encoding=UTF8&store_ref=SB_A011211412OA5ZTZOVHPU-A047099314ZIHCVQZ0GQW&pd_rd_plhdr=t&aaxitk=6ccc089b47ab43fec2bf5147cd8e1f85&hsa_cr_id=0&lp_asins=B0D5CXZ2F5%2CB0D93N3DWM%2CB0D5CYV3ZS&lp_query=T%20shirt&lp_slot=desktop-hsa-3psl&aref=rPVPGKoMaG&ref_=sbx_be_s_3psl_mbd_mb2_logo&pd_rd_w=CkgDz&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GKbFl&pd_rd_r=a48c5be3-39e0-49d8-909e-8e9e50d97efe
+                            - img "Boldfit" [ref=e4541]
+                        - generic [ref=e4542]:
+                          - link [ref=e4543] [cursor=pointer]:
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JL0V6gdjzmgiW2zlXEk-h48AAAGgpcQVEAoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICBZxtxs/clv1c_ek-wBPHXKjbXTixTdO9dI6s9P6sZtvJWxxW5Pv7F-qsVSvrstbpmHrTtQnhovmSmf1LpEdYIzTZo_ZRZlNDmrb-ZI8kGXEnbLszpnywYIQ8-qp3b6HMhS3DlsfdkZ3YBRzmZob2qFeeR5MQmkkEe84RL4lpjtLXrmMYwTjSO37bfGWkFPIBtzNFcajOucjmoc7YZ3zqVFwTwV8V_vkTkevryvV40kmv_HoJ0lIW95qKA05YuVnaiuqR9iITZZ245FA_gi8Jr5K-JbVwN1glWeGM19Sx1H-ZzFuTxDXveCxAbQ1dhAYq4wIJsdtCC3nn9PG8ccXx7jo2FfQkrLLCkB5AlgxYDSyZcgbF3AJIiEIxSJW8zOip2k-lNwqJAeevXTH2yb_q-HoRwxxmocFvAT4Y0mU80p8XGwQvJghafeo6-vo9B5B4EEn2wpZzdCB58GilTRjaXC_W4FcXzkNmKKKxaWLvgZiiyyYuq5FehDLyDmlaEAiUr9pRaN__sRDwVrh28dfFBaJDhRQyFRyJq72PvsBr1aHLncodqUzvrj49OiaZOa99Kb2WEUhVfC6EsZCzgogukAuNHtrU_AaY_XBzGi1BNi9ylYuH4lDsjM_xNKCFolCzycMv1wEqjjgmV23kv5s1Q2UkFglPBtP8gItYBrPbyCH77Pv_R24hyXtu3yybRYU23blwoBzRL7sFxKJIa70TbKgdeaJwFpnmQzwFrvR_m2UPtoWmIueZ3PN-ADN-04QgdYO3pa7vMaZD414e9dU7kNBXZ7ABmjiilzgKKjuMDn8l9rcC2EYYn-AxLoaggRmdGrWa1EPFrgw0gLH9R1nuoGnmycqCS0G6aDtdwNtnspc6ixgZRy9b8K7mDGxpuPYLGy0pnIRSdiOs0uyApuc70MW_fOchbRurE9RtZBEaorgM-LGX3b0jXxnOa336rH2KfR6GU0yuUIPS5M9MYemqVFulFVRyU5nAGKyWwcgbHTOEXQVaB9uIJqM1qQmW2m2qAXfAWUkyoNjLVgOon9Lo7NeZEsRQ-Tx-Q64fMxrmFZBWUKhhhojFh4yEkKDqF_qIoTFOj-7bmbhUntR_9RNTnOGt74Dc9d1Iw6ab69hrem7GV6TxwzRoD3E3lgNLGd6p6OgD8wbH4rGJiP1g8VyNzl2V7uhyfqUz1LS28kSwpEYnCkuq8rTBVGcuzhXaxTQOKWF5zI9hFJvJikb7nkGfPv0ZlLMSr1lSfeqj9zUUtgEMICzSbddViVfzY9Xrziyrr0kPl_kWoC2hrvSrAj1PCG161VVK_lHWHHhzKQtIqh7HAxLOPpPJBKFZlmQnjBAQ7sgq0ILXHKbkrjN6EeF6sNHRSjz_X9GaLcWNls-u5nsAkbQALAOUxum10Pv0zJcsuKS15IbMNtN9sa__tbYHbCjEOk7IqAxq4cLMmzql5hrdxn0Ojwe5YKth0vaF7fb3anme_3D8m4EbcNthhTlymeVHAozHMgL_KeC6PM2jLnIz13T3ntowsHRKnDrVKsOFOYnN2WjvsOsxZnmt9KTCb7OGa5bHYAHXI7F4i2bzB6Hiyb7_VmTGNFUij-hBbIEYZVXPg6xvXZ9JJX_wKhU5VDZI0GSlON33Rxiw6DPvEN0v-_6toU5H9MiE8FB7UAPp_6ptZC6JxdcFkbQGW9SxTtWP_CDCYfwM7wSddxu2cgHvlrmnGiPT4jbWTBUHtgnVXYWL_VE4-JXgKM4en3rTXA-Ow85sB2PKT1QWSNBZsKw/https://www.amazon.in/stores/page/EA8F97D9-451C-4310-AF86-4F630DC14A0E/?_encoding=UTF8&store_ref=SB_A011211412OA5ZTZOVHPU-A047099314ZIHCVQZ0GQW&pd_rd_plhdr=t&aaxitk=6ccc089b47ab43fec2bf5147cd8e1f85&hsa_cr_id=0&lp_asins=B0D5CXZ2F5%2CB0D93N3DWM%2CB0D5CYV3ZS&lp_query=T%20shirt&lp_slot=desktop-hsa-3psl&aref=rPVPGKoMaG&ref_=sbx_be_s_3psl_mbd_mb2_bkgd&pd_rd_w=CkgDz&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GKbFl&pd_rd_r=a48c5be3-39e0-49d8-909e-8e9e50d97efe
+                          - 'link "All-Day active: tees that support you" [ref=e4544] [cursor=pointer]':
+                            - /url: https://aax-eu-zaz.amazon.in/x/c/JL0V6gdjzmgiW2zlXEk-h48AAAGgpcQVEAoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICBZxtxs/clv1c_ek-wBPHXKjbXTixTdO9dI6s9P6sZtvJWxxW5Pv7F-qsVSvrstbpmHrTtQnhovmSmf1LpEdYIzTZo_ZRZlNDmrb-ZI8kGXEnbLszpnywYIQ8-qp3b6HMhS3DlsfdkZ3YBRzmZob2qFeeR5MQmkkEe84RL4lpjtLXrmMYwTjSO37bfGWkFPIBtzNFcajOucjmoc7YZ3zqVFwTwV8V_vkTkevryvV40kmv_HoJ0lIW95qKA05YuVnaiuqR9iITZZ245FA_gi8Jr5K-JbVwN1glWeGM19Sx1H-ZzFuTxDXveCxAbQ1dhAYq4wIJsdtCC3nn9PG8ccXx7jo2FfQkrLLCkB5AlgxYDSyZcgbF3AJIiEIxSJW8zOip2k-lNwqJAeevXTH2yb_q-HoRwxxmocFvAT4Y0mU80p8XGwQvJghafeo6-vo9B5B4EEn2wpZzdCB58GilTRjaXC_W4FcXzkNmKKKxaWLvgZiiyyYuq5FehDLyDmlaEAiUr9pRaN__sRDwVrh28dfFBaJDhRQyFRyJq72PvsBr1aHLncodqUzvrj49OiaZOa99Kb2WEUhVfC6EsZCzgogukAuNHtrU_AaY_XBzGi1BNi9ylYuH4lDsjM_xNKCFolCzycMv1wEqjjgmV23kv5s1Q2UkFglPBtP8gItYBrPbyCH77Pv_R24hyXtu3yybRYU23blwoBzRL7sFxKJIa70TbKgdeaJwFpnmQzwFrvR_m2UPtoWmIueZ3PN-ADN-04QgdYO3pa7vMaZD414e9dU7kNBXZ7ABmjiilzgKKjuMDn8l9rcC2EYYn-AxLoaggRmdGrWa1EPFrgw0gLH9R1nuoGnmycqCS0G6aDtdwNtnspc6ixgZRy9b8K7mDGxpuPYLGy0pnIRSdiOs0uyApuc70MW_fOchbRurE9RtZBEaorgM-LGX3b0jXxnOa336rH2KfR6GU0yuUIPS5M9MYemqVFulFVRyU5nAGKyWwcgbHTOEXQVaB9uIJqM1qQmW2m2qAXfAWUkyoNjLVgOon9Lo7NeZEsRQ-Tx-Q64fMxrmFZBWUKhhhojFh4yEkKDqF_qIoTFOj-7bmbhUntR_9RNTnOGt74Dc9d1Iw6ab69hrem7GV6TxwzRoD3E3lgNLGd6p6OgD8wbH4rGJiP1g8VyNzl2V7uhyfqUz1LS28kSwpEYnCkuq8rTBVGcuzhXaxTQOKWF5zI9hFJvJikb7nkGfPv0ZlLMSr1lSfeqj9zUUtgEMICzSbddViVfzY9Xrziyrr0kPl_kWoC2hrvSrAj1PCG161VVK_lHWHHhzKQtIqh7HAxLOPpPJBKFZlmQnjBAQ7sgq0ILXHKbkrjN6EeF6sNHRSjz_X9GaLcWNls-u5nsAkbQALAOUxum10Pv0zJcsuKS15IbMNtN9sa__tbYHbCjEOk7IqAxq4cLMmzql5hrdxn0Ojwe5YKth0vaF7fb3anme_3D8m4EbcNthhTlymeVHAozHMgL_KeC6PM2jLnIz13T3ntowsHRKnDrVKsOFOYnN2WjvsOsxZnmt9KTCb7OGa5bHYAHXI7F4i2bzB6Hiyb7_VmTGNFUij-hBbIEYZVXPg6xvXZ9JJX_wKhU5VDZI0GSlON33Rxiw6DPvEN0v-_6toU5H9MiE8FB7UAPp_6ptZC6JxdcFkbQGW9SxTtWP_CDCYfwM7wSddxu2cgHvlrmnGiPT4jbWTBUHtgnVXYWL_VE4-JXgKM4en3rTXA-Ow85sB2PKT1QWSNBZsKw/https://www.amazon.in/stores/page/EA8F97D9-451C-4310-AF86-4F630DC14A0E/?_encoding=UTF8&store_ref=SB_A011211412OA5ZTZOVHPU-A047099314ZIHCVQZ0GQW&pd_rd_plhdr=t&aaxitk=6ccc089b47ab43fec2bf5147cd8e1f85&hsa_cr_id=0&lp_asins=B0D5CXZ2F5%2CB0D93N3DWM%2CB0D5CYV3ZS&lp_query=T%20shirt&lp_slot=desktop-hsa-3psl&aref=rPVPGKoMaG&ref_=sbx_be_s_3psl_mbd_mb2_hl&pd_rd_w=CkgDz&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=GV6SPQ3J0F5929FDNR00&pd_rd_wg=GKbFl&pd_rd_r=a48c5be3-39e0-49d8-909e-8e9e50d97efe
+                            - generic [ref=e4546]:
+                              - generic [ref=e4547]: "All-Day active: tees that support you"
+                              - generic [ref=e4548]: "All-Day active: tees that support you"
+          - generic [ref=e4554]:
+            - heading "Need help?" [level=2] [ref=e4557]
+            - generic [ref=e4558]:
+              - link "Visit the help section" [ref=e4559] [cursor=pointer]:
+                - /url: /gp/help/customer/display.html?nodeId=201889520
+              - text: or
+              - link "contact us" [ref=e4560] [cursor=pointer]:
+                - /url: /gp/help/customer/contact-us
+          - generic [ref=e4563]:
+            - iframe [ref=e4564]:
+              - generic [ref=f1e4]:
+                - generic [ref=f1e5]: "Click to navigate to product detail page Sponsored Ad. Product image. Branded image. U.S. Polo ASSN. Mens LS002 Cotton Lounge Shorts. Price: ₹722.00."
+                - generic [ref=f1e8]:
+                  - img "Brand logo" [ref=f1e13]
+                  - img "Product image" [ref=f1e18]
+                - link "Click to navigate to product detail page" [ref=f1e22] [cursor=pointer]:
+                  - /url: https://aax-eu-zaz.amazon.in/x/c/RJBWxrmvCBkv8J6IBUByBPoAAAGgpcQU6goAAAH_AUFvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDEgICBILB4S/clv1c_ek-gwvHz7cXCDXnMIfsTrNs7tt0zuVp1SYsaOnvHgy9u0pAPkXsUSAe7Wz170SSVsGr4325DFMUtsRfAJws3XSscrE3HvI7nf_YlOctb6hMhig2TKrDlbUe7RUSEBnOzWZrxXamzcJXAnrc7UEDrJvC5Y5WOZtXqnOCQj6YrQRgZC-MqYGs7YzpFTkJW1lsdLsYZtpBiQE-fFVTQFcDhEuGkDFJPcFoOncIWSSnFdFkY6ufKkDgaVOQTUGWb_JSJtRYwQ-W0BdVIwG3LXyY_3qkj2-Zzl3EmWJMAPS1l5Wr_n0ZILROUTxF0eyG2iFSef1lvZmvgvRPO1wrpXpO3L0ttHUq6mqMnjCv2THVHumUQmfY86lLVVdJC_2UT8hvDFWZ_8ET-g3hK3XOOAkVOfyEGgg0qoy53IMn-DUUM1CVHdhhoV-XzlUidJXRXXUwV62tUZbowsOOoc293UwuGuX3YFpAIMY8FUVbHEzs2i336ZAR0ktAWEUpxA6Qw-sm_xAi2NU4TMpnjfRixtpCfKW7574cdLCY5wz3zim3D-uQ3iAR-nRqB6dEpK_ckS8gJeEhc1qdxdWXJU3aDX4QSCiP7xsFncej_C0BZYHfSLHaUf7tqGNtCkEWOCIkhL0fxsg2NICBAolznAal9GT-QXl-hNwlO_OtPxqtdEZ2Qfxy6JpQJg-UNPVbMyTz4CMD4F_--J2HDOfxigC8IT39kOngiU9iNOMv50WlzBv6pBmer-gK8dDwU-0W2DgqmTAQuXkLyUe5zoTz9dr265aq-QODX49VYPzswnhvY4_0MrNKR2yLvOC2bcprBNCnQDHq-g20WWd43-qZQYFmhXxcjfS4wCfh-XD8fQr_1ni-AUyZwnV3P2rMa-PM1WksPBGftHkcyAAGZwrVSnFO-0VfjvefY0KD41k63NE7wV5BPa9SqVgvMH5VFwTASbQHKSf3hx7r2UeFMXN6Jkv9clqB0y1-rMFaKrHG5gtWhC33cn1RcpgU9ajDS21XoxqP5rkGZosQ1SA9HAN2QoebDA8kVzotZUNLt_B1lfIzM2jQa5UoPPd-YXqiJ2SYDTugtwgdR3J8/http://www.amazon.in/dp/B0CW978ZVM/ref=syn_sd_onsite_desktop_0?ie=UTF8&psc=1&pd_rd_plhdr=t&aref=WaqIbBOhFO
+            - button "Leave feedback on Sponsored advertisement" [ref=e4566] [cursor=pointer]:
+              - generic [ref=e4567]: Sponsored
+        - link "Go back to filtering menu" [ref=e4569] [cursor=pointer]:
+          - /url: "#s-skipLinkTargetForFilterOptions"
+      - dialog "Filters" [ref=e4570]:
+        - generic [ref=e4571]:
+          - link "Skip to main search results" [ref=e4572] [cursor=pointer]:
+            - /url: "#s-skipLinkTargetForMainSearchResults"
+          - generic [ref=e4574]:
+            - generic [ref=e4578]:
+              - group [ref=e4579]:
+                - heading "Popular Shopping Ideas" [level=2] [ref=e4580]
+                - list [ref=e4581]:
+                  - listitem [ref=e4582]:
+                    - link "Oversized" [ref=e4584] [cursor=pointer]:
+                      - /url: /s?k=oversized+t+shirt&ref=sr_nr_p_rag_integrated_qb_0
+                  - listitem [ref=e4585]:
+                    - link "Full Sleeve" [ref=e4587] [cursor=pointer]:
+                      - /url: /s?k=t+shirt+full+sleeve&ref=sr_nr_p_rag_integrated_qb_1
+                  - listitem [ref=e4588]:
+                    - link "Sport" [ref=e4590] [cursor=pointer]:
+                      - /url: /s?k=sport+t+shirt&ref=sr_nr_p_rag_integrated_qb_2
+                  - listitem [ref=e4591]:
+                    - link "Gym" [ref=e4593] [cursor=pointer]:
+                      - /url: /s?k=gym+t+shirt&ref=sr_nr_p_rag_integrated_qb_3
+              - separator [ref=e4594]
+              - group "Delivery Day" [ref=e4595]:
+                - heading "Delivery Day" [level=2] [ref=e4596]
+                - list "Delivery Day" [ref=e4597]:
+                  - listitem "Popular Shopping Ideas" [ref=e4598]:
+                    - link "Apply the filter Get It by Tomorrow to narrow results" [ref=e4600] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_90%3A6741118031&dc&qid=1789487485&rnid=6741116031&ref=sr_nr_p_90_1&ds=v1%3Acw4K0ZkolvjjBN2oBQwowIoShEfccEs6cXpfrP2qj5U
+                      - checkbox [ref=e4603]
+                      - text: Get It by Tomorrow
+                  - listitem "Popular Shopping Ideas" [ref=e4605]:
+                    - link "Apply the filter Get It in 2 Days to narrow results" [ref=e4607] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_90%3A20912642031&dc&qid=1789487485&rnid=6741116031&ref=sr_nr_p_90_2&ds=v1%3AOEmIgk5WgbUFy9Oh8ZvoFZvVmfOmGv58cf%2F0gwd5GxY
+                      - checkbox [ref=e4610]
+                      - text: Get It in 2 Days
+                - heading "Eligible for Free Delivery" [level=2] [ref=e4612]
+                - list "Eligible for Free Delivery" [ref=e4613]:
+                  - listitem "Popular Shopping Ideas" [ref=e4614]:
+                    - link "Apply the filter Free Shipping to narrow results" [ref=e4616] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_free_shipping_eligible%3A205563695031&dc&qid=1789487485&rnid=205563694031&ref=sr_nr_p_n_free_shipping_eligible_1&ds=v1%3A8j4TaRT7%2FF8Zby0knSXoRLgJciYxGsb0yxFJh7dbQsI
+                      - checkbox [ref=e4619]
+                      - text: Free Shipping
+                      - generic [ref=e4621]: Get FREE Shipping on eligible orders shipped by Amazon
+              - group "Brands" [ref=e4622]:
+                - heading "Brands" [level=2] [ref=e4623]
+                - list "Brands" [ref=e4624]:
+                  - listitem "Popular Shopping Ideas" [ref=e4625]:
+                    - link "Apply the filter AUSK to narrow results" [ref=e4627] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_123%3A1243201&dc&qid=1789487485&rnid=91049095031&ref=sr_nr_p_123_1&ds=v1%3A4ghHJPKSdgltx5%2FxhhnEalhvTzbgyJZc%2B%2BrA0OCXaPM
+                      - checkbox [ref=e4630]
+                      - text: AUSK
+                  - listitem "Popular Shopping Ideas" [ref=e4632]:
+                    - link "Apply the filter LEOTUDE to narrow results" [ref=e4634] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_123%3A388212&dc&qid=1789487485&rnid=91049095031&ref=sr_nr_p_123_2&ds=v1%3AkZcO3YAoRXCUGJtIagTUi%2FOWizxf3qz7kHXJGp9UojA
+                      - checkbox [ref=e4637]
+                      - text: LEOTUDE
+                  - listitem "Popular Shopping Ideas" [ref=e4639]:
+                    - link "Apply the filter Lymio to narrow results" [ref=e4641] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_123%3A806079&dc&qid=1789487485&rnid=91049095031&ref=sr_nr_p_123_3&ds=v1%3AgPuhrUCpgoVXwKdxXrn5Vlgv92gFPVZswEo0BZqVpLg
+                      - checkbox [ref=e4644]
+                      - text: Lymio
+                  - listitem "Popular Shopping Ideas" [ref=e4646]:
+                    - link "Apply the filter Allen Solly to narrow results" [ref=e4648] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_123%3A398346&dc&qid=1789487485&rnid=91049095031&ref=sr_nr_p_123_4&ds=v1%3ACdhAN0r3Xu50lLDzU%2F5i6l65DaGKikijTW91bXntmUs
+                      - checkbox [ref=e4651]
+                      - text: Allen Solly
+                  - listitem "Popular Shopping Ideas" [ref=e4653]:
+                    - link "Apply the filter Amazon Brand - Symbol to narrow results" [ref=e4655] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_123%3A179318&dc&qid=1789487485&rnid=91049095031&ref=sr_nr_p_123_5&ds=v1%3AaZkEqrs7WStGACGnnidiPKZWid4zCmnd2JbLdVEsXWI
+                      - checkbox [ref=e4658]
+                      - text: Amazon Brand - Symbol
+                  - listitem "Popular Shopping Ideas" [ref=e4660]:
+                    - link "Apply the filter Peter England to narrow results" [ref=e4662] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_123%3A484445&dc&qid=1789487485&rnid=91049095031&ref=sr_nr_p_123_6&ds=v1%3AulyYFsg911aQKNNMp9W51ajTEd4kW0aniGT9fpaoEck
+                      - checkbox [ref=e4665]
+                      - text: Peter England
+                  - listitem "Popular Shopping Ideas" [ref=e4667]:
+                    - link "Apply the filter Louis Philippe to narrow results" [ref=e4669] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_123%3A435051&dc&qid=1789487485&rnid=91049095031&ref=sr_nr_p_123_7&ds=v1%3AbEcYeEUbN5SZ%2FVu4OSTwcmyymAcFmG7vG6tCz%2BggHSw
+                      - checkbox [ref=e4672]
+                      - text: Louis Philippe
+                  - listitem [ref=e4674]:
+                    - button "See more, Brands" [ref=e4677] [cursor=pointer]: See more
+              - group "Colour" [ref=e4679]:
+                - heading "Colour" [level=2] [ref=e4680]
+                - list "Colour" [ref=e4681]:
+                  - listitem [ref=e4682]:
+                    - generic:
+                      - link "Apply the filter Black to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_two_browse-vebin%3A1975317031&dc&qid=1789487485&rnid=1974754031&ref=sr_nr_p_n_size_two_browse-vebin_1&ds=v1%3A9k4IMCOIhIwgL6cvZRvOQQSW%2FNNTXKTXib1RF0EeV58
+                  - listitem [ref=e4684]:
+                    - generic:
+                      - link "Apply the filter Greys to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_two_browse-vebin%3A1975322031&dc&qid=1789487485&rnid=1974754031&ref=sr_nr_p_n_size_two_browse-vebin_2&ds=v1%3APqyMP4DSFC5tMhGSkxHmNreJ75OftOUquvHt%2FPqQBgw
+                  - listitem [ref=e4686]:
+                    - generic:
+                      - link "Apply the filter White to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_two_browse-vebin%3A1975332031&dc&qid=1789487485&rnid=1974754031&ref=sr_nr_p_n_size_two_browse-vebin_3&ds=v1%3A3XMLsAech7SOn4yVaKOb01qKNuUMTdUgCu%2F8bINsBfQ
+                  - listitem [ref=e4688]:
+                    - generic:
+                      - link "Apply the filter Browns to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_two_browse-vebin%3A1975319031&dc&qid=1789487485&rnid=1974754031&ref=sr_nr_p_n_size_two_browse-vebin_4&ds=v1%3AT6siePZM0dcgbBXxlntF%2BZI4513uWUpjb8EBj7J%2BQMo
+                  - listitem [ref=e4690]:
+                    - generic:
+                      - link "Apply the filter Beige to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_two_browse-vebin%3A1975316031&dc&qid=1789487485&rnid=1974754031&ref=sr_nr_p_n_size_two_browse-vebin_5&ds=v1%3A8WM7khDC1H%2F3aOStCP%2FS9PA6oWfJBuwmOUPCF9Hy6wg
+                  - listitem [ref=e4692]:
+                    - generic:
+                      - link "Apply the filter Reds to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_two_browse-vebin%3A1975329031&dc&qid=1789487485&rnid=1974754031&ref=sr_nr_p_n_size_two_browse-vebin_6&ds=v1%3AAc9IFA%2B37hHCEjPEnXk8Xjs8wVk9f8qykLkQ0tMtcEs
+                  - listitem [ref=e4694]:
+                    - generic:
+                      - link "Apply the filter Pinks to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_two_browse-vebin%3A1975327031&dc&qid=1789487485&rnid=1974754031&ref=sr_nr_p_n_size_two_browse-vebin_7&ds=v1%3Axs1Aukr1VicrTnkxVWgmnPXZPWNBr42lyNVnJWlPxKo
+                  - listitem [ref=e4696]:
+                    - generic:
+                      - link "Apply the filter Oranges to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_two_browse-vebin%3A1975326031&dc&qid=1789487485&rnid=1974754031&ref=sr_nr_p_n_size_two_browse-vebin_8&ds=v1%3AFd5EXa%2BhbjHZp2Gmcpu%2F8s8PSykLus40FnAVfWA%2B%2B0Y
+                  - listitem [ref=e4698]:
+                    - generic:
+                      - link "Apply the filter Yellows to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_two_browse-vebin%3A1975333031&dc&qid=1789487485&rnid=1974754031&ref=sr_nr_p_n_size_two_browse-vebin_9&ds=v1%3AC311TBtmZi7ixHFjavv0BlgPo1ZloL8wNUzCEWDUyIY
+                  - listitem [ref=e4700]:
+                    - generic:
+                      - link "Apply the filter Off-White to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_two_browse-vebin%3A1975323031&dc&qid=1789487485&rnid=1974754031&ref=sr_nr_p_n_size_two_browse-vebin_10&ds=v1%3A3czsCaTrRZvdM9H10Z7djwUAiF9A%2BdbnE0ebi8lpPjg
+                  - listitem [ref=e4702]:
+                    - generic:
+                      - link "Apply the filter Greens to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_two_browse-vebin%3A1975321031&dc&qid=1789487485&rnid=1974754031&ref=sr_nr_p_n_size_two_browse-vebin_11&ds=v1%3AT0Kxkma%2FaJDdR5i0FIg8lZmajwLyuVX%2F5rWvSg0a9PU
+                  - listitem [ref=e4704]:
+                    - generic:
+                      - link "Apply the filter Turquoise to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_two_browse-vebin%3A1975331031&dc&qid=1789487485&rnid=1974754031&ref=sr_nr_p_n_size_two_browse-vebin_12&ds=v1%3AfBep2APZJQhYL9noprWGcUWktLZKRk2kl6leWxE3stQ
+                  - listitem [ref=e4706]:
+                    - generic:
+                      - link "Apply the filter Blues to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_two_browse-vebin%3A1975318031&dc&qid=1789487485&rnid=1974754031&ref=sr_nr_p_n_size_two_browse-vebin_13&ds=v1%3AAm4MJXRxE9%2FYPmVXAfwm5hu9lE9fK7wv6JqTW6K3IlU
+                  - listitem [ref=e4708]:
+                    - generic:
+                      - link "Apply the filter Purples to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_two_browse-vebin%3A1975328031&dc&qid=1789487485&rnid=1974754031&ref=sr_nr_p_n_size_two_browse-vebin_14&ds=v1%3ATl23RFqfo3Lea4eRmfjVgi5E8es3BL2zpdZ3JREczDk
+                  - listitem [ref=e4710]:
+                    - generic:
+                      - link "Apply the filter Golds to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_two_browse-vebin%3A1975320031&dc&qid=1789487485&rnid=1974754031&ref=sr_nr_p_n_size_two_browse-vebin_15&ds=v1%3ADCI9DwqAf2N7z7wdo5oPtf%2B1GuDzYGW5fJAk75%2BDukk
+                  - listitem [ref=e4712]:
+                    - generic:
+                      - link "Apply the filter Silvers to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_two_browse-vebin%3A1975330031&dc&qid=1789487485&rnid=1974754031&ref=sr_nr_p_n_size_two_browse-vebin_16&ds=v1%3Au5x2HOj%2BYXdJ7bcjUgmf7pqQNASOzzNh5B7YG60t64Q
+                  - listitem [ref=e4714]:
+                    - generic:
+                      - link "Apply the filter Multicoloured to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_two_browse-vebin%3A1975325031&dc&qid=1789487485&rnid=1974754031&ref=sr_nr_p_n_size_two_browse-vebin_17&ds=v1%3A0MpjuS%2BGNyLmCn8GmC2e70%2BsRYZUWquhjhH6WWPWgpo
+                  - listitem [ref=e4716]:
+                    - generic:
+                      - link "Apply the filter Transparent to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_two_browse-vebin%3A4294888031&dc&qid=1789487485&rnid=1974754031&ref=sr_nr_p_n_size_two_browse-vebin_18&ds=v1%3ARmkC%2FxQ13yXzZ38Gh9Z%2F3B7dQ7wjxEBe726j13Dq%2Bpc
+              - group "Amazon Fashion" [ref=e4718]:
+                - heading "Amazon Fashion" [level=2] [ref=e4719]
+                - list "Amazon Fashion" [ref=e4720]:
+                  - listitem "Popular Shopping Ideas" [ref=e4721]:
+                    - link "Apply the filter Top Brands to narrow results" [ref=e4723] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1004227705091%3A11301357031&dc&qid=1789487485&rnid=11301356031&ref=sr_nr_p_n_g-1004227705091_1&ds=v1%3AcwLKbLVdK9u%2Bx5PoozJu3zw0k9cKRhU0qhr1V%2FYf8Gw
+                      - checkbox [ref=e4726]
+                      - text: Top Brands
+                  - listitem "Popular Shopping Ideas" [ref=e4728]:
+                    - link "Apply the filter Made for Amazon to narrow results" [ref=e4730] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1004227705091%3A14852585031&dc&qid=1789487485&rnid=11301356031&ref=sr_nr_p_n_g-1004227705091_2&ds=v1%3AUYXVmN0I2YOuY4kpghiNNPUD5xk69NXn28n7kCZVeYU
+                      - checkbox [ref=e4733]
+                      - text: Made for Amazon
+                  - listitem "Popular Shopping Ideas" [ref=e4735]:
+                    - link "Apply the filter Premium Brands to narrow results" [ref=e4737] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1004227705091%3A27064186031&dc&qid=1789487485&rnid=11301356031&ref=sr_nr_p_n_g-1004227705091_3&ds=v1%3AWntkIeyeViZwpdpGLOI1IYZck3B6zcwrOHeesOhHS7E
+                      - checkbox [ref=e4740]
+                      - text: Premium Brands
+              - group "Women's General Size" [ref=e4742]:
+                - heading "Women's General Size" [level=2] [ref=e4743]
+                - list "Women's General Size" [ref=e4744]:
+                  - listitem [ref=e4745]:
+                    - generic:
+                      - link "Apply the filter 3XS to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_five_browse-vebin%3A1975363031&dc&qid=1789487485&rnid=1975309031&ref=sr_nr_p_n_size_five_browse-vebin_1&ds=v1%3A%2FZmyJz%2Fu4o%2FVa%2FQ450eqoU1phCwtcz%2FZpTuXJrkfL%2FM
+                        - button "3XS" [ref=e4748] [cursor=pointer]
+                  - listitem [ref=e4749]:
+                    - generic:
+                      - link "Apply the filter 2XS to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_five_browse-vebin%3A1975364031&dc&qid=1789487485&rnid=1975309031&ref=sr_nr_p_n_size_five_browse-vebin_2&ds=v1%3AuZB3XaBm3Ok1h%2F5wm4FUmITMVJ%2FoeNbgi9hxcUETb24
+                        - button "2XS" [ref=e4752] [cursor=pointer]
+                  - listitem [ref=e4753]:
+                    - generic:
+                      - link "Apply the filter XS to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_five_browse-vebin%3A1975365031&dc&qid=1789487485&rnid=1975309031&ref=sr_nr_p_n_size_five_browse-vebin_3&ds=v1%3AZTzvXjzosFpmdH%2B69Wv6eL2%2FbQPRTzEOL%2FjtSINo8N0
+                        - button "XS" [ref=e4756] [cursor=pointer]
+                  - listitem [ref=e4757]:
+                    - generic:
+                      - link "Apply the filter S to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_five_browse-vebin%3A1975366031&dc&qid=1789487485&rnid=1975309031&ref=sr_nr_p_n_size_five_browse-vebin_4&ds=v1%3AA7xaPI%2BJHy2OHQC1w0FJ2N6CEiAObqz95XxU5kJsPiI
+                        - button "S" [ref=e4760] [cursor=pointer]
+                  - listitem [ref=e4761]:
+                    - generic:
+                      - link "Apply the filter M to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_five_browse-vebin%3A1975367031&dc&qid=1789487485&rnid=1975309031&ref=sr_nr_p_n_size_five_browse-vebin_5&ds=v1%3A535Z23Z9WTwliKeeq7L2mZo2I83fNNOkp4UJ948zB0o
+                        - button "M" [ref=e4764] [cursor=pointer]
+                  - listitem [ref=e4765]:
+                    - generic:
+                      - link "Apply the filter L to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_five_browse-vebin%3A1975368031&dc&qid=1789487485&rnid=1975309031&ref=sr_nr_p_n_size_five_browse-vebin_6&ds=v1%3ATCwd6A4lxLoety%2BNpTqSxdhfLpUM%2FKrVOBd2UvOxgK0
+                        - button "L" [ref=e4768] [cursor=pointer]
+                  - listitem [ref=e4769]:
+                    - generic:
+                      - link "Apply the filter XL to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_five_browse-vebin%3A1975369031&dc&qid=1789487485&rnid=1975309031&ref=sr_nr_p_n_size_five_browse-vebin_7&ds=v1%3Aeka3DPiGUYnZGIEHFcsF9USOcX4H8JWyCA5SWhyDSUY
+                        - button "XL" [ref=e4772] [cursor=pointer]
+                  - listitem [ref=e4773]:
+                    - generic:
+                      - link "Apply the filter 2XL to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_five_browse-vebin%3A1975370031&dc&qid=1789487485&rnid=1975309031&ref=sr_nr_p_n_size_five_browse-vebin_8&ds=v1%3AYsoBWNDUqvuwPQu6mAlYIVk1PWeNo%2BxAUIakUU2XPUs
+                        - button "2XL" [ref=e4776] [cursor=pointer]
+                  - listitem [ref=e4777]:
+                    - generic:
+                      - link "Apply the filter 3XL to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_five_browse-vebin%3A1975371031&dc&qid=1789487485&rnid=1975309031&ref=sr_nr_p_n_size_five_browse-vebin_9&ds=v1%3A2V0yNjMEnADcHl8Wm2L%2B4yfOS1OmcCTWvYdXDNmUKz0
+                        - button "3XL" [ref=e4780] [cursor=pointer]
+                  - listitem [ref=e4781]:
+                    - generic:
+                      - link "Apply the filter 4XL to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_five_browse-vebin%3A1975372031&dc&qid=1789487485&rnid=1975309031&ref=sr_nr_p_n_size_five_browse-vebin_10&ds=v1%3Ah2odlhzuzHuAfGEDAklbfelveXUpeNN2QkKdXO%2F3fso
+                        - button "4XL" [ref=e4784] [cursor=pointer]
+                  - listitem [ref=e4785]:
+                    - generic:
+                      - link "Apply the filter 5XL to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_five_browse-vebin%3A1975373031&dc&qid=1789487485&rnid=1975309031&ref=sr_nr_p_n_size_five_browse-vebin_11&ds=v1%3AE0aXuKcPgo6cdc7h5qVe9k%2FeWqGxmCZCu5bNY63xHjc
+                        - button "5XL" [ref=e4788] [cursor=pointer]
+                  - listitem [ref=e4789]:
+                    - generic:
+                      - link "Apply the filter 6XL to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_five_browse-vebin%3A22308301031&dc&qid=1789487485&rnid=1975309031&ref=sr_nr_p_n_size_five_browse-vebin_12&ds=v1%3AGbJhM2Wp0SnCiL9C0Ya4sSfWPTLhKVU1dOPNI5k14NE
+                        - button "6XL" [ref=e4792] [cursor=pointer]
+                  - listitem [ref=e4793]:
+                    - generic:
+                      - link "Apply the filter 7XL to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_five_browse-vebin%3A22308304031&dc&qid=1789487485&rnid=1975309031&ref=sr_nr_p_n_size_five_browse-vebin_13&ds=v1%3ASJdxnkmSctSs%2BViIMamv2NYMDK%2FJRfnEU2ijXCh5ts4
+                        - button "7XL" [ref=e4796] [cursor=pointer]
+                  - listitem [ref=e4797]:
+                    - generic:
+                      - link "Apply the filter 8XL to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_five_browse-vebin%3A22308308031&dc&qid=1789487485&rnid=1975309031&ref=sr_nr_p_n_size_five_browse-vebin_14&ds=v1%3AGCdeXbRrPyCDjvZhdzTk9TWvUiNgug6RXxd%2BR7U2RFk
+                        - button "8XL" [ref=e4800] [cursor=pointer]
+                  - listitem [ref=e4801]:
+                    - generic:
+                      - link "Apply the filter Free Size to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_five_browse-vebin%3A100572757031&dc&qid=1789487485&rnid=1975309031&ref=sr_nr_p_n_size_five_browse-vebin_15&ds=v1%3A%2B6wzDLdMapxbb4OCKlZTdInVIP3k559XkbK36HwXNuY
+                        - button "Free Size" [ref=e4804] [cursor=pointer]
+                - heading "Men's General Size" [level=2] [ref=e4805]
+                - list "Men's General Size" [ref=e4806]:
+                  - listitem [ref=e4807]:
+                    - generic:
+                      - link "Apply the filter 2XS to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_men_international_size%3A1975391031&dc&qid=1789487485&rnid=1974882031&ref=sr_nr_p_n_pt_nav_size_men_international_size_1&ds=v1%3AP4abBj9me3mSxd%2FOnx%2FqtaP8iX6VBmKByDATojV3esM
+                        - button "2XS" [ref=e4810] [cursor=pointer]
+                  - listitem [ref=e4811]:
+                    - generic:
+                      - link "Apply the filter XS to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_men_international_size%3A1975392031&dc&qid=1789487485&rnid=1974882031&ref=sr_nr_p_n_pt_nav_size_men_international_size_2&ds=v1%3AARwp03knFxBTwFEFQJFm2q41gq7ArOVkhlqqnTENyk8
+                        - button "XS" [ref=e4814] [cursor=pointer]
+                  - listitem [ref=e4815]:
+                    - generic:
+                      - link "Apply the filter S to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_men_international_size%3A1975393031&dc&qid=1789487485&rnid=1974882031&ref=sr_nr_p_n_pt_nav_size_men_international_size_3&ds=v1%3A5%2FZR5LkJEHcB15L0hn5t056hmHYFI%2BdXPQWPGcazP%2BM
+                        - button "S" [ref=e4818] [cursor=pointer]
+                  - listitem [ref=e4819]:
+                    - generic:
+                      - link "Apply the filter M to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_men_international_size%3A1975394031&dc&qid=1789487485&rnid=1974882031&ref=sr_nr_p_n_pt_nav_size_men_international_size_4&ds=v1%3Aml%2BtGQS6saRKd6CIjBoe0V4OknBs2OXBp9upv8OBjOw
+                        - button "M" [ref=e4822] [cursor=pointer]
+                  - listitem [ref=e4823]:
+                    - generic:
+                      - link "Apply the filter L to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_men_international_size%3A1975395031&dc&qid=1789487485&rnid=1974882031&ref=sr_nr_p_n_pt_nav_size_men_international_size_5&ds=v1%3AE8MFj%2BcrLToPNIWx2sGyL537%2FQODGuZUfo5xV63DFMA
+                        - button "L" [ref=e4826] [cursor=pointer]
+                  - listitem [ref=e4827]:
+                    - generic:
+                      - link "Apply the filter XL to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_men_international_size%3A1975396031&dc&qid=1789487485&rnid=1974882031&ref=sr_nr_p_n_pt_nav_size_men_international_size_6&ds=v1%3ArjOgGxPc6rmradxZAkqUxC%2FcV2DcH%2FUwtmpEXPlmKAI
+                        - button "XL" [ref=e4830] [cursor=pointer]
+                  - listitem [ref=e4831]:
+                    - generic:
+                      - link "Apply the filter 2XL to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_men_international_size%3A1975397031&dc&qid=1789487485&rnid=1974882031&ref=sr_nr_p_n_pt_nav_size_men_international_size_7&ds=v1%3AkgN28kc4ppeGtCS%2BbtsRk6cOOYDbW56ckHiU2T0%2BbHQ
+                        - button "2XL" [ref=e4834] [cursor=pointer]
+                  - listitem [ref=e4835]:
+                    - generic:
+                      - link "Apply the filter 3XL to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_men_international_size%3A1975398031&dc&qid=1789487485&rnid=1974882031&ref=sr_nr_p_n_pt_nav_size_men_international_size_8&ds=v1%3A2MKfYOaCgbtD%2Bv%2FGG0EoFa4FQAMHV2mdK%2FmUuRPdVXQ
+                        - button "3XL" [ref=e4838] [cursor=pointer]
+                  - listitem [ref=e4839]:
+                    - generic:
+                      - link "Apply the filter 4XL to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_men_international_size%3A1975399031&dc&qid=1789487485&rnid=1974882031&ref=sr_nr_p_n_pt_nav_size_men_international_size_9&ds=v1%3AzhmCc5NBH%2F%2BWRyeQJl89ZC3qM9GmfJhzBo%2B4Uc3HVs0
+                        - button "4XL" [ref=e4842] [cursor=pointer]
+                  - listitem [ref=e4843]:
+                    - generic:
+                      - link "Apply the filter 5XL to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_men_international_size%3A1975400031&dc&qid=1789487485&rnid=1974882031&ref=sr_nr_p_n_pt_nav_size_men_international_size_10&ds=v1%3AbhvKP2DdvOM4oH3KPjYqqCQob6dVXPpeZFlr%2B%2B76QxE
+                        - button "5XL" [ref=e4846] [cursor=pointer]
+                  - listitem [ref=e4847]:
+                    - generic:
+                      - link "Apply the filter 6XL to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_men_international_size%3A22308293031&dc&qid=1789487485&rnid=1974882031&ref=sr_nr_p_n_pt_nav_size_men_international_size_11&ds=v1%3AcOgqOeY0f4j5z3P0YEPvJEsRmgtxW1RHTITJ6K%2Bc1Kg
+                        - button "6XL" [ref=e4850] [cursor=pointer]
+                  - listitem [ref=e4851]:
+                    - generic:
+                      - link "Apply the filter 7XL to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_men_international_size%3A22308294031&dc&qid=1789487485&rnid=1974882031&ref=sr_nr_p_n_pt_nav_size_men_international_size_12&ds=v1%3A0bcL5%2Bk9G%2BzUilQltTHht9lyCFH11IuCTrmfudDSifA
+                        - button "7XL" [ref=e4854] [cursor=pointer]
+                  - listitem [ref=e4855]:
+                    - generic:
+                      - link "Apply the filter 8XL to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_men_international_size%3A22308295031&dc&qid=1789487485&rnid=1974882031&ref=sr_nr_p_n_pt_nav_size_men_international_size_13&ds=v1%3A3v%2FGoKfSshh%2By3k6wVUo%2FjwBSKoHW9zsFKuJklOuIwc
+                        - button "8XL" [ref=e4858] [cursor=pointer]
+                  - listitem [ref=e4859]:
+                    - generic:
+                      - link "Apply the filter 9XL to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_men_international_size%3A100572758031&dc&qid=1789487485&rnid=1974882031&ref=sr_nr_p_n_pt_nav_size_men_international_size_14&ds=v1%3A7yOT9KZJ1CvhvAROXTGo0EkgCJreEVffF7j7qUMRZsI
+                        - button "9XL" [ref=e4862] [cursor=pointer]
+                - heading "Children's General Size" [level=2] [ref=e4863]
+                - list "Children's General Size" [ref=e4864]:
+                  - listitem "Popular Shopping Ideas" [ref=e4865]:
+                    - link "Apply the filter 2 - 3 years to narrow results" [ref=e4867] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_children_size%3A2081569031&dc&qid=1789487485&rnid=1974868031&ref=sr_nr_p_n_pt_nav_size_children_size_1&ds=v1%3A6I6r%2BB4gfbzieV0HCMaATlrtT8Me6DU42M13OUslcac
+                      - checkbox [ref=e4870]
+                      - text: 2 - 3 years
+                  - listitem "Popular Shopping Ideas" [ref=e4872]:
+                    - link "Apply the filter 3 - 4 years to narrow results" [ref=e4874] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_children_size%3A2081570031&dc&qid=1789487485&rnid=1974868031&ref=sr_nr_p_n_pt_nav_size_children_size_2&ds=v1%3AlJrilnSMPL21A9Itb51ctiCAQFsBbjZ29FW3CuB8ckA
+                      - checkbox [ref=e4877]
+                      - text: 3 - 4 years
+                  - listitem "Popular Shopping Ideas" [ref=e4879]:
+                    - link "Apply the filter 4 - 5 years to narrow results" [ref=e4881] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_children_size%3A2081571031&dc&qid=1789487485&rnid=1974868031&ref=sr_nr_p_n_pt_nav_size_children_size_3&ds=v1%3AnDgij88z9eKhh%2FSmnEL7wr2rfI%2FWxP9w%2FvhKkCW8510
+                      - checkbox [ref=e4884]
+                      - text: 4 - 5 years
+                  - listitem "Popular Shopping Ideas" [ref=e4886]:
+                    - link "Apply the filter 5 - 6 years to narrow results" [ref=e4888] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_children_size%3A2081572031&dc&qid=1789487485&rnid=1974868031&ref=sr_nr_p_n_pt_nav_size_children_size_4&ds=v1%3AjZT%2BIE8%2BzSF1Cg4w9Ww8Cz8tvaRMiKdwzcMIwzaM9fo
+                      - checkbox [ref=e4891]
+                      - text: 5 - 6 years
+                  - listitem "Popular Shopping Ideas" [ref=e4893]:
+                    - link "Apply the filter 6 - 7 years to narrow results" [ref=e4895] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_children_size%3A2081573031&dc&qid=1789487485&rnid=1974868031&ref=sr_nr_p_n_pt_nav_size_children_size_5&ds=v1%3AO95Ec7UR6Sgv5x%2FFTsjOcN4ALzOFVZBW3vVyf6PgG4I
+                      - checkbox [ref=e4898]
+                      - text: 6 - 7 years
+                  - listitem "Popular Shopping Ideas" [ref=e4900]:
+                    - link "Apply the filter 7 - 8 years to narrow results" [ref=e4902] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_children_size%3A2081574031&dc&qid=1789487485&rnid=1974868031&ref=sr_nr_p_n_pt_nav_size_children_size_6&ds=v1%3A%2FvicPN%2FsQZ87BPHsnXWwtFPZYnoIAPIGeMjGIR%2BRaS4
+                      - checkbox [ref=e4905]
+                      - text: 7 - 8 years
+                  - listitem "Popular Shopping Ideas" [ref=e4907]:
+                    - link "Apply the filter 8 - 9 years to narrow results" [ref=e4909] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_children_size%3A2081575031&dc&qid=1789487485&rnid=1974868031&ref=sr_nr_p_n_pt_nav_size_children_size_7&ds=v1%3Ad09sbCTFLNDfMTY4pIPe1IMeEpT9ff7Odf8P0s9g1bE
+                      - checkbox [ref=e4912]
+                      - text: 8 - 9 years
+                  - listitem "Popular Shopping Ideas" [ref=e4914]:
+                    - link "Apply the filter 9 - 10 years to narrow results" [ref=e4916] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_children_size%3A2081576031&dc&qid=1789487485&rnid=1974868031&ref=sr_nr_p_n_pt_nav_size_children_size_8&ds=v1%3AK49Vu5zc1idM3ei3dEM%2FPzNA%2BqpFjL9UeAfT%2B9ctFvY
+                      - checkbox [ref=e4919]
+                      - text: 9 - 10 years
+                  - listitem "Popular Shopping Ideas" [ref=e4921]:
+                    - link "Apply the filter 10 - 11 years to narrow results" [ref=e4923] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_children_size%3A2081577031&dc&qid=1789487485&rnid=1974868031&ref=sr_nr_p_n_pt_nav_size_children_size_9&ds=v1%3AZBlrBeKwieWFA6wUqWbGnwHjpPdFnIPS2NE0Sm3Kt%2F0
+                      - checkbox [ref=e4926]
+                      - text: 10 - 11 years
+                  - listitem "Popular Shopping Ideas" [ref=e4928]:
+                    - link "Apply the filter 11 - 12 years to narrow results" [ref=e4930] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_children_size%3A2081578031&dc&qid=1789487485&rnid=1974868031&ref=sr_nr_p_n_pt_nav_size_children_size_10&ds=v1%3ArzWhd1FV5Lh6ynEqCOTjE4uqHs%2F6sfGkydXRdvyhxDg
+                      - checkbox [ref=e4933]
+                      - text: 11 - 12 years
+                  - listitem "Popular Shopping Ideas" [ref=e4935]:
+                    - link "Apply the filter 12 - 13 years to narrow results" [ref=e4937] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_children_size%3A2081579031&dc&qid=1789487485&rnid=1974868031&ref=sr_nr_p_n_pt_nav_size_children_size_11&ds=v1%3AfqmOgRRKYRQ7d%2FcEv6BJFYZJb%2FMRRJgK7%2B%2BB1iBpDfc
+                      - checkbox [ref=e4940]
+                      - text: 12 - 13 years
+                  - listitem "Popular Shopping Ideas" [ref=e4942]:
+                    - link "Apply the filter 13 - 14 years to narrow results" [ref=e4944] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_children_size%3A2081580031&dc&qid=1789487485&rnid=1974868031&ref=sr_nr_p_n_pt_nav_size_children_size_12&ds=v1%3ASBtoMDzLLkVOMzZ9KXFJZqkgWrsKFK2SOcBIcJIxRXU
+                      - checkbox [ref=e4947]
+                      - text: 13 - 14 years
+                  - listitem "Popular Shopping Ideas" [ref=e4949]:
+                    - link "Apply the filter 14 - 15 years to narrow results" [ref=e4951] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_children_size%3A2081581031&dc&qid=1789487485&rnid=1974868031&ref=sr_nr_p_n_pt_nav_size_children_size_13&ds=v1%3AKiD2LMTHHe4bcnH8MVSIxPBCtz140xjGY0tHDOxt8Uw
+                      - checkbox [ref=e4954]
+                      - text: 14 - 15 years
+                  - listitem "Popular Shopping Ideas" [ref=e4956]:
+                    - link "Apply the filter 15 - 16 years to narrow results" [ref=e4958] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_children_size%3A2081582031&dc&qid=1789487485&rnid=1974868031&ref=sr_nr_p_n_pt_nav_size_children_size_14&ds=v1%3AcBq8zPE79vmTP%2BUFJQP2A4b8bWAvQVlZ3JvgitaWlW4
+                      - checkbox [ref=e4961]
+                      - text: 15 - 16 years
+                  - listitem "Popular Shopping Ideas" [ref=e4963]:
+                    - link "Apply the filter 16 - 17 years to narrow results" [ref=e4965] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_children_size%3A2081583031&dc&qid=1789487485&rnid=1974868031&ref=sr_nr_p_n_pt_nav_size_children_size_15&ds=v1%3AUlXk60ye4eUhrMfd1LINpeegZxXNOliyMe0xK%2Fse1wg
+                      - checkbox [ref=e4968]
+                      - text: 16 - 17 years
+                  - listitem "Popular Shopping Ideas" [ref=e4970]:
+                    - link "Apply the filter 17 - 18 years to narrow results" [ref=e4972] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_children_size%3A2081584031&dc&qid=1789487485&rnid=1974868031&ref=sr_nr_p_n_pt_nav_size_children_size_16&ds=v1%3AHvRc3FD0fYh9CiyIsjLXYu19OB%2BpVR%2FsDZsn8dLq%2Bh4
+                      - checkbox [ref=e4975]
+                      - text: 17 - 18 years
+                - heading "Men's Shirt Size" [level=2] [ref=e4977]
+                - list "Men's Shirt Size" [ref=e4978]:
+                  - listitem [ref=e4979]:
+                    - generic:
+                      - link "Apply the filter 34 to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_six_browse-vebin%3A11969815031&dc&qid=1789487485&rnid=11969812031&ref=sr_nr_p_n_size_six_browse-vebin_1&ds=v1%3AXWblPWQJ8klKQGlznsmHQzkLSo0GERREwmF9IMnnu%2Bc
+                        - button "34" [ref=e4982] [cursor=pointer]
+                  - listitem [ref=e4983]:
+                    - generic:
+                      - link "Apply the filter 36 to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_six_browse-vebin%3A11969817031&dc&qid=1789487485&rnid=11969812031&ref=sr_nr_p_n_size_six_browse-vebin_2&ds=v1%3AGHUGIx8LhQ%2Bx%2BmG6NGdeqOCGUivenCduem2HQteZvas
+                        - button "36" [ref=e4986] [cursor=pointer]
+                  - listitem [ref=e4987]:
+                    - generic:
+                      - link "Apply the filter 38 to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_six_browse-vebin%3A11969819031&dc&qid=1789487485&rnid=11969812031&ref=sr_nr_p_n_size_six_browse-vebin_3&ds=v1%3AFrzSuZF0KvPmaDFXAD1Vjttka4weZ8qtuxn0jkmVLF0
+                        - button "38" [ref=e4990] [cursor=pointer]
+                  - listitem [ref=e4991]:
+                    - generic:
+                      - link "Apply the filter 39 to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_six_browse-vebin%3A11969820031&dc&qid=1789487485&rnid=11969812031&ref=sr_nr_p_n_size_six_browse-vebin_4&ds=v1%3AiGx3vwZzdNaRjBKifJRO4IgzWxY0Xi6SNWZK9qdV9kE
+                        - button "39" [ref=e4994] [cursor=pointer]
+                  - listitem [ref=e4995]:
+                    - generic:
+                      - link "Apply the filter 40 to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_six_browse-vebin%3A11969821031&dc&qid=1789487485&rnid=11969812031&ref=sr_nr_p_n_size_six_browse-vebin_5&ds=v1%3ASXTn99vwY6WYfjiE5BFNmVLhz9BFdpUMuxMZzkmdlsM
+                        - button "40" [ref=e4998] [cursor=pointer]
+                  - listitem [ref=e4999]:
+                    - generic:
+                      - link "Apply the filter 42 to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_six_browse-vebin%3A11969823031&dc&qid=1789487485&rnid=11969812031&ref=sr_nr_p_n_size_six_browse-vebin_6&ds=v1%3AFSamsVyrr3cyTOZV60BP1X4UMA%2BUChAvYD3cg00s2rw
+                        - button "42" [ref=e5002] [cursor=pointer]
+                  - listitem [ref=e5003]:
+                    - generic:
+                      - link "Apply the filter 44 to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_six_browse-vebin%3A11969825031&dc&qid=1789487485&rnid=11969812031&ref=sr_nr_p_n_size_six_browse-vebin_7&ds=v1%3A3ja%2FnBPDHRy8kD%2BF1j6dABfWBsPVbNiC1RiBAT2iC7c
+                        - button "44" [ref=e5006] [cursor=pointer]
+                  - listitem [ref=e5007]:
+                    - generic:
+                      - link "Apply the filter 46 to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_six_browse-vebin%3A11969827031&dc&qid=1789487485&rnid=11969812031&ref=sr_nr_p_n_size_six_browse-vebin_8&ds=v1%3AtfvoI1ettUPVscgAGX44zcuD8fJQviFeNu%2BSOTDfZOc
+                        - button "46" [ref=e5010] [cursor=pointer]
+                  - listitem [ref=e5011]:
+                    - generic:
+                      - link "Apply the filter 48 to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_six_browse-vebin%3A11969829031&dc&qid=1789487485&rnid=11969812031&ref=sr_nr_p_n_size_six_browse-vebin_9&ds=v1%3AD3egoyRhmEzovGuxBMCpmjj1BrEPNilJBNZnah3YS%2Bg
+                        - button "48" [ref=e5014] [cursor=pointer]
+                  - listitem [ref=e5015]:
+                    - generic:
+                      - link "Apply the filter 50 to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_six_browse-vebin%3A11969831031&dc&qid=1789487485&rnid=11969812031&ref=sr_nr_p_n_size_six_browse-vebin_10&ds=v1%3AYF8Rh5pz8U5oOFlVTENuLmzjArj3wp5tw06X4RJzPhY
+                        - button "50" [ref=e5018] [cursor=pointer]
+                  - listitem [ref=e5019]:
+                    - generic:
+                      - link "Apply the filter 52 to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_six_browse-vebin%3A11969833031&dc&qid=1789487485&rnid=11969812031&ref=sr_nr_p_n_size_six_browse-vebin_11&ds=v1%3AyOmXPhL7Lhx4mDX3ASbECFqyQMaHew0xkOKnaIKCdLU
+                        - button "52" [ref=e5022] [cursor=pointer]
+                  - listitem [ref=e5023]:
+                    - generic:
+                      - link "Apply the filter 56 to narrow results":
+                        - /url: /s?k=T+shirt&rh=p_n_size_six_browse-vebin%3A11969837031&dc&qid=1789487485&rnid=11969812031&ref=sr_nr_p_n_size_six_browse-vebin_12&ds=v1%3A61PC0PKWCDVvpjzUx0viUNSTRWroyiV7eBDJyBALnVA
+                        - button "56" [ref=e5026] [cursor=pointer]
+                - heading "Baby Size" [level=2] [ref=e5027]
+                - list "Baby Size" [ref=e5028]:
+                  - listitem "Popular Shopping Ideas" [ref=e5029]:
+                    - link "Apply the filter Newborn to narrow results" [ref=e5031] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_baby_size%3A1975472031&dc&qid=1789487485&rnid=1974848031&ref=sr_nr_p_n_pt_nav_size_baby_size_1&ds=v1%3AmYa1xmNR%2FkCdOvUpCm7CXUlE1JCKI3jdZORBla%2FVNCU
+                      - checkbox [ref=e5034]
+                      - text: Newborn
+                  - listitem "Popular Shopping Ideas" [ref=e5036]:
+                    - link "Apply the filter Up to 3 Months to narrow results" [ref=e5038] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_baby_size%3A1975473031&dc&qid=1789487485&rnid=1974848031&ref=sr_nr_p_n_pt_nav_size_baby_size_2&ds=v1%3A2vGJlPUN6Pw3%2FJ73kgD8n3pM9qTUgNFmXW%2FJKWRNC4U
+                      - checkbox [ref=e5041]
+                      - text: Up to 3 Months
+                  - listitem "Popular Shopping Ideas" [ref=e5043]:
+                    - link "Apply the filter 3-6 Months to narrow results" [ref=e5045] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_baby_size%3A1975474031&dc&qid=1789487485&rnid=1974848031&ref=sr_nr_p_n_pt_nav_size_baby_size_3&ds=v1%3AAA9gnuFFe6W5MTSbY5sL3zWrLrkdbEcLB6m3dHlB2tg
+                      - checkbox [ref=e5048]
+                      - text: 3-6 Months
+                  - listitem "Popular Shopping Ideas" [ref=e5050]:
+                    - link "Apply the filter 6-9 Months to narrow results" [ref=e5052] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_baby_size%3A5836989031&dc&qid=1789487485&rnid=1974848031&ref=sr_nr_p_n_pt_nav_size_baby_size_4&ds=v1%3AMU7NjtpY25JOenVMjjHxpny2uLHNQTeapZIrreiQ8L8
+                      - checkbox [ref=e5055]
+                      - text: 6-9 Months
+                  - listitem "Popular Shopping Ideas" [ref=e5057]:
+                    - link "Apply the filter 9-12 Months to narrow results" [ref=e5059] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_baby_size%3A5836990031&dc&qid=1789487485&rnid=1974848031&ref=sr_nr_p_n_pt_nav_size_baby_size_5&ds=v1%3AomfEJwQ0qjzKcX4Lpt97%2Baofuzskj8ZA3GNsF7Jtolw
+                      - checkbox [ref=e5062]
+                      - text: 9-12 Months
+                  - listitem "Popular Shopping Ideas" [ref=e5064]:
+                    - link "Apply the filter 12-18 Months to narrow results" [ref=e5066] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_baby_size%3A1975476031&dc&qid=1789487485&rnid=1974848031&ref=sr_nr_p_n_pt_nav_size_baby_size_6&ds=v1%3AKIBh6muZgxcYyyOVjBRuBlgTnfgkE45KUnwSU3Ensew
+                      - checkbox [ref=e5069]
+                      - text: 12-18 Months
+                  - listitem "Popular Shopping Ideas" [ref=e5071]:
+                    - link "Apply the filter 18-24 Months to narrow results" [ref=e5073] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pt_nav_size_baby_size%3A1975477031&dc&qid=1789487485&rnid=1974848031&ref=sr_nr_p_n_pt_nav_size_baby_size_7&ds=v1%3Asb%2Fk4IKmu1wE3rSlx1P8tEKIfGODHumgwp2AnbTemEI
+                      - checkbox [ref=e5076]
+                      - text: 18-24 Months
+              - group "Customer Reviews" [ref=e5078]:
+                - heading "Customer Reviews" [level=2] [ref=e5079]
+                - list "Customer Reviews" [ref=e5080]:
+                  - listitem [ref=e5081]:
+                    - link "Apply the filter 4 Stars & Up to narrow results" [ref=e5084] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_72%3A1318476031&dc&qid=1789487485&rnid=1318475031&ref=sr_nr_p_72_1&ds=v1%3AnqE3kFByfc2%2BABnvnfcWm9UpmKC7ldtrTZdXsx9%2FFVE
+                      - generic [ref=e5086]: 4 Stars
+                      - text: "& Up"
+              - group "Neckline" [ref=e5087]:
+                - heading "Neckline" [level=2] [ref=e5088]
+                - list "Neckline" [ref=e5089]:
+                  - listitem "Popular Shopping Ideas" [ref=e5090]:
+                    - link "Apply the filter Asymmetric Neck to narrow results" [ref=e5092] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101017419697111%3A215599163031&dc&qid=1789487485&rnid=215599140031&ref=sr_nr_p_n_g-101017419697111_1&ds=v1%3AskPThlYM4B1DlP7IaVHLMIYPnQmFLjJaBE3QZSPJg%2FU
+                      - checkbox [ref=e5095]
+                      - text: Asymmetric Neck
+                  - listitem "Popular Shopping Ideas" [ref=e5097]:
+                    - link "Apply the filter Boat Neck to narrow results" [ref=e5099] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101017419697111%3A215599142031&dc&qid=1789487485&rnid=215599140031&ref=sr_nr_p_n_g-101017419697111_2&ds=v1%3AaDIB9bV%2BT8VVL9yuizdqH%2FBCGKRQL%2BU0pbZVN2yMCws
+                      - checkbox [ref=e5102]
+                      - text: Boat Neck
+                  - listitem "Popular Shopping Ideas" [ref=e5104]:
+                    - link "Apply the filter Choker Neck to narrow results" [ref=e5106] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101017419697111%3A215599144031&dc&qid=1789487485&rnid=215599140031&ref=sr_nr_p_n_g-101017419697111_3&ds=v1%3Al5Tqz3yAorE%2BzRVU5xWLfIP8NrsXRRIxn41QKu9R0zo
+                      - checkbox [ref=e5109]
+                      - text: Choker Neck
+                  - listitem "Popular Shopping Ideas" [ref=e5111]:
+                    - link "Apply the filter Collared Neck to narrow results" [ref=e5113] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101017419697111%3A215599161031&dc&qid=1789487485&rnid=215599140031&ref=sr_nr_p_n_g-101017419697111_4&ds=v1%3Aa1X%2F783iq%2BFdfXqfZdvt1GNxhWyY4Ih8EACCNRsG0pU
+                      - checkbox [ref=e5116]
+                      - text: Collared Neck
+                  - listitem "Popular Shopping Ideas" [ref=e5118]:
+                    - link "Apply the filter Cowl Neck to narrow results" [ref=e5120] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101017419697111%3A215599141031&dc&qid=1789487485&rnid=215599140031&ref=sr_nr_p_n_g-101017419697111_5&ds=v1%3AppHUjuQKgNSGIcyyIMCQotnGRrrEsC5tfhiW%2BR5J9hE
+                      - checkbox [ref=e5123]
+                      - text: Cowl Neck
+                  - listitem "Popular Shopping Ideas" [ref=e5125]:
+                    - link "Apply the filter Crew Neck to narrow results" [ref=e5127] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101017419697111%3A215599164031&dc&qid=1789487485&rnid=215599140031&ref=sr_nr_p_n_g-101017419697111_6&ds=v1%3AyfO0D3vxFok8igGakIwJuUIbqevDazNSxHHPl0EnEkY
+                      - checkbox [ref=e5130]
+                      - text: Crew Neck
+                  - listitem "Popular Shopping Ideas" [ref=e5132]:
+                    - link "Apply the filter Halter Neck to narrow results" [ref=e5134] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101017419697111%3A215599156031&dc&qid=1789487485&rnid=215599140031&ref=sr_nr_p_n_g-101017419697111_7&ds=v1%3A%2FXbzvvYd4f%2FtjLyk0DSZ0z1H4cjknjSzcLeAPdll9og
+                      - checkbox [ref=e5137]
+                      - text: Halter Neck
+                  - listitem [ref=e5139]:
+                    - button "See more, Neckline" [ref=e5142] [cursor=pointer]: See more
+              - group "Sleeve Type" [ref=e5144]:
+                - heading "Sleeve Type" [level=2] [ref=e5145]
+                - list "Sleeve Type" [ref=e5146]:
+                  - listitem "Popular Shopping Ideas" [ref=e5147]:
+                    - link "Apply the filter Cap Sleeve to narrow results" [ref=e5149] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_feature_two_browse-bin%3A28041134031&dc&qid=1789487485&rnid=28041126031&ref=sr_nr_p_n_feature_two_browse-bin_1&ds=v1%3AwsRCmPNYNikN%2BzvOVCYeVjDZYk1r4VWL4mhOLxYr9Lo
+                      - checkbox [ref=e5152]
+                      - text: Cap Sleeve
+                  - listitem "Popular Shopping Ideas" [ref=e5154]:
+                    - link "Apply the filter Raglan Sleeve to narrow results" [ref=e5156] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_feature_two_browse-bin%3A28041129031&dc&qid=1789487485&rnid=28041126031&ref=sr_nr_p_n_feature_two_browse-bin_2&ds=v1%3ArHJx3BvT053HpAzGVy9jbCS0A2p3J2Ydf03qBXpVCjc
+                      - checkbox [ref=e5159]
+                      - text: Raglan Sleeve
+                  - listitem "Popular Shopping Ideas" [ref=e5161]:
+                    - link "Apply the filter Cuff Sleeve to narrow results" [ref=e5163] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_feature_two_browse-bin%3A28041127031&dc&qid=1789487485&rnid=28041126031&ref=sr_nr_p_n_feature_two_browse-bin_3&ds=v1%3AgE%2FAGSaGCIOi1M63ru9p9dY2dni8UgaJGoXPdvpyFAY
+                      - checkbox [ref=e5166]
+                      - text: Cuff Sleeve
+                  - listitem "Popular Shopping Ideas" [ref=e5168]:
+                    - link "Apply the filter Balloon Sleeve to narrow results" [ref=e5170] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_feature_two_browse-bin%3A28041133031&dc&qid=1789487485&rnid=28041126031&ref=sr_nr_p_n_feature_two_browse-bin_4&ds=v1%3A%2Fh7t7mhJcDHtyScHwav8goHQYB8cIfVzDWgoA2ZXmXA
+                      - checkbox [ref=e5173]
+                      - text: Balloon Sleeve
+                  - listitem "Popular Shopping Ideas" [ref=e5175]:
+                    - link "Apply the filter Batwing Sleeve to narrow results" [ref=e5177] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_feature_two_browse-bin%3A28041143031&dc&qid=1789487485&rnid=28041126031&ref=sr_nr_p_n_feature_two_browse-bin_5&ds=v1%3AD87tRYSoj8LiME418CjQQhSXucpDmQRPflQ6wDnDIwc
+                      - checkbox [ref=e5180]
+                      - text: Batwing Sleeve
+                  - listitem "Popular Shopping Ideas" [ref=e5182]:
+                    - link "Apply the filter Bell Sleeve to narrow results" [ref=e5184] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_feature_two_browse-bin%3A28041141031&dc&qid=1789487485&rnid=28041126031&ref=sr_nr_p_n_feature_two_browse-bin_6&ds=v1%3AujLoLJWNBbz7F8AFswJl2QLWD%2FLoQgDlQ7yTmfT5MHc
+                      - checkbox [ref=e5187]
+                      - text: Bell Sleeve
+                  - listitem "Popular Shopping Ideas" [ref=e5189]:
+                    - link "Apply the filter Bishop Sleeve to narrow results" [ref=e5191] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_feature_two_browse-bin%3A28041137031&dc&qid=1789487485&rnid=28041126031&ref=sr_nr_p_n_feature_two_browse-bin_7&ds=v1%3AP%2B6sJVen6dB1Nd2Ry02c6MubfjhfzTi%2Brz0Y5cjLbTA
+                      - checkbox [ref=e5194]
+                      - text: Bishop Sleeve
+                  - listitem "Popular Shopping Ideas" [ref=e5196]:
+                    - link "Apply the filter Butterfly Sleeve to narrow results" [ref=e5198] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_feature_two_browse-bin%3A28041142031&dc&qid=1789487485&rnid=28041126031&ref=sr_nr_p_n_feature_two_browse-bin_8&ds=v1%3AS3%2BnWPt0iK6h5%2F0sD0s1Xefqq95eprrK7fZ97A%2Bb7tA
+                      - checkbox [ref=e5201]
+                      - text: Butterfly Sleeve
+                  - listitem "Popular Shopping Ideas" [ref=e5203]:
+                    - link "Apply the filter Cape Sleeve to narrow results" [ref=e5205] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_feature_two_browse-bin%3A28041130031&dc&qid=1789487485&rnid=28041126031&ref=sr_nr_p_n_feature_two_browse-bin_9&ds=v1%3AEWYU5Y1q2b9nuG%2F5sJ5fiexclm969ntFr%2F3nMG14g0A
+                      - checkbox [ref=e5208]
+                      - text: Cape Sleeve
+                  - listitem "Popular Shopping Ideas" [ref=e5210]:
+                    - link "Apply the filter Cold Shoulder Sleeve to narrow results" [ref=e5212] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_feature_two_browse-bin%3A28041128031&dc&qid=1789487485&rnid=28041126031&ref=sr_nr_p_n_feature_two_browse-bin_10&ds=v1%3AT%2BAMIV2RDT7qntH4nb%2B7PotCqeexNtBEZhMC1ND5tMI
+                      - checkbox [ref=e5215]
+                      - text: Cold Shoulder Sleeve
+                  - listitem "Popular Shopping Ideas" [ref=e5217]:
+                    - link "Apply the filter Flutter Sleeve to narrow results" [ref=e5219] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_feature_two_browse-bin%3A28041139031&dc&qid=1789487485&rnid=28041126031&ref=sr_nr_p_n_feature_two_browse-bin_11&ds=v1%3AG8E8nQBet9z%2Bs2wv%2FZEo6Wsdz006JYwD4LpDR%2FjpjfY
+                      - checkbox [ref=e5222]
+                      - text: Flutter Sleeve
+                  - listitem "Popular Shopping Ideas" [ref=e5224]:
+                    - link "Apply the filter Kimono Sleeve to narrow results" [ref=e5226] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_feature_two_browse-bin%3A28041140031&dc&qid=1789487485&rnid=28041126031&ref=sr_nr_p_n_feature_two_browse-bin_12&ds=v1%3AHAkoPlLTWxfKbNvwqDkVU8GB1NX8D4gmHQD7uf4h0T0
+                      - checkbox [ref=e5229]
+                      - text: Kimono Sleeve
+                  - listitem "Popular Shopping Ideas" [ref=e5231]:
+                    - link "Apply the filter Lantern Sleeve to narrow results" [ref=e5233] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_feature_two_browse-bin%3A28041132031&dc&qid=1789487485&rnid=28041126031&ref=sr_nr_p_n_feature_two_browse-bin_13&ds=v1%3A7zxprgeQqH2T0yoA2sckhw%2Bo8sKS%2BFAE4o1R6Vrx6Kk
+                      - checkbox [ref=e5236]
+                      - text: Lantern Sleeve
+                  - listitem "Popular Shopping Ideas" [ref=e5238]:
+                    - link "Apply the filter Puff Sleeve to narrow results" [ref=e5240] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_feature_two_browse-bin%3A28041136031&dc&qid=1789487485&rnid=28041126031&ref=sr_nr_p_n_feature_two_browse-bin_14&ds=v1%3AlPqeX44PmpYpDEmc3IjLQiekdD5XB7FRoVAn8reaZLE
+                      - checkbox [ref=e5243]
+                      - text: Puff Sleeve
+                  - listitem "Popular Shopping Ideas" [ref=e5245]:
+                    - link "Apply the filter Ruffle Sleeve to narrow results" [ref=e5247] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_feature_two_browse-bin%3A28041131031&dc&qid=1789487485&rnid=28041126031&ref=sr_nr_p_n_feature_two_browse-bin_15&ds=v1%3AD8y3quLkKsYUZdof52LAuuOnnaaQ0cB%2BInEldn92o68
+                      - checkbox [ref=e5250]
+                      - text: Ruffle Sleeve
+                  - listitem "Popular Shopping Ideas" [ref=e5252]:
+                    - link "Apply the filter Split Sleeve to narrow results" [ref=e5254] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_feature_two_browse-bin%3A28041135031&dc&qid=1789487485&rnid=28041126031&ref=sr_nr_p_n_feature_two_browse-bin_16&ds=v1%3AELGYRJ5Kd57Uxuu4soVnekVkB%2FpQlbbVz%2BR0b8yVUlE
+                      - checkbox [ref=e5257]
+                      - text: Split Sleeve
+              - group [ref=e5259]:
+                - generic [ref=e5260]:
+                  - generic [ref=e5261]: Price
+                  - generic [ref=e5264]:
+                    - generic [ref=e5265]:
+                      - generic [ref=e5266]: ₹49
+                      - generic [ref=e5267]: –
+                      - generic [ref=e5268]: ₹31,100+
+                    - generic [ref=e5271]:
+                      - generic:
+                        - slider "Minimum price": "0"
+                      - generic [ref=e5272]:
+                        - slider "Maximum price": "187"
+                - list [ref=e5273]:
+                  - listitem [ref=e5274]:
+                    - link "Up to ₹300" [ref=e5276] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_36%3A-30000&dc&qid=1789487485&rnid=4595083031&ref=sr_nr_p_36_1&ds=v1%3AOfnIr2xSnQhQR0QrK7fQYYguag%2Byj6dGR6Y98NIC2Wg
+                  - listitem [ref=e5277]:
+                    - link "₹300 - ₹400" [ref=e5279] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_36%3A30000-40000&dc&qid=1789487485&rnid=4595083031&ref=sr_nr_p_36_2&ds=v1%3AuNpf%2BRZyuYg%2Fl3mONrAYgY8dSDa4Xfe9D1CWSM%2BMMRM
+                  - listitem [ref=e5280]:
+                    - link "₹400 - ₹500" [ref=e5282] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_36%3A40000-50000&dc&qid=1789487485&rnid=4595083031&ref=sr_nr_p_36_3&ds=v1%3AfC5IfTGYo2ed9FHscWVQfXq1sjQ2UYAzTf9vuZocLiI
+                  - listitem [ref=e5283]:
+                    - link "₹500 - ₹700" [ref=e5285] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_36%3A50000-70000&dc&qid=1789487485&rnid=4595083031&ref=sr_nr_p_36_4&ds=v1%3AisS4EJal7z6dGtd7z9M0zNSDVou6gop6vC8fVJ7OuXw
+                  - listitem [ref=e5286]:
+                    - link "Over ₹700" [ref=e5288] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_36%3A70000-&dc&qid=1789487485&rnid=4595083031&ref=sr_nr_p_36_5&ds=v1%3AJQT9Vf0rQe%2FAGY76ZuFtK2qoO8TvV9gMVLhbA9iErZA
+                - heading "Deals & Discounts" [level=2] [ref=e5289]
+                - list "Deals & Discounts" [ref=e5290]:
+                  - listitem [ref=e5291]:
+                    - link "All Discounts" [ref=e5293] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_deal_type%3A26921226031&dc&qid=1789487485&rnid=26921223031&ref=sr_nr_p_n_deal_type_1&ds=v1%3AO3FHV9wKIV3Q6o%2FeLNLy475LwzIgmMONAeo2QfW6pfo
+                  - listitem [ref=e5294]:
+                    - link "Buy More, Save More" [ref=e5296] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_deal_type%3A210770213031&dc&qid=1789487485&rnid=26921223031&ref=sr_nr_p_n_deal_type_2&ds=v1%3AJpFLOTEMbJkeoCkNKsWdviibsAoXcN4FKSEzt8pgXRk
+                  - listitem [ref=e5297]:
+                    - link "Coupons" [ref=e5299] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_deal_type%3A210770212031&dc&qid=1789487485&rnid=26921223031&ref=sr_nr_p_n_deal_type_3&ds=v1%3AN4FXaYxHOtZlfj62YmUEtozjRbBNfv1VyEi%2B4fzAYIQ
+                  - listitem [ref=e5300]:
+                    - link "Today's Deals" [ref=e5302] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_deal_type%3A26921224031&dc&qid=1789487485&rnid=26921223031&ref=sr_nr_p_n_deal_type_4&ds=v1%3Ary%2Bs4JoQ1yMsPw8EWQZyagzkuejodnIGbMgmjnLkVzE
+              - group "Fit Type" [ref=e5303]:
+                - heading "Fit Type" [level=2] [ref=e5304]
+                - list "Fit Type" [ref=e5305]:
+                  - listitem "Popular Shopping Ideas" [ref=e5306]:
+                    - link "Apply the filter Fitted to narrow results" [ref=e5308] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003273535111%3A28207570031&dc&qid=1789487485&rnid=28207568031&ref=sr_nr_p_n_g-1003273535111_1&ds=v1%3A2xZFwK802xePT8cTdxeOLKiJ6iMSjdx%2FIuPhVBC0mFo
+                      - checkbox [ref=e5311]
+                      - text: Fitted
+                  - listitem "Popular Shopping Ideas" [ref=e5313]:
+                    - link "Apply the filter Straight to narrow results" [ref=e5315] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003273535111%3A213341537031&dc&qid=1789487485&rnid=28207568031&ref=sr_nr_p_n_g-1003273535111_2&ds=v1%3ATKTkGs7JJmcrkwmvNf%2BtLEUYdbxi5wA1IYHblQoHbww
+                      - checkbox [ref=e5318]
+                      - text: Straight
+                  - listitem "Popular Shopping Ideas" [ref=e5320]:
+                    - link "Apply the filter Boxy to narrow results" [ref=e5322] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003273535111%3A216449083031&dc&qid=1789487485&rnid=28207568031&ref=sr_nr_p_n_g-1003273535111_3&ds=v1%3A00VWz8%2Bd8t4V0ohAK7a534RFK94ldw0oivl0vBLUj4g
+                      - checkbox [ref=e5325]
+                      - text: Boxy
+                  - listitem "Popular Shopping Ideas" [ref=e5327]:
+                    - link "Apply the filter Flowy to narrow results" [ref=e5329] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003273535111%3A216449080031&dc&qid=1789487485&rnid=28207568031&ref=sr_nr_p_n_g-1003273535111_4&ds=v1%3Awy8ee3pECb%2FkqCkRy64kSFSBcWosa0iv1JEjnfzQ%2F8Y
+                      - checkbox [ref=e5332]
+                      - text: Flowy
+                  - listitem "Popular Shopping Ideas" [ref=e5334]:
+                    - link "Apply the filter Regular to narrow results" [ref=e5336] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003273535111%3A216449087031&dc&qid=1789487485&rnid=28207568031&ref=sr_nr_p_n_g-1003273535111_5&ds=v1%3AOGf2gdsjmMSeGMHtOUuDOI9VJJE6WTHURGRnWwXBtNo
+                      - checkbox [ref=e5339]
+                      - text: Regular
+                  - listitem "Popular Shopping Ideas" [ref=e5341]:
+                    - link "Apply the filter Snug to narrow results" [ref=e5343] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003273535111%3A216449085031&dc&qid=1789487485&rnid=28207568031&ref=sr_nr_p_n_g-1003273535111_6&ds=v1%3A1dXnJx6IhbmZ2iMlu5My%2BpDM2uvcqSkjMS%2BJ8N64TQk
+                      - checkbox [ref=e5346]
+                      - text: Snug
+              - group "Apparel Material" [ref=e5348]:
+                - heading "Apparel Material" [level=2] [ref=e5349]
+                - list "Apparel Material" [ref=e5350]:
+                  - listitem "Popular Shopping Ideas" [ref=e5351]:
+                    - link "Apply the filter Cotton to narrow results" [ref=e5353] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_material_browse%3A1974776031&dc&qid=1789487485&rnid=1974774031&ref=sr_nr_p_n_material_browse_1&ds=v1%3ACPNhRm9xzesJtUhcymHiT5JrjiZnmpn%2FDXX8wXGeL30
+                      - checkbox [ref=e5356]
+                      - text: Cotton
+                  - listitem "Popular Shopping Ideas" [ref=e5358]:
+                    - link "Apply the filter Rayon to narrow results" [ref=e5360] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_material_browse%3A4725110031&dc&qid=1789487485&rnid=1974774031&ref=sr_nr_p_n_material_browse_2&ds=v1%3AoELu%2F182KjlZHVeIKt%2FPHoPh1%2FHZrrMs2km4Zin298I
+                      - checkbox [ref=e5363]
+                      - text: Rayon
+                  - listitem "Popular Shopping Ideas" [ref=e5365]:
+                    - link "Apply the filter Synthetic to narrow results" [ref=e5367] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_material_browse%3A1974790031&dc&qid=1789487485&rnid=1974774031&ref=sr_nr_p_n_material_browse_3&ds=v1%3AnJ8vOWnAFAXBw6DUO5f%2BnhfVlGj4YPWkZbQFlIHPfRk
+                      - checkbox [ref=e5370]
+                      - text: Synthetic
+                  - listitem "Popular Shopping Ideas" [ref=e5372]:
+                    - link "Apply the filter Art Silk to narrow results" [ref=e5374] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_material_browse%3A5836976031&dc&qid=1789487485&rnid=1974774031&ref=sr_nr_p_n_material_browse_4&ds=v1%3ArlGEf5yZu4oo1k1M6CnehElzu4WhDQVv4%2FJNi6gfNRE
+                      - checkbox [ref=e5377]
+                      - text: Art Silk
+                  - listitem "Popular Shopping Ideas" [ref=e5379]:
+                    - link "Apply the filter Chiffon to narrow results" [ref=e5381] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_material_browse%3A5836977031&dc&qid=1789487485&rnid=1974774031&ref=sr_nr_p_n_material_browse_5&ds=v1%3ADG%2BGYQ%2B%2BVtFKtaC7s%2Fml3Db2uG9MN6EwSGUXh8TyfJg
+                      - checkbox [ref=e5384]
+                      - text: Chiffon
+                  - listitem "Popular Shopping Ideas" [ref=e5386]:
+                    - link "Apply the filter Corduroy to narrow results" [ref=e5388] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_material_browse%3A1974775031&dc&qid=1789487485&rnid=1974774031&ref=sr_nr_p_n_material_browse_6&ds=v1%3APqB1JUXYG3OJoY%2FMEYUS7Z7bRETi40p77XUR8mVGSDo
+                      - checkbox [ref=e5391]
+                      - text: Corduroy
+                  - listitem "Popular Shopping Ideas" [ref=e5393]:
+                    - link "Apply the filter Crepe to narrow results" [ref=e5395] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_material_browse%3A5836979031&dc&qid=1789487485&rnid=1974774031&ref=sr_nr_p_n_material_browse_7&ds=v1%3Ar8qKOaw8ycWGQuCkm%2BUMTqJ1%2BzAx%2Fd3DWP3FqQjm9Vc
+                      - checkbox [ref=e5398]
+                      - text: Crepe
+                  - listitem [ref=e5400]:
+                    - button "See more, Apparel Material" [ref=e5403] [cursor=pointer]: See more
+              - group "Pattern" [ref=e5405]:
+                - heading "Pattern" [level=2] [ref=e5406]
+                - list "Pattern" [ref=e5407]:
+                  - listitem "Popular Shopping Ideas" [ref=e5408]:
+                    - link "Apply the filter Solid to narrow results" [ref=e5410] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1002980089111%3A28972537031&dc&qid=1789487485&rnid=28972527031&ref=sr_nr_p_n_g-1002980089111_1&ds=v1%3AgvyayuZjKEukDXj5NXZHHrpXKcCFXyqX29HgdsVwXrE
+                      - checkbox [ref=e5413]
+                      - text: Solid
+                  - listitem "Popular Shopping Ideas" [ref=e5415]:
+                    - link "Apply the filter Letter print to narrow results" [ref=e5417] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1002980089111%3A28972530031&dc&qid=1789487485&rnid=28972527031&ref=sr_nr_p_n_g-1002980089111_2&ds=v1%3AlTg7iLt6HNHN21DdNjITbKzTjB80ejHBNWuAkWzIM%2B0
+                      - checkbox [ref=e5420]
+                      - text: Letter print
+                  - listitem "Popular Shopping Ideas" [ref=e5422]:
+                    - link "Apply the filter Striped to narrow results" [ref=e5424] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1002980089111%3A28972544031&dc&qid=1789487485&rnid=28972527031&ref=sr_nr_p_n_g-1002980089111_3&ds=v1%3A3m5sqVyOLIyUZ0LoHeGE5W7HuwdXJgsZENIIUZIzUHo
+                      - checkbox [ref=e5427]
+                      - text: Striped
+                  - listitem "Popular Shopping Ideas" [ref=e5429]:
+                    - link "Apply the filter Animal print to narrow results" [ref=e5431] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1002980089111%3A28972539031&dc&qid=1789487485&rnid=28972527031&ref=sr_nr_p_n_g-1002980089111_4&ds=v1%3AFX1UpI1g3g4D5ILbSZY0fUEdAcfwhal0o%2FjhHXbk0YA
+                      - checkbox [ref=e5434]
+                      - text: Animal print
+                  - listitem "Popular Shopping Ideas" [ref=e5436]:
+                    - link "Apply the filter Camouflage to narrow results" [ref=e5438] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1002980089111%3A28972547031&dc&qid=1789487485&rnid=28972527031&ref=sr_nr_p_n_g-1002980089111_5&ds=v1%3AzG4EHyPmjModrMjZhwq3a9OZowtv%2B8uploVbSliAgGQ
+                      - checkbox [ref=e5441]
+                      - text: Camouflage
+                  - listitem "Popular Shopping Ideas" [ref=e5443]:
+                    - link "Apply the filter Chequered to narrow results" [ref=e5445] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1002980089111%3A28972536031&dc&qid=1789487485&rnid=28972527031&ref=sr_nr_p_n_g-1002980089111_6&ds=v1%3Ay8SOamABeABlWojFgE2sTHTN40ePBvb5KzaHTdIaeiw
+                      - checkbox [ref=e5448]
+                      - text: Chequered
+                  - listitem "Popular Shopping Ideas" [ref=e5450]:
+                    - link "Apply the filter Chevron to narrow results" [ref=e5452] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1002980089111%3A28972538031&dc&qid=1789487485&rnid=28972527031&ref=sr_nr_p_n_g-1002980089111_7&ds=v1%3AR%2FCX%2Bqyo2fDIXQINQB7x55ZoSeJAmWweEBua9of3oOk
+                      - checkbox [ref=e5455]
+                      - text: Chevron
+                  - listitem "Popular Shopping Ideas" [ref=e5457]:
+                    - link "Apply the filter Floral to narrow results" [ref=e5459] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1002980089111%3A28972534031&dc&qid=1789487485&rnid=28972527031&ref=sr_nr_p_n_g-1002980089111_8&ds=v1%3A8QgBfqKSUARIdkb4eYzXA5YYs6RDeN4hvhgpPENnO%2Fg
+                      - checkbox [ref=e5462]
+                      - text: Floral
+                  - listitem "Popular Shopping Ideas" [ref=e5464]:
+                    - link "Apply the filter Fruits to narrow results" [ref=e5466] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1002980089111%3A28972533031&dc&qid=1789487485&rnid=28972527031&ref=sr_nr_p_n_g-1002980089111_9&ds=v1%3AfA8NolSFIZ0hZzutS9%2FXSM%2F8dRFCXO1reJwEGkjQZi8
+                      - checkbox [ref=e5469]
+                      - text: Fruits
+                  - listitem "Popular Shopping Ideas" [ref=e5471]:
+                    - link "Apply the filter Geometric to narrow results" [ref=e5473] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1002980089111%3A28972532031&dc&qid=1789487485&rnid=28972527031&ref=sr_nr_p_n_g-1002980089111_10&ds=v1%3A3BCm%2Bl1YmLthixbc57350U5BPqp2ou%2Ba%2FuXnM30rdiw
+                      - checkbox [ref=e5476]
+                      - text: Geometric
+                  - listitem "Popular Shopping Ideas" [ref=e5478]:
+                    - link "Apply the filter Hearts to narrow results" [ref=e5480] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1002980089111%3A28972543031&dc&qid=1789487485&rnid=28972527031&ref=sr_nr_p_n_g-1002980089111_11&ds=v1%3A76%2F1I%2FoAqEMLPRBnJIrHLf21wDetpgBZM%2F3xpgp%2FFKw
+                      - checkbox [ref=e5483]
+                      - text: Hearts
+                  - listitem "Popular Shopping Ideas" [ref=e5485]:
+                    - link "Apply the filter Herringbone to narrow results" [ref=e5487] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1002980089111%3A28972528031&dc&qid=1789487485&rnid=28972527031&ref=sr_nr_p_n_g-1002980089111_12&ds=v1%3AUCcgOkIt0cSQlChwwNpL8VNNirnBCy4Y7JoI%2FHsuTI8
+                      - checkbox [ref=e5490]
+                      - text: Herringbone
+                  - listitem "Popular Shopping Ideas" [ref=e5492]:
+                    - link "Apply the filter Houndstooth to narrow results" [ref=e5494] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1002980089111%3A28972529031&dc&qid=1789487485&rnid=28972527031&ref=sr_nr_p_n_g-1002980089111_13&ds=v1%3A1h1oAIPnnhQc1MEBOQBC6f9OCZJzmQi%2BSGosYbj1oug
+                      - checkbox [ref=e5497]
+                      - text: Houndstooth
+                  - listitem "Popular Shopping Ideas" [ref=e5499]:
+                    - link "Apply the filter Paisley to narrow results" [ref=e5501] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1002980089111%3A28972531031&dc&qid=1789487485&rnid=28972527031&ref=sr_nr_p_n_g-1002980089111_14&ds=v1%3AodcoDECjdycZhEFrY1auhj9tr2XVSXCdgabUAjA6tpw
+                      - checkbox [ref=e5504]
+                      - text: Paisley
+                  - listitem "Popular Shopping Ideas" [ref=e5506]:
+                    - link "Apply the filter Plaid to narrow results" [ref=e5508] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1002980089111%3A28972535031&dc&qid=1789487485&rnid=28972527031&ref=sr_nr_p_n_g-1002980089111_15&ds=v1%3A6tC18sQA7WAbIMnYaqXE47baFgNliv3uqhmsRWLcUvk
+                      - checkbox [ref=e5511]
+                      - text: Plaid
+                  - listitem "Popular Shopping Ideas" [ref=e5513]:
+                    - link "Apply the filter Polka dots to narrow results" [ref=e5515] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1002980089111%3A28972540031&dc&qid=1789487485&rnid=28972527031&ref=sr_nr_p_n_g-1002980089111_16&ds=v1%3A8kKKU6oEqCWcQT30sPW8mlCwjh%2BxTcz%2FENlkbAvyRIU
+                      - checkbox [ref=e5518]
+                      - text: Polka dots
+                  - listitem "Popular Shopping Ideas" [ref=e5520]:
+                    - link "Apply the filter Stars to narrow results" [ref=e5522] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1002980089111%3A28972541031&dc&qid=1789487485&rnid=28972527031&ref=sr_nr_p_n_g-1002980089111_17&ds=v1%3AvD85DtXLiIVhclRwfL2c2rN6vFGLv1FXAVUrLci29Lg
+                      - checkbox [ref=e5525]
+                      - text: Stars
+              - group "Discount" [ref=e5527]:
+                - heading "Discount" [level=2] [ref=e5528]
+                - list "Discount" [ref=e5529]:
+                  - listitem [ref=e5530]:
+                    - link "10% Off or more" [ref=e5532] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pct-off-with-tax%3A2665399031&dc&qid=1789487485&rnid=2665398031&ref=sr_nr_p_n_pct-off-with-tax_1&ds=v1%3ApqneBIPigS1X0IZsGvd%2FdmhcfNUjTCDR2L%2Fy9lPH8Ck
+                  - listitem [ref=e5533]:
+                    - link "25% Off or more" [ref=e5535] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pct-off-with-tax%3A2665400031&dc&qid=1789487485&rnid=2665398031&ref=sr_nr_p_n_pct-off-with-tax_2&ds=v1%3AuKq3FE4skVm%2BHjAX9Q8907Gf1MfGWdtQmJc4IRT1z%2F8
+                  - listitem [ref=e5536]:
+                    - link "35% Off or more" [ref=e5538] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pct-off-with-tax%3A2665402031&dc&qid=1789487485&rnid=2665398031&ref=sr_nr_p_n_pct-off-with-tax_3&ds=v1%3A%2F%2BVJEaFgjGozs6jadFSG3QJI5ixCJJD16oB%2BqwuEBxM
+                  - listitem [ref=e5539]:
+                    - link "50% Off or more" [ref=e5541] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pct-off-with-tax%3A2665401031&dc&qid=1789487485&rnid=2665398031&ref=sr_nr_p_n_pct-off-with-tax_4&ds=v1%3AL%2B9UHtH7%2FVeVbWdHEuOJ7ousqcmSyH6SXELKwZfbTZY
+                  - listitem [ref=e5542]:
+                    - link "60% Off or more" [ref=e5544] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pct-off-with-tax%3A27060456031&dc&qid=1789487485&rnid=2665398031&ref=sr_nr_p_n_pct-off-with-tax_5&ds=v1%3A0fdV68Kv1gPuwhQ26K%2FMWVOUllZrMaWpbz44EztYq60
+                  - listitem [ref=e5545]:
+                    - link "70% Off or more" [ref=e5547] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_pct-off-with-tax%3A27060457031&dc&qid=1789487485&rnid=2665398031&ref=sr_nr_p_n_pct-off-with-tax_6&ds=v1%3AUlbzYFw0ZKfEOclbswrZSMFZr%2FdgP6sT6D6fb51zsRE
+              - group "Special Features" [ref=e5548]:
+                - heading "Special Features" [level=2] [ref=e5549]
+                - list "Special Features" [ref=e5550]:
+                  - listitem "Popular Shopping Ideas" [ref=e5551]:
+                    - link "Apply the filter Lightweight to narrow results" [ref=e5553] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003497270111%3A48812527031&dc&qid=1789487485&rnid=48812335031&ref=sr_nr_p_n_g-1003497270111_1&ds=v1%3AEyqjkD7f0CKOcdDYkuSjBrTM8R6tw9FaWc0PcUrGz0o
+                      - checkbox [ref=e5556]
+                      - text: Lightweight
+                  - listitem "Popular Shopping Ideas" [ref=e5558]:
+                    - link "Apply the filter Breathable to narrow results" [ref=e5560] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003497270111%3A48812528031&dc&qid=1789487485&rnid=48812335031&ref=sr_nr_p_n_g-1003497270111_2&ds=v1%3AfquRlXqk80XHnF62GXNXJK1IxKIROc2dSUzB7wGLRwc
+                      - checkbox [ref=e5563]
+                      - text: Breathable
+                  - listitem "Popular Shopping Ideas" [ref=e5565]:
+                    - link "Apply the filter Quick Dry to narrow results" [ref=e5567] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003497270111%3A48812524031&dc&qid=1789487485&rnid=48812335031&ref=sr_nr_p_n_g-1003497270111_3&ds=v1%3AOqxXMzFrVKC%2FNTxBA3PKr7suOuuvubzxhgd0mIAL0sI
+                      - checkbox [ref=e5570]
+                      - text: Quick Dry
+                  - listitem "Popular Shopping Ideas" [ref=e5572]:
+                    - link "Apply the filter Moisture Wicking to narrow results" [ref=e5574] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003497270111%3A48812531031&dc&qid=1789487485&rnid=48812335031&ref=sr_nr_p_n_g-1003497270111_4&ds=v1%3AKCn22LjVzLXwkcZNpXftmD1fJD4xAQ1luwjDN95vJYg
+                      - checkbox [ref=e5577]
+                      - text: Moisture Wicking
+                  - listitem "Popular Shopping Ideas" [ref=e5579]:
+                    - link "Apply the filter Sun Protection to narrow results" [ref=e5581] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003497270111%3A48812523031&dc&qid=1789487485&rnid=48812335031&ref=sr_nr_p_n_g-1003497270111_5&ds=v1%3Aqq3N90ct72O5S3FOCWGOa%2FcP7sHyo%2Brr2wE89XKwR90
+                      - checkbox [ref=e5584]
+                      - text: Sun Protection
+                  - listitem "Popular Shopping Ideas" [ref=e5586]:
+                    - link "Apply the filter Absorbent to narrow results" [ref=e5588] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003497270111%3A203865310031&dc&qid=1789487485&rnid=48812335031&ref=sr_nr_p_n_g-1003497270111_6&ds=v1%3AqI04v%2Bgqaw9zwIqIeKWqFl3lBYJY9pfHdbM7SLAt%2BF0
+                      - checkbox [ref=e5591]
+                      - text: Absorbent
+                  - listitem "Popular Shopping Ideas" [ref=e5593]:
+                    - link "Apply the filter Adjustable to narrow results" [ref=e5595] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003497270111%3A48812529031&dc&qid=1789487485&rnid=48812335031&ref=sr_nr_p_n_g-1003497270111_7&ds=v1%3AXSiwUP4QQ4uMYqFnkKq7O7DCzvBeGggqcWZ2%2BuR2%2FqI
+                      - checkbox [ref=e5598]
+                      - text: Adjustable
+                  - listitem [ref=e5600]:
+                    - button "See more, Special Features" [ref=e5603] [cursor=pointer]: See more
+              - group "Pay On Delivery" [ref=e5605]:
+                - heading "Pay On Delivery" [level=2] [ref=e5606]
+                - list "Pay On Delivery" [ref=e5607]:
+                  - listitem "Popular Shopping Ideas" [ref=e5608]:
+                    - link "Apply the filter Eligible for Pay On Delivery to narrow results" [ref=e5610] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_is_cod_eligible%3A4931671031&dc&qid=1789487485&rnid=4931670031&ref=sr_nr_p_n_is_cod_eligible_1&ds=v1%3A8dZn7RpoZrwDkBviPN3v2S%2BAnUM3ce0Gllf5%2BtLFx9o
+                      - checkbox [ref=e5613]
+                      - text: Eligible for Pay On Delivery
+              - group "Closure Type" [ref=e5615]:
+                - heading "Closure Type" [level=2] [ref=e5616]
+                - list "Closure Type" [ref=e5617]:
+                  - listitem "Popular Shopping Ideas" [ref=e5618]:
+                    - link "Apply the filter Pull On to narrow results" [ref=e5620] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003448370111%3A30540778031&dc&qid=1789487485&rnid=30540768031&ref=sr_nr_p_n_g-1003448370111_1&ds=v1%3Au0bLh9gBM32eGLJ4cr0%2BHpVzLTIf2eY05%2BHplVOw3Ag
+                      - checkbox [ref=e5623]
+                      - text: Pull On
+                  - listitem "Popular Shopping Ideas" [ref=e5625]:
+                    - link "Apply the filter Button to narrow results" [ref=e5627] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003448370111%3A30540769031&dc&qid=1789487485&rnid=30540768031&ref=sr_nr_p_n_g-1003448370111_2&ds=v1%3AJ%2B3cOq0i8jMcfdj9%2BR%2FPN9ep59tco6Su%2B5%2BpWYo0HOE
+                      - checkbox [ref=e5630]
+                      - text: Button
+                  - listitem "Popular Shopping Ideas" [ref=e5632]:
+                    - link "Apply the filter Zipper to narrow results" [ref=e5634] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003448370111%3A30540775031&dc&qid=1789487485&rnid=30540768031&ref=sr_nr_p_n_g-1003448370111_3&ds=v1%3AAIPEFabdwH7hBNWNpbSIn%2FIaiUklY%2F4IPfB1U9Rf%2FNo
+                      - checkbox [ref=e5637]
+                      - text: Zipper
+                  - listitem "Popular Shopping Ideas" [ref=e5639]:
+                    - link "Apply the filter Snap to narrow results" [ref=e5641] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003448370111%3A30540776031&dc&qid=1789487485&rnid=30540768031&ref=sr_nr_p_n_g-1003448370111_4&ds=v1%3AM4fSmIwq4NPfKNCtCwqaszx2dFUCyfLhZlh8GEUe4ww
+                      - checkbox [ref=e5644]
+                      - text: Snap
+                  - listitem "Popular Shopping Ideas" [ref=e5646]:
+                    - link "Apply the filter Buckle to narrow results" [ref=e5648] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003448370111%3A30540770031&dc&qid=1789487485&rnid=30540768031&ref=sr_nr_p_n_g-1003448370111_5&ds=v1%3A8LNbr9dQn8rp9%2BnO6IduIrXrIrv3jNdNZmicee8%2BN8o
+                      - checkbox [ref=e5651]
+                      - text: Buckle
+                  - listitem "Popular Shopping Ideas" [ref=e5653]:
+                    - link "Apply the filter Double Ring to narrow results" [ref=e5655] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003448370111%3A30540772031&dc&qid=1789487485&rnid=30540768031&ref=sr_nr_p_n_g-1003448370111_6&ds=v1%3Acxhormcqonv%2BXhy18fce1CwtpP%2BzGWKv5bmKkqt7KFk
+                      - checkbox [ref=e5658]
+                      - text: Double Ring
+                  - listitem "Popular Shopping Ideas" [ref=e5660]:
+                    - link "Apply the filter Drawstring to narrow results" [ref=e5662] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003448370111%3A30540773031&dc&qid=1789487485&rnid=30540768031&ref=sr_nr_p_n_g-1003448370111_7&ds=v1%3A17znXSGa7TOuCOnYJmM3%2BzhomN2JYsfBUOBc%2BjSrq9I
+                      - checkbox [ref=e5665]
+                      - text: Drawstring
+                  - listitem [ref=e5667]:
+                    - button "See more, Closure Type" [ref=e5670] [cursor=pointer]: See more
+              - group "Occasion" [ref=e5672]:
+                - heading "Occasion" [level=2] [ref=e5673]
+                - list "Occasion" [ref=e5674]:
+                  - listitem "Popular Shopping Ideas" [ref=e5675]:
+                    - link "Apply the filter Birthday to narrow results" [ref=e5677] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003500754111%3A48812559031&dc&qid=1789487485&rnid=48812337031&ref=sr_nr_p_n_g-1003500754111_1&ds=v1%3AZibVyprxG%2Bw%2FE%2FbMMzfpbdLvGN8a1s5%2B%2F8tiBZt26hU
+                      - checkbox [ref=e5680]
+                      - text: Birthday
+                  - listitem "Popular Shopping Ideas" [ref=e5682]:
+                    - link "Apply the filter New Year to narrow results" [ref=e5684] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003500754111%3A48812557031&dc&qid=1789487485&rnid=48812337031&ref=sr_nr_p_n_g-1003500754111_2&ds=v1%3AXhtR%2FqfP24tk46WMw5eZZXtA%2FU%2BwcUJPXBOeCo8fHRM
+                      - checkbox [ref=e5687]
+                      - text: New Year
+                  - listitem "Popular Shopping Ideas" [ref=e5689]:
+                    - link "Apply the filter Valentine's Day to narrow results" [ref=e5691] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003500754111%3A48812540031&dc&qid=1789487485&rnid=48812337031&ref=sr_nr_p_n_g-1003500754111_3&ds=v1%3AFDfxKahi5WQK7ioVxpZ1hcRalhZUUk2R7hTG6TLvTsk
+                      - checkbox [ref=e5694]
+                      - text: Valentine's Day
+                  - listitem "Popular Shopping Ideas" [ref=e5696]:
+                    - link "Apply the filter Anniversary to narrow results" [ref=e5698] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003500754111%3A48812558031&dc&qid=1789487485&rnid=48812337031&ref=sr_nr_p_n_g-1003500754111_4&ds=v1%3AxH4hlwW31GydbxuwESnJLt8ZWyDM7B4u3AIk6GDW2O4
+                      - checkbox [ref=e5701]
+                      - text: Anniversary
+                  - listitem "Popular Shopping Ideas" [ref=e5703]:
+                    - link "Apply the filter Baby Shower to narrow results" [ref=e5705] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003500754111%3A86387821031&dc&qid=1789487485&rnid=48812337031&ref=sr_nr_p_n_g-1003500754111_5&ds=v1%3A47GO6UE2STq%2B%2BfXcV0sLJaJxRnbJLXT6wPXJyTxSh2E
+                      - checkbox [ref=e5708]
+                      - text: Baby Shower
+                  - listitem "Popular Shopping Ideas" [ref=e5710]:
+                    - link "Apply the filter Bachelor Party to narrow results" [ref=e5712] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003500754111%3A48812543031&dc&qid=1789487485&rnid=48812337031&ref=sr_nr_p_n_g-1003500754111_6&ds=v1%3AvW1rJEBl6HBRXyLVebn1nq%2F2QSqR8FwV%2BEhXH71u%2F5w
+                      - checkbox [ref=e5715]
+                      - text: Bachelor Party
+                  - listitem "Popular Shopping Ideas" [ref=e5717]:
+                    - link "Apply the filter Bachelorette Party to narrow results" [ref=e5719] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003500754111%3A48812551031&dc&qid=1789487485&rnid=48812337031&ref=sr_nr_p_n_g-1003500754111_7&ds=v1%3A0akztakxAWKFMiNweOnKV7Sxk1yb9JxAodcFAnDB35A
+                      - checkbox [ref=e5722]
+                      - text: Bachelorette Party
+                  - listitem [ref=e5724]:
+                    - button "See more, Occasion" [ref=e5727] [cursor=pointer]: See more
+              - group "New Arrivals" [ref=e5729]:
+                - heading "New Arrivals" [level=2] [ref=e5730]
+                - list "New Arrivals" [ref=e5731]:
+                  - listitem [ref=e5732]:
+                    - link "Last 30 days" [ref=e5734] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_date_first_available_absolute%3A1318487031&dc&qid=1789487485&rnid=1318486031&ref=sr_nr_p_n_date_first_available_absolute_1&ds=v1%3A%2Fhp3oXONBlVxcC1ly%2BjJHzxpyeFEuj5mHuXAtq5%2BaWs
+                  - listitem [ref=e5735]:
+                    - link "Last 90 days" [ref=e5737] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_date_first_available_absolute%3A1318488031&dc&qid=1789487485&rnid=1318486031&ref=sr_nr_p_n_date_first_available_absolute_2&ds=v1%3AVcZflNWHby0s%2FptWr2LAGIYzz2JjmzgMMiqF5BGloOw
+              - group "Lifestyle" [ref=e5738]:
+                - heading "Lifestyle" [level=2] [ref=e5739]
+                - list "Lifestyle" [ref=e5740]:
+                  - listitem "Popular Shopping Ideas" [ref=e5741]:
+                    - link "Apply the filter Business Casual to narrow results" [ref=e5743] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101015292802111%3A95166417031&dc&qid=1789487485&rnid=95166416031&ref=sr_nr_p_n_g-101015292802111_1&ds=v1%3Arvd2WaXs2%2FxwsRBndHOOMXa3rJU71eV%2FusWXoATX00c
+                      - checkbox [ref=e5746]
+                      - text: Business Casual
+                  - listitem "Popular Shopping Ideas" [ref=e5748]:
+                    - link "Apply the filter Business Professional to narrow results" [ref=e5750] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101015292802111%3A211797903031&dc&qid=1789487485&rnid=95166416031&ref=sr_nr_p_n_g-101015292802111_2&ds=v1%3A0zwZLxozKUovBXuUrRGQiKIXmHvCiB0tkdnjtH7i9fM
+                      - checkbox [ref=e5753]
+                      - text: Business Professional
+                  - listitem "Popular Shopping Ideas" [ref=e5755]:
+                    - link "Apply the filter Casual to narrow results" [ref=e5757] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101015292802111%3A95166419031&dc&qid=1789487485&rnid=95166416031&ref=sr_nr_p_n_g-101015292802111_3&ds=v1%3AXHadQFI01MOXBfxMA22EQqgqeVk%2F10kSJEF2qGJJ%2FbU
+                      - checkbox [ref=e5760]
+                      - text: Casual
+                  - listitem "Popular Shopping Ideas" [ref=e5762]:
+                    - link "Apply the filter Comfort to narrow results" [ref=e5764] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101015292802111%3A95166418031&dc&qid=1789487485&rnid=95166416031&ref=sr_nr_p_n_g-101015292802111_4&ds=v1%3A%2BDVf1h3fkJQ1yEn5r118EV64C3IcJvHijPrQsA%2BnOLE
+                      - checkbox [ref=e5767]
+                      - text: Comfort
+                  - listitem "Popular Shopping Ideas" [ref=e5769]:
+                    - link "Apply the filter Dress to narrow results" [ref=e5771] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101015292802111%3A211797905031&dc&qid=1789487485&rnid=95166416031&ref=sr_nr_p_n_g-101015292802111_5&ds=v1%3AixGeijkKMWOGmHVUis%2BvF3zJ8n5ogW0bzJHq18O%2FDpc
+                      - checkbox [ref=e5774]
+                      - text: Dress
+                  - listitem "Popular Shopping Ideas" [ref=e5776]:
+                    - link "Apply the filter Evening to narrow results" [ref=e5778] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101015292802111%3A95166420031&dc&qid=1789487485&rnid=95166416031&ref=sr_nr_p_n_g-101015292802111_6&ds=v1%3A%2BT7DWtJmom7qWAcF5JEPpkhfFApyAyvPi%2BCgx%2FQhTPQ
+                      - checkbox [ref=e5781]
+                      - text: Evening
+                  - listitem "Popular Shopping Ideas" [ref=e5783]:
+                    - link "Apply the filter Formal to narrow results" [ref=e5785] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101015292802111%3A95166421031&dc&qid=1789487485&rnid=95166416031&ref=sr_nr_p_n_g-101015292802111_7&ds=v1%3AdAbeOeyM9n8pobqnlOs31tHA8C8NJbQpfgqagWtGNgc
+                      - checkbox [ref=e5788]
+                      - text: Formal
+                  - listitem "Popular Shopping Ideas" [ref=e5790]:
+                    - link "Apply the filter Themed to narrow results" [ref=e5792] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101015292802111%3A211797904031&dc&qid=1789487485&rnid=95166416031&ref=sr_nr_p_n_g-101015292802111_8&ds=v1%3ApwHT1133qt%2FAVNdOPlUoaApRAnQdxn3WpT%2FO5n64v1Y
+                      - checkbox [ref=e5795]
+                      - text: Themed
+                  - listitem "Popular Shopping Ideas" [ref=e5797]:
+                    - link "Apply the filter Work Utility to narrow results" [ref=e5799] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101015292802111%3A211797906031&dc&qid=1789487485&rnid=95166416031&ref=sr_nr_p_n_g-101015292802111_9&ds=v1%3AnyJfwYaycKHIQIJPURLKeaNCXdYr%2BI91CNI%2F7c00mHo
+                      - checkbox [ref=e5802]
+                      - text: Work Utility
+              - group "Care Instructions" [ref=e5804]:
+                - heading "Care Instructions" [level=2] [ref=e5805]
+                - list "Care Instructions" [ref=e5806]:
+                  - listitem "Popular Shopping Ideas" [ref=e5807]:
+                    - link "Apply the filter Dry Clean Only to narrow results" [ref=e5809] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101015182109111%3A93874559031&dc&qid=1789487485&rnid=93874556031&ref=sr_nr_p_n_g-101015182109111_1&ds=v1%3AX%2BX9D60gmun%2BPhMdzyuAOTfLCj4sviY03604Td9Z0L8
+                      - checkbox [ref=e5812]
+                      - text: Dry Clean Only
+                  - listitem "Popular Shopping Ideas" [ref=e5814]:
+                    - link "Apply the filter Hand Wash Only to narrow results" [ref=e5816] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101015182109111%3A93874558031&dc&qid=1789487485&rnid=93874556031&ref=sr_nr_p_n_g-101015182109111_2&ds=v1%3AMrQcQEC9hLSNI6F6XvIUFKIp1DEHdEGwMhqPVALOCoU
+                      - checkbox [ref=e5819]
+                      - text: Hand Wash Only
+                  - listitem "Popular Shopping Ideas" [ref=e5821]:
+                    - link "Apply the filter Machine Wash to narrow results" [ref=e5823] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101015182109111%3A93874557031&dc&qid=1789487485&rnid=93874556031&ref=sr_nr_p_n_g-101015182109111_3&ds=v1%3ASe2CV2lYS6nQ4FEMSta3pm1HrQ8efiHauHGDtHpraoA
+                      - checkbox [ref=e5826]
+                      - text: Machine Wash
+              - group "Pocket Type" [ref=e5828]:
+                - heading "Pocket Type" [level=2] [ref=e5829]
+                - list "Pocket Type" [ref=e5830]:
+                  - listitem "Popular Shopping Ideas" [ref=e5831]:
+                    - link "Apply the filter Patch Pocket to narrow results" [ref=e5833] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003373046111%3A29591650031&dc&qid=1789487485&rnid=29590838031&ref=sr_nr_p_n_g-1003373046111_1&ds=v1%3AiuRGgyxBHw%2FWHmzBh2Z9eXzILoSt20HCr8N75SI311c
+                      - checkbox [ref=e5836]
+                      - text: Patch Pocket
+                  - listitem "Popular Shopping Ideas" [ref=e5838]:
+                    - link "Apply the filter Cargo Pocket to narrow results" [ref=e5840] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003373046111%3A29591648031&dc&qid=1789487485&rnid=29590838031&ref=sr_nr_p_n_g-1003373046111_2&ds=v1%3AT23x8lgjJNxPMdyy6tvAm%2F0D3xZgz%2Byc%2FsjYbpVOyu4
+                      - checkbox [ref=e5843]
+                      - text: Cargo Pocket
+                  - listitem "Popular Shopping Ideas" [ref=e5845]:
+                    - link "Apply the filter Round Pocket to narrow results" [ref=e5847] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003373046111%3A29591647031&dc&qid=1789487485&rnid=29590838031&ref=sr_nr_p_n_g-1003373046111_3&ds=v1%3A99OHDsv81CXn8JBc1TUvLWtEr3Z%2Bp80tGnfCsl2LSqs
+                      - checkbox [ref=e5850]
+                      - text: Round Pocket
+                  - listitem "Popular Shopping Ideas" [ref=e5852]:
+                    - link "Apply the filter Coin Pocket to narrow results" [ref=e5854] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003373046111%3A29591651031&dc&qid=1789487485&rnid=29590838031&ref=sr_nr_p_n_g-1003373046111_4&ds=v1%3AnpJSqEZbqM9%2FObjdfx07fXNs06kRrkJZM0J5m3qQfbI
+                      - checkbox [ref=e5857]
+                      - text: Coin Pocket
+                  - listitem "Popular Shopping Ideas" [ref=e5859]:
+                    - link "Apply the filter Flap Pocket to narrow results" [ref=e5861] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003373046111%3A29591649031&dc&qid=1789487485&rnid=29590838031&ref=sr_nr_p_n_g-1003373046111_5&ds=v1%3AmHK3H1OuvScQlN%2FktNG6JmDhUX4iWkXnQLpVeRO5PfQ
+                      - checkbox [ref=e5864]
+                      - text: Flap Pocket
+                  - listitem "Popular Shopping Ideas" [ref=e5866]:
+                    - link "Apply the filter Jetted Pocket to narrow results" [ref=e5868] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003373046111%3A66052452031&dc&qid=1789487485&rnid=29590838031&ref=sr_nr_p_n_g-1003373046111_6&ds=v1%3AaavqRkIpNq2s3Ll3H95PanSHg2JdvYH8lyDkxdVSdFU
+                      - checkbox [ref=e5871]
+                      - text: Jetted Pocket
+                  - listitem "Popular Shopping Ideas" [ref=e5873]:
+                    - link "Apply the filter Kangaroo Pocket to narrow results" [ref=e5875] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003373046111%3A66052455031&dc&qid=1789487485&rnid=29590838031&ref=sr_nr_p_n_g-1003373046111_7&ds=v1%3AASRcDwjBB9qFbh1PAFrnYYESHWb1AL%2B1WG%2FrXn12CZA
+                      - checkbox [ref=e5878]
+                      - text: Kangaroo Pocket
+                  - listitem "Popular Shopping Ideas" [ref=e5880]:
+                    - link "Apply the filter Seam Pocket to narrow results" [ref=e5882] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003373046111%3A66052454031&dc&qid=1789487485&rnid=29590838031&ref=sr_nr_p_n_g-1003373046111_8&ds=v1%3AkYaiR0SK6xTqgy8L%2Bf0pLzgASbV4EDl3CL3W%2FpxgDnc
+                      - checkbox [ref=e5885]
+                      - text: Seam Pocket
+                  - listitem "Popular Shopping Ideas" [ref=e5887]:
+                    - link "Apply the filter Slant Pocket to narrow results" [ref=e5889] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003373046111%3A29591646031&dc&qid=1789487485&rnid=29590838031&ref=sr_nr_p_n_g-1003373046111_9&ds=v1%3ACknQjh4c4XsjHj44%2FnYaF9uvZ4xfyhmf7PyHytppjqg
+                      - checkbox [ref=e5892]
+                      - text: Slant Pocket
+                  - listitem "Popular Shopping Ideas" [ref=e5894]:
+                    - link "Apply the filter Slit Pocket to narrow results" [ref=e5896] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003373046111%3A29591652031&dc&qid=1789487485&rnid=29590838031&ref=sr_nr_p_n_g-1003373046111_10&ds=v1%3ADKJ8maH9Q2YEBIYPb88%2BZ2ozw%2FFAiH2UyedEmwKl0lI
+                      - checkbox [ref=e5899]
+                      - text: Slit Pocket
+                  - listitem "Popular Shopping Ideas" [ref=e5901]:
+                    - link "Apply the filter Straight Pocket to narrow results" [ref=e5903] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003373046111%3A66052453031&dc&qid=1789487485&rnid=29590838031&ref=sr_nr_p_n_g-1003373046111_11&ds=v1%3A2yyC7nsi2tT7pK8FvKQRp4xDrTrrltBScRHxIwijRww
+                      - checkbox [ref=e5906]
+                      - text: Straight Pocket
+                  - listitem "Popular Shopping Ideas" [ref=e5908]:
+                    - link "Apply the filter Welt Pocket to narrow results" [ref=e5910] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-1003373046111%3A66052456031&dc&qid=1789487485&rnid=29590838031&ref=sr_nr_p_n_g-1003373046111_12&ds=v1%3AwB5qOiIJfemVqaTjnk3UnIH7x%2F1SetzpOod2S1iLE0Y
+                      - checkbox [ref=e5913]
+                      - text: Welt Pocket
+              - group "Seller" [ref=e5915]:
+                - heading "Seller" [level=2] [ref=e5916]
+                - list "Seller" [ref=e5917]:
+                  - listitem "Popular Shopping Ideas" [ref=e5918]:
+                    - link "Apply the filter Cocoblu Retail to narrow results" [ref=e5920] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_6%3AA1WYWER0W24N8S&dc&qid=1789487485&rnid=1318474031&ref=sr_nr_p_6_1&ds=v1%3AXciEpTtHBZd1H5hnxSX%2BIV%2FAam4qRR22vAmzytsK%2BHM
+                      - checkbox [ref=e5923]
+                      - text: Cocoblu Retail
+                  - listitem "Popular Shopping Ideas" [ref=e5925]:
+                    - link "Apply the filter The Souled Store to narrow results" [ref=e5927] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_6%3AA3LWIHGIMJMVON&dc&qid=1789487485&rnid=1318474031&ref=sr_nr_p_6_2&ds=v1%3AH%2FraiVepN5xG05Kn4LsWl0JhBgvIS8b52eud6WaLKzA
+                      - checkbox [ref=e5930]
+                      - text: The Souled Store
+                  - listitem [ref=e5932]:
+                    - button "See more, Seller" [ref=e5935] [cursor=pointer]: See more
+              - group "Availability" [ref=e5937]:
+                - heading "Availability" [level=2] [ref=e5938]
+                - list "Availability" [ref=e5939]:
+                  - listitem "Popular Shopping Ideas" [ref=e5940]:
+                    - link "Apply the filter Include Out of Stock to narrow results" [ref=e5942] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_availability%3A1318485031&dc&qid=1789487485&rnid=1318483031&ref=sr_nr_p_n_availability_2&ds=v1%3Av%2BcLCazH1WPOlvRwczJMkiZicKn4KXYE4PGQLp4kaWc
+                      - checkbox [ref=e5945]
+                      - text: Include Out of Stock
+              - group "Made for Amazon Brands" [ref=e5947]:
+                - heading "Made for Amazon Brands" [level=2] [ref=e5948]
+                - list "Made for Amazon Brands" [ref=e5949]:
+                  - listitem "Popular Shopping Ideas" [ref=e5950]:
+                    - link "Apply the filter Made for Amazon to narrow results" [ref=e5952] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_is_private_label%3A16184648031&dc&qid=1789487485&rnid=16184647031&ref=sr_nr_p_n_is_private_label_1&ds=v1%3AbkO7LOv5pnLBywdFI4LXD0aPkqhJd2AzOVN%2FEGzhxUs
+                      - checkbox [ref=e5955]
+                      - text: Made for Amazon
+              - group "Sleeve Length Description" [ref=e5957]:
+                - heading "Sleeve Length Description" [level=2] [ref=e5958]
+                - list "Sleeve Length Description" [ref=e5959]:
+                  - listitem "Popular Shopping Ideas" [ref=e5960]:
+                    - link "Apply the filter Sleeveless to narrow results" [ref=e5962] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101017421825111%3A215636116031&dc&qid=1789487485&rnid=215636111031&ref=sr_nr_p_n_g-101017421825111_1&ds=v1%3A24%2FfzoKSzBF7WBJoV%2F8NQkKVhl7oFFEJR6nZ8Am3CSU
+                      - checkbox [ref=e5965]
+                      - text: Sleeveless
+                  - listitem "Popular Shopping Ideas" [ref=e5967]:
+                    - link "Apply the filter Short Sleeve to narrow results" [ref=e5969] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101017421825111%3A215636114031&dc&qid=1789487485&rnid=215636111031&ref=sr_nr_p_n_g-101017421825111_2&ds=v1%3AC2Chc%2FgV69rucODVe11iNuQY9xjxfv3uWuYTPUkGvek
+                      - checkbox [ref=e5972]
+                      - text: Short Sleeve
+                  - listitem "Popular Shopping Ideas" [ref=e5974]:
+                    - link "Apply the filter Half Sleeve to narrow results" [ref=e5976] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101017421825111%3A215636112031&dc&qid=1789487485&rnid=215636111031&ref=sr_nr_p_n_g-101017421825111_3&ds=v1%3A%2B4QZf5tSjkm2X%2BKxw6kMUQMTdzGDkgBbws8QQ2vXDbM
+                      - checkbox [ref=e5979]
+                      - text: Half Sleeve
+                  - listitem "Popular Shopping Ideas" [ref=e5981]:
+                    - link "Apply the filter 3/4 Sleeve to narrow results" [ref=e5983] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101017421825111%3A215636115031&dc&qid=1789487485&rnid=215636111031&ref=sr_nr_p_n_g-101017421825111_4&ds=v1%3AMMfeheabGSrbtoWSHEMbiVSgBdMszGh%2FP1Y%2BFOpf1g0
+                      - checkbox [ref=e5986]
+                      - text: 3/4 Sleeve
+                  - listitem "Popular Shopping Ideas" [ref=e5988]:
+                    - link "Apply the filter Long Sleeve to narrow results" [ref=e5990] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101017421825111%3A215636113031&dc&qid=1789487485&rnid=215636111031&ref=sr_nr_p_n_g-101017421825111_5&ds=v1%3A5O7of786Mpt50GxaCXKalu3mdDA9p0gOq3g3vKMZaCM
+                      - checkbox [ref=e5993]
+                      - text: Long Sleeve
+              - group "Gender" [ref=e5995]:
+                - heading "Gender" [level=2] [ref=e5996]
+                - list "Gender" [ref=e5997]:
+                  - listitem "Popular Shopping Ideas" [ref=e5998]:
+                    - link "Apply the filter Men to narrow results" [ref=e6000] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101015233022111%3A207199036031&dc&qid=1789487485&rnid=207199033031&ref=sr_nr_p_n_g-101015233022111_1&ds=v1%3AYAwrMmi53jGcjMDJFHtI8%2BpRZfavzmuzIhlzEppwNlQ
+                      - checkbox [ref=e6003]
+                      - text: Men
+                  - listitem "Popular Shopping Ideas" [ref=e6005]:
+                    - link "Apply the filter Women to narrow results" [ref=e6007] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101015233022111%3A207199034031&dc&qid=1789487485&rnid=207199033031&ref=sr_nr_p_n_g-101015233022111_2&ds=v1%3A1nNd%2Fkpi2dfFJJ5XHGEvWzPg91Ba7E1jIcaU6I9KrV4
+                      - checkbox [ref=e6010]
+                      - text: Women
+                  - listitem "Popular Shopping Ideas" [ref=e6012]:
+                    - link "Apply the filter Boys to narrow results" [ref=e6014] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101015233022111%3A207199035031&dc&qid=1789487485&rnid=207199033031&ref=sr_nr_p_n_g-101015233022111_3&ds=v1%3AdJaD2VGoCcssdghwe4yl9L3EvwZciW6cCPAoMICzRb0
+                      - checkbox [ref=e6017]
+                      - text: Boys
+                  - listitem "Popular Shopping Ideas" [ref=e6019]:
+                    - link "Apply the filter Girls to narrow results" [ref=e6021] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101015233022111%3A207199041031&dc&qid=1789487485&rnid=207199033031&ref=sr_nr_p_n_g-101015233022111_4&ds=v1%3Afg%2Fi%2BsZ8dBrrg5ENazIWpplH%2Fj7Us3AOic3yZBW54Rw
+                      - checkbox [ref=e6024]
+                      - text: Girls
+                  - listitem "Popular Shopping Ideas" [ref=e6026]:
+                    - link "Apply the filter Babies to narrow results" [ref=e6028] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101015233022111%3A207199037031&dc&qid=1789487485&rnid=207199033031&ref=sr_nr_p_n_g-101015233022111_5&ds=v1%3A4t2SNXNaJMjhzTUth0I1xkaCOplYsK86BDfo38txmbc
+                      - checkbox [ref=e6031]
+                      - text: Babies
+                  - listitem "Popular Shopping Ideas" [ref=e6033]:
+                    - link "Apply the filter Unisex to narrow results" [ref=e6035] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101015233022111%3A207199039031&dc&qid=1789487485&rnid=207199033031&ref=sr_nr_p_n_g-101015233022111_6&ds=v1%3ApZcLyOeFMNQZFTVQcVP8dnzJ6Sbi97mcHspJydCC5s4
+                      - checkbox [ref=e6038]
+                      - text: Unisex
+              - group "Shirt Form" [ref=e6040]:
+                - heading "Shirt Form" [level=2] [ref=e6041]
+                - list "Shirt Form" [ref=e6042]:
+                  - listitem "Popular Shopping Ideas" [ref=e6043]:
+                    - link "Apply the filter Blouse to narrow results" [ref=e6045] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_feature_five_browse-bin%3A210962459031&dc&qid=1789487485&rnid=210962452031&ref=sr_nr_p_n_feature_five_browse-bin_1&ds=v1%3ACD2CHI2CdiYwoMEAEYcrIvnFUgcJwfQQWTR1%2BOCH0HY
+                      - checkbox [ref=e6048]
+                      - text: Blouse
+                  - listitem "Popular Shopping Ideas" [ref=e6050]:
+                    - link "Apply the filter Crop Top to narrow results" [ref=e6052] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_feature_five_browse-bin%3A210962460031&dc&qid=1789487485&rnid=210962452031&ref=sr_nr_p_n_feature_five_browse-bin_2&ds=v1%3AM7Pj2swxEw3YR8MBJA0uTxGGHwNWOOJMiDrq5CWp1l8
+                      - checkbox [ref=e6055]
+                      - text: Crop Top
+                  - listitem "Popular Shopping Ideas" [ref=e6057]:
+                    - link "Apply the filter Peasant Top to narrow results" [ref=e6059] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_feature_five_browse-bin%3A210962453031&dc&qid=1789487485&rnid=210962452031&ref=sr_nr_p_n_feature_five_browse-bin_3&ds=v1%3AgGkR109CNN30aHqABOQjirr2dKG9eAe08k49jxrUkw8
+                      - checkbox [ref=e6062]
+                      - text: Peasant Top
+                  - listitem "Popular Shopping Ideas" [ref=e6064]:
+                    - link "Apply the filter Polo Shirt to narrow results" [ref=e6066] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_feature_five_browse-bin%3A210962456031&dc&qid=1789487485&rnid=210962452031&ref=sr_nr_p_n_feature_five_browse-bin_4&ds=v1%3AYPhJdVSoMTz4E8QYLh3iKt2mqlm08IFoApqJ6lT2kk4
+                      - checkbox [ref=e6069]
+                      - text: Polo Shirt
+                  - listitem "Popular Shopping Ideas" [ref=e6071]:
+                    - link "Apply the filter Sport Jersey to narrow results" [ref=e6073] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_feature_five_browse-bin%3A210962455031&dc&qid=1789487485&rnid=210962452031&ref=sr_nr_p_n_feature_five_browse-bin_5&ds=v1%3Ad9GmNr9LyJI2Oijk6Z1kJDUtPSBRt83FT5%2B%2BetnD%2FY4
+                      - checkbox [ref=e6076]
+                      - text: Sport Jersey
+                  - listitem "Popular Shopping Ideas" [ref=e6078]:
+                    - link "Apply the filter T-Shirt to narrow results" [ref=e6080] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_feature_five_browse-bin%3A210962454031&dc&qid=1789487485&rnid=210962452031&ref=sr_nr_p_n_feature_five_browse-bin_6&ds=v1%3AQqeuu8TwoRX48WZrXRxleAjvs1Dbdkl4AiJsjmd37uU
+                      - checkbox [ref=e6083]
+                      - text: T-Shirt
+                  - listitem "Popular Shopping Ideas" [ref=e6085]:
+                    - link "Apply the filter Tank Top to narrow results" [ref=e6087] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_feature_five_browse-bin%3A210962457031&dc&qid=1789487485&rnid=210962452031&ref=sr_nr_p_n_feature_five_browse-bin_7&ds=v1%3AXGG8V8R87lxawIEbwnnx1pFtdCtSwavS7KhKEL5NCDY
+                      - checkbox [ref=e6090]
+                      - text: Tank Top
+                  - listitem "Popular Shopping Ideas" [ref=e6092]:
+                    - link "Apply the filter Tuxedo Shirt to narrow results" [ref=e6094] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_feature_five_browse-bin%3A210962458031&dc&qid=1789487485&rnid=210962452031&ref=sr_nr_p_n_feature_five_browse-bin_8&ds=v1%3AAJtjQFb8xYO0Zgs3zpUGTDhq7Hk6RnvIPlvjYWI3cAY
+                      - checkbox [ref=e6097]
+                      - text: Tuxedo Shirt
+              - group "Collar Style" [ref=e6099]:
+                - heading "Collar Style" [level=2] [ref=e6100]
+                - list "Collar Style" [ref=e6101]:
+                  - listitem "Popular Shopping Ideas" [ref=e6102]:
+                    - link "Apply the filter Collarless to narrow results" [ref=e6104] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_theme_browse-bin%3A88653354031&dc&qid=1789487485&rnid=1974793031&ref=sr_nr_p_n_theme_browse-bin_1&ds=v1%3A8Yz4PW5HLlcyzMyMw8dBKeN4nmmZMeEAI%2FpiAhnsUOA
+                      - checkbox [ref=e6107]
+                      - text: Collarless
+                  - listitem "Popular Shopping Ideas" [ref=e6109]:
+                    - link "Apply the filter Polo Collar to narrow results" [ref=e6111] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_theme_browse-bin%3A88653355031&dc&qid=1789487485&rnid=1974793031&ref=sr_nr_p_n_theme_browse-bin_2&ds=v1%3AfT4XlbV0wxOOLT1k1m9Ddpp%2FX2qNn3%2FkFnisIC7ETvo
+                      - checkbox [ref=e6114]
+                      - text: Polo Collar
+                  - listitem "Popular Shopping Ideas" [ref=e6116]:
+                    - link "Apply the filter Club Collar to narrow results" [ref=e6118] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_theme_browse-bin%3A1974799031&dc&qid=1789487485&rnid=1974793031&ref=sr_nr_p_n_theme_browse-bin_3&ds=v1%3AXyzGP3aououUkxOgust7Tgsq4rDcmgVla2i8tivP6do
+                      - checkbox [ref=e6121]
+                      - text: Club Collar
+                  - listitem "Popular Shopping Ideas" [ref=e6123]:
+                    - link "Apply the filter Band Collar to narrow results" [ref=e6125] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_theme_browse-bin%3A27368207031&dc&qid=1789487485&rnid=1974793031&ref=sr_nr_p_n_theme_browse-bin_4&ds=v1%3A9BLUXN5cap82H2jJAB6hhwXUpCMWASWQo6paGLZIOA4
+                      - checkbox [ref=e6128]
+                      - text: Band Collar
+                  - listitem "Popular Shopping Ideas" [ref=e6130]:
+                    - link "Apply the filter Button Down to narrow results" [ref=e6132] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_theme_browse-bin%3A1974794031&dc&qid=1789487485&rnid=1974793031&ref=sr_nr_p_n_theme_browse-bin_5&ds=v1%3AOHTAet0G9Tgh0MjuVwz2J7nV59Dv%2FE%2F47833ZopnNtU
+                      - checkbox [ref=e6135]
+                      - text: Button Down
+                  - listitem "Popular Shopping Ideas" [ref=e6137]:
+                    - link "Apply the filter Camp Collar to narrow results" [ref=e6139] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_theme_browse-bin%3A27368206031&dc&qid=1789487485&rnid=1974793031&ref=sr_nr_p_n_theme_browse-bin_6&ds=v1%3A5ueL4Kptw4IAM674zXtg%2Fulj1uazzzYUC9d5QmqExVs
+                      - checkbox [ref=e6142]
+                      - text: Camp Collar
+                  - listitem "Popular Shopping Ideas" [ref=e6144]:
+                    - link "Apply the filter Cutaway to narrow results" [ref=e6146] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_theme_browse-bin%3A1974796031&dc&qid=1789487485&rnid=1974793031&ref=sr_nr_p_n_theme_browse-bin_7&ds=v1%3AsfLNxV2Vn28q4KRTdAGHBxzb%2FYw2VAfjKTDikBqRtCw
+                      - checkbox [ref=e6149]
+                      - text: Cutaway
+                  - listitem "Popular Shopping Ideas" [ref=e6151]:
+                    - link "Apply the filter Eyelet Collar to narrow results" [ref=e6153] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_theme_browse-bin%3A27368210031&dc&qid=1789487485&rnid=1974793031&ref=sr_nr_p_n_theme_browse-bin_8&ds=v1%3AmofVr86P3u2pjVBYiE6T7z6QqwGgMVteCqfeh2tQMi0
+                      - checkbox [ref=e6156]
+                      - text: Eyelet Collar
+                  - listitem "Popular Shopping Ideas" [ref=e6158]:
+                    - link "Apply the filter Flat Collar to narrow results" [ref=e6160] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_theme_browse-bin%3A49437083031&dc&qid=1789487485&rnid=1974793031&ref=sr_nr_p_n_theme_browse-bin_9&ds=v1%3AgS%2BuNMDJu5A4FDTeznlSl2b4o8U9uk0zEYbJZ5RTJvs
+                      - checkbox [ref=e6163]
+                      - text: Flat Collar
+                  - listitem "Popular Shopping Ideas" [ref=e6165]:
+                    - link "Apply the filter Lapel Collar to narrow results" [ref=e6167] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_theme_browse-bin%3A65933777031&dc&qid=1789487485&rnid=1974793031&ref=sr_nr_p_n_theme_browse-bin_10&ds=v1%3AhLAaJFGqaM%2BU4Cx0XSouOyZo%2FdOPc3Jvvk%2BhvXP8JCI
+                      - checkbox [ref=e6170]
+                      - text: Lapel Collar
+                  - listitem "Popular Shopping Ideas" [ref=e6172]:
+                    - link "Apply the filter Mandarin Collar to narrow results" [ref=e6174] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_theme_browse-bin%3A1974798031&dc&qid=1789487485&rnid=1974793031&ref=sr_nr_p_n_theme_browse-bin_11&ds=v1%3AT%2BaUKkSiex5n9Q7f4EYywcV3m%2BMtkFY3180%2FppN%2BAzc
+                      - checkbox [ref=e6177]
+                      - text: Mandarin Collar
+                  - listitem "Popular Shopping Ideas" [ref=e6179]:
+                    - link "Apply the filter One Piece Collar to narrow results" [ref=e6181] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_theme_browse-bin%3A27368213031&dc&qid=1789487485&rnid=1974793031&ref=sr_nr_p_n_theme_browse-bin_12&ds=v1%3Ayx%2FRGfvv4yj1jh11mV%2B1RUuTHMYMPHdrw%2BEk5EKmcqA
+                      - checkbox [ref=e6184]
+                      - text: One Piece Collar
+                  - listitem "Popular Shopping Ideas" [ref=e6186]:
+                    - link "Apply the filter Point Collar to narrow results" [ref=e6188] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_theme_browse-bin%3A1974795031&dc&qid=1789487485&rnid=1974793031&ref=sr_nr_p_n_theme_browse-bin_13&ds=v1%3A7bu9R0kpOTVEOvLOnLk43dBaSunsb20wSAhExxiMmwg
+                      - checkbox [ref=e6191]
+                      - text: Point Collar
+                  - listitem "Popular Shopping Ideas" [ref=e6193]:
+                    - link "Apply the filter Spear Collar to narrow results" [ref=e6195] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_theme_browse-bin%3A27368208031&dc&qid=1789487485&rnid=1974793031&ref=sr_nr_p_n_theme_browse-bin_14&ds=v1%3Awre%2BNoKUtGk7amb9Dsxs8qHn%2FEsLT9exSphRunlmkpI
+                      - checkbox [ref=e6198]
+                      - text: Spear Collar
+                  - listitem "Popular Shopping Ideas" [ref=e6200]:
+                    - link "Apply the filter Spread Collar to narrow results" [ref=e6202] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_theme_browse-bin%3A27368209031&dc&qid=1789487485&rnid=1974793031&ref=sr_nr_p_n_theme_browse-bin_15&ds=v1%3ASNYMuY3hjQHa%2B21FOeIFGEbehfCoOuGpmveWpOoWftc
+                      - checkbox [ref=e6205]
+                      - text: Spread Collar
+                  - listitem "Popular Shopping Ideas" [ref=e6207]:
+                    - link "Apply the filter Tab Collar to narrow results" [ref=e6209] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_theme_browse-bin%3A1974800031&dc&qid=1789487485&rnid=1974793031&ref=sr_nr_p_n_theme_browse-bin_16&ds=v1%3AS9vhajIMazT6JJAXraEnOiB9pvQYaFKHiKCzzMzL5yQ
+                      - checkbox [ref=e6212]
+                      - text: Tab Collar
+              - group "Cuff Style" [ref=e6214]:
+                - heading "Cuff Style" [level=2] [ref=e6215]
+                - list "Cuff Style" [ref=e6216]:
+                  - listitem "Popular Shopping Ideas" [ref=e6217]:
+                    - link "Apply the filter Round Cut Cuff to narrow results" [ref=e6219] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101015176075111%3A93782961031&dc&qid=1789487485&rnid=93782958031&ref=sr_nr_p_n_g-101015176075111_1&ds=v1%3A7FTcMeZn%2FvN9uOchcMpW7NWrkPKiURm%2Bl3xY4z11RX0
+                      - checkbox [ref=e6222]
+                      - text: Round Cut Cuff
+                  - listitem "Popular Shopping Ideas" [ref=e6224]:
+                    - link "Apply the filter Ribbed Cuff to narrow results" [ref=e6226] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101015176075111%3A93782965031&dc&qid=1789487485&rnid=93782958031&ref=sr_nr_p_n_g-101015176075111_2&ds=v1%3AbaKaccqkfVvohckRF6JG67OTZZyzeLpuyKDqSitaAYc
+                      - checkbox [ref=e6229]
+                      - text: Ribbed Cuff
+                  - listitem "Popular Shopping Ideas" [ref=e6231]:
+                    - link "Apply the filter Single Cuff to narrow results" [ref=e6233] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101015176075111%3A93782960031&dc&qid=1789487485&rnid=93782958031&ref=sr_nr_p_n_g-101015176075111_3&ds=v1%3AMCkv8OBn%2FYceUS1axHvIS1xXNizcP2mwHhrVoHzcQC0
+                      - checkbox [ref=e6236]
+                      - text: Single Cuff
+                  - listitem "Popular Shopping Ideas" [ref=e6238]:
+                    - link "Apply the filter Angle Cut Cuff to narrow results" [ref=e6240] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101015176075111%3A93782959031&dc&qid=1789487485&rnid=93782958031&ref=sr_nr_p_n_g-101015176075111_4&ds=v1%3Am7op83unCnbWQ9yfHTJeXNHQIkaO5Myw7uEKwN%2BQIPc
+                      - checkbox [ref=e6243]
+                      - text: Angle Cut Cuff
+                  - listitem "Popular Shopping Ideas" [ref=e6245]:
+                    - link "Apply the filter Barrel Cuff to narrow results" [ref=e6247] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101015176075111%3A93782962031&dc&qid=1789487485&rnid=93782958031&ref=sr_nr_p_n_g-101015176075111_5&ds=v1%3An7yZkiPSj8oJg%2FYu7X5ondqhrPLuGEa3AZeUcZl%2BYlY
+                      - checkbox [ref=e6250]
+                      - text: Barrel Cuff
+                  - listitem "Popular Shopping Ideas" [ref=e6252]:
+                    - link "Apply the filter Double Cuff to narrow results" [ref=e6254] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101015176075111%3A93782963031&dc&qid=1789487485&rnid=93782958031&ref=sr_nr_p_n_g-101015176075111_6&ds=v1%3AvbEABHBy%2BD9ivG1is5LdhvYLVHN2YIOyfuHaW9zL5Co
+                      - checkbox [ref=e6257]
+                      - text: Double Cuff
+                  - listitem "Popular Shopping Ideas" [ref=e6259]:
+                    - link "Apply the filter French Cuff to narrow results" [ref=e6261] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_n_g-101015176075111%3A93782964031&dc&qid=1789487485&rnid=93782958031&ref=sr_nr_p_n_g-101015176075111_7&ds=v1%3Agrjao5Y0UA9AmY%2FAeQVkbe3pprEoSsY3R0xg%2FbMNqiU
+                      - checkbox [ref=e6264]
+                      - text: French Cuff
+              - group "Country of Origin" [ref=e6266]:
+                - heading "Country of Origin" [level=2] [ref=e6267]
+                - list "Country of Origin" [ref=e6268]:
+                  - listitem "Popular Shopping Ideas" [ref=e6269]:
+                    - link "Apply the filter India to narrow results" [ref=e6271] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_country_of_origin-bin%3AIN&dc&qid=1789487485&rnid=215263484031&ref=sr_nr_p_country_of_origin-bin_1&ds=v1%3AVMOosteo9T0MCBePoNMF8hfPcMscnPoE56gGJTx0EYA
+                      - checkbox [ref=e6274]
+                      - text: India
+                  - listitem "Popular Shopping Ideas" [ref=e6276]:
+                    - link "Apply the filter United States to narrow results" [ref=e6278] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_country_of_origin-bin%3AUS&dc&qid=1789487485&rnid=215263484031&ref=sr_nr_p_country_of_origin-bin_2&ds=v1%3AuBofMZjejgG3pl%2BwAyjyHRPvU2KUknIRaaKGAYcnVmE
+                      - checkbox [ref=e6281]
+                      - text: United States
+                  - listitem "Popular Shopping Ideas" [ref=e6283]:
+                    - link "Apply the filter China to narrow results" [ref=e6285] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_country_of_origin-bin%3ACN&dc&qid=1789487485&rnid=215263484031&ref=sr_nr_p_country_of_origin-bin_3&ds=v1%3ADtI8ys8Cy%2F3A%2FNC76sdwR1Vv5j99ErV5Harx5dpz2Es
+                      - checkbox [ref=e6288]
+                      - text: China
+                  - listitem "Popular Shopping Ideas" [ref=e6290]:
+                    - link "Apply the filter Bangladesh to narrow results" [ref=e6292] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_country_of_origin-bin%3ABD&dc&qid=1789487485&rnid=215263484031&ref=sr_nr_p_country_of_origin-bin_4&ds=v1%3A93C50PwZsIovfe5Vky4kVU4%2FmXqWEkjlbX27hkENXFA
+                      - checkbox [ref=e6295]
+                      - text: Bangladesh
+                  - listitem "Popular Shopping Ideas" [ref=e6297]:
+                    - link "Apply the filter Indonesia to narrow results" [ref=e6299] [cursor=pointer]:
+                      - /url: /s?k=T+shirt&rh=p_country_of_origin-bin%3AID&dc&qid=1789487485&rnid=215263484031&ref=sr_nr_p_country_of_origin-bin_5&ds=v1%3AzKZ2hiuh0BZwR%2FAolywzczoqf4VJM9VZpcjrvcDgXd8
+                      - checkbox [ref=e6302]
+                      - text: Indonesia
+                  - listitem [ref=e6304]:
+                    - button "See more, Country of Origin" [ref=e6307] [cursor=pointer]: See more
+            - generic [ref=e6312]:
+              - iframe [ref=e6313]:
+                - region "Sponsored ad from AD Essentials" [ref=f2e3]:
+                  - link "AD Essentials Buy now AD Essentials 100% Soft Cotton Solid Plain T-Shirt | Round Neck Daily Use T-Shirt | Men's Half Sleeve Casual T-Shirts 100% Soft Cotton Solid Plain T-Shirt | Round Neck Daily Use T-Shirt | Men's Half Sleeve Casual T-Shirts ₹499.00 List price was ₹999.00 Eligible for Amazon Prime. Save 5% with coupon" [ref=f2e4] [cursor=pointer]:
+                    - generic [ref=f2e5]:
+                      - generic [ref=f2e6]:
+                        - generic [ref=f2e7]: AD Essentials
+                        - generic [ref=f2e8]: Buy now
+                      - img "AD Essentials 100% Soft Cotton Solid Plain T-Shirt | Round Neck Daily Use T-Shirt | Men's Half Sleeve Casual T-Shirts" [ref=f2e16]
+                      - generic [ref=f2e17]:
+                        - generic [ref=f2e18]: 100% Soft Cotton Solid Plain T-Shirt | Round Neck Daily Use T-Shirt | Men's Half Sleeve Casual T-Shirts
+                        - generic [ref=f2e20]:
+                          - generic [ref=f2e24]:
+                            - generic [ref=f2e25]: ₹499.00
+                            - generic [ref=f2e26]:
+                              - generic [ref=f2e27]: ₹
+                              - generic [ref=f2e28]: "499"
+                              - generic [ref=f2e29]: "00"
+                            - generic [ref=f2e30]:
+                              - generic [ref=f2e31]: List price was ₹999.00
+                              - generic [ref=f2e32]: ₹999.00
+                              - img "Eligible for Amazon Prime." [ref=f2e34]
+                          - generic [ref=f2e44]:
+                            - generic [ref=f2e46]: Save 5%
+                            - generic [ref=f2e47]: with coupon
+              - button "Leave feedback on Sponsored advertisement" [ref=e6315] [cursor=pointer]:
+                - generic [ref=e6316]: Sponsored
+  - complementary "Your recently viewed items and featured recommendations"
+  - generic [ref=e6318]:
+    - button "Back to top" [ref=e6319] [cursor=pointer]:
+      - generic [ref=e6320]: Back to top
+    - generic [ref=e6321]:
+      - generic [ref=e6322]:
+        - heading "Get to Know Us" [level=6] [ref=e6323]
+        - list [ref=e6324]:
+          - listitem [ref=e6325]:
+            - link "About Amazon" [ref=e6326] [cursor=pointer]:
+              - /url: https://www.aboutamazon.in/?utm_source=gateway&utm_medium=footer
+          - listitem [ref=e6327]:
+            - link "Careers" [ref=e6328] [cursor=pointer]:
+              - /url: https://amazon.jobs
+          - listitem [ref=e6329]:
+            - link "Press Releases" [ref=e6330] [cursor=pointer]:
+              - /url: https://press.aboutamazon.in/?utm_source=gateway&utm_medium=footer
+          - listitem [ref=e6331]:
+            - link "Amazon Science" [ref=e6332] [cursor=pointer]:
+              - /url: https://www.amazon.science
+      - generic [ref=e6334]:
+        - heading "Connect with Us" [level=6] [ref=e6335]
+        - list [ref=e6336]:
+          - listitem [ref=e6337]:
+            - link "Facebook" [ref=e6338] [cursor=pointer]:
+              - /url: https://www.facebook.com/AmazonIN
+          - listitem [ref=e6339]:
+            - link "Twitter" [ref=e6340] [cursor=pointer]:
+              - /url: https://x.com/AmazonIN
+          - listitem [ref=e6341]:
+            - link "Instagram" [ref=e6342] [cursor=pointer]:
+              - /url: https://www.instagram.com/amazondotin
+      - generic [ref=e6344]:
+        - heading "Make Money with Us" [level=6] [ref=e6345]
+        - list [ref=e6346]:
+          - listitem [ref=e6347]:
+            - link "Sell on Amazon" [ref=e6348] [cursor=pointer]:
+              - /url: /b/?node=2838698031&ld=AZINSOANavDesktopFooter_C&ref_=nav_footer_sell_C
+          - listitem [ref=e6349]:
+            - link "Sell under Amazon Accelerator" [ref=e6350] [cursor=pointer]:
+              - /url: https://accelerator.amazon.in/?ref_=map_1_b2b_GW_FT
+          - listitem [ref=e6351]:
+            - link "Protect and Build Your Brand" [ref=e6352] [cursor=pointer]:
+              - /url: https://brandservices.amazon.in/?ref=AOINABRLGNRFOOT&ld=AOINABRLGNRFOOT
+          - listitem [ref=e6353]:
+            - link "Amazon Global Selling" [ref=e6354] [cursor=pointer]:
+              - /url: https://sell.amazon.in/grow-your-business/amazon-global-selling.html?ld=AZIN_Footer_V1&ref=AZIN_Footer_V1
+          - listitem [ref=e6355]:
+            - link "Supply to Amazon" [ref=e6356] [cursor=pointer]:
+              - /url: https://supply.amazon.com/?ref_=footer_sta&lang=en-IN
+          - listitem [ref=e6357]:
+            - link "Become an Affiliate" [ref=e6358] [cursor=pointer]:
+              - /url: https://affiliate-program.amazon.in/?utm_campaign=assocshowcase&utm_medium=footer&utm_source=GW&ref_=footer_assoc
+          - listitem [ref=e6359]:
+            - link "Fulfilment by Amazon" [ref=e6360] [cursor=pointer]:
+              - /url: https://services.amazon.in/services/fulfilment-by-amazon/benefits.html/ref=az_footer_fba?ld=AWRGINFBAfooter
+          - listitem [ref=e6361]:
+            - link "Advertise Your Products" [ref=e6362] [cursor=pointer]:
+              - /url: https://advertising.amazon.in/?ref=Amz.in
+          - listitem [ref=e6363]:
+            - link "Amazon Pay on Merchants" [ref=e6364] [cursor=pointer]:
+              - /url: https://www.amazonpay.in/merchant
+      - generic [ref=e6366]:
+        - heading "Let Us Help You" [level=6] [ref=e6367]
+        - list [ref=e6368]:
+          - listitem [ref=e6369]:
+            - link "Your Account" [ref=e6370] [cursor=pointer]:
+              - /url: /gp/css/homepage.html?ref_=footer_ya
+          - listitem [ref=e6371]:
+            - link "Returns Centre" [ref=e6372] [cursor=pointer]:
+              - /url: /gp/css/returns/homepage.html?ref_=footer_hy_f_4
+          - listitem [ref=e6373]:
+            - link "Recalls and Product Safety Alerts" [ref=e6374] [cursor=pointer]:
+              - /url: https://www.amazon.in/your-product-safety-alerts?ref_=footer_bsx_ypsa
+          - listitem [ref=e6375]:
+            - link "100% Purchase Protection" [ref=e6376] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=201083470&ref_=footer_swc
+          - listitem [ref=e6377]:
+            - link "Amazon App Download" [ref=e6378] [cursor=pointer]:
+              - /url: /gp/browse.html?node=6967393031&ref_=footer_mobapp
+          - listitem [ref=e6379]:
+            - link "Help" [ref=e6380] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=200507590&ref_=footer_gw_m_b_he
+    - generic [ref=e6382]:
+      - link "Amazon India Home" [ref=e6385] [cursor=pointer]:
+        - /url: /ref=footer_logo
+      - generic [ref=e6388]:
+        - generic [ref=e6389]:
+          - link "Choose a language for shopping. Current selection is English." [ref=e6390] [cursor=pointer]:
+            - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=footer_lang
+            - generic [ref=e6392]: English
+          - button "Expand to Change Language or Country" [ref=e6393] [cursor=pointer]
+        - button "Choose a country/region for shopping. The current selection is India." [ref=e6394] [cursor=pointer]:
+          - generic [ref=e6396]: India
+    - generic "More on Amazon" [ref=e6397]:
+      - generic "More on Amazon" [ref=e6398]:
+        - list [ref=e6399]:
+          - listitem [ref=e6400]:
+            - link "AbeBooks Books, art & collectibles" [ref=e6401] [cursor=pointer]:
+              - /url: https://www.abebooks.com/
+              - heading "AbeBooks" [level=5] [ref=e6402]
+              - generic [ref=e6403]:
+                - text: Books, art
+                - text: "& collectibles"
+          - listitem [ref=e6404]
+          - listitem [ref=e6405]:
+            - link "Amazon Web Services Scalable Cloud Computing Services" [ref=e6406] [cursor=pointer]:
+              - /url: https://aws.amazon.com/what-is-cloud-computing/?sc_channel=EL&sc_campaign=IN_amazonfooter
+              - heading "Amazon Web Services" [level=5] [ref=e6407]
+              - generic [ref=e6408]:
+                - text: Scalable Cloud
+                - text: Computing Services
+          - listitem [ref=e6409]
+          - listitem [ref=e6410]:
+            - link "Audible Download Audio Books" [ref=e6411] [cursor=pointer]:
+              - /url: https://www.audible.in/
+              - heading "Audible" [level=5] [ref=e6412]
+              - generic [ref=e6413]:
+                - text: Download
+                - text: Audio Books
+          - listitem [ref=e6414]
+          - listitem [ref=e6415]:
+            - link "IMDb Movies, TV & Celebrities" [ref=e6416] [cursor=pointer]:
+              - /url: https://www.imdb.com/
+              - heading "IMDb" [level=5] [ref=e6417]
+              - generic [ref=e6418]:
+                - text: Movies, TV
+                - text: "& Celebrities"
+        - list [ref=e6419]:
+          - listitem [ref=e6420]:
+            - link "Shopbop Designer Fashion Brands" [ref=e6421] [cursor=pointer]:
+              - /url: https://www.shopbop.com/
+              - heading "Shopbop" [level=5] [ref=e6422]
+              - generic [ref=e6423]:
+                - text: Designer
+                - text: Fashion Brands
+          - listitem [ref=e6424]
+          - listitem [ref=e6425]:
+            - link "Amazon Business Everything For Your Business" [ref=e6426] [cursor=pointer]:
+              - /url: /business?ref=footer_aingw
+              - heading "Amazon Business" [level=5] [ref=e6427]
+              - generic [ref=e6428]:
+                - text: Everything For
+                - text: Your Business
+          - listitem [ref=e6429]
+          - listitem [ref=e6430]:
+            - link "Amazon Music Stream millions of songs" [ref=e6431] [cursor=pointer]:
+              - /url: /music/player?ref=footer_apm
+              - heading "Amazon Music" [level=5] [ref=e6432]
+              - generic [ref=e6433]: Stream millions of songs
+          - listitem [ref=e6434]
+          - listitem [ref=e6435]
+    - generic [ref=e6436]:
+      - list [ref=e6437]:
+        - listitem [ref=e6438]:
+          - link "Conditions of Use & Sale" [ref=e6439] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=200545940&ref_=footer_cou
+        - listitem [ref=e6440]:
+          - link "Privacy Notice" [ref=e6441] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=200534380&ref_=footer_privacy
+        - listitem [ref=e6442]:
+          - link "Interest-Based Ads" [ref=e6443] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=202075050&ref_=footer_iba
+      - generic [ref=e6444]: © 1996-2026, Amazon.com, Inc. or its affiliates
+  - iframe [ref=e6446]:
+    - iframe [ref=f5e2]:
+      - generic [active] [ref=f6e1]:
+        - img [ref=f6e2]
+        - img [ref=f6e3]
+        - img [ref=f6e4]
+        - img [ref=f6e5]
+        - img [ref=f6e6]
+        - img [ref=f6e7]
+        - img [ref=f6e8]
+        - img [ref=f6e9]
+        - img [ref=f6e10]
+        - img [ref=f6e11]
+        - img [ref=f6e12]
+        - img [ref=f6e13]
+        - img [ref=f6e14]
+        - img [ref=f6e15]
+        - img [ref=f6e16]
+        - img [ref=f6e17]
+        - img [ref=f6e18]
+        - img [ref=f6e19]
+        - img [ref=f6e20]
+        - img [ref=f6e21]
+        - img [ref=f6e22]
+        - img [ref=f6e23]
+        - img [ref=f6e24]
+        - img [ref=f6e25]
+        - img [ref=f6e26]
+        - img [ref=f6e27]
+        - img [ref=f6e28]
+        - img [ref=f6e29]
+        - img [ref=f6e30]
+        - img [ref=f6e31]
+        - img [ref=f6e32]
+        - img [ref=f6e33]
+        - img [ref=f6e34]
+        - img [ref=f6e35]
+        - img [ref=f6e36]
+        - img [ref=f6e37]
+        - img [ref=f6e38]
+        - img [ref=f6e39]
+        - img [ref=f6e40]
+```
+
+# Test source
+
+```ts
+  1  | export class mainpro {
+  2  | 
+  3  |     constructor(page) {
+  4  |         this.page = page;
+  5  |     }
+  6  | 
+  7  |     async search() {
+  8  |         await this.page
+  9  |             .getByPlaceholder('Search Amazon.in')
+  10 |             .fill('T shirt');
+  11 | 
+  12 |         await this.page.keyboard.press('Enter');
+  13 |     }
+  14 | 
+  15 |     async clickproduct() {
+  16 |         await this.page
+  17 |             .getByText(
+  18 |                 '100% Cotton Oversized T-Shirt Unisex Drop Shoulder Dye Washed Street Look Black Pack of 1'
+  19 |             )
+  20 |             .first()
+  21 |             .click();
+  22 |     }
+  23 | 
+  24 |     async addtocart() {
+  25 |         await this.page
+  26 |             .locator('#add-to-cart-button')
+> 27 |             .click();
+     |              ^ Error: locator.click: Test timeout of 30000ms exceeded.
+  28 |             
+  29 |     }
+  30 |     
+  31 | }
+  32 | 
+```
